@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: 58a967fd44dbcf947aca6071ce1bb61b
+guid: babdacd2fc6e97e4fbbd4107efd77a1f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3209183117411149394
-    second: Red Hero Mask_0
-  - first:
-      213: 157128009993980198
-    second: Red Hero Mask_1
-  - first:
-      213: -1357731892536592938
-    second: Red Hero Mask_2
-  - first:
-      213: 6519912750568432569
-    second: Red Hero Mask_3
-  - first:
-      213: 1629166358220350527
-    second: Red Hero Mask_4
-  - first:
-      213: -6752800886383341380
-    second: Red Hero Mask_5
+      213: -3287190615178580972
+    second: Default Hero Image_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -141,22 +126,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Red Hero Mask_4
+      name: Default Hero Image_0
       rect:
         serializedVersion: 2
-        x: 751
-        y: 1120
-        width: 973
-        height: 1123
+        x: 704
+        y: 188
+        width: 605
+        height: 730
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f34adbdcb26fb9610800000000000000
-      internalID: 1629166358220350527
+      spriteID: 41c68414d8d8162d0800000000000000
+      internalID: -3287190615178580972
       vertices: []
       indices: 
       edges: []
