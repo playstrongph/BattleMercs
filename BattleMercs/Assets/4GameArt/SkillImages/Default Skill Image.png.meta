@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: 1788e6d3dcf5d564eaeab09ce74d98a4
+guid: 0308563945529a24887e311e39bb9fc5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 471758700278311590
-    second: Skill Frame Masks_0
-  - first:
-      213: -7557326741844521757
-    second: Skill Frame Masks_1
-  - first:
-      213: -7191659402359670246
-    second: Skill Frame Masks_2
-  - first:
-      213: -3774005590826065951
-    second: Passive Skill mask
-  - first:
-      213: -3888537948899317067
-    second: Skill Ready Mask
-  - first:
-      213: -29906113888716292
-    second: Skill Not Ready Mask
+      213: -2624133322254026311
+    second: Default Skill Image_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -141,64 +126,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Passive Skill mask
+      name: Default Skill Image_0
       rect:
         serializedVersion: 2
-        x: 439
-        y: 95
-        width: 273
-        height: 276
+        x: 658
+        y: 268
+        width: 604
+        height: 580
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ef597229e900abc0800000000000000
-      internalID: -3774005590826065951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skill Ready Mask
-      rect:
-        serializedVersion: 2
-        x: 845
-        y: 97
-        width: 260
-        height: 269
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5baea3c7653290ac0800000000000000
-      internalID: -3888537948899317067
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skill Not Ready Mask
-      rect:
-        serializedVersion: 2
-        x: 1243
-        y: 75
-        width: 245
-        height: 174
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf9fc014c80c59ff0800000000000000
-      internalID: -29906113888716292
+      spriteID: 9b978cb85a4359bd0800000000000000
+      internalID: -2624133322254026311
       vertices: []
       indices: 
       edges: []

@@ -47,3 +47,9 @@ TagManager:
   - name: Heroes
     uniqueID: 374580181
     locked: 0
+  - name: HeroSkills
+    uniqueID: 787769207
+    locked: 0
+  - name: Skills
+    uniqueID: 862448857
+    locked: 0
