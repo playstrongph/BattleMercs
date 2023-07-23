@@ -59,3 +59,6 @@ TagManager:
   - name: FightButton
     uniqueID: 3105892121
     locked: 0
+  - name: HeroPreview
+    uniqueID: 1719318979
+    locked: 0
