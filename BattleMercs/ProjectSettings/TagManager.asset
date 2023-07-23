@@ -56,3 +56,6 @@ TagManager:
   - name: Skills
     uniqueID: 862448857
     locked: 0
+  - name: FightButton
+    uniqueID: 3105892121
+    locked: 0
