@@ -132,12 +132,12 @@ TextureImporter:
       name: Blue Hero mask_0
       rect:
         serializedVersion: 2
-        x: 695
-        y: 1108
-        width: 819
-        height: 970
+        x: 595
+        y: 992
+        width: 1037
+        height: 1251
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

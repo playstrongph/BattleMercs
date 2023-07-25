@@ -62,3 +62,6 @@ TagManager:
   - name: HeroPreview
     uniqueID: 1719318979
     locked: 0
+  - name: SkillPreview
+    uniqueID: 1811880437
+    locked: 0

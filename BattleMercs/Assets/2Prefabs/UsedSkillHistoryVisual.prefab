@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 7563845726041579066}
   - component: {fileID: 7563845726041579069}
   m_Layer: 0
-  m_Name: SkillUsedVisual
+  m_Name: UsedSkillHistoryVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
