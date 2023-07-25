@@ -32,7 +32,7 @@ GameObject:
   - component: {fileID: 3125873116832265099}
   - component: {fileID: 3125873116832265096}
   m_Layer: 0
-  m_Name: UsedSkillPreview
+  m_Name: UsedSkillPreviewVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
