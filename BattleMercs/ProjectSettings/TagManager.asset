@@ -65,3 +65,6 @@ TagManager:
   - name: SkillPreview
     uniqueID: 1811880437
     locked: 0
+  - name: UsedSkillPreview
+    uniqueID: 1634822591
+    locked: 0
