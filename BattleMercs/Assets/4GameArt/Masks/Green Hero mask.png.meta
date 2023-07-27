@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: -309162985848547488
     second: Green Hero mask_0
+  - first:
+      213: 2791312521808690060
+    second: Green Hero mask_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -129,19 +132,19 @@ TextureImporter:
       name: Green Hero mask_0
       rect:
         serializedVersion: 2
-        x: 848
-        y: 1276
-        width: 831
-        height: 973
+        x: 703
+        y: 1180
+        width: 1096
+        height: 1165
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0675cc207e1a5bbf0800000000000000
-      internalID: -309162985848547488
+      spriteID: c8bb18713fbbcb620800000000000000
+      internalID: 2791312521808690060
       vertices: []
       indices: 
       edges: []
