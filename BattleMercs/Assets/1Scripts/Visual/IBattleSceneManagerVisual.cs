@@ -4,5 +4,7 @@
     {
         //Inspector References
         IGameBoardVisual GameBoardVisual { get; }
+        IPlayerVisual MainPlayerVisual { get; }
+        IPlayerVisual EnemyPlayerVisual { get; }
     }
 }

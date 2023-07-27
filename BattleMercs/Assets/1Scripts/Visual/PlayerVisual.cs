@@ -8,13 +8,17 @@ namespace _1Scripts.Visual
       #region VARIABLES
       
       [Header("Inspector References")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManagerVisual))] private Object battleSceneManagerVisual = null;
+      
+      [Header("Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroVisual))] private List<Object> heroVisualsList = new List<Object>();
-
 
       #endregion
 
       #region PROPERTIES
-
+      
+      public IBattleSceneManagerVisual BattleSceneManagerVisual => battleSceneManagerVisual as IBattleSceneManagerVisual;
+      
       public List<IHeroVisual> HeroVisualsList
       {
          get
