@@ -1,24 +1,40 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerVisual : MonoBehaviour
+namespace _1Scripts.Visual
 {
-   #region VARIABLES
+   public class PlayerVisual : MonoBehaviour, IPlayerVisual
+   {
+      #region VARIABLES
+      
+      [Header("Inspector References")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroVisual))] private List<Object> heroVisualsList = new List<Object>();
 
-        
 
-   #endregion
-        
-   #region PROPERTIES
+      #endregion
 
-        
+      #region PROPERTIES
 
-   #endregion
-        
-   #region METHODS
+      public List<IHeroVisual> HeroVisualsList
+      {
+         get
+         {
+            var newList = new List<IHeroVisual>();
+            foreach (var heroVisual in heroVisualsList)
+            {
+               newList.Add(heroVisual as IHeroVisual);
+            }
+            return newList;
+         }
+      }
 
-        
 
-   #endregion
+      #endregion
+
+      #region METHODS
+
+
+
+      #endregion
+   }
 }
