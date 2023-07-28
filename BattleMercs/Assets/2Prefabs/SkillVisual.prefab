@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 241687286}
   - component: {fileID: 241687285}
   m_Layer: 0
-  m_Name: SkillGraphic
+  m_Name: PassiveSkillGraphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 316922915}
   - component: {fileID: 316922914}
   m_Layer: 0
-  m_Name: PassiveSkill
+  m_Name: PassiveSkillVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 1140343363}
   - component: {fileID: 1140343362}
   m_Layer: 0
-  m_Name: SkillReadyText
+  m_Name: SpeedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -498,7 +498,7 @@ GameObject:
   - component: {fileID: 1813423251}
   - component: {fileID: 1813423250}
   m_Layer: 0
-  m_Name: SkillCooldownText
+  m_Name: CooldownText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -731,7 +731,7 @@ GameObject:
   - component: {fileID: 2048570999}
   - component: {fileID: 2048570998}
   m_Layer: 0
-  m_Name: SkillGraphic
+  m_Name: SkillNotReadyGraphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -804,6 +804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3240097523965823125}
   - component: {fileID: 3240097523965823124}
+  - component: {fileID: 5940426726895412396}
   m_Layer: 0
   m_Name: SkillVisual
   m_TagString: Untagged
@@ -854,6 +855,29 @@ Canvas:
   m_SortingLayerID: 862448857
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &5940426726895412396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3240097523965823122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee84e5ca9d75f146a69f5788de4736a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillReadyVisualTransform: {fileID: 3240097524160099078}
+  skillNotReadyVisualTransform: {fileID: 1983185225}
+  passiveSkillVisualTransform: {fileID: 316922913}
+  skillReadyGraphic: {fileID: 3240097524032005601}
+  skillNotReadyGraphic: {fileID: 2048570998}
+  passiveSkillGraphic: {fileID: 241687285}
+  skillReadyCanvas: {fileID: 3240097524160099081}
+  skillNotReadyCanvas: {fileID: 1983185226}
+  passiveSkillCanvas: {fileID: 316922914}
+  speedText: {fileID: 1140343362}
+  cooldownText: {fileID: 1813423250}
 --- !u!1 &3240097524032005631
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,7 +890,7 @@ GameObject:
   - component: {fileID: 3240097524032005600}
   - component: {fileID: 3240097524032005601}
   m_Layer: 0
-  m_Name: SkillGraphic
+  m_Name: SkillReadyGraphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
