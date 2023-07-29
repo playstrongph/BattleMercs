@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 7563845726041579068}
   - component: {fileID: 7563845726041579066}
   - component: {fileID: 7563845726041579069}
+  - component: {fileID: 3375274951377803518}
   m_Layer: 0
   m_Name: UsedSkillHistoryVisual
   m_TagString: Untagged
@@ -173,3 +174,16 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3375274951377803518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563845726041579070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8557f49bdbd4d18499e367a535f53d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillGraphic: {fileID: 7563845724625857766}

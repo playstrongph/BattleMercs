@@ -6,5 +6,7 @@
         IGameBoardVisual GameBoardVisual { get; }
         IPlayerVisual MainPlayerVisual { get; }
         IPlayerVisual EnemyPlayerVisual { get; }
+        IHeroSkillsVisual HeroSkillsVisual { get; }
+        ISkillHistoryVisual SkillHistoryVisual { get; }
     }
 }

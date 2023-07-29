@@ -142,6 +142,8 @@ MonoBehaviour:
   gameBoardVisual: {fileID: 8229039373553431457}
   mainPlayerVisual: {fileID: 3913210454597308276}
   enemyPlayerVisual: {fileID: 3913210453856126252}
+  heroSkillsVisual: {fileID: 9105971521566629530}
+  skillHistoryVisual: {fileID: 109747860694605001}
 --- !u!1001 &407357390836355022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -724,6 +726,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 407357392181292564}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9105971521566629530 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8933401931122290830, guid: 7022ef47cad1d074fb3862091e463b44,
+    type: 3}
+  m_PrefabInstance: {fileID: 407357392181292564}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 255ca07cea84faa46b7e0391ba97f0b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &407357392224561484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1240,12 +1254,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab3442fe595cb8a4f9a3c96021009ed2, type: 3}
---- !u!224 &66442283618825037 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 381457436452239067, guid: ab3442fe595cb8a4f9a3c96021009ed2,
-    type: 3}
-  m_PrefabInstance: {fileID: 407357392381068694}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3913210454597308276 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3740729113449515746, guid: ab3442fe595cb8a4f9a3c96021009ed2,
@@ -1258,6 +1266,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a354e38120bc3ca40a0d4dbcb6d44cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &66442283618825037 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 381457436452239067, guid: ab3442fe595cb8a4f9a3c96021009ed2,
+    type: 3}
+  m_PrefabInstance: {fileID: 407357392381068694}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1498879418961612454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1575,6 +1589,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UsedSkillHistoryVisual 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3121741658512063587, guid: a2f53c1c9ad603b4f851585dc95a20fa,
+        type: 3}
+      propertyPath: battleSceneManagerVisual
+      value: 
+      objectReference: {fileID: 5882213117987428413}
     - target: {fileID: 3517477286863948998, guid: a2f53c1c9ad603b4f851585dc95a20fa,
         type: 3}
       propertyPath: m_Name
@@ -1792,6 +1811,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2f53c1c9ad603b4f851585dc95a20fa, type: 3}
+--- !u!114 &109747860694605001 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3121741658512063587, guid: a2f53c1c9ad603b4f851585dc95a20fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 3087006879229534378}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed719a905b16130449af09cbd94fe3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6729841311352180436 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8625083103566409342, guid: a2f53c1c9ad603b4f851585dc95a20fa,
