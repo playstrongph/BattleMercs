@@ -699,7 +699,7 @@ PrefabInstance:
     - target: {fileID: 7303433935918806151, guid: 7022ef47cad1d074fb3862091e463b44,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7303433936031633650, guid: 7022ef47cad1d074fb3862091e463b44,
         type: 3}
@@ -711,6 +711,11 @@ PrefabInstance:
       propertyPath: m_OverrideSorting
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8933401931122290830, guid: 7022ef47cad1d074fb3862091e463b44,
+        type: 3}
+      propertyPath: battleSceneManagerVisual
+      value: 
+      objectReference: {fileID: 5882213117987428413}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7022ef47cad1d074fb3862091e463b44, type: 3}
 --- !u!224 &6988525712478797855 stripped
