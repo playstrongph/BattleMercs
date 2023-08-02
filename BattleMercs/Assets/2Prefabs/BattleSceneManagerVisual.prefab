@@ -2602,6 +2602,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 407357391222785283}
     m_Modifications:
+    - target: {fileID: 5528246602081874893, guid: 4f063f71c747fef459dc955a76f7efaa,
+        type: 3}
+      propertyPath: battleManagerVisual
+      value: 
+      objectReference: {fileID: 5882213117987428413}
     - target: {fileID: 7853968120051021473, guid: 4f063f71c747fef459dc955a76f7efaa,
         type: 3}
       propertyPath: m_Enabled

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7853968119745994661}
   - component: {fileID: 7853968119745994662}
   m_Layer: 0
-  m_Name: Speed
+  m_Name: SpeedImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 7853968120015184354}
   - component: {fileID: 7853968120015184355}
   m_Layer: 0
-  m_Name: Cooldown
+  m_Name: CooldownImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -428,6 +428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7853968120051021474}
   - component: {fileID: 7853968120051021473}
+  - component: {fileID: 5528246602081874893}
   m_Layer: 0
   m_Name: SkillPreviewVisual
   m_TagString: Untagged
@@ -484,6 +485,29 @@ Canvas:
   m_SortingLayerID: 1811880437
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &5528246602081874893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7853968120051021475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 420c5ab52c7646942b7cef39f6fb9c59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleManagerVisual: {fileID: 0}
+  canvas: {fileID: 7853968120051021473}
+  skillPreviewFrames: {fileID: 7623805802148079578}
+  skillGraphic: {fileID: 7853968120583128542}
+  cooldownGraphic: {fileID: 7853968120015184355}
+  speedGraphic: {fileID: 7853968119745994662}
+  nameText: {fileID: 7853968119989043972}
+  elementText: {fileID: 7853968121542293498}
+  descriptionText: {fileID: 7853968120828770851}
+  cooldownText: {fileID: 7853968120005326796}
+  speedText: {fileID: 7853968120668053567}
 --- !u!1 &7853968120583128528
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,8 +951,9 @@ GameObject:
   - component: {fileID: 7853968121299939737}
   - component: {fileID: 7853968121299939815}
   - component: {fileID: 7853968121299939736}
+  - component: {fileID: 7623805802148079578}
   m_Layer: 0
-  m_Name: PreviewFrames
+  m_Name: SkillPreviewFrames
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -991,6 +1016,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7623805802148079578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7853968121299939738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8f6b1dd9da705841956567721dbdcfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillPreviewFrame: {fileID: 7853968121299939736}
+  frames:
+  - {fileID: 6308278330998182386, guid: 1d58eb9aeb55c7242a6f8d0d56718f85, type: 3}
+  - {fileID: 2531894167454913421, guid: 1d58eb9aeb55c7242a6f8d0d56718f85, type: 3}
+  - {fileID: -6372847374873367398, guid: 1d58eb9aeb55c7242a6f8d0d56718f85, type: 3}
+  - {fileID: -8614387202556066374, guid: 1d58eb9aeb55c7242a6f8d0d56718f85, type: 3}
 --- !u!1 &7853968121542293500
 GameObject:
   m_ObjectHideFlags: 0
