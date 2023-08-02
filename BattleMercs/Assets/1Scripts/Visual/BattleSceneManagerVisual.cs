@@ -12,6 +12,8 @@ namespace _1Scripts.Visual
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerVisual))] private Object enemyPlayerVisual = null;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillsVisual))] private Object heroSkillsVisual = null;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillHistoryVisual))] private Object skillHistoryVisual = null;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ICombatButtonVisual))] private Object combatButtonVisual = null;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroPreviewVisual))] private Object heroPreviewVisual = null;
       
       #endregion
 
@@ -26,6 +28,9 @@ namespace _1Scripts.Visual
       }
       public IHeroSkillsVisual HeroSkillsVisual => heroSkillsVisual as IHeroSkillsVisual;
       public ISkillHistoryVisual SkillHistoryVisual => skillHistoryVisual as ISkillHistoryVisual;
+      
+      public ICombatButtonVisual CombatButtonVisual => combatButtonVisual as ICombatButtonVisual;
+      public IHeroPreviewVisual HeroPreviewVisual  => heroPreviewVisual as IHeroPreviewVisual;
 
       #endregion
 

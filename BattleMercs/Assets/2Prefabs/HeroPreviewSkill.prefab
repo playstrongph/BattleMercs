@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1415578496786337565}
   - component: {fileID: 1415578496786337563}
   - component: {fileID: 1415578496786337564}
+  - component: {fileID: 5832588899875656332}
   m_Layer: 0
   m_Name: SkillPreviewFrames
   m_TagString: Untagged
@@ -75,6 +76,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5832588899875656332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415578496786337566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8f6b1dd9da705841956567721dbdcfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillPreviewFrame: {fileID: 1415578496786337564}
+  frames:
+  - {fileID: 6308278330998182386, guid: 1d58eb9aeb55c7242a6f8d0d56718f85, type: 3}
+  - {fileID: 2531894167454913421, guid: 1d58eb9aeb55c7242a6f8d0d56718f85, type: 3}
+  - {fileID: -6372847374873367398, guid: 1d58eb9aeb55c7242a6f8d0d56718f85, type: 3}
+  - {fileID: -8614387202556066374, guid: 1d58eb9aeb55c7242a6f8d0d56718f85, type: 3}
 --- !u!1 &1415578496954242056
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +106,7 @@ GameObject:
   - component: {fileID: 1415578496954242101}
   - component: {fileID: 1415578496954242102}
   m_Layer: 0
-  m_Name: SkillName
+  m_Name: SkillNameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,7 +240,7 @@ GameObject:
   - component: {fileID: 1415578497138090052}
   - component: {fileID: 1415578497138090053}
   m_Layer: 0
-  m_Name: SkillDescription
+  m_Name: SkillDescriptionText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -354,7 +373,7 @@ GameObject:
   - component: {fileID: 1415578497413699442}
   - component: {fileID: 1415578497413699443}
   m_Layer: 0
-  m_Name: SkillElement
+  m_Name: SkillElementText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -903,6 +922,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1415578498166952901}
+  - component: {fileID: 9140458099442843089}
   m_Layer: 0
   m_Name: HeroPreviewSkill
   m_TagString: Untagged
@@ -938,6 +958,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 586.0697, y: 595.1556}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &9140458099442843089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415578498166952902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d90371d41a512f44a0380b8112d77fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillPreviewFrames: {fileID: 5832588899875656332}
+  skillPreviewGraphic: {fileID: 1415578498116120007}
+  cooldownGraphic: {fileID: 1415578498530290041}
+  speedGraphic: {fileID: 1415578497817915963}
+  cooldownText: {fileID: 1415578497932128615}
+  speedText: {fileID: 1415578497565523850}
+  skillNameText: {fileID: 1415578496954242102}
+  skillElementText: {fileID: 1415578497413699443}
+  skillDescriptionText: {fileID: 1415578497138090053}
 --- !u!1 &1415578498512501628
 GameObject:
   m_ObjectHideFlags: 0

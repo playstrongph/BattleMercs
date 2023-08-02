@@ -435,7 +435,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
+  m_fontSize: 12
   m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -994,8 +994,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7305401988604356882}
+  - component: {fileID: 4318939328357336720}
   m_Layer: 0
-  m_Name: HeroPreview
+  m_Name: HeroPreviewHero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1029,6 +1030,26 @@ RectTransform:
   m_AnchoredPosition: {x: -0.2937622, y: -0.3204193}
   m_SizeDelta: {x: -0.40933228, y: -0.72003853}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4318939328357336720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7305401988604356883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ff28534336da946886210720c4eb01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroFramesVisual: {fileID: 9061017711195330355}
+  armor: {fileID: 1745400227}
+  namePlate: {fileID: 210708988}
+  racePlate: {fileID: 1921943036}
+  attackText: {fileID: 357818177}
+  healthText: {fileID: 1992010176}
+  nameText: {fileID: 514299424}
+  raceText: {fileID: 879210026}
 --- !u!1 &7305401988950330418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,6 +1061,7 @@ GameObject:
   - component: {fileID: 7305401988950330417}
   - component: {fileID: 7305401988950330423}
   - component: {fileID: 7305401988950330416}
+  - component: {fileID: 9061017711195330355}
   m_Layer: 0
   m_Name: HeroFrames
   m_TagString: Untagged
@@ -1105,6 +1127,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9061017711195330355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7305401988950330418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbfb14da2aa4c364a9a9ea877b2fe28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frameInUse: {fileID: 7305401988950330416}
+  frameSelection:
+  - {fileID: -4902278355354446413, guid: 2511d2230a7a5ce469e17de8fc14c6e5, type: 3}
+  - {fileID: -9130639797075620102, guid: 56fafa7066507ca4bbb7a4f266d5826d, type: 3}
+  - {fileID: -5524865532692075295, guid: 48066e6ab3844304f91c39c0ba3ab86d, type: 3}
+  - {fileID: -5526074859663678738, guid: 27b10edc8ccbfd44491237dec6f444e7, type: 3}
 --- !u!1 &7305401989640124885
 GameObject:
   m_ObjectHideFlags: 0

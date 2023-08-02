@@ -8,5 +8,7 @@
         IPlayerVisual EnemyPlayerVisual { get; }
         IHeroSkillsVisual HeroSkillsVisual { get; }
         ISkillHistoryVisual SkillHistoryVisual { get; }
+        ICombatButtonVisual CombatButtonVisual { get; }
+        IHeroPreviewVisual HeroPreviewVisual { get; }
     }
 }
