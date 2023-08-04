@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 983782808618756123}
   - component: {fileID: 983782808618756101}
   - component: {fileID: 983782808618756122}
+  - component: {fileID: 5762438554290840505}
   m_Layer: 0
   m_Name: HeroFrames
   m_TagString: Untagged
@@ -76,6 +77,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5762438554290840505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983782808618756120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbfb14da2aa4c364a9a9ea877b2fe28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frameInUse: {fileID: 983782808711788941}
+  frameSelection:
+  - {fileID: -4902278355354446413, guid: 2511d2230a7a5ce469e17de8fc14c6e5, type: 3}
+  - {fileID: -9130639797075620102, guid: 56fafa7066507ca4bbb7a4f266d5826d, type: 3}
+  - {fileID: -5524865532692075295, guid: 48066e6ab3844304f91c39c0ba3ab86d, type: 3}
+  - {fileID: -5526074859663678738, guid: 27b10edc8ccbfd44491237dec6f444e7, type: 3}
 --- !u!1 &983782808689961884
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,7 +107,7 @@ GameObject:
   - component: {fileID: 983782808689961881}
   - component: {fileID: 983782808689961886}
   m_Layer: 0
-  m_Name: Arrow
+  m_Name: ArrowImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -238,7 +257,7 @@ GameObject:
   - component: {fileID: 983782809334353166}
   - component: {fileID: 983782809334353167}
   m_Layer: 0
-  m_Name: ArrowGlow
+  m_Name: ArrowGlowImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -878,6 +897,7 @@ GameObject:
   - component: {fileID: 4611413834328748770}
   - component: {fileID: 4611413834328748700}
   - component: {fileID: 4611413834328748771}
+  - component: {fileID: 9159432611185413892}
   m_Layer: 0
   m_Name: PreviewFrames
   m_TagString: Untagged
@@ -942,6 +962,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9159432611185413892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4611413834328748769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8f6b1dd9da705841956567721dbdcfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillPreviewFrame: {fileID: 4611413834328748771}
+  frames:
+  - {fileID: 6308278330998182386, guid: 1d58eb9aeb55c7242a6f8d0d56718f85, type: 3}
+  - {fileID: 2531894167454913421, guid: 1d58eb9aeb55c7242a6f8d0d56718f85, type: 3}
+  - {fileID: -6372847374873367398, guid: 1d58eb9aeb55c7242a6f8d0d56718f85, type: 3}
+  - {fileID: -8614387202556066374, guid: 1d58eb9aeb55c7242a6f8d0d56718f85, type: 3}
 --- !u!1 &4611413834426324413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,7 +1350,7 @@ GameObject:
   - component: {fileID: 4611413834648838809}
   - component: {fileID: 4611413834648838808}
   m_Layer: 0
-  m_Name: Cooldown
+  m_Name: CooldownImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1387,7 +1425,7 @@ GameObject:
   - component: {fileID: 4611413834918026462}
   - component: {fileID: 4611413834918026461}
   m_Layer: 0
-  m_Name: Speed
+  m_Name: SpeedImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1460,8 +1498,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4611413835491685849}
   - component: {fileID: 4611413835491685850}
+  - component: {fileID: 3743654975927288507}
   m_Layer: 0
-  m_Name: SkillUsed
+  m_Name: SkillUsedVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1519,3 +1558,28 @@ Canvas:
   m_SortingLayerID: 1811880437
   m_SortingOrder: 2
   m_TargetDisplay: 0
+--- !u!114 &3743654975927288507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4611413835491685848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ba78e948e649d4aa31a5f4c91e1af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillPreviewFrames: {fileID: 9159432611185413892}
+  heroFramesVisual: {fileID: 5762438554290840505}
+  skillGraphic: {fileID: 4611413833879520933}
+  cooldownImage: {fileID: 4611413834648838808}
+  speedImage: {fileID: 4611413834918026461}
+  arrowGlowImage: {fileID: 983782809334353167}
+  arrowImage: {fileID: 983782808689961886}
+  heroImage: {fileID: 983782808711788941}
+  nameText: {fileID: 4611413834624598143}
+  elementText: {fileID: 4611413834033968257}
+  descriptionText: {fileID: 4611413833852008792}
+  cooldownText: {fileID: 4611413834639832247}
+  speedText: {fileID: 4611413833960317764}
