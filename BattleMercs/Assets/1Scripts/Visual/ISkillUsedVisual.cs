@@ -1,4 +1,5 @@
 ﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace _1Scripts.Visual
@@ -7,6 +8,7 @@ namespace _1Scripts.Visual
     {
         ISkillPreviewFrames SkillPreviewFrames { get; }
         IHeroFramesVisual HeroFramesVisual { get; }
+        Canvas Canvas { get; }
         Image SkillGraphic { get; }
         Image CooldownImage { get; }
         Image SpeedImage { get; }

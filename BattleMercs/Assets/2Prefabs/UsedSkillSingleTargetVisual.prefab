@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 2640218734755465507}
   - component: {fileID: 8651711915809757539}
   m_Layer: 0
-  m_Name: Armor
+  m_Name: ArmorImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 2037779194618592429}
   - component: {fileID: 2037779194618592430}
   m_Layer: 0
-  m_Name: RacePlate
+  m_Name: RacePlateImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -714,7 +714,7 @@ GameObject:
   - component: {fileID: 2037779195846935612}
   - component: {fileID: 2037779195846935613}
   m_Layer: 0
-  m_Name: NamePlate
+  m_Name: NamePlateImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1221,6 +1221,7 @@ GameObject:
   - component: {fileID: 735849269550639866}
   - component: {fileID: 7514920308874682863}
   - component: {fileID: 2885043047819597829}
+  - component: {fileID: 8249916027732112658}
   m_Layer: 0
   m_Name: HeroFrames
   m_TagString: Untagged
@@ -1286,6 +1287,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8249916027732112658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4784686040873332345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbfb14da2aa4c364a9a9ea877b2fe28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frameInUse: {fileID: 2897857654714248275}
+  frameSelection:
+  - {fileID: -4902278355354446413, guid: 2511d2230a7a5ce469e17de8fc14c6e5, type: 3}
+  - {fileID: -9130639797075620102, guid: 56fafa7066507ca4bbb7a4f266d5826d, type: 3}
+  - {fileID: -5524865532692075295, guid: 48066e6ab3844304f91c39c0ba3ab86d, type: 3}
+  - {fileID: -5526074859663678738, guid: 27b10edc8ccbfd44491237dec6f444e7, type: 3}
 --- !u!1 &5117445953757772250
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,8 +1449,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5651042336097501132}
   - component: {fileID: 795026695}
+  - component: {fileID: 5473707335517809784}
   m_Layer: 0
-  m_Name: UsedSkillSingleTarget
+  m_Name: UsedSkillSingleTargetVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1485,7 +1505,31 @@ Canvas:
   m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 1634822591
   m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!114 &5473707335517809784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5651042336097501135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab9e06cd8603d94b985329d7bee1a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroFramesVisual: {fileID: 8249916027732112658}
+  armorImage: {fileID: 8651711915809757539}
+  namePlateImage: {fileID: 2037779195846935613}
+  racePlateImage: {fileID: 2037779194618592430}
+  damageGraphic: {fileID: 2037779195284407314}
+  criticalDamageGraphic: {fileID: 2037779195228050382}
+  attackText: {fileID: 7362724774066660974}
+  healthText: {fileID: 64089581802435034}
+  armorText: {fileID: 2037779195931276635}
+  nameText: {fileID: 2037779196057077277}
+  raceText: {fileID: 2037779195362112257}
+  damageText: {fileID: 2037779194836248859}

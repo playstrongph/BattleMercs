@@ -13,7 +13,8 @@ namespace _1Scripts.Visual
       [Header("Components")] 
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPreviewFrames))] private Object skillPreviewFrames = null;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroFramesVisual))] private Object heroFramesVisual = null;
-
+      [SerializeField] private Canvas canvas = null;
+      
       [Header("Images")] 
       [SerializeField] private Image skillGraphic = null;
       [SerializeField] private Image cooldownImage = null;
@@ -36,6 +37,7 @@ namespace _1Scripts.Visual
       //Components
       public ISkillPreviewFrames SkillPreviewFrames => skillPreviewFrames as ISkillPreviewFrames;
       public IHeroFramesVisual HeroFramesVisual => heroFramesVisual as IHeroFramesVisual;
+      public Canvas Canvas => canvas;
       
       //Images
       public Image SkillGraphic => skillGraphic;

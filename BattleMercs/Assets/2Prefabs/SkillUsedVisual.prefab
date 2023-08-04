@@ -1572,6 +1572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillPreviewFrames: {fileID: 9159432611185413892}
   heroFramesVisual: {fileID: 5762438554290840505}
+  canvas: {fileID: 4611413835491685850}
   skillGraphic: {fileID: 4611413833879520933}
   cooldownImage: {fileID: 4611413834648838808}
   speedImage: {fileID: 4611413834918026461}
