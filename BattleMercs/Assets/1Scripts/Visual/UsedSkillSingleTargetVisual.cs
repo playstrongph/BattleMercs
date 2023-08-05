@@ -4,12 +4,16 @@ using UnityEngine.UI;
 
 namespace _1Scripts.Visual
 {
-   public class UsedSkillSingleTargetVisual : MonoBehaviour
+   public class UsedSkillSingleTargetVisual : MonoBehaviour, IUsedSkillSingleTargetVisual
    {
       #region VARIABLES
       
       [Header("Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroFramesVisual))] private Object heroFramesVisual = null;
+
+      [SerializeField] private Canvas canvas = null;
+      [SerializeField] private Transform thisTransform = null;
+      
 
       [Header("Images")] 
       [SerializeField] private Image armorImage = null;
@@ -33,6 +37,8 @@ namespace _1Scripts.Visual
 
       //Components
       public IHeroFramesVisual HeroFramesVisual => heroFramesVisual as IHeroFramesVisual;
+      public Canvas Canvas => canvas;
+      public Transform ThisTransform => thisTransform;
       
       //Images
       public Image ArmorImage => armorImage;

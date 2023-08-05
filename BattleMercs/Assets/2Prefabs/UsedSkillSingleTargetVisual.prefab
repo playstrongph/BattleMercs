@@ -1522,6 +1522,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroFramesVisual: {fileID: 8249916027732112658}
+  canvas: {fileID: 795026695}
+  thisTransform: {fileID: 5651042336097501132}
   armorImage: {fileID: 8651711915809757539}
   namePlateImage: {fileID: 2037779195846935613}
   racePlateImage: {fileID: 2037779194618592430}
