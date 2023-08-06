@@ -800,6 +800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 323655420811409318}
   - component: {fileID: 323655420811409321}
+  - component: {fileID: 6677769261270455502}
   m_Layer: 0
   m_Name: SkillTargetingVisual
   m_TagString: Untagged
@@ -850,6 +851,44 @@ Canvas:
   m_SortingLayerID: 1574300363
   m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!114 &6677769261270455502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323655420811409319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b80d0006f598248b7f8aa32980b266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crossHair: {fileID: 323655420662792292}
+  arrow: {fileID: 323655420812683484}
+  nodes:
+  - {fileID: 323655419367723111}
+  - {fileID: 323655419278470365}
+  - {fileID: 323655419377685181}
+  - {fileID: 323655419704627442}
+  - {fileID: 323655420987683219}
+  - {fileID: 323655420265885469}
+  - {fileID: 323655419593745770}
+  - {fileID: 323655420009451648}
+  - {fileID: 323655420476739246}
+  - {fileID: 323655419185412368}
+  crossHairImage: {fileID: 323655420662792295}
+  arrowImage: {fileID: 323655420812683486}
+  nodesImage:
+  - {fileID: 323655419367723110}
+  - {fileID: 323655419278470364}
+  - {fileID: 323655419377685180}
+  - {fileID: 323655419704627445}
+  - {fileID: 323655420987683218}
+  - {fileID: 323655420265885468}
+  - {fileID: 323655419593745773}
+  - {fileID: 323655420009451651}
+  - {fileID: 323655420476739217}
+  - {fileID: 323655419185412371}
 --- !u!1 &323655420812683485
 GameObject:
   m_ObjectHideFlags: 0
