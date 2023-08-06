@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4025127891384342246}
   - component: {fileID: 1847427112}
+  - component: {fileID: 4041375816393396379}
   m_Layer: 0
   m_Name: BattleSceneLogicManager
   m_TagString: Untagged
@@ -46,3 +47,17 @@ MonoBehaviour:
   prefabBattleSceneManagerVisual: {fileID: 407357391222785282, guid: 86f42a1ae533925429bc500618128eef,
     type: 3}
   battleSceneManagerVisual: {fileID: 0}
+  initializeBattleSceneManagerVisual: {fileID: 4041375816393396379}
+--- !u!114 &4041375816393396379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4025127891384342249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b39baed8529b5446b7f15dfc9885890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleSceneLogicManager: {fileID: 1847427112}

@@ -14,14 +14,28 @@ namespace _1Scripts.Logic
       [SerializeField] private GameObject prefabBattleSceneManagerVisual = null;
       
       [Header("Inspector References")]
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManagerVisual))] private Object battleSceneManagerVisual = null;
+      [SerializeField] private GameObject battleSceneManagerVisual = null;
+
+      [Header("Components")]
+      [SerializeField]
+      [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeBattleSceneManagerVisual))] private Object initializeBattleSceneManagerVisual = null;
+      
 
       #endregion
 
       #region PROPERTIES
 
-      private IBattleSceneManagerVisual BattleSceneManagerVisual => battleSceneManagerVisual as IBattleSceneManagerVisual;
+      public GameObject PrefabBattleSceneManagerVisual => prefabBattleSceneManagerVisual;
+
+      public IBattleSceneManagerVisual BattleSceneManagerVisual => battleSceneManagerVisual.GetComponent<IBattleSceneManagerVisual>();
+
+      public GameObject SetBattleSceneManagerVisual
+      {
+         set => battleSceneManagerVisual = value;
+      }
       
+      //Components
+      public IInitializeBattleSceneManagerVisual InitializeBattleSceneManagerVisual => initializeBattleSceneManagerVisual as IInitializeBattleSceneManagerVisual;
 
       #endregion
 
@@ -29,18 +43,11 @@ namespace _1Scripts.Logic
 
       private void Start()
       {
-         //TODO: In the future, perform a Network Instantiate for both host and clients
-         battleSceneManagerVisual = Instantiate(prefabBattleSceneManagerVisual);
-         
-         //TEST
-         StartCoroutine(TestSetValue(battleSceneManagerVisual as GameObject));
+         //TODO: In the future, Network instantiate
+         InitializeBattleSceneManagerVisual.StartActions();
       }
 
-      private IEnumerator TestSetValue(GameObject test)
-      {
-         test.GetComponent<IBattleSceneManagerVisual>().BattleSceneLogicManager = this;
-         yield return null;
-      }
+      
 
 
 
