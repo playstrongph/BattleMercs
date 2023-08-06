@@ -549,6 +549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9029131192879293165}
   - component: {fileID: 9029131192879293154}
+  - component: {fileID: 1886664046596961657}
   m_Layer: 0
   m_Name: DisplaySkillTargetingVisual
   m_TagString: Untagged
@@ -599,6 +600,44 @@ Canvas:
   m_SortingLayerID: 1574300363
   m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!114 &1886664046596961657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9029131192879293164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32567b10a1371384596870f01a8d16f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crossHair: {fileID: 9029131193262773551}
+  arrow: {fileID: 9029131192875924887}
+  nodes:
+  - {fileID: 9029131192441816364}
+  - {fileID: 9029131192264751510}
+  - {fileID: 9029131192431855606}
+  - {fileID: 9029131191838574009}
+  - {fileID: 9029131192971453656}
+  - {fileID: 9029131193391266390}
+  - {fileID: 9029131192182255649}
+  - {fileID: 9029131193679136203}
+  - {fileID: 9029131193480289253}
+  - {fileID: 9029131192322157659}
+  crossHairImage: {fileID: 9029131193262773548}
+  arrowImage: {fileID: 9029131192875924885}
+  nodesImage:
+  - {fileID: 9029131192441816365}
+  - {fileID: 9029131192264751511}
+  - {fileID: 9029131192431855607}
+  - {fileID: 9029131191838574014}
+  - {fileID: 9029131192971453657}
+  - {fileID: 9029131193391266391}
+  - {fileID: 9029131192182255654}
+  - {fileID: 9029131193679136200}
+  - {fileID: 9029131193480289242}
+  - {fileID: 9029131192322157656}
 --- !u!1 &9029131192971453659
 GameObject:
   m_ObjectHideFlags: 0

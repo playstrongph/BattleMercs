@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace _1Scripts.Visual
 {
-   public class SkillTargetingVisual : MonoBehaviour, ISkillTargetingVisual
+   public class DisplaySkillTargetingVisual : MonoBehaviour
    {
       #region VARIABLES
 
