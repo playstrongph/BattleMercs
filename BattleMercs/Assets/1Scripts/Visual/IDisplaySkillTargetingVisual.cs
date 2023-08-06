@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace _1Scripts.Visual
 {
-    public interface ISkillTargetingVisual
+    public interface IDisplaySkillTargetingVisual
     {
         IBattleSceneManagerVisual BattleSceneManagerVisual { get; }
         Transform CrossHair { get; }

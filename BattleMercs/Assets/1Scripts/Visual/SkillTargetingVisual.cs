@@ -7,6 +7,9 @@ namespace _1Scripts.Visual
    public class SkillTargetingVisual : MonoBehaviour, ISkillTargetingVisual
    {
       #region VARIABLES
+      
+      [Header("Inspector References")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManagerVisual))] private Object battleSceneManagerVisual = null;
 
       [Header("Transforms")] 
       [SerializeField] private Transform crossHair = null;
@@ -24,7 +27,7 @@ namespace _1Scripts.Visual
       #endregion
 
       #region PROPERTIES
-
+      public IBattleSceneManagerVisual BattleSceneManagerVisual => battleSceneManagerVisual as IBattleSceneManagerVisual;
       public Transform CrossHair => crossHair;
       public Transform Arrow => arrow;
       public List<Transform> Nodes => nodes;
