@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79023d7932ee4f844b181a06c7e7c2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleSceneLogicManager: {fileID: 0}
   gameBoardVisual: {fileID: 8229039373553431457}
   mainPlayerVisual: {fileID: 3913210454597308276}
   enemyPlayerVisual: {fileID: 3913210453856126252}
@@ -2459,6 +2460,11 @@ PrefabInstance:
     - target: {fileID: 323655420811409321, guid: 919dec3145995af45af2fb05e60990c9,
         type: 3}
       propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 4492242272907343952}
+    - target: {fileID: 3646527161293496577, guid: 919dec3145995af45af2fb05e60990c9,
+        type: 3}
+      propertyPath: cameraUsed
       value: 
       objectReference: {fileID: 4492242272907343952}
     - target: {fileID: 6677769261270455502, guid: 919dec3145995af45af2fb05e60990c9,
