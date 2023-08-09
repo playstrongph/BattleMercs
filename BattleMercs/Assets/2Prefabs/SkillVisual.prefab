@@ -869,6 +869,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee84e5ca9d75f146a69f5788de4736a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillVisualInputActions: {fileID: 7136167246501256177}
+  skillVisualCollider: {fileID: 530503993789234235}
   skillReadyVisualTransform: {fileID: 3240097524160099078}
   skillNotReadyVisualTransform: {fileID: 1983185225}
   passiveSkillVisualTransform: {fileID: 316922913}
@@ -905,6 +907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8de360b542dbe149919bea726de5f13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillVisual: {fileID: 5940426726895412396}
 --- !u!1 &3240097524032005631
 GameObject:
   m_ObjectHideFlags: 0

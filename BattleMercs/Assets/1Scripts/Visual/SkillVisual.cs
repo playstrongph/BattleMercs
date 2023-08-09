@@ -7,6 +7,11 @@ namespace _1Scripts.Visual
    public class SkillVisual : MonoBehaviour, ISkillVisual
    {
       #region VARIABLES
+
+      [Header("Components")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisualInputActions))] private Object skillVisualInputActions = null;
+
+      [SerializeField] private BoxCollider skillVisualCollider = null;
       
       [Header("Transforms")]
       [SerializeField] private Transform skillReadyVisualTransform = null;
@@ -30,6 +35,10 @@ namespace _1Scripts.Visual
       #endregion
 
       #region PROPERTIES
+      
+      //COMPONENTS
+      public ISkillVisualInputActions SkillVisualInputActions => skillVisualInputActions as ISkillVisualInputActions;
+      public BoxCollider SkillVisualCollider => skillVisualCollider;
       
       //TRANSFORMS
       public Transform SkillReadyVisualTransform => skillReadyVisualTransform;

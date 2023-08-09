@@ -6,6 +6,8 @@ namespace _1Scripts.Visual
 {
     public interface ISkillVisual
     {
+        ISkillVisualInputActions SkillVisualInputActions { get; }
+        BoxCollider SkillVisualCollider { get; }
         Transform SkillReadyVisualTransform { get; }
         Transform SkillNotReadyVisualTransform { get; }
         Transform PassiveSkillVisualTransform { get; }
