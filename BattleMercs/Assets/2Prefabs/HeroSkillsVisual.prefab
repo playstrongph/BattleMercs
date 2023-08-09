@@ -72,9 +72,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 255ca07cea84faa46b7e0391ba97f0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 7303433935170825732}
   threeSkillPanelVisual: {fileID: 8377659362689121397}
   fourSkillPanelVisual: {fileID: 5626623284273940199}
+  canvas: {fileID: 7303433935170825732}
   battleSceneManagerVisual: {fileID: 0}
 --- !u!1 &7303433935918806154
 GameObject:
@@ -566,6 +566,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.08420181
       objectReference: {fileID: 0}
+    - target: {fileID: 5940426726895412396, guid: d582b9a50ff145348af28fb63dc876a8,
+        type: 3}
+      propertyPath: heroSkillsVisual
+      value: 
+      objectReference: {fileID: 8933401931122290830}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d582b9a50ff145348af28fb63dc876a8, type: 3}
 --- !u!224 &3240097524326806183 stripped
@@ -738,6 +743,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.08420181
       objectReference: {fileID: 0}
+    - target: {fileID: 5940426726895412396, guid: d582b9a50ff145348af28fb63dc876a8,
+        type: 3}
+      propertyPath: heroSkillsVisual
+      value: 
+      objectReference: {fileID: 8933401931122290830}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d582b9a50ff145348af28fb63dc876a8, type: 3}
 --- !u!224 &3240097524408468862 stripped
@@ -918,6 +928,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.08420181
       objectReference: {fileID: 0}
+    - target: {fileID: 5940426726895412396, guid: d582b9a50ff145348af28fb63dc876a8,
+        type: 3}
+      propertyPath: heroSkillsVisual
+      value: 
+      objectReference: {fileID: 8933401931122290830}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d582b9a50ff145348af28fb63dc876a8, type: 3}
 --- !u!224 &3240097524606536581 stripped
@@ -1099,6 +1114,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.08420181
       objectReference: {fileID: 0}
+    - target: {fileID: 5940426726895412396, guid: d582b9a50ff145348af28fb63dc876a8,
+        type: 3}
+      propertyPath: heroSkillsVisual
+      value: 
+      objectReference: {fileID: 8933401931122290830}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d582b9a50ff145348af28fb63dc876a8, type: 3}
 --- !u!224 &3240097525018638816 stripped
@@ -1279,6 +1299,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.08420181
       objectReference: {fileID: 0}
+    - target: {fileID: 5940426726895412396, guid: d582b9a50ff145348af28fb63dc876a8,
+        type: 3}
+      propertyPath: heroSkillsVisual
+      value: 
+      objectReference: {fileID: 8933401931122290830}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d582b9a50ff145348af28fb63dc876a8, type: 3}
 --- !u!224 &3240097525502954766 stripped
@@ -1451,6 +1476,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.08420181
       objectReference: {fileID: 0}
+    - target: {fileID: 5940426726895412396, guid: d582b9a50ff145348af28fb63dc876a8,
+        type: 3}
+      propertyPath: heroSkillsVisual
+      value: 
+      objectReference: {fileID: 8933401931122290830}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d582b9a50ff145348af28fb63dc876a8, type: 3}
 --- !u!224 &3240097525580680786 stripped
@@ -1632,6 +1662,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.08420181
       objectReference: {fileID: 0}
+    - target: {fileID: 5940426726895412396, guid: d582b9a50ff145348af28fb63dc876a8,
+        type: 3}
+      propertyPath: heroSkillsVisual
+      value: 
+      objectReference: {fileID: 8933401931122290830}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d582b9a50ff145348af28fb63dc876a8, type: 3}
 --- !u!224 &3240097525994454635 stripped

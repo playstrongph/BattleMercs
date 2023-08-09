@@ -6,6 +6,7 @@ namespace _1Scripts.Visual
 {
     public interface ISkillVisual
     {
+        IHeroSkillsVisual HeroSkillsVisual { get; }
         ISkillVisualInputActions SkillVisualInputActions { get; }
         BoxCollider SkillVisualCollider { get; }
         Transform SkillReadyVisualTransform { get; }
@@ -19,5 +20,7 @@ namespace _1Scripts.Visual
         Canvas PassiveSkillCanvas { get; }
         TextMeshProUGUI SpeedText { get; }
         TextMeshProUGUI CooldownText { get; }
+
+        Transform ThisTransform { get; }
     }
 }

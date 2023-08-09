@@ -7,7 +7,10 @@ namespace _1Scripts.Visual
    public class SkillVisual : MonoBehaviour, ISkillVisual
    {
       #region VARIABLES
-
+      
+      [Header("Inspector References")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillsVisual))] private Object heroSkillsVisual = null;
+      
       [Header("Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisualInputActions))] private Object skillVisualInputActions = null;
 
@@ -36,6 +39,9 @@ namespace _1Scripts.Visual
 
       #region PROPERTIES
       
+      //INSPECTOR REFERENCES
+      public IHeroSkillsVisual HeroSkillsVisual => heroSkillsVisual as IHeroSkillsVisual;
+      
       //COMPONENTS
       public ISkillVisualInputActions SkillVisualInputActions => skillVisualInputActions as ISkillVisualInputActions;
       public BoxCollider SkillVisualCollider => skillVisualCollider;
@@ -44,6 +50,8 @@ namespace _1Scripts.Visual
       public Transform SkillReadyVisualTransform => skillReadyVisualTransform;
       public Transform SkillNotReadyVisualTransform => skillNotReadyVisualTransform;
       public Transform PassiveSkillVisualTransform => passiveSkillVisualTransform;
+
+      public Transform ThisTransform => this.transform;
 
       //IMAGES
       public Image SkillReadyGraphic => skillReadyGraphic;

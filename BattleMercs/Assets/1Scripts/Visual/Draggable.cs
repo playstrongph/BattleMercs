@@ -4,7 +4,7 @@ using Object = UnityEngine.Object;
 
 namespace _1Scripts.Visual
 {
-   public class Draggable : MonoBehaviour
+   public class Draggable : MonoBehaviour, IDraggable
    {
       #region VARIABLES
 
