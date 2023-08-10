@@ -24,6 +24,8 @@ namespace _1Scripts.Visual
          SkillTargetingVisual.ThisTransform = skillVisual.ThisTransform;
 
         SkillTargetingVisual.Draggable.EnableDraggable();
+        
+        SkillTargetingVisual.ArrowLineAndCrossHairVisual.ShowArrowLineAndCrossHair();
       }
 
 

@@ -9,6 +9,8 @@ namespace _1Scripts.Visual
         IBattleSceneManagerVisual BattleSceneManagerVisual { get; }
         IDraggable Draggable { get; }
         ISelectSkillTargetVisual SelectSkillTargetVisual { get; }
+
+        IArrowLineAndCrossHairVisual ArrowLineAndCrossHairVisual { get; }
         Transform CrossHair { get; }
         Transform Arrow { get; }
         List<Transform> Nodes { get; }

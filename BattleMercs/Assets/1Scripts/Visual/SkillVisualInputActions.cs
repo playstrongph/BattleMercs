@@ -31,6 +31,11 @@ namespace _1Scripts.Visual
          SkillVisual.HeroSkillsVisual.BattleSceneManagerVisual.SkillTargetingVisual.SelectSkillTargetVisual.SelectingSkillTarget(SkillVisual);
       }
 
+      private void OnMouseUp()
+      {
+         SkillVisual.HeroSkillsVisual.BattleSceneManagerVisual.SkillTargetingVisual.Draggable.DisableDraggable();
+      }
+
       #endregion
    }
 }

@@ -15,7 +15,7 @@ namespace _1Scripts.Visual
       
       [Header("Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISelectSkillTargetVisual))] private Object selectSkillTargetVisual = null;
-
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IArrowLineAndCrossHairVisual))] private Object arrowLineAndCrossHairVisual = null;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IDraggable))] private Object draggable = null;
 
       [Header("Transforms")] 
@@ -34,6 +34,7 @@ namespace _1Scripts.Visual
       #region PROPERTIES
       public IBattleSceneManagerVisual BattleSceneManagerVisual => battleSceneManagerVisual as IBattleSceneManagerVisual;
       public ISelectSkillTargetVisual SelectSkillTargetVisual => selectSkillTargetVisual as ISelectSkillTargetVisual;
+      public IArrowLineAndCrossHairVisual ArrowLineAndCrossHairVisual => arrowLineAndCrossHairVisual as IArrowLineAndCrossHairVisual;
       public IDraggable Draggable => draggable as IDraggable;
       public Transform CrossHair => crossHair;
       public Transform Arrow => arrow;
