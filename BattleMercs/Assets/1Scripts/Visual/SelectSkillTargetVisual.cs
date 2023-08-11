@@ -21,7 +21,7 @@ namespace _1Scripts.Visual
 
       public void SelectingSkillTarget(ISkillVisual skillVisual)
       {
-         SkillTargetingVisual.ThisTransform = skillVisual.ThisTransform;
+         SkillTargetingVisual.ThisTransform.position = skillVisual.ThisTransform.position;
 
         SkillTargetingVisual.Draggable.EnableDraggable();
         

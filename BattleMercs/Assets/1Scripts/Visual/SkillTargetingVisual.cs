@@ -22,12 +22,15 @@ namespace _1Scripts.Visual
       [SerializeField] private Transform crossHair = null;
       [SerializeField] private Transform arrow = null;
       [SerializeField] private List<Transform> nodes = new List<Transform>();
-    
       
       [Header("Images")] 
       [SerializeField] private Image crossHairImage = null;
       [SerializeField] private Image arrowImage = null;
       [SerializeField] private List<Image> nodesImage = new List<Image>();
+      
+      //Other variables
+
+      private Vector3 SkillTargetingOrigin { get; set; }
 
       #endregion
 
@@ -40,7 +43,7 @@ namespace _1Scripts.Visual
       public Transform Arrow => arrow;
       public List<Transform> Nodes => nodes;
 
-      public Transform ThisTransform { get; set; }
+      public Transform ThisTransform => transform;
 
 
       public Image CrossHairImage => crossHairImage;
@@ -54,7 +57,15 @@ namespace _1Scripts.Visual
 
       private void Awake()
       {
-         ThisTransform = transform;
+         SkillTargetingOrigin = transform.position;
+      }
+      
+      /// <summary>
+      /// Resets the Skill Targeting Visual to original position
+      /// </summary>
+      public void ResetPositionToOrigin()
+      {
+         ThisTransform.position = SkillTargetingOrigin;
       }
 
       #endregion

@@ -17,6 +17,10 @@ namespace _1Scripts.Visual
         Image CrossHairImage { get; }
         Image ArrowImage { get; }
         List<Image> NodesImage { get; }
-        Transform ThisTransform { get; set; }
+        Transform ThisTransform { get;}
+
+        void ResetPositionToOrigin();
+
+
     }
 }

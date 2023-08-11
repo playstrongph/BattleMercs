@@ -33,7 +33,11 @@ namespace _1Scripts.Visual
 
       private void OnMouseUp()
       {
+         SkillVisual.HeroSkillsVisual.BattleSceneManagerVisual.SkillTargetingVisual.ResetPositionToOrigin();
+         
          SkillVisual.HeroSkillsVisual.BattleSceneManagerVisual.SkillTargetingVisual.Draggable.DisableDraggable();
+         
+         
       }
 
       #endregion

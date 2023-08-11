@@ -802,7 +802,6 @@ GameObject:
   - component: {fileID: 323655420811409321}
   - component: {fileID: 6677769261270455502}
   - component: {fileID: 4307043040627682997}
-  - component: {fileID: 7076632757376890874}
   m_Layer: 0
   m_Name: SkillTargetingVisual
   m_TagString: Untagged
@@ -867,7 +866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleSceneManagerVisual: {fileID: 0}
   selectSkillTargetVisual: {fileID: 4307043040627682997}
-  arrowLineAndCrossHairVisual: {fileID: 7076632757376890874}
+  arrowLineAndCrossHairVisual: {fileID: 3918482318381466848}
   draggable: {fileID: 3646527161293496577}
   crossHair: {fileID: 323655420662792292}
   arrow: {fileID: 323655420812683484}
@@ -908,23 +907,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillTargetingVisual: {fileID: 6677769261270455502}
---- !u!114 &7076632757376890874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323655420811409319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b878dc34842923e48a0a0954a8a05d13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillTargetingVisual: {fileID: 6677769261270455502}
-  distanceMultiplier: 40
-  scaleFactor: 1
-  distanceDivisor: 30
-  tFactor: 0.08
 --- !u!1 &323655420812683485
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,6 +920,7 @@ GameObject:
   - component: {fileID: 323655420812683457}
   - component: {fileID: 323655420812683486}
   - component: {fileID: 3646527161293496577}
+  - component: {fileID: 3918482318381466848}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -1030,6 +1013,23 @@ MonoBehaviour:
   skillTargetingVisual: {fileID: 6677769261270455502}
   cameraUsed: {fileID: 0}
   arrowCollider: {fileID: 323655420812683487}
+--- !u!114 &3918482318381466848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323655420812683485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b878dc34842923e48a0a0954a8a05d13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillTargetingVisual: {fileID: 6677769261270455502}
+  distanceMultiplier: 40
+  scaleFactor: 1
+  distanceDivisor: 30
+  tFactor: 0.08
 --- !u!1 &323655420987683216
 GameObject:
   m_ObjectHideFlags: 0
