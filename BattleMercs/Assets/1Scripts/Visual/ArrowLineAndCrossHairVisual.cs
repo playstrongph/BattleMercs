@@ -77,7 +77,7 @@ namespace _1Scripts.Visual
          {
             ShowTargetingArrow(notNormalized,direction);
             
-            //SkillTargetCollider.TargetNodes.ShowArrowNodes();
+            //TODO: Temp disabled
             ShowTargetingArrowNodes();
          
             //Enable Box Collider

@@ -57,6 +57,7 @@ namespace _1Scripts.Visual
          var screenMousePos = Input.mousePosition;
          screenMousePos.z = _zDisplacement;
          return CameraUsed.ScreenToWorldPoint(screenMousePos);
+         //return Camera.main.ScreenToWorldPoint(screenMousePos);
       }
       
       /// <summary>
@@ -87,7 +88,7 @@ namespace _1Scripts.Visual
          thisTransform.position = new Vector3(mousePos.x - _pointerDisplacement.x, mousePos.y - _pointerDisplacement.y, thisTransform.position.z);
          
          //TODO:
-         //SkillTargetingVisual.ShowArrowLineAndCrossHair.TurnOn();
+         SkillTargetingVisual.ArrowLineAndCrossHairVisual.ShowArrowLineAndCrossHair();
       }
       
       

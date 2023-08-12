@@ -25,7 +25,7 @@ namespace _1Scripts.Visual
 
         SkillTargetingVisual.Draggable.EnableDraggable();
         
-        SkillTargetingVisual.ArrowLineAndCrossHairVisual.ShowArrowLineAndCrossHair();
+        //SkillTargetingVisual.ArrowLineAndCrossHairVisual.ShowArrowLineAndCrossHair();
       }
 
 

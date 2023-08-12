@@ -869,6 +869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee84e5ca9d75f146a69f5788de4736a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heroSkillsVisual: {fileID: 0}
   skillVisualInputActions: {fileID: 7136167246501256177}
   skillVisualCollider: {fileID: 530503993789234235}
   skillReadyVisualTransform: {fileID: 3240097524160099078}
@@ -893,7 +894,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 50, y: 50, z: 1}
+  m_Size: {x: 30, y: 30, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7136167246501256177
 MonoBehaviour:
