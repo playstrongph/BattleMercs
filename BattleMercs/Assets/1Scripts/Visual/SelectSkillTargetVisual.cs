@@ -18,15 +18,27 @@ namespace _1Scripts.Visual
       #endregion
         
       #region METHODS
-
-      public void SelectingSkillTarget(ISkillVisual skillVisual)
+      
+      /// <summary>
+      /// Start skill targeting permissive checks (SkillType, EnableStatus, and ReadinessStatus)
+      /// </summary>
+      /// <param name="skillVisual"></param>
+      public void SkillTargetingPermissiveChecks(ISkillVisual skillVisual)
+      {
+         //TODO: Replace this with permissive checks for SkillType, SkillEnableStatus, SkillReadinessStatus
+         StartSkillTargeting(skillVisual);
+      }
+      
+      /// <summary>
+      /// Start Skill Targeting after skill targeting permissive checks (SkillType, EnableStatus, and ReadinessStatus)
+      /// </summary>
+      /// <param name="skillVisual"></param>
+      public void StartSkillTargeting(ISkillVisual skillVisual)
       {
          SkillTargetingVisual.ThisTransform.position = skillVisual.ThisTransform.position;
-
-        SkillTargetingVisual.Draggable.EnableDraggable();
-        
-        //SkillTargetingVisual.ArrowLineAndCrossHairVisual.ShowArrowLineAndCrossHair();
+         SkillTargetingVisual.Draggable.EnableDraggable();
       }
+
 
 
       #endregion

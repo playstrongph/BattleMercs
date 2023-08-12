@@ -3,6 +3,8 @@
     public interface ISelectSkillTargetVisual
     {
         ISkillTargetingVisual SkillTargetingVisual { get; }
-        void SelectingSkillTarget(ISkillVisual skillVisual);
+        void SkillTargetingPermissiveChecks(ISkillVisual skillVisual);
+
+        void StartSkillTargeting(ISkillVisual skillVisual);
     }
 }

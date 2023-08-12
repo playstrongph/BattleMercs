@@ -28,7 +28,7 @@ namespace _1Scripts.Visual
 
       private void OnMouseDown()
       {
-         SkillVisual.HeroSkillsVisual.BattleSceneManagerVisual.SkillTargetingVisual.SelectSkillTargetVisual.SelectingSkillTarget(SkillVisual);
+         SkillVisual.HeroSkillsVisual.BattleSceneManagerVisual.SkillTargetingVisual.SelectSkillTargetVisual.SkillTargetingPermissiveChecks(SkillVisual);
       }
 
       private void OnMouseUp()
