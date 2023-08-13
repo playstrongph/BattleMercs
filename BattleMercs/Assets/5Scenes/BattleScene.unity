@@ -3148,8 +3148,14 @@ MonoBehaviour:
   allPlayers:
   - playerName: Player1
     playerIDNumber: {fileID: 11400000, guid: 3d9dc0345a238c14eb307c495ae170ee, type: 2}
+    soulsCount: 0
+    currentEnemyPlayer: {fileID: 0}
+    playerHeroes: []
   - playerName: Player2
     playerIDNumber: {fileID: 11400000, guid: 610fd37ee9e44674ab631d9e82eb833c, type: 2}
+    soulsCount: 0
+    currentEnemyPlayer: {fileID: 0}
+    playerHeroes: []
 --- !u!1 &1939456911
 GameObject:
   m_ObjectHideFlags: 0

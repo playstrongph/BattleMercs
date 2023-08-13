@@ -36,7 +36,12 @@ namespace _1Scripts.Logic
          
          [Header("SET IN RUNTIME")]
          [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private Object currentEnemyPlayer;
+         
+         //Hero Lists
          [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> playerHeroes;
+         [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> aliveHeroes;
+         [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> deadHeroes;
+         [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> extinctHeroes;
          
          
          
@@ -93,10 +98,69 @@ namespace _1Scripts.Logic
                }
             }
          }
-
-
-
-
+         public List<IHeroLogic> AliveHeroes
+         {
+            get
+            {
+               var newList = new List<IHeroLogic>();
+               foreach (var hero in aliveHeroes)
+               {
+                  newList.Add(hero as IHeroLogic);
+               }
+               return newList;
+            }
+            
+            private set
+            {
+               aliveHeroes = new List<Object>();
+               foreach (var hero in aliveHeroes)
+               {
+                  value.Add(hero as IHeroLogic);
+               }
+            }
+         }
+         public List<IHeroLogic> DeadHeroes
+         {
+            get
+            {
+               var newList = new List<IHeroLogic>();
+               foreach (var hero in deadHeroes)
+               {
+                  newList.Add(hero as IHeroLogic);
+               }
+               return newList;
+            }
+            
+            private set
+            {
+               deadHeroes = new List<Object>();
+               foreach (var hero in deadHeroes)
+               {
+                  value.Add(hero as IHeroLogic);
+               }
+            }
+         }
+         public List<IHeroLogic> ExtinctHeroes
+         {
+            get
+            {
+               var newList = new List<IHeroLogic>();
+               foreach (var hero in extinctHeroes)
+               {
+                  newList.Add(hero as IHeroLogic);
+               }
+               return newList;
+            }
+            
+            private set
+            {
+               extinctHeroes = new List<Object>();
+               foreach (var hero in extinctHeroes)
+               {
+                  value.Add(hero as IHeroLogic);
+               }
+            }
+         }
 
          #endregion
       }
