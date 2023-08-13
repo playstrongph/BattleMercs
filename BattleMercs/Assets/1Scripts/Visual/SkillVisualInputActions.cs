@@ -36,8 +36,6 @@ namespace _1Scripts.Visual
          SkillVisual.HeroSkillsVisual.BattleSceneManagerVisual.SkillTargetingVisual.ResetPositionToOrigin();
          
          SkillVisual.HeroSkillsVisual.BattleSceneManagerVisual.SkillTargetingVisual.Draggable.DisableDraggable();
-         
-         
       }
 
       #endregion
