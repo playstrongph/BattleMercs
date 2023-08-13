@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using _1Scripts.Logic.SOLogicScripts;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Object = UnityEngine.Object;
 
 namespace _1Scripts.Logic
@@ -15,6 +14,8 @@ namespace _1Scripts.Logic
 
 
       [SerializeField] private List<PlayerElements> playerElements = new List<PlayerElements>();
+
+      public List<PlayerElements> PlayerElementsList => playerElements;
 
       #endregion
         
@@ -30,13 +31,34 @@ namespace _1Scripts.Logic
       {
          [SerializeField] private string playerElementName;
          [SerializeField] private List<PlayerInformation> playerInformation;
+
+         public string PlayerElementsName
+         {
+            get => playerElementName;
+            private set => playerElementName = value;
+         }
+
+         public List<PlayerInformation> PlayerInformation
+         {
+            get => playerInformation;
+
+            set => playerInformation = value;
+         }
+
       }
 
       [Serializable]
       public struct PlayerInformation
       {
          [SerializeField] private string playerName;
-         [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerNumberAsset))] private Object playerIDNumber;
+
+         public string PlayerName
+         {
+            get => playerName;
+            private set => playerName = value;
+         }
+
+            [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerNumberAsset))] private Object playerIDNumber;
 
          public IPlayerNumberAsset PlayerIDNumber
          {
@@ -51,7 +73,22 @@ namespace _1Scripts.Logic
         
       #region METHODS
 
-    
+      private void Awake()
+      {
+         TestPrint();
+      }
+
+      private void TestPrint()
+      {
+         Debug.Log("Player Element 1" +PlayerElementsList[0].PlayerElementsName);
+         Debug.Log("Player Element 1" +PlayerElementsList[0].PlayerInformation[0].PlayerName);
+         
+         Debug.Log("Player Element 1" +PlayerElementsList[1].PlayerElementsName);
+         Debug.Log("Player Element 1" +PlayerElementsList[1].PlayerInformation[1].PlayerName);
+
+         Debug.Log("End");
+      }
+
 
       #endregion
    }

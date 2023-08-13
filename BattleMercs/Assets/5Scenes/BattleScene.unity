@@ -3146,14 +3146,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerElements:
-  - playerElementName: Player 1
+  - playerElementName: Player Element 1
     playerInformation:
-    - playerName: Player1
+    - playerName: PEI 1
       playerIDNumber: {fileID: 0}
-    - playerName: Player2
+    - playerName: PEI 2
       playerIDNumber: {fileID: 0}
-  - playerElementName: Player 2
-    playerInformation: []
+  - playerElementName: Player Element 2
+    playerInformation:
+    - playerName: PE21
+      playerIDNumber: {fileID: 0}
+    - playerName: PE22
+      playerIDNumber: {fileID: 0}
 --- !u!1 &1939456911
 GameObject:
   m_ObjectHideFlags: 0
