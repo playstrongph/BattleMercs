@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using _1Scripts.Logic.SOLogicScripts;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Object = UnityEngine.Object;
 
 namespace _1Scripts.Logic
@@ -33,9 +32,12 @@ namespace _1Scripts.Logic
          [SerializeField] private string playerName;
          [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerNumberAsset))] private Object playerIDNumber;
          [SerializeField] private int soulsCount;
+            
          
          [Header("SET IN RUNTIME")]
          [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private Object currentEnemyPlayer;
+         [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> playerHeroes;
+         
          
          
          
@@ -55,6 +57,14 @@ namespace _1Scripts.Logic
             get => playerIDNumber as IPlayerNumberAsset;
             set => playerIDNumber = value as Object;
          }
+         
+         public int SoulsCount
+         {
+            get => soulsCount;
+            set => soulsCount = value;
+         }
+         
+         //SET IN RUNTIME
 
          public IHeroLogic CurrentEnemyPlayer
          {
@@ -62,11 +72,29 @@ namespace _1Scripts.Logic
             set => currentEnemyPlayer = value as Object;
          }
 
-         public int SoulsCount
+         public List<IHeroLogic> PlayerHeroes
          {
-            get => soulsCount;
-            set => soulsCount = value;
+            get
+            {
+               var newList = new List<IHeroLogic>();
+               foreach (var hero in playerHeroes)
+               {
+                  newList.Add(hero as IHeroLogic);
+               }
+               return newList;
+            }
+            
+            private set
+            {
+               playerHeroes = new List<Object>();
+               foreach (var hero in playerHeroes)
+               {
+                  value.Add(hero as IHeroLogic);
+               }
+            }
          }
+
+
 
 
 
