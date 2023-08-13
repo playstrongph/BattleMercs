@@ -3145,10 +3145,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35342303a2c19c488ec7555d0953d92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInformation:
-  - playerIDNumber: {fileID: 0}
-  - playerIDNumber: {fileID: 0}
-  - playerIDNumber: {fileID: 0}
+  playerElements:
+  - playerElementName: Player 1
+    playerInformation:
+    - playerName: Player1
+      playerIDNumber: {fileID: 0}
+    - playerName: Player2
+      playerIDNumber: {fileID: 0}
+  - playerElementName: Player 2
+    playerInformation: []
 --- !u!1 &1939456911
 GameObject:
   m_ObjectHideFlags: 0
