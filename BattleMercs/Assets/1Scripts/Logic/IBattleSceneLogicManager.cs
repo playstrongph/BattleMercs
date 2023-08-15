@@ -6,11 +6,6 @@ namespace _1Scripts.Logic
     public interface IBattleSceneLogicManager
     {
         GameObject PrefabBattleSceneManagerVisual { get; }
-        IBattleSceneManagerVisual BattleSceneManagerVisual { get;}
-
-        GameObject SetBattleSceneManagerVisual { set; }
-        
-        //Components
-        IInitializeBattleSceneManagerVisual InitializeBattleSceneManagerVisual { get; }
+        IBattleSceneManagerVisual BattleSceneManagerVisual { get; set; }
     }
 }

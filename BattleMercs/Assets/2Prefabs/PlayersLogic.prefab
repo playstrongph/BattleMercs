@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7948158845811852086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7992324136735279391}
+  - component: {fileID: 679576700443660864}
+  m_Layer: 0
+  m_Name: PlayersLogic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7992324136735279391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7948158845811852086}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &679576700443660864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7948158845811852086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a35342303a2c19c488ec7555d0953d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allPlayers:
+  - playerName: Player1
+    playerIDNumber: {fileID: 11400000, guid: 3d9dc0345a238c14eb307c495ae170ee, type: 2}
+    soulsCount: 0
+    currentEnemyPlayer: {fileID: 0}
+    playerHeroes: []
+    aliveHeroes: []
+    deadHeroes: []
+    extinctHeroes: []
+  - playerName: Player2
+    playerIDNumber: {fileID: 11400000, guid: 610fd37ee9e44674ab631d9e82eb833c, type: 2}
+    soulsCount: 0
+    currentEnemyPlayer: {fileID: 0}
+    playerHeroes: []
+    aliveHeroes: []
+    deadHeroes: []
+    extinctHeroes: []

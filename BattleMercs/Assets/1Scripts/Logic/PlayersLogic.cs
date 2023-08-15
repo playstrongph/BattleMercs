@@ -6,19 +6,29 @@ using Object = UnityEngine.Object;
 
 namespace _1Scripts.Logic
 {
-   public class PlayersLogic : MonoBehaviour
+   public class PlayersLogic : MonoBehaviour, IPlayersLogic
    {
       #region VARIABLES
 
 
+      [Header("Inspector References")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneLogicManager))] private Object battleSceneLogicManager;
+         
       [SerializeField] private List<PlayersStruct> allPlayers = new List<PlayersStruct>();
 
-      public List<PlayersStruct> AllPlayers => allPlayers;
+     
 
       #endregion
         
       #region PROPERTIES
 
+      public IBattleSceneLogicManager BattleSceneLogicManager
+      {
+         get => battleSceneLogicManager as IBattleSceneLogicManager;
+         private set => battleSceneLogicManager = value as Object;
+      }
+      public List<PlayersStruct> AllPlayers => allPlayers;
+   
       #endregion
       
       #region STRUCTS
@@ -171,15 +181,10 @@ namespace _1Scripts.Logic
 
       private void Awake()
       {
-         TestPrint();
+      
       }
 
-      private void TestPrint()
-      {
-         Debug.Log("Player Element 1" +AllPlayers[0].PlayerName);
-         Debug.Log("Player Element 1" +AllPlayers[1].PlayerName);
-         Debug.Log("End");
-      }
+      
 
 
       #endregion

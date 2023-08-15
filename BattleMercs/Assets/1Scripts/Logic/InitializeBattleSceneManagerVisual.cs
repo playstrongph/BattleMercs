@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _1Scripts.Visual;
+using UnityEngine;
 
 namespace _1Scripts.Logic
 {
@@ -30,7 +31,7 @@ namespace _1Scripts.Logic
          var prefab = BattleSceneLogicManager.PrefabBattleSceneManagerVisual;
 
          //Set New Instance Reference
-         BattleSceneLogicManager.SetBattleSceneManagerVisual = Instantiate(prefab);
+         BattleSceneLogicManager.BattleSceneManagerVisual = Instantiate(prefab).GetComponent<IBattleSceneManagerVisual>();
          
          //Set LogicManager reference of VisualManager
          BattleSceneLogicManager.BattleSceneManagerVisual.BattleSceneLogicManager = BattleSceneLogicManager;
