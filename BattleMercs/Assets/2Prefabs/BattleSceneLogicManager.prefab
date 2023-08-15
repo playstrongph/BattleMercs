@@ -48,6 +48,7 @@ MonoBehaviour:
   prefabBattleSceneManagerVisual: {fileID: 407357391222785282, guid: 86f42a1ae533925429bc500618128eef,
     type: 3}
   battleSceneManagerVisual: {fileID: 0}
+  playersLogic: {fileID: 3981924646431780641}
   initializeBattleSceneManagerVisual: {fileID: 4041375816393396379}
 --- !u!114 &4041375816393396379
 MonoBehaviour:
@@ -142,3 +143,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4480224246309846369}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3981924646431780641 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 679576700443660864, guid: 5b4248ea47191204896d5f088c3f7736,
+    type: 3}
+  m_PrefabInstance: {fileID: 4480224246309846369}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a35342303a2c19c488ec7555d0953d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

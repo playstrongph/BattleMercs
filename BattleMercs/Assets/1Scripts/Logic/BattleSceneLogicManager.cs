@@ -7,19 +7,19 @@ namespace _1Scripts.Logic
    public class BattleSceneLogicManager : MonoBehaviour, IBattleSceneLogicManager
    {
       #region VARIABLES
+#pragma warning disable 0649 // Disable "Field is never assigned to..." warning
    
       [Header("Prefabs")]
-      #pragma warning disable 0649 // Disable "Field is never assigned to..." warning
-      [SerializeField] private GameObject prefabBattleSceneManagerVisual;
-      #pragma warning restore 0649 // Restore warnings
       
+      [SerializeField] private GameObject prefabBattleSceneManagerVisual;
+
       [Header("Runtime References")]
       [SerializeField] private Object battleSceneManagerVisual;
 
-      [Header("Components")]
-      #pragma warning disable 0649 // Disable "Field is never assigned to..." warning
+      [Header("Components")] [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayersLogic))] private Object playersLogic;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeBattleSceneManagerVisual))] private Object initializeBattleSceneManagerVisual;
-      #pragma warning restore 0649 // Restore warnings
+
+#pragma warning restore 0649 // Restore warnings
       #endregion
 
       #region PROPERTIES
@@ -33,6 +33,7 @@ namespace _1Scripts.Logic
       }
 
       //Components
+      public IPlayersLogic PlayersLogic => playersLogic as IPlayersLogic;
       private IInitializeBattleSceneManagerVisual InitializeBattleSceneManagerVisual => initializeBattleSceneManagerVisual as IInitializeBattleSceneManagerVisual;
 
       #endregion
