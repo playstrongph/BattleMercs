@@ -5,14 +5,12 @@ using UnityEngine;
 
 namespace _1Scripts.Logic
 {
-   
-   
 
    public class AllHeroesLogic : MonoBehaviour
    {
       #region VARIABLES
 
-      [SerializeField] private List<HeroesStruct> allHeroes = new List<HeroesStruct>();
+      [SerializeField] private List<HeroLogic> allHeroes = new List<HeroLogic>();
       
       #endregion
 
@@ -25,7 +23,7 @@ namespace _1Scripts.Logic
       /// </summary>
 
       [Serializable]
-      public struct HeroesStruct 
+      public struct HeroLogic 
       {
          #region StructVariables
          
@@ -73,7 +71,7 @@ namespace _1Scripts.Logic
         
       #region PROPERTIES
       
-      public List<HeroesStruct> AllHeroes => allHeroes;
+      public List<HeroLogic> AllHeroes => allHeroes;
 
       #endregion
 
