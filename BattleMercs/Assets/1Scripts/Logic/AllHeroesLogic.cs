@@ -8,13 +8,50 @@ namespace _1Scripts.Logic
 
    public class AllHeroesLogic : MonoBehaviour
    {
-      #region VARIABLES
 
-      [SerializeField] private List<HeroLogic> allHeroes = new List<HeroLogic>();
-      
+      #region ClassInterfaces
+
+      public interface IHeroInformation
+      {
+         string HeroName  { get; }
+      }
+
+      public interface IHeroLogic
+      {
+         IHeroInformation HeroInfo { get; }
+         string ListLabel { get; }
+      }
+
       #endregion
 
       
+
+
+      #region VARIABLES
+
+      [SerializeField] private List<HeroLogic> allHeroes = new List<HeroLogic>();
+
+      
+      
+      #endregion
+      
+      #region PROPERTIES
+      
+      public List<IHeroLogic> AllHeroes
+      {
+         get
+         {
+            var newList = new List<IHeroLogic>();
+            foreach (var hero in allHeroes)
+            {
+               newList.Add(hero);
+            }
+            return newList;
+         }
+      }
+
+      #endregion
+
 
       #region STRUCTS
       
@@ -23,7 +60,7 @@ namespace _1Scripts.Logic
       /// </summary>
 
       [Serializable]
-      public struct HeroLogic 
+      public struct HeroLogic : IHeroLogic
       {
          #region StructVariables
          
@@ -31,18 +68,24 @@ namespace _1Scripts.Logic
          
          //This is for changing the list element name only
          [SerializeField] private string listLabel;
-         
          [SerializeField] private HeroInformation heroInformation;
 
-         #pragma warning restore 0649 
+         #pragma warning restore 0649
 
-         public HeroInformation HeroInformation => heroInformation;
+        
+
+         #endregion
+
+         #region StructProperties
+         
+         public IHeroInformation HeroInfo => heroInformation;
+         public string ListLabel => listLabel;
 
          #endregion
       }
       
       [Serializable]
-      public struct HeroInformation 
+      public struct HeroInformation : IHeroInformation 
       {
          #region StructVariables
          
@@ -69,18 +112,10 @@ namespace _1Scripts.Logic
 
       #endregion
         
-      #region PROPERTIES
       
-      public List<HeroLogic> AllHeroes => allHeroes;
-
-      #endregion
-
       #region METHODS
 
-      private void Test()
-      {
-         var cP = AllHeroes[0];
-      }
+      
 
 
       #endregion
