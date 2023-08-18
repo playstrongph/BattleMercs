@@ -6,7 +6,7 @@ using UnityEngine;
 namespace _1Scripts.Logic
 {
 
-   public class AllHeroesLogic : MonoBehaviour
+   public class AllHeroesLogic : MonoBehaviour, IAllHeroesLogic
    {
 
       #region ClassInterfaces
@@ -14,6 +14,10 @@ namespace _1Scripts.Logic
       public interface IHeroInformation
       {
          string HeroName  { get; }
+         
+          int HeroLevel { get; }
+          int HeroStars { get; }
+          int HeroCp { get; }
       }
 
       public interface IHeroLogic
@@ -31,8 +35,6 @@ namespace _1Scripts.Logic
 
       [SerializeField] private List<HeroLogic> allHeroes = new List<HeroLogic>();
 
-      
-      
       #endregion
       
       #region PROPERTIES
