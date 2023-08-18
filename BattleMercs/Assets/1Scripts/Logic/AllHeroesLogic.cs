@@ -5,31 +5,26 @@ using UnityEngine;
 
 namespace _1Scripts.Logic
 {
+   
+   public interface IHeroInformation
+   {
+      string HeroName  { get; }
+         
+      int HeroLevel { get; }
+      int HeroStars { get; }
+      int HeroCp { get; }
+   }
+
+   public interface IHeroLogicX
+   {
+      IHeroInformation HeroInfo { get; }
+      string ListLabel { get; }
+   }
+  
+   
 
    public class AllHeroesLogic : MonoBehaviour, IAllHeroesLogic
    {
-
-      #region ClassInterfaces
-
-      public interface IHeroInformation
-      {
-         string HeroName  { get; }
-         
-          int HeroLevel { get; }
-          int HeroStars { get; }
-          int HeroCp { get; }
-      }
-
-      public interface IHeroLogic
-      {
-         IHeroInformation HeroInfo { get; }
-         string ListLabel { get; }
-      }
-
-      #endregion
-
-      
-
 
       #region VARIABLES
 
@@ -39,11 +34,11 @@ namespace _1Scripts.Logic
       
       #region PROPERTIES
       
-      public List<IHeroLogic> AllHeroes
+      public List<IHeroLogicX> AllHeroes
       {
          get
          {
-            var newList = new List<IHeroLogic>();
+            var newList = new List<IHeroLogicX>();
             foreach (var hero in allHeroes)
             {
                newList.Add(hero);
@@ -62,7 +57,7 @@ namespace _1Scripts.Logic
       /// </summary>
 
       [Serializable]
-      public struct HeroLogic : IHeroLogic
+      public struct HeroLogic : IHeroLogicX
       {
          #region StructVariables
          
@@ -117,7 +112,12 @@ namespace _1Scripts.Logic
       
       #region METHODS
 
-      
+      private void TestMethod()
+      {
+         var x = AllHeroes[0];
+
+         var y = x.HeroInfo;
+      }
 
 
       #endregion

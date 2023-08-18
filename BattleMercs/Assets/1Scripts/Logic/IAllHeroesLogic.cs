@@ -4,6 +4,6 @@ namespace _1Scripts.Logic
 {
     public interface IAllHeroesLogic
     {
-        List<AllHeroesLogic.IHeroLogic> AllHeroes { get; }
+        List<IHeroLogicX> AllHeroes { get; }
     }
 }

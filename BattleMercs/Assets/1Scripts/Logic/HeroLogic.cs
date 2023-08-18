@@ -2,7 +2,7 @@
 
 namespace _1Scripts.Logic
 {
-   public class HeroLogic : MonoBehaviour, IHeroLogic
+   public class HeroLogic : MonoBehaviour
    {
       #region VARIABLES
 
