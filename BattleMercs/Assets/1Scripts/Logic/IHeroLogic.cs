@@ -1,6 +1,7 @@
 namespace _1Scripts.Logic
 {
-    public partial interface IHeroLogic
+    public interface IHeroLogic
     {
+        IHeroInformation HeroInfo { get; }
     }
 }

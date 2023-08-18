@@ -14,15 +14,7 @@ namespace _1Scripts.Logic
       int HeroStars { get; }
       int HeroCp { get; }
    }
-
-   public interface IHeroLogicX
-   {
-      IHeroInformation HeroInfo { get; }
-      string ListLabel { get; }
-   }
-  
    
-
    public class AllHeroesLogic : MonoBehaviour, IAllHeroesLogic
    {
 
@@ -34,11 +26,11 @@ namespace _1Scripts.Logic
       
       #region PROPERTIES
       
-      public List<IHeroLogicX> AllHeroes
+      public List<IHeroLogic> AllHeroes
       {
          get
          {
-            var newList = new List<IHeroLogicX>();
+            var newList = new List<IHeroLogic>();
             foreach (var hero in allHeroes)
             {
                newList.Add(hero);
@@ -57,7 +49,7 @@ namespace _1Scripts.Logic
       /// </summary>
 
       [Serializable]
-      public struct HeroLogic : IHeroLogicX
+      public struct HeroLogic : IHeroLogic
       {
          #region StructVariables
          
@@ -68,8 +60,6 @@ namespace _1Scripts.Logic
          [SerializeField] private HeroInformation heroInformation;
 
          #pragma warning restore 0649
-
-        
 
          #endregion
 
@@ -112,12 +102,7 @@ namespace _1Scripts.Logic
       
       #region METHODS
 
-      private void TestMethod()
-      {
-         var x = AllHeroes[0];
-
-         var y = x.HeroInfo;
-      }
+     
 
 
       #endregion
