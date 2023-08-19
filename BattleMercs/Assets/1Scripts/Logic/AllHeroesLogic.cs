@@ -58,11 +58,7 @@ namespace _1Scripts.Logic
 
          #region StructProperties
 
-         public string HeroNameLabel
-         {
-            get => heroNameLabel;
-            set => heroNameLabel = value;
-         }
+         public string HeroNameLabel { get => heroNameLabel; set => heroNameLabel = value; }
          public IHeroInformation HeroInformation => heroInformation;
          public IHeroAttributes HeroAttributes => heroAttributes;
 
@@ -148,10 +144,7 @@ namespace _1Scripts.Logic
       
       #region METHODS
 
-      private void TestMethod()
-      {
-         var x = AllHeroes[0].HeroInformation;
-      }
+      
 
       #endregion
    }
