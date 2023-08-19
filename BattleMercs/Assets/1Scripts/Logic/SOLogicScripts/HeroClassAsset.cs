@@ -7,10 +7,15 @@ namespace _1Scripts.Logic.SOLogicScripts
    /// Caster Blue
    /// Defender Red
    /// </summary>
-   public class HeroClassAsset : ScriptableObject
+   public class HeroClassAsset : ScriptableObject, IHeroClassAsset
    {
       #region METHODS
+      
+      public virtual void SetClassColor(IHeroLogic heroLogic)
+      {
+         
 
+      }
         
 
       #endregion

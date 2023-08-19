@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using _1Scripts.Logic.SOLogicScripts;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 
 namespace _1Scripts.Logic
 {
-   
-   
-   
    public class AllHeroesLogic : MonoBehaviour, IAllHeroesLogic
    {
 
@@ -49,24 +48,29 @@ namespace _1Scripts.Logic
          #pragma warning disable 0649
          
          //This is for changing the list element name only
-         [SerializeField] private string listLabel;
-         [SerializeField] private HeroInformation heroInformation;
+         [SerializeField] private string heroNameLabel;
+         [SerializeField] private HeroInformationStruct heroInformation;
+         [SerializeField] private HeroAttributesStruct heroAttributes;
 
          #pragma warning restore 0649
 
          #endregion
 
          #region StructProperties
-         
-         public IHeroInformation HeroInfo => heroInformation;
-         public string ListLabel => listLabel;
+
+         public string HeroNameLabel
+         {
+            get => heroNameLabel;
+            set => heroNameLabel = value;
+         }
+         public IHeroInformation HeroInformation => heroInformation;
+         public IHeroAttributes HeroAttributes => heroAttributes;
 
          #endregion
       }
       
       [Serializable]
-      //TODO: Create stand alone Interface for IHeroInformation
-      public struct HeroInformation : IHeroInformation 
+      public struct HeroInformationStruct : IHeroInformation 
       {
          #region StructVariables
          
@@ -78,6 +82,9 @@ namespace _1Scripts.Logic
          [SerializeField] private int heroStars;
          [SerializeField] private int heroCp;
 
+         [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroClassAsset))] private Object heroClass;
+         [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroRaceAsset))] private Object heroRace;
+
          #pragma warning restore 0649 
          #endregion
 
@@ -87,17 +94,64 @@ namespace _1Scripts.Logic
          public int HeroLevel => heroLevel;
          public int HeroStars => heroStars;
          public int HeroCp => heroCp;
+         
+         public IHeroClassAsset HeroClass => heroClass as IHeroClassAsset;
+         public IHeroRaceAsset HeroRace => heroRace as IHeroRaceAsset;
 
          #endregion
       }
+      
+      [Serializable]
+      public struct HeroAttributesStruct: IHeroAttributes
+      {
+         //Variables
+         #pragma warning disable 0649
+
+         [SerializeField] private int health;
+         [SerializeField] private int attack;
+         [SerializeField] private int defense;
+         [SerializeField] private int speed;
+         [SerializeField] private int armor;
+         [SerializeField] private int focusPoints;
+         [SerializeField] private int criticalHitChance;
+         [SerializeField] private int criticalHitDamage;
+         [SerializeField] private int effectiveness;
+         [SerializeField] private int dualAttackChance;
+         [SerializeField] private int hitChance;
+         
+         #pragma warning disable 0649
+         
+         //Properties
+
+         public int Health => health;
+         public int Attack => attack;
+         public int Defense => defense;
+         public int Speed => speed;
+         public int Armor => armor;
+         public int FocusPoints => focusPoints;
+         public int CriticalHitChance => criticalHitChance;
+         public int CriticalHitDamage => criticalHitDamage;
+         public int Effectiveness => effectiveness;
+         public int DualAttackChance => dualAttackChance;
+         public int HitChance => hitChance;
+
+         
+
+         
+      }
+      
+     
+
 
       #endregion
         
       
       #region METHODS
 
-     
-
+      private void TestMethod()
+      {
+         var x = AllHeroes[0].HeroInformation;
+      }
 
       #endregion
    }

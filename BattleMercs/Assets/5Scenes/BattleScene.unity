@@ -165,12 +165,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allHeroes:
-  - listLabel: PLAYER 1
+  - heroNameLabel: 
     heroInformation:
       heroName: 
       heroLevel: 0
       heroStars: 0
       heroCp: 0
+      heroClass: {fileID: 0}
+      heroRace: {fileID: 0}
+    heroAttributes:
+      health: 0
+      attack: 0
+      defense: 0
+      speed: 0
+      armor: 0
+      focusPoints: 0
+      criticalHitChance: 0
+      criticalHitDamage: 0
+      effectiveness: 0
+      dualAttackChance: 0
+      hitChance: 0
+  - heroNameLabel: 
+    heroInformation:
+      heroName: 
+      heroLevel: 0
+      heroStars: 0
+      heroCp: 0
+      heroClass: {fileID: 0}
+      heroRace: {fileID: 0}
+    heroAttributes:
+      health: 0
+      attack: 0
+      defense: 0
+      speed: 0
+      armor: 0
+      focusPoints: 0
+      criticalHitChance: 0
+      criticalHitDamage: 0
+      effectiveness: 0
+      dualAttackChance: 0
+      hitChance: 0
 --- !u!224 &247078210 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 407357391222785283, guid: 86f42a1ae533925429bc500618128eef,
@@ -3152,49 +3186,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4025127891826217838}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1362205113
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1362205115}
-  - component: {fileID: 1362205114}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1362205114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1362205113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55933cb55e0f85d4ca76f65a8923278e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1362205115
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1362205113}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6278195, y: -0.39510185, z: -0.9276558}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1939456911
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,6 @@
-﻿namespace _1Scripts.Logic
+﻿using _1Scripts.Logic.SOLogicScripts;
+
+namespace _1Scripts.Logic
 {
    public interface IHeroInformation
    {
@@ -7,5 +9,8 @@
       int HeroLevel { get; }
       int HeroStars { get; }
       int HeroCp { get; }
+      IHeroClassAsset HeroClass { get; }
+
+      IHeroRaceAsset HeroRace { get; }
    }
 }
