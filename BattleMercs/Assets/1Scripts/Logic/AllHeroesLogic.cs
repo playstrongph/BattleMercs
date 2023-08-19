@@ -6,14 +6,7 @@ using UnityEngine;
 namespace _1Scripts.Logic
 {
    
-   public interface IHeroInformation
-   {
-      string HeroName  { get; }
-         
-      int HeroLevel { get; }
-      int HeroStars { get; }
-      int HeroCp { get; }
-   }
+   
    
    public class AllHeroesLogic : MonoBehaviour, IAllHeroesLogic
    {
@@ -72,6 +65,7 @@ namespace _1Scripts.Logic
       }
       
       [Serializable]
+      //TODO: Create stand alone Interface for IHeroInformation
       public struct HeroInformation : IHeroInformation 
       {
          #region StructVariables
