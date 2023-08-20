@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using _1Scripts.Logic.SOLogicScripts;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -11,8 +12,13 @@ namespace _1Scripts.Logic
    {
 
       #region VARIABLES
+#pragma warning disable 0649
+      [Header("Inspector References")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneLogicManager))] private Object battleSceneLogicManager;
 
       [SerializeField] private List<HeroLogic> allHeroes = new List<HeroLogic>();
+      
+#pragma warning restore 0649
 
       #endregion
       
@@ -30,6 +36,7 @@ namespace _1Scripts.Logic
             return newList;
          }
       }
+      public IBattleSceneLogicManager BattleSceneLogicManager => battleSceneLogicManager as IBattleSceneLogicManager;
 
       #endregion
 

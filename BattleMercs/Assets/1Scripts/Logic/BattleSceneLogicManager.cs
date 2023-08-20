@@ -15,9 +15,16 @@ namespace _1Scripts.Logic
 
       [Header("Runtime References")]
       [SerializeField] private Object battleSceneManagerVisual;
-
-      [Header("Components")] [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayersLogic))] private Object playersLogic;
+      
+      [Header("Children Components")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayersLogic))] private Object playersLogic;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IAllHeroesLogic))] private Object allHeroesLogic;
+      
+      [Header("Attached Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeBattleSceneManagerVisual))] private Object initializeBattleSceneManagerVisual;
+      
+      
+      
 
 #pragma warning restore 0649 // Restore warnings
       #endregion
@@ -25,6 +32,7 @@ namespace _1Scripts.Logic
       #region PROPERTIES
 
       public GameObject PrefabBattleSceneManagerVisual => prefabBattleSceneManagerVisual;
+      
 
       public IBattleSceneManagerVisual BattleSceneManagerVisual
       {
@@ -34,6 +42,7 @@ namespace _1Scripts.Logic
 
       //Components
       public IPlayersLogic PlayersLogic => playersLogic as IPlayersLogic;
+      public IAllHeroesLogic AllHeroesLogic => allHeroesLogic as IAllHeroesLogic;
       private IInitializeBattleSceneManagerVisual InitializeBattleSceneManagerVisual => initializeBattleSceneManagerVisual as IInitializeBattleSceneManagerVisual;
 
       #endregion
