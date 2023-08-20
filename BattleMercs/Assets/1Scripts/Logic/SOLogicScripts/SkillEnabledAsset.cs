@@ -23,7 +23,7 @@ namespace _1Scripts.Logic.SOLogicScripts
       
       
       //VISUAL Methods
-      public override void StartSkillTargetingVisual(ISkillVisual skillVisual)
+      public override void StartSkillTargetingVisual(ISkillVisual skillVisual,ISelectSkillTargetVisual selectSkillTargetVisual)
       {
          //TODO: Check for Skill Readiness
       }

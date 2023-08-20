@@ -20,7 +20,7 @@ namespace _1Scripts.Logic.SOLogicScripts
         
       #region METHODS
 
-      public override void StartSkillTargetingVisual(ISkillVisual skillVisual)
+      public override void StartSkillTargetingVisual(ISkillVisual skillVisual,ISelectSkillTargetVisual selectSkillTargetVisual)
       {
          //TODO: Call SkillEnabled.StartSkillTargetingVisual(skillVisual)
       }

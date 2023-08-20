@@ -22,7 +22,7 @@ namespace _1Scripts.Logic.SOLogicScripts
       
       
       //VISUAL Methods
-      public virtual void StartSkillTargetingVisual(ISkillVisual skillVisual)
+      public virtual void StartSkillTargetingVisual(ISkillVisual skillVisual,ISelectSkillTargetVisual selectSkillTargetVisual)
       {
          
       }

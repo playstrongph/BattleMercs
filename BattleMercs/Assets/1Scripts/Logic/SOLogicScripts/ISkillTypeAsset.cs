@@ -4,6 +4,6 @@ namespace _1Scripts.Logic.SOLogicScripts
 {
     public interface ISkillTypeAsset
     {
-        void StartSkillTargetingVisual(ISkillVisual skillVisual);
+        void StartSkillTargetingVisual(ISkillVisual skillVisual, ISelectSkillTargetVisual selectSkillTargetVisual);
     }
 }
