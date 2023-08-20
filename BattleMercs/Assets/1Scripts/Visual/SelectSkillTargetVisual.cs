@@ -27,6 +27,9 @@ namespace _1Scripts.Visual
       {
          //TODO: Replace this with permissive checks for SkillType, SkillEnableStatus, SkillReadinessStatus
          StartSkillTargeting(skillVisual);
+         
+         
+         
       }
       
       /// <summary>

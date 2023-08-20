@@ -7,9 +7,8 @@ namespace _1Scripts.Logic.SOLogicScripts
    {
       #region METHODS
       
-      public override void SetClassColor(IHeroLogic heroLogic)
+      public override void SetClassColor(IHeroLogic heroLogic) 
       {
-         
 
       }
         
