@@ -68,8 +68,11 @@ namespace _1Scripts.Logic
          [SerializeField] private string skillName;
          [TextArea(5, 5)] [SerializeField] private string skillDescription;
          [SerializeField] private Sprite skillSprite;
+         
+         [Header("Runtime References")]
          [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private Object casterHero;
-#pragma warning restore 0649
+         
+         #pragma warning restore 0649
          //Properties
 
          public string SkillName { get => skillName; set => skillName = value; }

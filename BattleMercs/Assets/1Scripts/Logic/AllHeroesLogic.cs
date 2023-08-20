@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using _1Scripts.Logic.SOLogicScripts;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -17,7 +18,7 @@ namespace _1Scripts.Logic
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneLogicManager))] private Object battleSceneLogicManager;
 
       [SerializeField] private List<HeroLogic> allHeroes = new List<HeroLogic>();
-      
+
 #pragma warning restore 0649
 
       #endregion
@@ -58,6 +59,7 @@ namespace _1Scripts.Logic
          [SerializeField] private string heroNameLabel;
          [SerializeField] private HeroInformationStruct heroInformation;
          [SerializeField] private HeroAttributesStruct heroAttributes;
+         
 
          #pragma warning restore 0649
 
@@ -68,6 +70,8 @@ namespace _1Scripts.Logic
          public string HeroNameLabel { get => heroNameLabel; set => heroNameLabel = value; }
          public IHeroInformation HeroInformation => heroInformation;
          public IHeroAttributes HeroAttributes => heroAttributes;
+
+         
 
          #endregion
       }
@@ -152,6 +156,7 @@ namespace _1Scripts.Logic
       #region METHODS
 
       
+
 
       #endregion
    }
