@@ -11,6 +11,8 @@ namespace _1Scripts.Logic
         //Components
         IPlayersLogic PlayersLogic { get; }
         IAllHeroesLogic AllHeroesLogic { get; }
+
+        IAllSkillsLogic AllSkillsLogic { get; }
         IBattleSceneManagerVisual BattleSceneManagerVisual { get; set; }
     }
 }

@@ -121,13 +121,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!224 &247078210 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 407357391222785283, guid: 86f42a1ae533925429bc500618128eef,
-    type: 3}
-  m_PrefabInstance: {fileID: 738803922}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &738803922
+--- !u!1001 &964175992
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -3096,6 +3090,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86f42a1ae533925429bc500618128eef, type: 3}
+--- !u!224 &964175993 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 407357391222785283, guid: 86f42a1ae533925429bc500618128eef,
+    type: 3}
+  m_PrefabInstance: {fileID: 964175992}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1939456911
 GameObject:
   m_ObjectHideFlags: 0
@@ -3137,7 +3137,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 247078210}
+  - {fileID: 964175993}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3153,6 +3153,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3595889889011325040, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: allSkills.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595889889011325040, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: allSkills.Array.data[1].skillNameLabel
+      value: SKILL 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
         type: 3}
       propertyPath: m_LocalPosition.x
