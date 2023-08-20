@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace _1Scripts.Logic
 {
     public interface IHeroLogic
@@ -6,6 +8,7 @@ namespace _1Scripts.Logic
         IHeroInformation HeroInformation { get; }
 
         IHeroAttributes HeroAttributes { get; }
+        List<ISkillLogic> HeroSkills { get; }
 
     }
 }

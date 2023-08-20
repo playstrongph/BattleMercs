@@ -7,5 +7,7 @@ namespace _1Scripts.Logic
         List<IHeroLogic> AllHeroes { get; }
 
         IBattleSceneLogicManager BattleSceneLogicManager { get; }
+
+        
     }
 }

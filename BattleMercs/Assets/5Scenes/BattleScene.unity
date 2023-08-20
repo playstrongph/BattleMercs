@@ -3156,12 +3156,17 @@ PrefabInstance:
     - target: {fileID: 3595889889011325040, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
         type: 3}
       propertyPath: allSkills.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3595889889011325040, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
         type: 3}
       propertyPath: allSkills.Array.data[1].skillNameLabel
       value: SKILL 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595889889011325040, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: allSkills.Array.data[0].skillNameLabel
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
         type: 3}
@@ -3222,6 +3227,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BattleSceneLogicManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756427737729860094, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: allHeroes.Array.data[0].heroSkills.Array.size
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b390b2f8ed343a84ea4f57a4ee6520f0, type: 3}

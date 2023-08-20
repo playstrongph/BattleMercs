@@ -59,7 +59,9 @@ namespace _1Scripts.Logic
          [SerializeField] private string heroNameLabel;
          [SerializeField] private HeroInformationStruct heroInformation;
          [SerializeField] private HeroAttributesStruct heroAttributes;
-         
+
+         [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillLogic))] private List<Object> heroSkills;
+
 
          #pragma warning restore 0649
 
@@ -71,7 +73,22 @@ namespace _1Scripts.Logic
          public IHeroInformation HeroInformation => heroInformation;
          public IHeroAttributes HeroAttributes => heroAttributes;
 
-         
+         public List<ISkillLogic> HeroSkills
+         {
+            get
+            {
+               var newList = new List<ISkillLogic>();
+               foreach (var heroSKill in heroSkills)
+               {
+                  newList.Add(heroSKill as ISkillLogic);
+               }
+               return newList;
+            }
+            
+            
+         }
+
+
 
          #endregion
       }
@@ -148,7 +165,7 @@ namespace _1Scripts.Logic
       }
       
      
-
+      
 
       #endregion
         
