@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed15f48d19e77845b0bd0805a93d216, type: 3}
+  m_Name: NewSkillAsset
+  m_EditorClassIdentifier: 
+  skillName: 
+  skillDescription: 
+  skillSprite: {fileID: 0}
+  skillCooldown: 0
+  skillSpeed: 0
+  skillFightingSpirit: 0
+  baseSkillCooldown: 0
+  baseSkillSpeed: 0
+  skillElement: {fileID: 0}
+  skillType: {fileID: 0}
+  skillReadiness: {fileID: 0}
+  skillEnableStatus: {fileID: 0}
+  skillTarget: {fileID: 0}
