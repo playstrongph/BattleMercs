@@ -5,6 +5,6 @@ namespace _1Scripts.Logic
     public interface IAllPlayersLogic
     {
         IBattleSceneLogicManager BattleSceneLogicManager { get; }
-        List<AllPlayersLogic.PlayerLogic> AllPlayers { get; }
+        List<IPlayerLogic> AllPlayers { get; }
     }
 }

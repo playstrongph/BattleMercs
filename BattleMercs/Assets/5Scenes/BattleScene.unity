@@ -128,11 +128,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1137983915579703441}
     m_Modifications:
-    - target: {fileID: 3981924646431780641, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
-        type: 3}
-      propertyPath: allPlayers.Array.data[0].playerName
-      value: PLAYER
-      objectReference: {fileID: 0}
     - target: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
         type: 3}
       propertyPath: m_LocalPosition.x

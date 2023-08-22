@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using _1Scripts.Logic.SOLogicScripts;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Object = UnityEngine.Object;
 
 namespace _1Scripts.Logic
@@ -13,8 +14,10 @@ namespace _1Scripts.Logic
 
       [Header("Inspector References")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneLogicManager))] private Object battleSceneLogicManager;
-         
-      [SerializeField] private List<PlayerLogic> allPlayers = new List<PlayerLogic>();
+
+      [FormerlySerializedAs("allPlayers1")] [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerLogic))] private List<Object> allPlayers = new List<Object>();
+
+      
 
      
 
@@ -27,8 +30,20 @@ namespace _1Scripts.Logic
          get => battleSceneLogicManager as IBattleSceneLogicManager;
          private set => battleSceneLogicManager = value as Object;
       }
-      public List<PlayerLogic> AllPlayers => allPlayers;
-   
+
+      public List<IPlayerLogic> AllPlayers
+      {
+         get
+         {
+            var newList = new List<IPlayerLogic>();
+            foreach (var player in allPlayers)
+            {
+               newList.Add(player as IPlayerLogic);
+            }
+            return newList;
+         }
+      }
+
       #endregion
       
       #region STRUCTS
