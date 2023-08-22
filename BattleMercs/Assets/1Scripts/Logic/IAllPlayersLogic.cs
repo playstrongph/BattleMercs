@@ -2,9 +2,9 @@
 
 namespace _1Scripts.Logic
 {
-    public interface IPlayersLogic
+    public interface IAllPlayersLogic
     {
         IBattleSceneLogicManager BattleSceneLogicManager { get; }
-        List<PlayersLogic.PlayersStruct> AllPlayers { get; }
+        List<AllPlayersLogic.PlayerLogic> AllPlayers { get; }
     }
 }

@@ -76,23 +76,38 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 679576700443660864, guid: 5b4248ea47191204896d5f088c3f7736,
         type: 3}
+      propertyPath: allPlayers.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 679576700443660864, guid: 5b4248ea47191204896d5f088c3f7736,
+        type: 3}
       propertyPath: battleSceneLogicManager
       value: 
       objectReference: {fileID: 1847427112}
     - target: {fileID: 679576700443660864, guid: 5b4248ea47191204896d5f088c3f7736,
         type: 3}
       propertyPath: allPlayers.Array.data[0].playerName
-      value: PLAYER 1
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 679576700443660864, guid: 5b4248ea47191204896d5f088c3f7736,
         type: 3}
       propertyPath: allPlayers.Array.data[1].playerName
-      value: PLAYER 2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 679576700443660864, guid: 5b4248ea47191204896d5f088c3f7736,
+        type: 3}
+      propertyPath: allPlayers.Array.data[0].playerIDNumber
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 679576700443660864, guid: 5b4248ea47191204896d5f088c3f7736,
+        type: 3}
+      propertyPath: allPlayers.Array.data[1].playerIDNumber
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7948158845811852086, guid: 5b4248ea47191204896d5f088c3f7736,
         type: 3}
       propertyPath: m_Name
-      value: PlayersLogic
+      value: AllPlayersLogic
       objectReference: {fileID: 0}
     - target: {fileID: 7992324136735279391, guid: 5b4248ea47191204896d5f088c3f7736,
         type: 3}
@@ -233,6 +248,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3907091850775403369, guid: e7a9d1b63fd4340448cd4e94aafc61a6,
         type: 3}
+      propertyPath: allHeroes.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3907091850775403369, guid: e7a9d1b63fd4340448cd4e94aafc61a6,
+        type: 3}
       propertyPath: battleSceneLogicManager
       value: 
       objectReference: {fileID: 1847427112}
@@ -272,6 +292,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AllSkillsLogic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5545599268939277662, guid: ab5f1419352f09e448217fe18036e339,
+        type: 3}
+      propertyPath: allSkills.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5545599268939277662, guid: ab5f1419352f09e448217fe18036e339,
         type: 3}

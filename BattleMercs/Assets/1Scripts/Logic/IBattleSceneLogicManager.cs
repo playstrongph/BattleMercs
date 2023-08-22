@@ -9,7 +9,7 @@ namespace _1Scripts.Logic
         GameObject PrefabBattleSceneManagerVisual { get; }
         
         //Components
-        IPlayersLogic PlayersLogic { get; }
+        IAllPlayersLogic AllPlayersLogic { get; }
         IAllHeroesLogic AllHeroesLogic { get; }
 
         IAllSkillsLogic AllSkillsLogic { get; }

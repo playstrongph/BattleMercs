@@ -4,7 +4,7 @@ using UnityEngine;
 namespace _1Scripts.Logic.SOLogicScripts
 {
    [CreateAssetMenu(fileName = "NewHeroAsset", menuName = "Assets/HeroAssets/NewHeroAsset")]
-   public class HeroAsset : ScriptableObject
+   public class HeroAsset : ScriptableObject, IHeroAsset
    {
       #region VARIABLES
 #pragma warning disable 0649

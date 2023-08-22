@@ -6,7 +6,7 @@ using Object = UnityEngine.Object;
 
 namespace _1Scripts.Logic
 {
-   public class PlayersLogic : MonoBehaviour, IPlayersLogic
+   public class AllPlayersLogic : MonoBehaviour, IAllPlayersLogic
    {
       #region VARIABLES
 
@@ -14,7 +14,7 @@ namespace _1Scripts.Logic
       [Header("Inspector References")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneLogicManager))] private Object battleSceneLogicManager;
          
-      [SerializeField] private List<PlayersStruct> allPlayers = new List<PlayersStruct>();
+      [SerializeField] private List<PlayerLogic> allPlayers = new List<PlayerLogic>();
 
      
 
@@ -27,7 +27,7 @@ namespace _1Scripts.Logic
          get => battleSceneLogicManager as IBattleSceneLogicManager;
          private set => battleSceneLogicManager = value as Object;
       }
-      public List<PlayersStruct> AllPlayers => allPlayers;
+      public List<PlayerLogic> AllPlayers => allPlayers;
    
       #endregion
       
@@ -35,9 +35,11 @@ namespace _1Scripts.Logic
 
 
       [Serializable]
-      public struct PlayersStruct
+      public struct PlayerLogic : IPlayerLogic
       {
          #region STRUCTVARIABLES
+         
+         #pragma warning disable 0649
 
          [SerializeField] private string playerName;
          [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerNumberAsset))] private Object playerIDNumber;
@@ -53,7 +55,7 @@ namespace _1Scripts.Logic
          [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> deadHeroes;
          [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> extinctHeroes;
          
-         
+         #pragma warning restore 0649
          
          
 
@@ -61,31 +63,16 @@ namespace _1Scripts.Logic
 
          #region STRUCTPROPERTIES
 
-         public string PlayerName
-         {
-            get => playerName;
-            private set => playerName = value;
+         public string PlayerName { get => playerName; set => playerName = value; }
+         
+         public IPlayerNumberAsset PlayerIDNumber { get => playerIDNumber as IPlayerNumberAsset; set => playerIDNumber = value as Object;
          }
          
-         public IPlayerNumberAsset PlayerIDNumber
-         {
-            get => playerIDNumber as IPlayerNumberAsset;
-            set => playerIDNumber = value as Object;
-         }
-         
-         public int SoulsCount
-         {
-            get => soulsCount;
-            set => soulsCount = value;
-         }
+         public int SoulsCount { get => soulsCount; set => soulsCount = value; }
          
          //SET IN RUNTIME
 
-         public IHeroLogic CurrentEnemyPlayer
-         {
-            get => currentEnemyPlayer as IHeroLogic;
-            set => currentEnemyPlayer = value as Object;
-         }
+         public IHeroLogic CurrentEnemyPlayer { get => currentEnemyPlayer as IHeroLogic; set => currentEnemyPlayer = value as Object; }
 
          public List<IHeroLogic> PlayerHeroes
          {
@@ -97,15 +84,6 @@ namespace _1Scripts.Logic
                   newList.Add(hero as IHeroLogic);
                }
                return newList;
-            }
-            
-            private set
-            {
-               playerHeroes = new List<Object>();
-               foreach (var hero in playerHeroes)
-               {
-                  value.Add(hero as IHeroLogic);
-               }
             }
          }
          public List<IHeroLogic> AliveHeroes
@@ -119,15 +97,6 @@ namespace _1Scripts.Logic
                }
                return newList;
             }
-            
-            private set
-            {
-               aliveHeroes = new List<Object>();
-               foreach (var hero in aliveHeroes)
-               {
-                  value.Add(hero as IHeroLogic);
-               }
-            }
          }
          public List<IHeroLogic> DeadHeroes
          {
@@ -139,15 +108,6 @@ namespace _1Scripts.Logic
                   newList.Add(hero as IHeroLogic);
                }
                return newList;
-            }
-            
-            private set
-            {
-               deadHeroes = new List<Object>();
-               foreach (var hero in deadHeroes)
-               {
-                  value.Add(hero as IHeroLogic);
-               }
             }
          }
          public List<IHeroLogic> ExtinctHeroes
@@ -161,15 +121,6 @@ namespace _1Scripts.Logic
                }
                return newList;
             }
-            
-            private set
-            {
-               extinctHeroes = new List<Object>();
-               foreach (var hero in extinctHeroes)
-               {
-                  value.Add(hero as IHeroLogic);
-               }
-            }
          }
 
          #endregion
@@ -179,11 +130,7 @@ namespace _1Scripts.Logic
         
       #region METHODS
 
-      private void Awake()
-      {
       
-      }
-
       
 
 

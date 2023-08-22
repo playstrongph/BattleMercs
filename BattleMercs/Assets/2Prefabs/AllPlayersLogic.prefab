@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7992324136735279391}
   - component: {fileID: 679576700443660864}
   m_Layer: 0
-  m_Name: PlayersLogic
+  m_Name: AllPlayersLogic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35342303a2c19c488ec7555d0953d92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleSceneLogicManager: {fileID: 0}
   allPlayers:
   - playerName: Player1
     playerIDNumber: {fileID: 11400000, guid: 3d9dc0345a238c14eb307c495ae170ee, type: 2}

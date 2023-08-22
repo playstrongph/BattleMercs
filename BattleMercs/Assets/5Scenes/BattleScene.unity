@@ -121,6 +121,86 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &199861347
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1137983915579703441}
+    m_Modifications:
+    - target: {fileID: 3981924646431780641, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: allPlayers.Array.data[0].playerName
+      value: PLAYER
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025127891384342249, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: m_Name
+      value: BattleSceneLogicManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b390b2f8ed343a84ea4f57a4ee6520f0, type: 3}
+--- !u!4 &199861348 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+    type: 3}
+  m_PrefabInstance: {fileID: 199861347}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &964175992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3138,6 +3218,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 964175993}
+  - {fileID: 199861348}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3153,21 +3234,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3595889889011325040, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
-        type: 3}
-      propertyPath: allSkills.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3595889889011325040, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
-        type: 3}
-      propertyPath: allSkills.Array.data[1].skillNameLabel
-      value: SKILL 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3595889889011325040, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
-        type: 3}
-      propertyPath: allSkills.Array.data[0].skillNameLabel
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3227,11 +3293,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BattleSceneLogicManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6756427737729860094, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
-        type: 3}
-      propertyPath: allHeroes.Array.data[0].heroSkills.Array.size
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b390b2f8ed343a84ea4f57a4ee6520f0, type: 3}

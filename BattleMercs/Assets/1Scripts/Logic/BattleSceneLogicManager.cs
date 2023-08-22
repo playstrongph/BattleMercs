@@ -17,7 +17,7 @@ namespace _1Scripts.Logic
       [SerializeField] private Object battleSceneManagerVisual;
       
       [Header("Children Components")]
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayersLogic))] private Object playersLogic;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IAllPlayersLogic))] private Object playersLogic;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IAllHeroesLogic))] private Object allHeroesLogic;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IAllSkillsLogic))] private Object allSkillsLogic;
       
@@ -42,7 +42,7 @@ namespace _1Scripts.Logic
       }
 
       //Components
-      public IPlayersLogic PlayersLogic => playersLogic as IPlayersLogic;
+      public IAllPlayersLogic AllPlayersLogic => playersLogic as IAllPlayersLogic;
       public IAllHeroesLogic AllHeroesLogic => allHeroesLogic as IAllHeroesLogic;
       public IAllSkillsLogic AllSkillsLogic => allSkillsLogic as IAllSkillsLogic;
       private IInitializeBattleSceneManagerVisual InitializeBattleSceneManagerVisual => initializeBattleSceneManagerVisual as IInitializeBattleSceneManagerVisual;
