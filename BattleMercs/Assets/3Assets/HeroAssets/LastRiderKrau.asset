@@ -21,16 +21,17 @@ MonoBehaviour:
   heroZodiac: {fileID: 11400000, guid: c7c5070e47ef21a479948d396fb4a996, type: 2}
   heroSprite: {fileID: 6692353232059853187, guid: da3668ea40652b248a0a9f43bd6b5bc7,
     type: 3}
-  health: 0
-  attack: 0
-  defense: 0
-  speed: 0
+  health: 6405
+  attack: 839
+  defense: 752
+  speed: 100
   armor: 0
   focusPoints: 0
-  criticalHitChance: 0
-  criticalHitDamage: 0
+  criticalHitChance: 15
+  criticalHitDamage: 150
   effectiveness: 0
-  dualAttackChance: 0
+  effectResistance: 18
+  dualAttackChance: 5
   hitChance: 0
   heroSkills:
   - {fileID: 0}

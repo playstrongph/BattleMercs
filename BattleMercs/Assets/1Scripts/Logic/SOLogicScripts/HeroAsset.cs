@@ -34,6 +34,7 @@ namespace _1Scripts.Logic.SOLogicScripts
       [SerializeField] private int criticalHitChance;
       [SerializeField] private int criticalHitDamage;
       [SerializeField] private int effectiveness;
+      [SerializeField] private int effectResistance;
       [SerializeField] private int dualAttackChance;
       [SerializeField] private int hitChance;
 
@@ -69,6 +70,7 @@ namespace _1Scripts.Logic.SOLogicScripts
       public int CriticalHitChance => criticalHitChance;
       public int CriticalHitDamage => criticalHitDamage;
       public int Effectiveness => effectiveness;
+      public int EffectResistance => effectResistance;
       public int DualAttackChance => dualAttackChance;
       public int HitChance => hitChance;
 

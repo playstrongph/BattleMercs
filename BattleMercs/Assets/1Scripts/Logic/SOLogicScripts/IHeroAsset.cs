@@ -26,6 +26,7 @@ namespace _1Scripts.Logic.SOLogicScripts
         int CriticalHitChance { get; }
         int CriticalHitDamage { get; }
         int Effectiveness { get; }
+        int EffectResistance { get; }
         int DualAttackChance { get; }
         int HitChance { get; }
         List<ISkillAsset> HeroSkills { get; }
