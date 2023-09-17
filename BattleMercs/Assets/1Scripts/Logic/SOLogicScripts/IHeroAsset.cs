@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace _1Scripts.Logic.SOLogicScripts
 {
@@ -8,8 +9,14 @@ namespace _1Scripts.Logic.SOLogicScripts
         int HeroLevel { get; }
         int HeroStars { get; }
         int CumulativePower { get; }
+        IHeroElementAsset HeroElement { get; }
         IHeroClassAsset HeroClass { get; }
-        IHeroRaceAsset HeroRace { get; }
+        IHeroZodiacAsset HeroZodiac { get; }
+        
+        
+        Sprite HeroSprite { get; }
+
+
         int Health { get; }
         int Attack { get; }
         int Defense { get; }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _1Scripts.Logic.SOLogicScripts
 {
@@ -15,8 +16,13 @@ namespace _1Scripts.Logic.SOLogicScripts
       [SerializeField] private int heroLevel;
       [SerializeField] private int heroStars;
       [SerializeField] private int cumulativePower;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroElementAsset))] private Object heroElement;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroClassAsset))] private Object heroClass;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroRaceAsset))] private Object heroRace;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroZodiacAsset))] private Object heroZodiac;
+
+      [Header("Hero Visuals")] 
+      [SerializeField] private Sprite heroSprite;
+      
 
       [Header("Hero Attributes")] 
       [SerializeField] private int health;
@@ -45,8 +51,13 @@ namespace _1Scripts.Logic.SOLogicScripts
       public int HeroLevel => heroLevel;
       public int HeroStars => heroStars;
       public int CumulativePower => cumulativePower;
+      
+      public IHeroElementAsset HeroElement => heroElement as IHeroElementAsset;
       public IHeroClassAsset HeroClass => heroClass as IHeroClassAsset;
-      public IHeroRaceAsset HeroRace => heroRace as IHeroRaceAsset;
+      public IHeroZodiacAsset HeroZodiac => heroZodiac as IHeroZodiacAsset;
+      
+      //Hero Visuals
+      public Sprite HeroSprite => heroSprite;
       
       //Hero Attributes
       public int Health => health;

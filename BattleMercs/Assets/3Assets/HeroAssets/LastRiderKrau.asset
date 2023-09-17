@@ -10,14 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96f7a9176ec3e1b4a8f50480a3f3a071, type: 3}
-  m_Name: NewHeroAsset
+  m_Name: LastRiderKrau
   m_EditorClassIdentifier: 
-  heroName: 
-  heroLevel: 0
-  heroStars: 0
+  heroName: Last Rider Krau
+  heroLevel: 60
+  heroStars: 5
   cumulativePower: 0
-  heroClass: {fileID: 0}
-  heroRace: {fileID: 0}
+  heroElement: {fileID: 11400000, guid: 29408c7197e69254c908f4b0c8a74ca4, type: 2}
+  heroClass: {fileID: 11400000, guid: 06a88364f1f290d4dbdf75a8599ebfca, type: 2}
+  heroZodiac: {fileID: 11400000, guid: c7c5070e47ef21a479948d396fb4a996, type: 2}
+  heroSprite: {fileID: 6692353232059853187, guid: da3668ea40652b248a0a9f43bd6b5bc7,
+    type: 3}
   health: 0
   attack: 0
   defense: 0

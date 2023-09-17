@@ -2,8 +2,7 @@
 
 namespace _1Scripts.Logic.SOLogicScripts
 {
-   [CreateAssetMenu(fileName = "SoulWeaver", menuName = "Assets/HeroRace/SoulWeaver")]
-   public class SoulWeaverRaceAsset : HeroRaceAsset
+   public class HeroZodiacAsset : ScriptableObject, IHeroZodiacAsset
    {
       #region VARIABLES
 
@@ -20,10 +19,10 @@ namespace _1Scripts.Logic.SOLogicScripts
       #region METHODS
 
       /// <summary>
-      /// Set text of Hero Race in the hero preview
+      /// Set text of Hero Zodiac in the hero preview
       /// </summary>
       /// <param name="heroLogic"></param>
-      public override void SetRace(IHeroLogic heroLogic)
+      public virtual void SetZodiac(IHeroLogic heroLogic)
       {
           
       }

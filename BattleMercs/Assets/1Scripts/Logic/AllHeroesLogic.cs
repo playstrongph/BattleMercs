@@ -107,7 +107,7 @@ namespace _1Scripts.Logic
          [SerializeField] private int heroCp;
 
          [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroClassAsset))] private Object heroClass;
-         [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroRaceAsset))] private Object heroRace;
+         [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroZodiacAsset))] private Object heroRace;
 
          #pragma warning restore 0649 
          #endregion
@@ -120,7 +120,7 @@ namespace _1Scripts.Logic
          public int HeroCp => heroCp;
          
          public IHeroClassAsset HeroClass => heroClass as IHeroClassAsset;
-         public IHeroRaceAsset HeroRace => heroRace as IHeroRaceAsset;
+         public IHeroZodiacAsset HeroZodiac => heroRace as IHeroZodiacAsset;
 
          #endregion
       }

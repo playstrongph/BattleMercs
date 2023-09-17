@@ -11,6 +11,6 @@ namespace _1Scripts.Logic
       int HeroCp { get; }
       IHeroClassAsset HeroClass { get; }
 
-      IHeroRaceAsset HeroRace { get; }
+      IHeroZodiacAsset HeroZodiac { get; }
    }
 }
