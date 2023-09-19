@@ -161,7 +161,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6973323618985365075, guid: 3c7921323b6eb0c4cb5a7c2cc2c32988,
+  m_Sprite: {fileID: 4038726832969559223, guid: 5ffdd0e95b58fd84f86aabae740c3a8d,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -238,10 +238,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillPanelVisual: {fileID: 5626623284273940199}
   frames:
-  - {fileID: -6973323618985365075, guid: 3c7921323b6eb0c4cb5a7c2cc2c32988, type: 3}
-  - {fileID: -3189264307068337925, guid: 3c7921323b6eb0c4cb5a7c2cc2c32988, type: 3}
-  - {fileID: -7673932230332495453, guid: 3c7921323b6eb0c4cb5a7c2cc2c32988, type: 3}
-  - {fileID: -6400984294676459612, guid: 3c7921323b6eb0c4cb5a7c2cc2c32988, type: 3}
+  - {fileID: 4038726832969559223, guid: 5ffdd0e95b58fd84f86aabae740c3a8d, type: 3}
+  - {fileID: -6332194793555141414, guid: 5ffdd0e95b58fd84f86aabae740c3a8d, type: 3}
+  - {fileID: 663884410599526384, guid: 5ffdd0e95b58fd84f86aabae740c3a8d, type: 3}
+  - {fileID: -4001662651508378108, guid: 5ffdd0e95b58fd84f86aabae740c3a8d, type: 3}
+  - {fileID: -3425829872271575657, guid: 5ffdd0e95b58fd84f86aabae740c3a8d, type: 3}
+  - {fileID: 5004661452520620699, guid: 5ffdd0e95b58fd84f86aabae740c3a8d, type: 3}
 --- !u!1 &7303433936031633648
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +328,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4169951247526096423, guid: 83e7b6e6d33c4244887f993451654253,
+  m_Sprite: {fileID: -4653195950793480227, guid: 69dd9ff63e999fb418dc1b8b5127395d,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -402,10 +404,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillPanelVisual: {fileID: 8377659362689121397}
   frames:
-  - {fileID: -4169951247526096423, guid: 83e7b6e6d33c4244887f993451654253, type: 3}
-  - {fileID: 3694721762729148751, guid: 83e7b6e6d33c4244887f993451654253, type: 3}
-  - {fileID: 5666062333680803625, guid: 83e7b6e6d33c4244887f993451654253, type: 3}
-  - {fileID: 8360394963262451685, guid: 83e7b6e6d33c4244887f993451654253, type: 3}
+  - {fileID: -4653195950793480227, guid: 69dd9ff63e999fb418dc1b8b5127395d, type: 3}
+  - {fileID: -9006559858647623174, guid: 69dd9ff63e999fb418dc1b8b5127395d, type: 3}
+  - {fileID: -2545814324948100875, guid: 69dd9ff63e999fb418dc1b8b5127395d, type: 3}
+  - {fileID: 6717593879369977817, guid: 69dd9ff63e999fb418dc1b8b5127395d, type: 3}
+  - {fileID: -206695816493430239, guid: 69dd9ff63e999fb418dc1b8b5127395d, type: 3}
+  - {fileID: -7930838620143311698, guid: 69dd9ff63e999fb418dc1b8b5127395d, type: 3}
 --- !u!1001 &377764402
 PrefabInstance:
   m_ObjectHideFlags: 0
