@@ -3,8 +3,11 @@
     public interface ISkillPanelFrames
     {
         void SetDefaultGreyFrame();
-        void SetDefenderRedFrame();
-        void SetFighterGreenFrame();
-        void SetCasterBlueFrame();
+        void SetRedFrame();
+        void SetGreenFrame();
+        void SetBlueFrame();
+
+        void SetLightFrame();
+        void SetDarkFrame();
     }
 }

@@ -32,20 +32,32 @@ namespace _1Scripts.Visual
          SkillPanelVisual.SkillPanelImage.sprite = Frames[0];
       }
 
-      public void SetDefenderRedFrame()
+      public void SetRedFrame()
       {
          SkillPanelVisual.SkillPanelImage.sprite = Frames[1];
       }
    
-      public void SetFighterGreenFrame()
+      public void SetGreenFrame()
       {
          SkillPanelVisual.SkillPanelImage.sprite = Frames[2];
       }
    
-      public void SetCasterBlueFrame()
+      public void SetBlueFrame()
       {
          SkillPanelVisual.SkillPanelImage.sprite = Frames[3];
       }
+      
+      public void SetLightFrame()
+      {
+         SkillPanelVisual.SkillPanelImage.sprite = Frames[4];
+      }
+      
+      public void SetDarkFrame()
+      {
+         SkillPanelVisual.SkillPanelImage.sprite = Frames[5];
+      }
+      
+      
 
       
 

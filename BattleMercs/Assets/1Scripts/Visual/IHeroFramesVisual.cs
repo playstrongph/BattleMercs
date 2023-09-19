@@ -2,9 +2,9 @@
 {
     public interface IHeroFramesVisual
     {
-        void SetColorRedDefenderFrame();
-        void SetColorGreenFighterFrame( );
-        void SetColorBlueCasterFrame( );
+        void SetColorRedFrame();
+        void SetColorGreenFrame( );
+        void SetColorBlueFrame( );
         void SetColorGreyDefaultFrame( );
     }
 }
