@@ -6,5 +6,7 @@
         void SetColorGreenFrame( );
         void SetColorBlueFrame( );
         void SetColorGreyDefaultFrame( );
+        void SetColorLightFrame();
+        void SetColorDarkFame();
     }
 }

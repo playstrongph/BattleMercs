@@ -48,9 +48,18 @@ namespace _1Scripts.Visual
          //Element 3 is Blue
          FrameInUse.sprite = FrameSelection[3];
       }
-   
       
-        
+      public void SetColorLightFrame( )
+      {
+         //Element 4 is Light
+         FrameInUse.sprite = FrameSelection[4];
+      }
+
+      public void SetColorDarkFame()
+      {
+         //Element 5 is Dark
+         FrameInUse.sprite = FrameSelection[5];
+      }
 
       #endregion
    }

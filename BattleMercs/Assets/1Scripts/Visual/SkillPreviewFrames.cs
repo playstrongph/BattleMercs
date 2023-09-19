@@ -26,29 +26,43 @@ namespace _1Scripts.Visual
         
       #region METHODS
       
-      public void SetColorRedDefender()
+      public void SetColorGreyDefault()
       {
-         //Element 0 is Red
+         //Element 0 is Grey
          SkillPreviewFrame.sprite = Frames[0];
       }
-   
-      public void SetColorGreenFighter()
+      
+      public void SetColorRedElement()
       {
-         //Element 1 is Green
+         //Element 1 is Red
          SkillPreviewFrame.sprite = Frames[1];
       }
    
-      public void SetColorBlueCaster()
+      public void SetColorGreenElement()
       {
-         //Element 2 is Blue
+         //Element 2 is Green
          SkillPreviewFrame.sprite = Frames[2];
       }
    
-      public void SetColorGreyDefault()
+      public void SetColorBlueElement()
       {
-         //Element 3 is Grey
+         //Element 3 is Blue
          SkillPreviewFrame.sprite = Frames[3];
       }
+      
+      public void SetColorLightElement()
+      {
+         //Element 4 is Light
+         SkillPreviewFrame.sprite = Frames[4];
+      }
+      
+      public void SetColorDarkElement()
+      {
+         //Element 5 is Blue
+         SkillPreviewFrame.sprite = Frames[5];
+      }
+   
+      
         
 
       #endregion

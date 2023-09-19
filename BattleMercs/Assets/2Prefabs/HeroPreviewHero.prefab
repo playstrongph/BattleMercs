@@ -1141,10 +1141,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frameInUse: {fileID: 7305401988950330416}
   frameSelection:
+  - {fileID: -5526074859663678738, guid: 27b10edc8ccbfd44491237dec6f444e7, type: 3}
   - {fileID: -4902278355354446413, guid: 2511d2230a7a5ce469e17de8fc14c6e5, type: 3}
   - {fileID: -9130639797075620102, guid: 56fafa7066507ca4bbb7a4f266d5826d, type: 3}
   - {fileID: -5524865532692075295, guid: 48066e6ab3844304f91c39c0ba3ab86d, type: 3}
-  - {fileID: -5526074859663678738, guid: 27b10edc8ccbfd44491237dec6f444e7, type: 3}
+  - {fileID: 3998795309336788928, guid: 3ff87b246f97bc54ea356765530fb9bb, type: 3}
+  - {fileID: -1649526537359759766, guid: 2a959fe4bbba88e4f8fc52b86c84c622, type: 3}
 --- !u!1 &7305401989640124885
 GameObject:
   m_ObjectHideFlags: 0

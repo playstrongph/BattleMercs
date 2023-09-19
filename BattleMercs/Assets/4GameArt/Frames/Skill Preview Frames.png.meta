@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 1d58eb9aeb55c7242a6f8d0d56718f85
+guid: fda4682a5f5bb874faa6a2956b4ff586
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -8614387202556066374
-    second: Default Skill Preview Frame
+    second: 0 Grey Skill Preview Frame
   - first:
       213: -6372847374873367398
-    second: Blue Skill Preview Frame
+    second: 1 Red Skill Preview Frame
   - first:
       213: 2531894167454913421
-    second: Green Skill Preview Frame
+    second: 2 Green Skill Preview Frame
   - first:
       213: 6308278330998182386
-    second: Red Skill Preview Frame
+    second: 3 Blue Skill Preview Frame
+  - first:
+      213: -5230421286986390004
+    second: 5 Dark Skill Preview Frame
+  - first:
+      213: -599077170762162498
+    second: 4 Light Skill Preview Frame
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -59,7 +65,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -135,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Default Skill Preview Frame
+      name: 0 Grey Skill Preview Frame
       rect:
         serializedVersion: 2
-        x: 536
-        y: 389
-        width: 209
-        height: 300
+        x: 498
+        y: 960
+        width: 389
+        height: 554
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,13 +162,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Skill Preview Frame
+      name: 1 Red Skill Preview Frame
       rect:
         serializedVersion: 2
-        x: 772
-        y: 389
-        width: 208
-        height: 300
+        x: 914
+        y: 960
+        width: 388
+        height: 555
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,13 +183,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Green Skill Preview Frame
+      name: 2 Green Skill Preview Frame
       rect:
         serializedVersion: 2
-        x: 1005
-        y: 389
-        width: 210
-        height: 300
+        x: 1338
+        y: 960
+        width: 387
+        height: 554
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,13 +204,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Red Skill Preview Frame
+      name: 3 Blue Skill Preview Frame
       rect:
         serializedVersion: 2
-        x: 1240
-        y: 389
-        width: 209
-        height: 300
+        x: 1762
+        y: 960
+        width: 388
+        height: 554
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,6 +220,48 @@ TextureImporter:
       bones: []
       spriteID: 2f1d07728b18b8750800000000000000
       internalID: 6308278330998182386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5 Dark Skill Preview Frame
+      rect:
+        serializedVersion: 2
+        x: 2197
+        y: 960
+        width: 387
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06e88b2d8fc967b0800000000000000
+      internalID: -5230421286986390004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4 Light Skill Preview Frame
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 960
+        width: 388
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebedcabbc76afa7f0800000000000000
+      internalID: -599077170762162498
       vertices: []
       indices: 
       edges: []

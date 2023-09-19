@@ -2,9 +2,11 @@
 {
     public interface ISkillPreviewFrames
     {
-        void SetColorRedDefender();
-        void SetColorGreenFighter();
-        void SetColorBlueCaster();
         void SetColorGreyDefault();
+        void SetColorRedElement();
+        void SetColorGreenElement();
+        void SetColorBlueElement();
+        void SetColorLightElement();
+        void SetColorDarkElement();
     }
 }
