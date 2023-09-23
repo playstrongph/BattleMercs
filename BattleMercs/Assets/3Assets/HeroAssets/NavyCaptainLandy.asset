@@ -10,29 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96f7a9176ec3e1b4a8f50480a3f3a071, type: 3}
-  m_Name: LastRiderKrau
+  m_Name: NavyCaptainLandy
   m_EditorClassIdentifier: 
-  heroName: Last Rider Krau
+  heroName: NavyCaptainLandy
   heroLevel: 60
   heroStars: 5
   cumulativePower: 0
   heroElement: {fileID: 11400000, guid: bdba6c774d62fde4bb1534cde4861e28, type: 2}
   heroClass: {fileID: 11400000, guid: 06a88364f1f290d4dbdf75a8599ebfca, type: 2}
-  heroZodiac: {fileID: 11400000, guid: c7c5070e47ef21a479948d396fb4a996, type: 2}
-  heroSprite: {fileID: 6692353232059853187, guid: da3668ea40652b248a0a9f43bd6b5bc7,
+  heroZodiac: {fileID: 11400000, guid: 95e2d0fbd85b0b7458099dbdbf77736e, type: 2}
+  heroSprite: {fileID: 9215442348235039368, guid: 005714ef89ef805459881b841399a5f5,
     type: 3}
-  health: 6405
-  attack: 839
-  defense: 752
-  speed: 100
+  health: 5825
+  attack: 1134
+  defense: 662
+  speed: 99
   armor: 0
   focusPoints: 0
-  criticalHitChance: 15
+  criticalHitChance: 23
   criticalHitDamage: 150
   effectiveness: 0
-  effectResistance: 18
+  effectResistance: 0
   dualAttackChance: 5
-  hitChance: 0
+  hitChance: 100
   heroSkills:
   - {fileID: 0}
   - {fileID: 0}

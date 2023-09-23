@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using _1Scripts.Logic.SOLogicScripts;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Object = UnityEngine.Object;
 
 
@@ -56,7 +57,7 @@ namespace _1Scripts.Logic
          #pragma warning disable 0649
          
          //This is for changing the list element name only
-         [SerializeField] private string heroNameLabel;
+         [SerializeField] private string heroLabel;
          [SerializeField] private HeroInformationStruct heroInformation;
          [SerializeField] private HeroAttributesStruct heroAttributes;
 
@@ -69,7 +70,7 @@ namespace _1Scripts.Logic
 
          #region StructProperties
 
-         public string HeroNameLabel { get => heroNameLabel; set => heroNameLabel = value; }
+         public string HeroLabel { get => heroLabel; set => heroLabel = value; }
          public IHeroInformation HeroInformation => heroInformation;
          public IHeroAttributes HeroAttributes => heroAttributes;
 
@@ -84,11 +85,7 @@ namespace _1Scripts.Logic
                }
                return newList;
             }
-            
-            
          }
-
-
 
          #endregion
       }
@@ -104,10 +101,11 @@ namespace _1Scripts.Logic
          [SerializeField] private string heroName;
          [SerializeField] private int heroLevel;
          [SerializeField] private int heroStars;
-         [SerializeField] private int heroCp;
-
+         [SerializeField] private int cumulativePower;
+         
+         [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroElementAsset))] private Object heroElement;
          [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroClassAsset))] private Object heroClass;
-         [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroZodiacAsset))] private Object heroRace;
+         [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroZodiacAsset))] private Object heroZodiac;
 
          #pragma warning restore 0649 
          #endregion
@@ -117,10 +115,11 @@ namespace _1Scripts.Logic
          public string HeroName => heroName;
          public int HeroLevel => heroLevel;
          public int HeroStars => heroStars;
-         public int HeroCp => heroCp;
+         public int CumulativePower => cumulativePower;
          
+         public IHeroElementAsset HeroElement => heroElement as IHeroElementAsset;
          public IHeroClassAsset HeroClass => heroClass as IHeroClassAsset;
-         public IHeroZodiacAsset HeroZodiac => heroRace as IHeroZodiacAsset;
+         public IHeroZodiacAsset HeroZodiac => heroZodiac as IHeroZodiacAsset;
 
          #endregion
       }
@@ -140,6 +139,7 @@ namespace _1Scripts.Logic
          [SerializeField] private int criticalHitChance;
          [SerializeField] private int criticalHitDamage;
          [SerializeField] private int effectiveness;
+         [SerializeField] private int effectResistance;
          [SerializeField] private int dualAttackChance;
          [SerializeField] private int hitChance;
          
@@ -156,16 +156,10 @@ namespace _1Scripts.Logic
          public int CriticalHitChance => criticalHitChance;
          public int CriticalHitDamage => criticalHitDamage;
          public int Effectiveness => effectiveness;
+         public int EffectResistance => effectResistance;
          public int DualAttackChance => dualAttackChance;
          public int HitChance => hitChance;
-
-         
-
-         
       }
-      
-     
-      
 
       #endregion
         

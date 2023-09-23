@@ -4,7 +4,7 @@ namespace _1Scripts.Logic
 {
     public interface IHeroLogic
     {
-        string HeroNameLabel { get; set; }
+        string HeroLabel { get; set; }
         IHeroInformation HeroInformation { get; }
 
         IHeroAttributes HeroAttributes { get; }

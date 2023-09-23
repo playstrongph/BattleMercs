@@ -2,8 +2,8 @@
 
 namespace _1Scripts.Logic.SOLogicScripts
 {
-   [CreateAssetMenu(fileName = "PiscesZodiac", menuName = "Assets/HeroZodiac/PiscesZodiac")]
-   public class PiscesZodiacAsset : HeroZodiacAsset
+   [CreateAssetMenu(fileName = "GeminiZodiac", menuName = "Assets/HeroZodiac/GeminiZodiac")]
+   public class GeminiZodiacAsset : HeroZodiacAsset
    {
       #region VARIABLES
 

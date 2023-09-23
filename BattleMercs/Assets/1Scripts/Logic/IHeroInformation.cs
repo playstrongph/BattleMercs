@@ -8,7 +8,8 @@ namespace _1Scripts.Logic
          
       int HeroLevel { get; }
       int HeroStars { get; }
-      int HeroCp { get; }
+      int CumulativePower { get; }
+      IHeroElementAsset HeroElement { get; }
       IHeroClassAsset HeroClass { get; }
 
       IHeroZodiacAsset HeroZodiac { get; }
