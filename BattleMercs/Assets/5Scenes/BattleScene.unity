@@ -3289,6 +3289,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BattleSceneLogicManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4025127891384342249, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b390b2f8ed343a84ea4f57a4ee6520f0, type: 3}
 --- !u!223 &8682765528835582311
