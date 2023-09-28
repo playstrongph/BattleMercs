@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed15f48d19e77845b0bd0805a93d216, type: 3}
+  m_Name: ForHonor
+  m_EditorClassIdentifier: 
+  skillName: ForHonor
+  skillDescription: Encourages the Perland Army, granting vigor to all allies for
+    2 turns. Decreases buff duration of all enemies by 1 turn and has a 100% chance
+    to decrease Attack for 2 turns. Grants an extra turn to the caster.
+  skillSprite: {fileID: 6150030369559424895, guid: 2c4e70a12902ea1499f1b6743acc94ed,
+    type: 3}
+  skillCooldown: 0
+  skillSpeed: 0
+  skillFightingSpirit: 0
+  fightingSpiritCost: 0
+  baseSkillCooldown: 5
+  baseSkillSpeed: 0
+  skillElement: {fileID: 11400000, guid: 4f73ec484a273c446a9b8baa33a78bc0, type: 2}
+  skillType: {fileID: 11400000, guid: 2cc7c2fcd5b83ea49a7319fc4ed72b3e, type: 2}
+  skillReadiness: {fileID: 11400000, guid: fb72ac836d7072d4ead4d326060d9f0d, type: 2}
+  skillEnableStatus: {fileID: 11400000, guid: 589eb884e2e1839458a42a1bb6ae0f59, type: 2}
+  skillTarget: {fileID: 11400000, guid: cf53c8d3e55750945b777ef09d7cf2ea, type: 2}

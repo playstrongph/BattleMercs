@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed15f48d19e77845b0bd0805a93d216, type: 3}
+  m_Name: CodeNumber00
+  m_EditorClassIdentifier: 
+  skillName: CodeNumber00
+  skillDescription: After being attacked, decreases skill cooldowns of the caster
+    by 1 turn. After suffering an attack that targets all allies, decreases skill
+    cooldowns by an additional 1 turn, and grants a barrier to all allies for 1 turn.
+    Barrier strength increases proportional to the caster's max Health Barrier effect
+    can be activated once per turn.
+  skillSprite: {fileID: -6780785181108676582, guid: 2b0aa83636c0df04ca4d83411149e9b7,
+    type: 3}
+  skillCooldown: 0
+  skillSpeed: 0
+  skillFightingSpirit: 0
+  fightingSpiritCost: 0
+  baseSkillCooldown: 0
+  baseSkillSpeed: 0
+  skillElement: {fileID: 11400000, guid: b66fd0c1ab65eb740abed476db3c6ce2, type: 2}
+  skillType: {fileID: 11400000, guid: 5dc41b6a8fe4d214e98e3930d0ce05df, type: 2}
+  skillReadiness: {fileID: 11400000, guid: fb72ac836d7072d4ead4d326060d9f0d, type: 2}
+  skillEnableStatus: {fileID: 11400000, guid: 589eb884e2e1839458a42a1bb6ae0f59, type: 2}
+  skillTarget: {fileID: 11400000, guid: 3716e006c9b6f2642b86bbb615c97891, type: 2}

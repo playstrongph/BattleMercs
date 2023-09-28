@@ -34,6 +34,6 @@ MonoBehaviour:
   dualAttackChance: 5
   hitChance: 100
   heroSkills:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: ce3b71a4692f14442aa2c60965b9203f, type: 2}
+  - {fileID: 11400000, guid: d2bef564061897f4090a2191c3c56ecd, type: 2}
+  - {fileID: 11400000, guid: 5add2ca6e6c4d054f93909df95216971, type: 2}

@@ -2,8 +2,8 @@
 
 namespace _1Scripts.Logic.SOLogicScripts
 {
-   [CreateAssetMenu(fileName = "FrostElement", menuName = "Assets/SkillElement/FrostElement")]
-   public class FrostElementAsset : SkillElementAsset
+   [CreateAssetMenu(fileName = "EarthSkillElement", menuName = "Assets/SkillElement/EarthSkillElement")]
+   public class EarthSkillElementAsset : SkillElementAsset
    {
       #region VARIABLES
 

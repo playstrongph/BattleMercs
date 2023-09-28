@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _1Scripts.Logic.SOLogicScripts
 {
@@ -11,13 +12,18 @@ namespace _1Scripts.Logic.SOLogicScripts
       
       [Header("Skill Information")]
       [SerializeField] private string skillName;
+      
+      [TextArea(15,20)]
       [SerializeField] private string skillDescription;
       [SerializeField] private Sprite skillSprite;
 
       [Header("Skill Attributes")]
+      
+      //Set to "0" to make it initially available
       [SerializeField] private int skillCooldown;
       [SerializeField] private int skillSpeed;
       [SerializeField] private int skillFightingSpirit;
+      [SerializeField] private int fightingSpiritCost;
       [SerializeField] private int baseSkillCooldown;
       [SerializeField] private int baseSkillSpeed;
 
@@ -40,6 +46,8 @@ namespace _1Scripts.Logic.SOLogicScripts
       public int SkillCooldown => skillCooldown;
       public int SkillSpeed => skillSpeed;
       public int SkillFightingSpirit => skillFightingSpirit;
+      
+      public int FightingSpiritCost => fightingSpiritCost;
       public int BaseSkillCooldown => baseSkillCooldown;
       public int BaseSkillSpeed => baseSkillSpeed;
       

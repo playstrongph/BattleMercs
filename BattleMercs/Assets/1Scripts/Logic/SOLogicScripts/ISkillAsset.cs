@@ -10,6 +10,7 @@ namespace _1Scripts.Logic.SOLogicScripts
         int SkillCooldown { get; }
         int SkillSpeed { get; }
         int SkillFightingSpirit { get; }
+        int FightingSpiritCost { get; }
         int BaseSkillCooldown { get; }
         int BaseSkillSpeed { get; }
         ISkillElementAsset SkillElement { get; }
