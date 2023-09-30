@@ -3229,6 +3229,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3595889889011325040, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: allSkills.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
         type: 3}
       propertyPath: m_LocalPosition.x

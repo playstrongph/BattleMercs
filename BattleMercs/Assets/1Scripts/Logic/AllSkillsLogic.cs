@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using _1Scripts.Logic.SOLogicScripts;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Object = UnityEngine.Object;
 
 namespace _1Scripts.Logic
@@ -96,6 +97,10 @@ namespace _1Scripts.Logic
          [SerializeField] private int skillCooldown;
          [SerializeField] private int skillSpeed;
          [SerializeField] private int skillFightingSpirit;
+         [SerializeField] private int skillFocusPoints;
+         
+         [SerializeField] private int fightingSpiritCost;
+         [FormerlySerializedAs("focusCooldown")] [SerializeField] private int focusPointsCost;
          [SerializeField] private int baseSkillCooldown;
          [SerializeField] private int baseSkillSpeed;
          
@@ -111,7 +116,10 @@ namespace _1Scripts.Logic
          public int SkillCooldown { get => skillCooldown; set => skillCooldown = value; }
          public int SkillSpeed { get => skillSpeed; set => skillSpeed = value; }
          public int SkillFightingSpirit { get => skillFightingSpirit; set => skillFightingSpirit = value; }
+         public int SkillFocusPoints { get => skillFocusPoints; set => skillFocusPoints = value; }
          public int BaseSkillCooldown { get => baseSkillCooldown; set => baseSkillCooldown = value; }
+         public int FightingSpiritCost { get => fightingSpiritCost; set => fightingSpiritCost = value; }
+         public int FocusPointsCost { get => focusPointsCost; set => focusPointsCost = value; }
          public int BaseSkillSpeed { get => baseSkillSpeed; set => baseSkillSpeed = value; }
 
          public ISkillElementAsset SkillElementAsset

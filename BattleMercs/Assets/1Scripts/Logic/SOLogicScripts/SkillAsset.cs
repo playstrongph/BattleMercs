@@ -23,9 +23,14 @@ namespace _1Scripts.Logic.SOLogicScripts
       [SerializeField] private int skillCooldown;
       [SerializeField] private int skillSpeed;
       [SerializeField] private int skillFightingSpirit;
+      [SerializeField] private int skillFocusPoints;
+      
+      //Base Cooldown and other costs
       [SerializeField] private int fightingSpiritCost;
+      [SerializeField] private int focusPointsCost;
       [SerializeField] private int baseSkillCooldown;
       [SerializeField] private int baseSkillSpeed;
+      
 
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillElementAsset))] private Object skillElement;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTypeAsset))] private Object skillType;
@@ -49,6 +54,8 @@ namespace _1Scripts.Logic.SOLogicScripts
       
       public int FightingSpiritCost => fightingSpiritCost;
       public int BaseSkillCooldown => baseSkillCooldown;
+      public int SkillFocusPoints => skillFocusPoints;
+      public int FocusPointsCost => focusPointsCost;
       public int BaseSkillSpeed => baseSkillSpeed;
       
       public ISkillElementAsset SkillElement => skillElement as ISkillElementAsset;

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed15f48d19e77845b0bd0805a93d216, type: 3}
+  m_Name: NatureRestoration
+  m_EditorClassIdentifier: 
+  skillName: NatureRestoration
+  skillDescription: Restores balance that has been destroyed, dispelling all debuffs
+    from all allies and granting increased Attack and immunity for 2 turns. Increases
+    Combat Readiness of the caster by 50%. When this skill is available at the start
+    of the turn, decreases debuff duration of the caster by 1 turn.
+  skillSprite: {fileID: 8255662054860326999, guid: 371f17d0806592f4ba4267e27031716e,
+    type: 3}
+  skillCooldown: 0
+  skillSpeed: 0
+  skillFightingSpirit: 0
+  fightingSpiritCost: 0
+  baseSkillCooldown: 4
+  baseSkillSpeed: 0
+  skillElement: {fileID: 11400000, guid: 4f73ec484a273c446a9b8baa33a78bc0, type: 2}
+  skillType: {fileID: 11400000, guid: 2cc7c2fcd5b83ea49a7319fc4ed72b3e, type: 2}
+  skillReadiness: {fileID: 11400000, guid: fb72ac836d7072d4ead4d326060d9f0d, type: 2}
+  skillEnableStatus: {fileID: 11400000, guid: 589eb884e2e1839458a42a1bb6ae0f59, type: 2}
+  skillTarget: {fileID: 11400000, guid: cf53c8d3e55750945b777ef09d7cf2ea, type: 2}
