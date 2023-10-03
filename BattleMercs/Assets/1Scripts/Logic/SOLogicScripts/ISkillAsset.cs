@@ -14,7 +14,11 @@ namespace _1Scripts.Logic.SOLogicScripts
         int FightingSpiritCost { get; }
         int SkillFocusPoints { get; }
         int FocusPointsCost { get; }
-        
+
+        int SkillStackingCounters { get; }
+
+        int StackingCountersLimit { get; }
+
         int BaseSkillSpeed { get; }
         ISkillElementAsset SkillElement { get; }
         ISkillTypeAsset SkillType { get; }

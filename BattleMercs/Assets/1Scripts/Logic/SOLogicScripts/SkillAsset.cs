@@ -17,21 +17,30 @@ namespace _1Scripts.Logic.SOLogicScripts
       [SerializeField] private string skillDescription;
       [SerializeField] private Sprite skillSprite;
 
-      [Header("Skill Attributes")]
+      [Header("Basic Skill Attribute Values")]
       
-      //Set to "0" to make it initially available
+      //Initial Values
       [SerializeField] private int skillCooldown;
       [SerializeField] private int skillSpeed;
-      [SerializeField] private int skillFightingSpirit;
-      [SerializeField] private int skillFocusPoints;
       
-      //Base Cooldown and other costs
-      [SerializeField] private int fightingSpiritCost;
-      [SerializeField] private int focusPointsCost;
+      //Base Values
       [SerializeField] private int baseSkillCooldown;
       [SerializeField] private int baseSkillSpeed;
       
-
+      [Header("Other Skill Attribute Values")]
+      
+      //Attribute values
+      [SerializeField] private int skillFightingSpirit;
+      [SerializeField] private int skillFocusPoints;
+      [SerializeField] private int skillStackingCounters;
+      
+      //Costs
+      [SerializeField] private int fightingSpiritCost;
+      [SerializeField] private int focusPointsCost;
+      [SerializeField] private int stackingCountersLimit;
+      
+      
+      [Header("Skill Attribute Assets")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillElementAsset))] private Object skillElement;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTypeAsset))] private Object skillType;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillReadinessAsset))] private Object skillReadiness;
@@ -43,21 +52,25 @@ namespace _1Scripts.Logic.SOLogicScripts
       #endregion
 
       #region PROPERTIES
-
       public string SkillName => skillName;
       public string SkillDescription => skillDescription;
       public Sprite SkillSprite => skillSprite;
-
+      
+      //Basic Skill Attribute Values
       public int SkillCooldown => skillCooldown;
       public int SkillSpeed => skillSpeed;
-      public int SkillFightingSpirit => skillFightingSpirit;
-      
-      public int FightingSpiritCost => fightingSpiritCost;
       public int BaseSkillCooldown => baseSkillCooldown;
-      public int SkillFocusPoints => skillFocusPoints;
-      public int FocusPointsCost => focusPointsCost;
       public int BaseSkillSpeed => baseSkillSpeed;
       
+      //Other Skill Attribute Values
+      public int SkillFightingSpirit => skillFightingSpirit;
+      public int FightingSpiritCost => fightingSpiritCost;
+      public int SkillStackingCounters => skillStackingCounters;
+      public int SkillFocusPoints => skillFocusPoints;
+      public int FocusPointsCost => focusPointsCost;
+      public int StackingCountersLimit => stackingCountersLimit;
+      
+      //Skill Attribute Assets
       public ISkillElementAsset SkillElement => skillElement as ISkillElementAsset;
       public ISkillTypeAsset SkillType => skillType as ISkillTypeAsset;
       public ISkillReadinessAsset SkillReadiness => skillReadiness as ISkillReadinessAsset;
