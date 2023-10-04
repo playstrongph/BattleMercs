@@ -21,7 +21,7 @@ MonoBehaviour:
   heroZodiac: {fileID: 11400000, guid: 5b7fbb27988a2c44bb6186f19d335f28, type: 2}
   heroSprite: {fileID: -5352293173377541852, guid: 46a97373e7e9ac7448ebe4cd504d6caf,
     type: 3}
-  health: 5826
+  health: 6992
   attack: 758
   defense: 672
   speed: 95
@@ -30,10 +30,10 @@ MonoBehaviour:
   criticalHitChance: 15
   criticalHitDamage: 150
   effectiveness: 0
-  effectResistance: 12
+  effectResistance: 47
   dualAttackChance: 5
   hitChance: 100
   heroSkills:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 24fb656f977d6ad4bada6a0883ab206b, type: 2}
+  - {fileID: 11400000, guid: 1313a2dfaeaf6204ba35efe440e38efc, type: 2}
+  - {fileID: 11400000, guid: f33cb60a5e7c660449099513692d939e, type: 2}

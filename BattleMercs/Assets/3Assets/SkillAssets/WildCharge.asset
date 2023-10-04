@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed15f48d19e77845b0bd0805a93d216, type: 3}
+  m_Name: WildCharge
+  m_EditorClassIdentifier: 
+  skillName: WildCharge
+  skillDescription: 'Increases Critical Hit Chance by 30%. At the start of the turn,
+    gains 1 Focus and grants Bzzt! to the caster for 1 turn, and when Focus is full,
+    resets cooldown of Operation: Cream Puff.
+
+    Bzzt!: After attacking, inflicts
+    2000 fixed damage and injuries on all enemies. The severity of injuries increases
+    proportional to fixed damage. Injuries decrease max Health of the target by up
+    to 10%. Applies to Heroes only.'
+  skillSprite: {fileID: 3178947686364653779, guid: b212cf1158eadff40a3364643bdf328b,
+    type: 3}
+  skillCooldown: 0
+  skillSpeed: 0
+  baseSkillCooldown: 0
+  baseSkillSpeed: 0
+  skillFightingSpirit: 0
+  skillFocusPoints: 0
+  skillStackingCounters: 0
+  fightingSpiritCost: 0
+  focusPointsCost: 0
+  stackingCountersLimit: 0
+  skillElement: {fileID: 11400000, guid: 4f73ec484a273c446a9b8baa33a78bc0, type: 2}
+  skillType: {fileID: 11400000, guid: 5dc41b6a8fe4d214e98e3930d0ce05df, type: 2}
+  skillReadiness: {fileID: 11400000, guid: fb72ac836d7072d4ead4d326060d9f0d, type: 2}
+  skillEnableStatus: {fileID: 11400000, guid: 589eb884e2e1839458a42a1bb6ae0f59, type: 2}
+  skillTarget: {fileID: 11400000, guid: 3716e006c9b6f2642b86bbb615c97891, type: 2}
