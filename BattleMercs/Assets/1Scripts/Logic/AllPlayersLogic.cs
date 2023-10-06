@@ -14,8 +14,8 @@ namespace _1Scripts.Logic
 
       [Header("Inspector References")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneLogicManager))] private Object battleSceneLogicManager;
-
-      [FormerlySerializedAs("allPlayers1")] [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerLogic))] private List<Object> allPlayers = new List<Object>();
+      
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerLogic))] private List<Object> allPlayers = new List<Object>();
 
       
 
