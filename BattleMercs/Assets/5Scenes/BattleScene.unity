@@ -3229,14 +3229,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3595889889011325040, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+    - target: {fileID: 3981924646431780641, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
         type: 3}
-      propertyPath: allSkills.Array.size
+      propertyPath: allPlayers.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3595889889011325040, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+    - target: {fileID: 3981924646431780641, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
         type: 3}
-      propertyPath: allSkills.Array.data[0].skillNameLabel
+      propertyPath: allPlayers1.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3981924646431780641, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: allPlayers.Array.data[0].playerName
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4025127891384342246, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
@@ -3299,9 +3304,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: BattleSceneLogicManager
       objectReference: {fileID: 0}
-    - target: {fileID: 4025127891384342249, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+    - target: {fileID: 6756427737729860094, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
         type: 3}
-      propertyPath: m_IsActive
+      propertyPath: allHeroes.Array.size
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

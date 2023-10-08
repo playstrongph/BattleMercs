@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabBattleSceneManagerVisual: {fileID: 407357391222785282, guid: 86f42a1ae533925429bc500618128eef,
     type: 3}
+  battleSettings: {fileID: 11400000, guid: 2cee7d7d882df1e43bee5128365d1d2b, type: 2}
   battleSceneManagerVisual: {fileID: 0}
   playersLogic: {fileID: 3981924646431780641}
   allHeroesLogic: {fileID: 6756427737729860094}
@@ -296,13 +297,18 @@ PrefabInstance:
     - target: {fileID: 5545599268939277662, guid: ab5f1419352f09e448217fe18036e339,
         type: 3}
       propertyPath: allSkills.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5545599268939277662, guid: ab5f1419352f09e448217fe18036e339,
         type: 3}
       propertyPath: battleSceneLogicManager
       value: 
       objectReference: {fileID: 1847427112}
+    - target: {fileID: 5545599268939277662, guid: ab5f1419352f09e448217fe18036e339,
+        type: 3}
+      propertyPath: allSkills.Array.data[0].skillNameLabel
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5545599268939277663, guid: ab5f1419352f09e448217fe18036e339,
         type: 3}
       propertyPath: m_LocalPosition.x

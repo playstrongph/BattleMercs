@@ -1,4 +1,5 @@
-﻿using _1Scripts.Visual;
+﻿using _1Scripts.Logic.SOLogicScripts;
+using _1Scripts.Visual;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -10,11 +11,13 @@ namespace _1Scripts.Logic
 #pragma warning disable 0649 // Disable "Field is never assigned to..." warning
    
       [Header("Prefabs")]
-      
       [SerializeField] private GameObject prefabBattleSceneManagerVisual;
+      
+      [Header("SO Assets")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneSettingsAsset))] private Object battleSettings;
 
       [Header("Runtime References")]
-      [SerializeField] private Object battleSceneManagerVisual;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManagerVisual))]private Object battleSceneManagerVisual;
       
       [Header("Children Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IAllPlayersLogic))] private Object playersLogic;
@@ -34,12 +37,19 @@ namespace _1Scripts.Logic
 
       public GameObject PrefabBattleSceneManagerVisual => prefabBattleSceneManagerVisual;
       
+      public IBattleSceneSettingsAsset BattleSettings
+      {
+         get => battleSettings as IBattleSceneSettingsAsset;
+         set => battleSettings = value as Object;
+      }
+      
 
       public IBattleSceneManagerVisual BattleSceneManagerVisual
       {
          get => battleSceneManagerVisual as IBattleSceneManagerVisual;
          set => battleSceneManagerVisual = value as Object;
       }
+      
 
       //Components
       public IAllPlayersLogic AllPlayersLogic => playersLogic as IAllPlayersLogic;

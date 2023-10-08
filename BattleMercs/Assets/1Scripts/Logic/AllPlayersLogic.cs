@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using _1Scripts.Logic.SOLogicScripts;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Object = UnityEngine.Object;
 
 namespace _1Scripts.Logic
@@ -14,12 +12,8 @@ namespace _1Scripts.Logic
 
       [Header("Inspector References")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneLogicManager))] private Object battleSceneLogicManager;
-      
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerLogic))] private List<Object> allPlayers = new List<Object>();
 
-      
-
-     
+      [SerializeField] private List<PlayerLogic> allPlayers = new List<PlayerLogic>();
 
       #endregion
         
@@ -38,7 +32,7 @@ namespace _1Scripts.Logic
             var newList = new List<IPlayerLogic>();
             foreach (var player in allPlayers)
             {
-               newList.Add(player as IPlayerLogic);
+               newList.Add(player);
             }
             return newList;
          }
@@ -53,41 +47,31 @@ namespace _1Scripts.Logic
       public struct PlayerLogic : IPlayerLogic
       {
          #region STRUCTVARIABLES
-         
          #pragma warning disable 0649
 
          [SerializeField] private string playerName;
-         [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerNumberAsset))] private Object playerIDNumber;
+         [SerializeField] private string playerIDNumber;
          [SerializeField] private int soulsCount;
-            
+         [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerLogic))] private Object currentEnemyPlayer;
          
-         [Header("SET IN RUNTIME")]
-         [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private Object currentEnemyPlayer;
-         
-         //Hero Lists
+         [Header("HERO LISTS")]
          [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> playerHeroes;
          [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> aliveHeroes;
          [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> deadHeroes;
          [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> extinctHeroes;
          
          #pragma warning restore 0649
-         
-         
-
          #endregion
 
          #region STRUCTPROPERTIES
-
          public string PlayerName { get => playerName; set => playerName = value; }
-         
-         public IPlayerNumberAsset PlayerIDNumber { get => playerIDNumber as IPlayerNumberAsset; set => playerIDNumber = value as Object;
-         }
-         
+         public string PlayerIDNumber { get => playerIDNumber; set => playerIDNumber = value; }
          public int SoulsCount { get => soulsCount; set => soulsCount = value; }
          
          //SET IN RUNTIME
-
-         public IHeroLogic CurrentEnemyPlayer { get => currentEnemyPlayer as IHeroLogic; set => currentEnemyPlayer = value as Object; }
+         
+         //Used for reference purposes only;  Object type to prevent circular logic
+         public IPlayerLogic CurrentEnemyPlayer { get => currentEnemyPlayer as IPlayerLogic; set => currentEnemyPlayer = value as Object; }
 
          public List<IHeroLogic> PlayerHeroes
          {

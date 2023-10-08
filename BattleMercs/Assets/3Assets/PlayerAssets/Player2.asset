@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed3bd2986e54d7b4c8f7a65d89cd6705, type: 3}
-  m_Name: BattleSettings1
+  m_Script: {fileID: 11500000, guid: cd90433fd3926fa459f67ee47a5c44dc, type: 3}
+  m_Name: Player2
   m_EditorClassIdentifier: 
-  players:
-  - {fileID: 11400000, guid: 36c9c23b6e872ea48977f58c92ef09f8, type: 2}
-  - {fileID: 11400000, guid: ed53eee2908d8c84d80e60c25fab7b47, type: 2}
+  playerName: DarkCPU
+  playerHeroes: {fileID: 11400000, guid: f0b65800ceb22874eb45d69d0084dcf5, type: 2}
