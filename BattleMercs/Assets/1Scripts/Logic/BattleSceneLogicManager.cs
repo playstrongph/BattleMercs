@@ -25,7 +25,9 @@ namespace _1Scripts.Logic
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IAllSkillsLogic))] private Object allSkillsLogic;
       
       [Header("Attached Components")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleStart))] private Object battleStart;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeBattleSceneManagerVisual))] private Object initializeBattleSceneManagerVisual;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeAllPlayers))] private Object initializeAllPlayers;
       
       
       
@@ -55,15 +57,20 @@ namespace _1Scripts.Logic
       public IAllPlayersLogic AllPlayersLogic => playersLogic as IAllPlayersLogic;
       public IAllHeroesLogic AllHeroesLogic => allHeroesLogic as IAllHeroesLogic;
       public IAllSkillsLogic AllSkillsLogic => allSkillsLogic as IAllSkillsLogic;
-      private IInitializeBattleSceneManagerVisual InitializeBattleSceneManagerVisual => initializeBattleSceneManagerVisual as IInitializeBattleSceneManagerVisual;
+      
+      //Attached Components
+      private IBattleStart BattleStart => battleStart as IBattleStart;
+      public IInitializeBattleSceneManagerVisual InitializeBattleSceneManagerVisual => initializeBattleSceneManagerVisual as IInitializeBattleSceneManagerVisual;
+      public IInitializeAllPlayers InitializeAllPlayers => initializeAllPlayers as IInitializeAllPlayers;
 
       #endregion
 
       #region METHODS
       private void Start()
       {
-         //TODO: In the future, Network instantiate
-         InitializeBattleSceneManagerVisual.StartActions();
+         //TODO: Load in BattleStart
+         //InitializeBattleSceneManagerVisual.StartActions();
+         BattleStart.StartAction();
       }
 
       

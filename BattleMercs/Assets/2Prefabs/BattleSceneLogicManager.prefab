@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4025127891384342246}
   - component: {fileID: 1847427112}
   - component: {fileID: 4041375816393396379}
+  - component: {fileID: 1989336922780340270}
+  - component: {fileID: 1357007176}
   m_Layer: 0
   m_Name: BattleSceneLogicManager
   m_TagString: Untagged
@@ -54,7 +56,9 @@ MonoBehaviour:
   playersLogic: {fileID: 3981924646431780641}
   allHeroesLogic: {fileID: 6756427737729860094}
   allSkillsLogic: {fileID: 3595889889011325040}
+  battleStart: {fileID: 1989336922780340270}
   initializeBattleSceneManagerVisual: {fileID: 4041375816393396379}
+  initializeAllPlayers: {fileID: 1357007176}
 --- !u!114 &4041375816393396379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,6 +72,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleSceneLogicManager: {fileID: 1847427112}
+--- !u!114 &1989336922780340270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4025127891384342249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90085c54ebd0552408e80dd85278c1de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logicManagerReference: {fileID: 1847427112}
+--- !u!114 &1357007176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4025127891384342249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65971c343458bba458210f97bf42c024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4480224246309846369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -250,7 +279,7 @@ PrefabInstance:
     - target: {fileID: 3907091850775403369, guid: e7a9d1b63fd4340448cd4e94aafc61a6,
         type: 3}
       propertyPath: allHeroes.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3907091850775403369, guid: e7a9d1b63fd4340448cd4e94aafc61a6,
         type: 3}

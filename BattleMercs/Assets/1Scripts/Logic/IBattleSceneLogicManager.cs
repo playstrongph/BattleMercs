@@ -1,4 +1,5 @@
-﻿using _1Scripts.Visual;
+﻿using _1Scripts.Logic.SOLogicScripts;
+using _1Scripts.Visual;
 using UnityEngine;
 
 namespace _1Scripts.Logic
@@ -9,10 +10,16 @@ namespace _1Scripts.Logic
         GameObject PrefabBattleSceneManagerVisual { get; }
         
         //Components
+
+        IBattleSceneSettingsAsset BattleSettings { get; }
         IAllPlayersLogic AllPlayersLogic { get; }
         IAllHeroesLogic AllHeroesLogic { get; }
 
         IAllSkillsLogic AllSkillsLogic { get; }
         IBattleSceneManagerVisual BattleSceneManagerVisual { get; set; }
+        
+        //Attached Components
+        IInitializeAllPlayers InitializeAllPlayers { get; }
+        IInitializeBattleSceneManagerVisual InitializeBattleSceneManagerVisual { get; }
     }
 }

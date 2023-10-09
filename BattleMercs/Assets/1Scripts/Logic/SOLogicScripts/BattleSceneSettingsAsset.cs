@@ -9,18 +9,18 @@ namespace _1Scripts.Logic.SOLogicScripts
    {
       #region VARIABLES
 
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAsset))] private List<Object> players = new List<Object>();  
+      [FormerlySerializedAs("players")] [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAsset))] private List<Object> allPlayers = new List<Object>();  
 
       #endregion
         
       #region PROPERTIES
       
-      public List<IPlayerAsset> Player
+      public List<IPlayerAsset> AllPlayers
       {
          get
          {
             var newList = new List<IPlayerAsset>();
-            foreach (var player in players)
+            foreach (var player in allPlayers)
             {
                newList.Add(player as IPlayerAsset);
             }

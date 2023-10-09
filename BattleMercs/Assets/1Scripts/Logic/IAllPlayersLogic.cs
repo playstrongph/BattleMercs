@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using _1Scripts.Logic.SOLogicScripts;
 
 namespace _1Scripts.Logic
 {
@@ -6,5 +7,7 @@ namespace _1Scripts.Logic
     {
         IBattleSceneLogicManager BattleSceneLogicManager { get; }
         List<IPlayerLogic> AllPlayers { get; }
+        
+        void AddNewPlayers(List<IPlayerAsset> playerAssets);
     }
 }

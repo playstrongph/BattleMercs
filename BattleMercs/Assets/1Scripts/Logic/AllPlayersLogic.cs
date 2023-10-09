@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using _1Scripts.Logic.SOLogicScripts;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -129,8 +130,16 @@ namespace _1Scripts.Logic
         
       #region METHODS
 
-      
-      
+      public void AddNewPlayers(List<IPlayerAsset> playerAssets)
+      {
+         foreach (var t in playerAssets)
+         {
+            var x = new PlayerLogic { PlayerName = t.PlayerName };
+            allPlayers.Add(x);
+         }
+      }
+
+
 
 
       #endregion

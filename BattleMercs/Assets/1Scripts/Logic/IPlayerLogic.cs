@@ -6,6 +6,7 @@ namespace _1Scripts.Logic
 {
    public interface IPlayerLogic
    {
+      
       string PlayerName { get; set; }
       //IPlayerNumberAsset PlayerIDNumber { get; set; }
       string PlayerIDNumber { get; set; }
