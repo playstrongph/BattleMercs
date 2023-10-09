@@ -26,11 +26,7 @@ namespace _1Scripts.Logic
          
           allPlayersLogic.AddNewPlayers(allPlayerAssets);
           
-          //TEST Sequence
-          foreach (var player in allPlayers)
-          {
-              Debug.Log("Player Name: " +player.PlayerName);
-          }
+         
 
 
       }
