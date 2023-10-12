@@ -25,6 +25,15 @@ namespace _1Scripts.Logic
 
          
           allPlayersLogic.AddNewPlayers(allPlayerAssets);
+
+          foreach (var player in allPlayerAssets)
+          {
+              var playerLogicPrefab = logicManager.BattleSettings.PlayerLogicPrefab;
+
+              var newPlayer = Instantiate(playerLogicPrefab, allPlayersLogic.Transform);
+              newPlayer.name = player.PlayerName;
+
+          }
           
          
 

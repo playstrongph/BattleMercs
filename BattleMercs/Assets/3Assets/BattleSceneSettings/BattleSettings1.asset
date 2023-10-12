@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3bd2986e54d7b4c8f7a65d89cd6705, type: 3}
   m_Name: BattleSettings1
   m_EditorClassIdentifier: 
-  players:
+  allPlayers:
   - {fileID: 11400000, guid: 36c9c23b6e872ea48977f58c92ef09f8, type: 2}
   - {fileID: 11400000, guid: ed53eee2908d8c84d80e60c25fab7b47, type: 2}
+  playerLogicPrefab: {fileID: 6634385906465547695, guid: d2be427a02231064ebf2184c9c320e3b,
+    type: 3}

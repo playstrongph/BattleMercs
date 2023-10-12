@@ -8,9 +8,15 @@ namespace _1Scripts.Logic.SOLogicScripts
    public class BattleSceneSettingsAsset : ScriptableObject, IBattleSceneSettingsAsset
    {
       #region VARIABLES
+#pragma warning disable 0649
 
-      [FormerlySerializedAs("players")] [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAsset))] private List<Object> allPlayers = new List<Object>();  
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAsset))] private List<Object> allPlayers = new List<Object>();
 
+      [Header("PREFABS")]
+      [SerializeField] private GameObject playerLogicPrefab;
+      
+      
+#pragma warning restore 0649
       #endregion
         
       #region PROPERTIES
@@ -27,16 +33,19 @@ namespace _1Scripts.Logic.SOLogicScripts
             return newList;
          }
       }
+      public GameObject PlayerLogicPrefab => playerLogicPrefab;
       
+
+
       //TODO:  Anomalies, game board design, power-ups, and other general combat stuff
-      
-        
+
+
 
       #endregion
-        
+
       #region METHODS
 
-        
+
 
       #endregion
    }

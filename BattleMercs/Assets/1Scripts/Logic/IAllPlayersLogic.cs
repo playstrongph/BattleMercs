@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using _1Scripts.Logic.SOLogicScripts;
+using UnityEngine;
 
 namespace _1Scripts.Logic
 {
@@ -9,5 +10,7 @@ namespace _1Scripts.Logic
         List<IPlayerLogic> AllPlayers { get; }
         
         void AddNewPlayers(List<IPlayerAsset> playerAssets);
+
+        Transform Transform { get; }
     }
 }

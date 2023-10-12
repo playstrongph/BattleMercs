@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using _1Scripts.Logic.SOLogicScripts;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Object = UnityEngine.Object;
 
 namespace _1Scripts.Logic
@@ -14,7 +15,10 @@ namespace _1Scripts.Logic
       [Header("Inspector References")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneLogicManager))] private Object battleSceneLogicManager;
 
-      [SerializeField] private List<PlayerLogic> allPlayers = new List<PlayerLogic>();
+      [SerializeField] private List<PlayerLogic> oldAllPlayers = new List<PlayerLogic>();
+      
+      //Non-serialized variables
+      
 
       #endregion
         
@@ -31,7 +35,7 @@ namespace _1Scripts.Logic
          get
          {
             var newList = new List<IPlayerLogic>();
-            foreach (var player in allPlayers)
+            foreach (var player in oldAllPlayers)
             {
                newList.Add(player);
             }
@@ -39,7 +43,20 @@ namespace _1Scripts.Logic
          }
       }
 
+
+      public Transform Transform => this.transform;
+
       #endregion
+      
+      #region METHODS
+
+      public void AddNewPlayers(List<IPlayerAsset> playerAssets)
+      {
+         
+      }
+      
+      #endregion
+      
       
       #region STRUCTS
 
@@ -127,21 +144,6 @@ namespace _1Scripts.Logic
       }
 
       #endregion
-        
-      #region METHODS
-
-      public void AddNewPlayers(List<IPlayerAsset> playerAssets)
-      {
-         foreach (var t in playerAssets)
-         {
-            var x = new PlayerLogic { PlayerName = t.PlayerName };
-            allPlayers.Add(x);
-         }
-      }
-
-
-
-
-      #endregion
+      
    }
 }
