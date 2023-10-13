@@ -21,7 +21,8 @@ namespace _1Scripts.Logic
       {
           var allPlayerAssets = logicManager.BattleSettings.AllPlayers;
           var allPlayersLogic = logicManager.AllPlayersLogic;
-          var allPlayers = allPlayersLogic.AllPlayers;
+          var oldAllPlayers = allPlayersLogic.OldAllPlayers;
+          //var allPlayers = allPlayersLogic.AllPlayers;
 
          
           allPlayersLogic.AddNewPlayers(allPlayerAssets);
@@ -32,7 +33,17 @@ namespace _1Scripts.Logic
 
               var newPlayer = Instantiate(playerLogicPrefab, allPlayersLogic.Transform);
               newPlayer.name = player.PlayerName;
-
+              
+              //This works
+              //newPlayer.GetComponent<IPlayerLogic>().PlayerName = player.PlayerName;
+              
+              allPlayersLogic.AddToAllPlayersList(newPlayer);
+          }
+          
+          //This is working!
+          for (int i = 0; i < allPlayersLogic.AllPlayers.Count; i++)
+          {
+              allPlayersLogic.AllPlayers[i].PlayerName = allPlayerAssets[i].PlayerName;
           }
           
          

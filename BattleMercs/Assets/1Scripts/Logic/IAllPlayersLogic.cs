@@ -7,10 +7,14 @@ namespace _1Scripts.Logic
     public interface IAllPlayersLogic
     {
         IBattleSceneLogicManager BattleSceneLogicManager { get; }
-        List<IPlayerLogic> AllPlayers { get; }
+        List<IPlayerLogic> OldAllPlayers { get; }
         
+        List<IPlayerLogic> AllPlayers { get; }
+
         void AddNewPlayers(List<IPlayerAsset> playerAssets);
 
         Transform Transform { get; }
+
+        void AddToAllPlayersList(GameObject playerLogicGameObject);
     }
 }

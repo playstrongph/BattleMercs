@@ -16,7 +16,9 @@ namespace _1Scripts.Logic
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneLogicManager))] private Object battleSceneLogicManager;
 
       [SerializeField] private List<PlayerLogic> oldAllPlayers = new List<PlayerLogic>();
-      
+
+      [SerializeField] private List<GameObject> allPlayers = new List<GameObject>();
+
       //Non-serialized variables
       
 
@@ -30,7 +32,7 @@ namespace _1Scripts.Logic
          private set => battleSceneLogicManager = value as Object;
       }
 
-      public List<IPlayerLogic> AllPlayers
+      public List<IPlayerLogic> OldAllPlayers
       {
          get
          {
@@ -42,6 +44,20 @@ namespace _1Scripts.Logic
             return newList;
          }
       }
+      
+      public List<IPlayerLogic> AllPlayers
+      {
+         get
+         {
+            var newList = new List<IPlayerLogic>();
+            foreach (var player in allPlayers)
+            {
+               newList.Add(player.GetComponent<IPlayerLogic>());
+            }
+            return newList;
+         }
+      }
+      
 
 
       public Transform Transform => this.transform;
@@ -54,7 +70,12 @@ namespace _1Scripts.Logic
       {
          
       }
-      
+
+      public void AddToAllPlayersList(GameObject playerLogicGameObject)
+      {
+         allPlayers.Add(playerLogicGameObject);
+      }
+
       #endregion
       
       

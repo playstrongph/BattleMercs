@@ -43,8 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f7ddc0d7444304f80f81fa630f8177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: 
-  playerIDNumber: 
+  playerName: Default Player
+  playerIDNumber: 9999
   soulsCount: 0
   currentEnemyPlayer: {fileID: 0}
   playerHeroes: []
