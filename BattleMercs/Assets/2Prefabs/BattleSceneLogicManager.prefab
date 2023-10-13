@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4041375816393396379}
   - component: {fileID: 1989336922780340270}
   - component: {fileID: 1357007176}
+  - component: {fileID: 6357082121393306748}
   m_Layer: 0
   m_Name: BattleSceneLogicManager
   m_TagString: Untagged
@@ -59,6 +60,7 @@ MonoBehaviour:
   battleStart: {fileID: 1989336922780340270}
   initializeBattleSceneManagerVisual: {fileID: 4041375816393396379}
   initializeAllPlayers: {fileID: 1357007176}
+  uniqueIDGenerator: {fileID: 6357082121393306748}
 --- !u!114 &4041375816393396379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +97,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65971c343458bba458210f97bf42c024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIDs: []
+--- !u!114 &6357082121393306748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4025127891384342249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff612a1a14c31f64ca2c802153a6447b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &4480224246309846369

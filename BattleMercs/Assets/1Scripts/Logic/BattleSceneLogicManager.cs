@@ -28,6 +28,7 @@ namespace _1Scripts.Logic
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleStart))] private Object battleStart;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeBattleSceneManagerVisual))] private Object initializeBattleSceneManagerVisual;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeAllPlayers))] private Object initializeAllPlayers;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IUniqueIDGenerator))] private Object uniqueIDGenerator;
       
       
       
@@ -62,6 +63,8 @@ namespace _1Scripts.Logic
       private IBattleStart BattleStart => battleStart as IBattleStart;
       public IInitializeBattleSceneManagerVisual InitializeBattleSceneManagerVisual => initializeBattleSceneManagerVisual as IInitializeBattleSceneManagerVisual;
       public IInitializeAllPlayers InitializeAllPlayers => initializeAllPlayers as IInitializeAllPlayers;
+      
+      public IUniqueIDGenerator UniqueIDGenerator => uniqueIDGenerator as IUniqueIDGenerator;
 
       #endregion
 
