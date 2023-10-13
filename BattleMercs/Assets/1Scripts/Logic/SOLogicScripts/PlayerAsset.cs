@@ -11,7 +11,9 @@ namespace _1Scripts.Logic.SOLogicScripts
       #pragma warning disable 0649
 
       [SerializeField] private string playerName;
+      [SerializeField] private int soulsCount;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ITeamHeroesAsset))] private Object playerHeroes;
+       
       
       #pragma warning restore 0649
 
@@ -20,6 +22,7 @@ namespace _1Scripts.Logic.SOLogicScripts
       #region PROPERTIES
 
       public string PlayerName => playerName;
+      public int SoulsCount => soulsCount;
       public ITeamHeroesAsset PlayerHeroes => playerHeroes as ITeamHeroesAsset;
 
       #endregion

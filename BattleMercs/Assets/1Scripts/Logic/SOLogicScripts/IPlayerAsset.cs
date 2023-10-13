@@ -3,6 +3,7 @@
     public interface IPlayerAsset
     {
         string PlayerName { get; }
+        int SoulsCount { get; }
         ITeamHeroesAsset PlayerHeroes { get; }
     }
 }
