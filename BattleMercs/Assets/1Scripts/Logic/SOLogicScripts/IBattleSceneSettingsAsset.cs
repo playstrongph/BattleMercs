@@ -8,5 +8,7 @@ namespace _1Scripts.Logic.SOLogicScripts
         List<IPlayerAsset> AllPlayers { get; }
 
         GameObject PlayerLogicPrefab { get; }
+
+        GameObject HeroLogicPrefab { get; }
     }
 }

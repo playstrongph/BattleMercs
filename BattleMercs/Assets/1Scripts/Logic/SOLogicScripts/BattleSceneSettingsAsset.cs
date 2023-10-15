@@ -14,7 +14,7 @@ namespace _1Scripts.Logic.SOLogicScripts
 
       [Header("PREFABS")]
       [SerializeField] private GameObject playerLogicPrefab;
-      
+      [SerializeField] private GameObject heroLogicPrefab;
       
 #pragma warning restore 0649
       #endregion
@@ -34,6 +34,7 @@ namespace _1Scripts.Logic.SOLogicScripts
          }
       }
       public GameObject PlayerLogicPrefab => playerLogicPrefab;
+      public GameObject HeroLogicPrefab => heroLogicPrefab;
       
 
 

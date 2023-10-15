@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Player1
   m_EditorClassIdentifier: 
   playerName: Praetorian
+  soulsCount: 99
   playerHeroes: {fileID: 11400000, guid: a5b570a2a6ac50341bb6b8324f5b12f1, type: 2}

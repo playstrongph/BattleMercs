@@ -43,15 +43,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf1141b5211e2d43ba379d58a17072f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allHeroes:
-  - heroNameLabel: 
+  battleSceneLogicManager: {fileID: 0}
+  allHeroes: []
+  oldAllHeroes:
+  - heroLabel: 
     heroInformation:
       heroName: 
       heroLevel: 0
       heroStars: 0
-      heroCp: 0
+      cumulativePower: 0
+      heroElement: {fileID: 0}
       heroClass: {fileID: 0}
-      heroRace: {fileID: 0}
+      heroZodiac: {fileID: 0}
     heroAttributes:
       health: 0
       attack: 0
@@ -62,16 +65,19 @@ MonoBehaviour:
       criticalHitChance: 0
       criticalHitDamage: 0
       effectiveness: 0
+      effectResistance: 0
       dualAttackChance: 0
       hitChance: 0
-  - heroNameLabel: 
+    heroSkills: []
+  - heroLabel: 
     heroInformation:
       heroName: 
       heroLevel: 0
       heroStars: 0
-      heroCp: 0
+      cumulativePower: 0
+      heroElement: {fileID: 0}
       heroClass: {fileID: 0}
-      heroRace: {fileID: 0}
+      heroZodiac: {fileID: 0}
     heroAttributes:
       health: 0
       attack: 0
@@ -82,5 +88,7 @@ MonoBehaviour:
       criticalHitChance: 0
       criticalHitDamage: 0
       effectiveness: 0
+      effectResistance: 0
       dualAttackChance: 0
       hitChance: 0
+    heroSkills: []

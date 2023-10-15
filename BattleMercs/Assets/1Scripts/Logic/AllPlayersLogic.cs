@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using _1Scripts.Logic.SOLogicScripts;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Object = UnityEngine.Object;
 
 namespace _1Scripts.Logic

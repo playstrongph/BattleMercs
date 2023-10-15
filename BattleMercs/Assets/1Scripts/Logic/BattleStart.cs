@@ -33,6 +33,8 @@ namespace _1Scripts.Logic
 
           yield return StartCoroutine(InitializeAllPlayersCoroutine());
           
+          yield return StartCoroutine(InitializeAllHeroesCoroutine());
+          
           yield return null;
       }
       
@@ -49,6 +51,12 @@ namespace _1Scripts.Logic
       private IEnumerator InitializeAllPlayersCoroutine()
       {
           LogicManagerReference.InitializeAllPlayers.LoadPlayers(LogicManagerReference);
+          yield return null;
+      }
+      
+      private IEnumerator InitializeAllHeroesCoroutine()
+      {
+          LogicManagerReference.InitializeAllHeroes.LoadHeroes(LogicManagerReference);
           yield return null;
       }
 

@@ -263,6 +263,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BattleSceneLogicManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6756427737729860094, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+        type: 3}
+      propertyPath: allHeroes.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b390b2f8ed343a84ea4f57a4ee6520f0, type: 3}
 --- !u!1001 &964175992

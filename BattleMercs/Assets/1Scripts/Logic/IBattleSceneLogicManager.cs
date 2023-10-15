@@ -20,6 +20,7 @@ namespace _1Scripts.Logic
         
         //Attached Components
         IInitializeAllPlayers InitializeAllPlayers { get; }
+        IInitializeAllHeroes InitializeAllHeroes { get; }
         IInitializeBattleSceneManagerVisual InitializeBattleSceneManagerVisual { get; }
         IUniqueIDGenerator UniqueIDGenerator { get; }
     }

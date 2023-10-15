@@ -17,3 +17,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ed53eee2908d8c84d80e60c25fab7b47, type: 2}
   playerLogicPrefab: {fileID: 6634385906465547695, guid: d2be427a02231064ebf2184c9c320e3b,
     type: 3}
+  heroLogicPrefab: {fileID: 401306147064565863, guid: 6096aff8134eaff478478d664ba1ba5f,
+    type: 3}

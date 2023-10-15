@@ -4,14 +4,14 @@ namespace _1Scripts.Logic
 {
    public interface IHeroInformation
    {
-      string HeroName  { get; }
+      string HeroName  { get; set; }
          
-      int HeroLevel { get; }
-      int HeroStars { get; }
-      int CumulativePower { get; }
-      IHeroElementAsset HeroElement { get; }
-      IHeroClassAsset HeroClass { get; }
+      int HeroLevel { get; set;}
+      int HeroStars { get; set;}
+      int CumulativePower { get; set; }
+      IHeroElementAsset HeroElement { get; set;}
+      IHeroClassAsset HeroClass { get; set;}
 
-      IHeroZodiacAsset HeroZodiac { get; }
+      IHeroZodiacAsset HeroZodiac { get; set;}
    }
 }

@@ -25,21 +25,26 @@ namespace _1Scripts.Logic
       {
           var allPlayerAssets = logicManager.BattleSettings.AllPlayers;
           var allPlayersLogic = logicManager.AllPlayersLogic;
+          var playerLogicPrefab = logicManager.BattleSettings.PlayerLogicPrefab;
 
 
           foreach (var playerAsset in allPlayerAssets)
           {
-              var playerLogicPrefab = logicManager.BattleSettings.PlayerLogicPrefab;
+              
               var newPlayer = Instantiate(playerLogicPrefab, allPlayersLogic.Transform);
-              var newPlayerLogic = newPlayer.GetComponent<IPlayerLogic>();
-
               newPlayer.name = playerAsset.PlayerName;
               
-              //Load player asset por
+              var newPlayerLogic = newPlayer.GetComponent<IPlayerLogic>();
+
+              
+              
+              //Set player name
               newPlayerLogic.PlayerName = playerAsset.PlayerName;
-              //TODO: PlayerNumber
+              //Set unique player ID Number
               newPlayerLogic.PlayerIDNumber = logicManager.UniqueIDGenerator.GenerateUniqueID();
-              //TODO: SoulsCount
+              //Set SoulsCount
+              newPlayerLogic.SoulsCount = playerAsset.SoulsCount;
+              
               //TODO: Player Heroes
 
               allPlayersLogic.AddToAllPlayersList(newPlayer);
