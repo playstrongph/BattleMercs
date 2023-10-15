@@ -44,6 +44,7 @@ namespace _1Scripts.Logic
                   SetHeroInformation(newHeroLogic,heroAsset);
 
                   //TODO Set Hero Attributes
+                  SetHeroAttributes(newHeroLogic, heroAsset);
                   
                   //TODO: Add to all heroes list
                   allHeroesLogic.AddToAllHeroesList(newHero);
@@ -51,7 +52,12 @@ namespace _1Scripts.Logic
               }//foreach heroAsset
           }//foreach playerAsset
       } //Load Heroes End
-
+        
+      /// <summary>
+      /// Transfer the information parameters from the heroAsset to the heroLogic
+      /// </summary>
+      /// <param name="heroLogic"></param>
+      /// <param name="heroAsset"></param>
       private void SetHeroInformation(IHeroLogic heroLogic, IHeroAsset heroAsset)
       {
           var heroInformation = heroLogic.HeroInformation;
@@ -64,8 +70,32 @@ namespace _1Scripts.Logic
           heroInformation.HeroElement = heroAsset.HeroElement;
           heroInformation.HeroClass = heroAsset.HeroClass;
           heroInformation.HeroZodiac = heroAsset.HeroZodiac;
-
       }
+      
+      /// <summary>
+      /// Transfer parameter values from hero asset to hero logic
+      /// </summary>
+      /// <param name="heroLogic"></param>
+      /// <param name="heroAsset"></param>
+      private void SetHeroAttributes(IHeroLogic heroLogic, IHeroAsset heroAsset)
+      {
+          var heroAttributes = heroLogic.HeroAttributes;
+
+          heroAttributes.Health = heroAsset.Health;
+          heroAttributes.Attack = heroAsset.Attack;
+          heroAttributes.Defense = heroAsset.Defense;
+          heroAttributes.Speed = heroAsset.Speed;
+          heroAttributes.Armor = heroAsset.Armor;
+          heroAttributes.FocusPoints = heroAsset.FocusPoints;
+          heroAttributes.CriticalHitChance = heroAsset.CriticalHitChance;
+          heroAttributes.CriticalHitDamage = heroAsset.CriticalHitDamage;
+          heroAttributes.Effectiveness = heroAsset.Effectiveness;
+          heroAttributes.EffectResistance = heroAsset.EffectResistance;
+          heroAttributes.DualAttackChance = heroAsset.DualAttackChance;
+          heroAttributes.HitChance = heroAsset.HitChance;
+      }
+      
+      
 
 
 

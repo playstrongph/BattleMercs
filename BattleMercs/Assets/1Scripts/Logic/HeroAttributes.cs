@@ -27,19 +27,19 @@ namespace _1Scripts.Logic
       #endregion
         
       #region PROPERTIES
-      
-      public int Health => health;
-      public int Attack => attack;
-      public int Defense => defense;
-      public int Speed => speed;
-      public int Armor => armor;
-      public int FocusPoints => focusPoints;
-      public int CriticalHitChance => criticalHitChance;
-      public int CriticalHitDamage => criticalHitDamage;
-      public int Effectiveness => effectiveness;
-      public int EffectResistance => effectResistance;
-      public int DualAttackChance => dualAttackChance;
-      public int HitChance => hitChance;
+
+      public int Health { get => health; set => health = value; }
+      public int Attack { get => attack; set => attack = value; }
+      public int Defense { get => defense; set => defense = value; }
+      public int Speed { get => speed; set => speed = value; }
+      public int Armor { get => armor; set => armor = value; }
+      public int FocusPoints { get => focusPoints; set => focusPoints = value; }
+      public int CriticalHitChance { get => criticalHitChance; set => criticalHitChance = value; }
+      public int CriticalHitDamage { get => criticalHitDamage; set => criticalHitDamage = value; }
+      public int Effectiveness { get => effectiveness; set => effectiveness = value; }
+      public int EffectResistance { get => effectResistance; set => effectResistance = value; }
+      public int DualAttackChance { get => dualAttackChance; set => dualAttackChance = value; }
+      public int HitChance { get => hitChance; set => hitChance = value; }
         
 
       #endregion
