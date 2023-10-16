@@ -31,7 +31,7 @@ namespace _1Scripts.Logic
       {
           yield return StartCoroutine(InitializeBattleSceneManagerVisualCoroutine());
 
-          yield return StartCoroutine(InitializeAllPlayersCoroutine());
+          yield return StartCoroutine(InitializeAllPlayersHeroesAndSkillsCoroutine());
 
           //yield return StartCoroutine(InitializeAllSkillsCoroutine());
           
@@ -48,7 +48,7 @@ namespace _1Scripts.Logic
           yield return null;
       }
 
-      private IEnumerator InitializeAllPlayersCoroutine()
+      private IEnumerator InitializeAllPlayersHeroesAndSkillsCoroutine()
       {
           LogicManagerReference.InitializeAllPlayers.LoadPlayers(LogicManagerReference);
           yield return null;
