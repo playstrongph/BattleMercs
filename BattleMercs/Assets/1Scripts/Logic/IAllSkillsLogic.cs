@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace _1Scripts.Logic
 {
@@ -6,5 +7,9 @@ namespace _1Scripts.Logic
     {
         IBattleSceneLogicManager BattleSceneLogicManager { get; }
         List<ISkillLogic> AllSkills { get; }
+
+        void AddToAllSkillsList(ISkillLogic newSkill);
+
+        Transform Transform { get; }
     }
 }

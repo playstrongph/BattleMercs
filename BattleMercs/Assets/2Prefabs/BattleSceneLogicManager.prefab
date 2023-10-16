@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1989336922780340270}
   - component: {fileID: 1357007176}
   - component: {fileID: 5118911434887637107}
+  - component: {fileID: 7300771690263513753}
   - component: {fileID: 6357082121393306748}
   m_Layer: 0
   m_Name: BattleSceneLogicManager
@@ -62,6 +63,7 @@ MonoBehaviour:
   initializeBattleSceneManagerVisual: {fileID: 4041375816393396379}
   initializeAllPlayers: {fileID: 1357007176}
   initializeAllHeroes: {fileID: 5118911434887637107}
+  initializeAllSkills: {fileID: 7300771690263513753}
   uniqueIDGenerator: {fileID: 6357082121393306748}
 --- !u!114 &4041375816393396379
 MonoBehaviour:
@@ -111,6 +113,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 363b87699bc60274ababed516070d085, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7300771690263513753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4025127891384342249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e0099b0f813c242b583be0a806060c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6357082121393306748

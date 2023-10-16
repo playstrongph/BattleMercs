@@ -43,10 +43,10 @@ namespace _1Scripts.Logic
                   //Set Hero Information
                   SetHeroInformation(newHeroLogic,heroAsset);
 
-                  //TODO Set Hero Attributes
+                  //Set Hero Attributes
                   SetHeroAttributes(newHeroLogic, heroAsset);
                   
-                  //TODO: Add to all heroes list
+                  //Add to all heroes list
                   allHeroesLogic.AddToAllHeroesList(newHero);
 
               }//foreach heroAsset

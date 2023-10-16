@@ -16,6 +16,8 @@ namespace _1Scripts.Logic
         IAllHeroesLogic AllHeroesLogic { get; }
 
         IAllSkillsLogic AllSkillsLogic { get; }
+
+        IInitializeAllSkills InitializeAllSkills { get; }
         IBattleSceneManagerVisual BattleSceneManagerVisual { get; set; }
         
         //Attached Components

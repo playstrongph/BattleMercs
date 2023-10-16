@@ -19,3 +19,5 @@ MonoBehaviour:
     type: 3}
   heroLogicPrefab: {fileID: 401306147064565863, guid: 6096aff8134eaff478478d664ba1ba5f,
     type: 3}
+  skillLogicPrefab: {fileID: 3380712927992335220, guid: 0798e0981d9038c44bf473fd1ed67f01,
+    type: 3}

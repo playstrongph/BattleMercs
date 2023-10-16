@@ -10,5 +10,7 @@ namespace _1Scripts.Logic.SOLogicScripts
         GameObject PlayerLogicPrefab { get; }
 
         GameObject HeroLogicPrefab { get; }
+
+        GameObject SkillLogicPrefab { get; }
     }
 }

@@ -45,7 +45,7 @@ namespace _1Scripts.Logic
               //Set SoulsCount
               newPlayerLogic.SoulsCount = playerAsset.SoulsCount;
               
-              //TODO: Player Heroes
+              //TODO: Player Heroes Reference
 
               allPlayersLogic.AddToAllPlayersList(newPlayer);
           }
