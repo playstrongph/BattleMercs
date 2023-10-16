@@ -21,19 +21,19 @@ namespace _1Scripts.Logic
       #endregion
 
       #region METHODS
-      
-      public void LoadHeroes(IBattleSceneLogicManager logicManager)
+
+      /// <summary>
+      /// TEST
+      /// </summary>
+      /// <param name="logicManager"></param>
+      /// <param name="playerLogic"></param>
+      ///  /// <param name="teamHeroesAsset"></param>
+      public void LoadHeroes(IBattleSceneLogicManager logicManager, IPlayerLogic playerLogic, ITeamHeroesAsset teamHeroesAsset)
       {
-          var allPlayerAssets = logicManager.BattleSettings.AllPlayers;
           var allHeroesLogic = logicManager.AllHeroesLogic;
           var heroLogicPrefab = logicManager.BattleSettings.HeroLogicPrefab;
-
-
-          foreach (var playerAsset in allPlayerAssets)
-          {
-              var heroAssets = playerAsset.PlayerHeroes.TeamHeroes;
-
-              foreach (var heroAsset in heroAssets)
+      
+              foreach (var heroAsset in teamHeroesAsset.TeamHeroes)
               {
                   var newHero = Instantiate(heroLogicPrefab, allHeroesLogic.Transform);
                   newHero.name = heroAsset.HeroName;
@@ -46,12 +46,17 @@ namespace _1Scripts.Logic
                   //Set Hero Attributes
                   SetHeroAttributes(newHeroLogic, heroAsset);
                   
+                  //Set the References
+                  SetPlayerAndHeroReferences(newHeroLogic,playerLogic);
+                  
                   //Add to all heroes list
                   allHeroesLogic.AddToAllHeroesList(newHero);
 
               }//foreach heroAsset
-          }//foreach playerAsset
+         
       } //Load Heroes End
+      
+      
         
       /// <summary>
       /// Transfer the information parameters from the heroAsset to the heroLogic
@@ -94,8 +99,16 @@ namespace _1Scripts.Logic
           heroAttributes.DualAttackChance = heroAsset.DualAttackChance;
           heroAttributes.HitChance = heroAsset.HitChance;
       }
-      
-      
+
+      private void SetPlayerAndHeroReferences(IHeroLogic heroLogic, IPlayerLogic playerLogic)
+      {
+          //Set Hero's PLayer Reference
+          heroLogic.PlayerReference = playerLogic;
+                  
+          //Add to the player's PlayerHeroes and AliveHeroes list
+          playerLogic.AddToPlayerHeroesList(heroLogic);
+          playerLogic.AddToAliveHeroesList(heroLogic);
+      }
 
 
 

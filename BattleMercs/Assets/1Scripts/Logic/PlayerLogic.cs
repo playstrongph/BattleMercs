@@ -46,7 +46,7 @@ namespace _1Scripts.Logic
                newList.Add(hero as IHeroLogic);
             }
             return newList;
-                  }
+          }
       }
       
       public List<IHeroLogic> AliveHeroes
@@ -92,9 +92,43 @@ namespace _1Scripts.Logic
         
       #region METHODS
       
+      /// <summary>
+      /// Add to "object" list displayed in the Inspector
+      /// </summary>
+      /// <param name="heroLogic"></param>
+      public void AddToPlayerHeroesList(IHeroLogic heroLogic)
+      {
+         playerHeroes.Add(heroLogic as Object);
+      }
       
+      /// <summary>
+      /// Add to "object" list displayed in the Inspector
+      /// </summary>
+      /// <param name="heroLogic"></param>
+      public void AddToAliveHeroesList(IHeroLogic heroLogic)
+      {
+         aliveHeroes.Add(heroLogic as Object);
+      }
       
-        
+      /// <summary>
+      /// Add to "object" list displayed in the Inspector
+      /// </summary>
+      /// <param name="heroLogic"></param>
+      public void AddToDeadHeroesList(IHeroLogic heroLogic)
+      {
+         deadHeroes.Add(heroLogic as Object);
+      }
+      
+      /// <summary>
+      /// Add to "object" list displayed in the Inspector
+      /// </summary>
+      /// <param name="heroLogic"></param>
+      public void AddToExtinctHeroesList(IHeroLogic heroLogic)
+      {
+         extinctHeroes.Add(heroLogic as Object);
+      }
+
+
 
       #endregion
    }

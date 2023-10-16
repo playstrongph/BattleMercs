@@ -14,6 +14,7 @@ namespace _1Scripts.Logic
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroAttributes))] private Object heroAttributes;
       
       [Header("SET IN RUNTIME")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerLogic))] private Object playerReference;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillLogic))] private List<Object> heroSkills;
       
 #pragma warning restore 0649
@@ -25,7 +26,13 @@ namespace _1Scripts.Logic
        
        public IHeroInformation HeroInformation => heroInformation as IHeroInformation;
        public IHeroAttributes HeroAttributes => heroAttributes as IHeroAttributes;
-       
+
+       public IPlayerLogic PlayerReference
+       {
+           get => playerReference as IPlayerLogic;
+           set => playerReference  = value as Object;
+       }
+
        public List<ISkillLogic> HeroSkills
        {
            get

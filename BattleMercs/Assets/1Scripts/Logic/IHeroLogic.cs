@@ -10,5 +10,7 @@ namespace _1Scripts.Logic
         IHeroAttributes HeroAttributes { get; }
         List<ISkillLogic> HeroSkills { get; }
 
+        IPlayerLogic PlayerReference { get; set; }
+
     }
 }

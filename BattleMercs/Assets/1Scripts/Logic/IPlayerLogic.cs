@@ -18,5 +18,12 @@ namespace _1Scripts.Logic
       List<IHeroLogic> AliveHeroes { get; }
       List<IHeroLogic> DeadHeroes { get; }
       List<IHeroLogic> ExtinctHeroes { get; }
+
+      void AddToPlayerHeroesList(IHeroLogic heroLogic);
+
+      void AddToAliveHeroesList(IHeroLogic heroLogic);
+      void AddToDeadHeroesList(IHeroLogic heroLogic);
+
+      void AddToExtinctHeroesList(IHeroLogic heroLogic);
    }
 }

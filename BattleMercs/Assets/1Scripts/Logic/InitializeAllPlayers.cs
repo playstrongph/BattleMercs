@@ -27,17 +27,14 @@ namespace _1Scripts.Logic
           var allPlayersLogic = logicManager.AllPlayersLogic;
           var playerLogicPrefab = logicManager.BattleSettings.PlayerLogicPrefab;
 
-
           foreach (var playerAsset in allPlayerAssets)
           {
-              
+              var teamHeroesAsset = playerAsset.PlayerHeroes;
               var newPlayer = Instantiate(playerLogicPrefab, allPlayersLogic.Transform);
               newPlayer.name = playerAsset.PlayerName;
               
               var newPlayerLogic = newPlayer.GetComponent<IPlayerLogic>();
 
-              
-              
               //Set player name
               newPlayerLogic.PlayerName = playerAsset.PlayerName;
               //Set unique player ID Number
@@ -45,9 +42,11 @@ namespace _1Scripts.Logic
               //Set SoulsCount
               newPlayerLogic.SoulsCount = playerAsset.SoulsCount;
               
-              //TODO: Player Heroes Reference
-
+              //Player Heroes Reference
               allPlayersLogic.AddToAllPlayersList(newPlayer);
+              
+              //Create The Heroes here so you can set the reference
+              logicManager.InitializeAllHeroes.LoadHeroes(logicManager,newPlayerLogic,teamHeroesAsset);
           }
       }
 
