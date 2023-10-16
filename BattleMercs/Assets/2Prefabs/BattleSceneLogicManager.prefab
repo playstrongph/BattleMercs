@@ -369,7 +369,7 @@ PrefabInstance:
     - target: {fileID: 5545599268939277662, guid: ab5f1419352f09e448217fe18036e339,
         type: 3}
       propertyPath: allSkills.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5545599268939277662, guid: ab5f1419352f09e448217fe18036e339,
         type: 3}

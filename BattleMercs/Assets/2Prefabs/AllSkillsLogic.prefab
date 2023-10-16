@@ -44,38 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleSceneLogicManager: {fileID: 0}
-  allSkills:
-  - skillNameLabel: SKILL 1
-    skillInformation:
-      skillName: 
-      skillDescription: 
-      skillSprite: {fileID: 0}
-      casterHero: {fileID: 0}
-    skillAttributes:
-      skillCooldown: 0
-      skillSpeed: 0
-      skillFightingSpirit: 0
-      baseSkillCooldown: 0
-      baseSkillSpeed: 0
-      skillElement: {fileID: 0}
-      skillType: {fileID: 0}
-      skillReadiness: {fileID: 0}
-      skillEnableStatus: {fileID: 0}
-      skillTargetAsset: {fileID: 0}
-  - skillNameLabel: 
-    skillInformation:
-      skillName: 
-      skillDescription: 
-      skillSprite: {fileID: 0}
-      casterHero: {fileID: 0}
-    skillAttributes:
-      skillCooldown: 0
-      skillSpeed: 0
-      skillFightingSpirit: 0
-      baseSkillCooldown: 0
-      baseSkillSpeed: 0
-      skillElement: {fileID: 0}
-      skillType: {fileID: 0}
-      skillReadiness: {fileID: 0}
-      skillEnableStatus: {fileID: 0}
-      skillTargetAsset: {fileID: 0}
+  allSkills: []

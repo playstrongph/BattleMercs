@@ -40,18 +40,15 @@ namespace _1Scripts.Logic
 
                   var newSkillLogic = newSkill.GetComponent<ISkillLogic>();
                   
-                  //TODO: Set Skill Information
+                  //Set Skill Information
                   SetSkillInformation(newSkillLogic,skillAsset);
                   
-                  //TODO: Set Hero Attributes
+                  //Set Hero Attributes
                   SetSkillAttributes(newSkillLogic,skillAsset);
                   
-                  //TODO: Add to All Skills List
-                 allSkillsLogic.AddToAllSkillsList(newSkillLogic);
-
+                  //Add to All Skills List
+                  allSkillsLogic.AddToAllSkillsList(newSkillLogic);
                }
-               
-               
             }
          }
       } // Load Heroes

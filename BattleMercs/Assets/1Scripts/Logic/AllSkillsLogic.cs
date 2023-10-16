@@ -46,7 +46,7 @@ namespace _1Scripts.Logic
 
       public void AddToAllSkillsList(ISkillLogic newSkill)
       {
-         AllSkills.Add(newSkill);
+         allSkills.Add(newSkill as Object);
       }
 
 
