@@ -30,7 +30,7 @@ namespace _1Scripts.Logic
           foreach (var playerAsset in allPlayerAssets)
           {
               var teamHeroesAsset = playerAsset.PlayerHeroes;
-              var newPlayer = Instantiate(playerLogicPrefab, allPlayersLogic.Transform);
+              var newPlayer = Instantiate(playerLogicPrefab, logicManager.Transform);
               newPlayer.name = playerAsset.PlayerName;
               
               var newPlayerLogic = newPlayer.GetComponent<IPlayerLogic>();

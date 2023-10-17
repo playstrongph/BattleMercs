@@ -19,7 +19,9 @@ namespace _1Scripts.Logic
 
         IInitializeAllSkills InitializeAllSkills { get; }
         IBattleSceneManagerVisual BattleSceneManagerVisual { get; set; }
-        
+
+        Transform Transform { get; }
+
         //Attached Components
         IInitializeAllPlayers InitializeAllPlayers { get; }
         IInitializeAllHeroes InitializeAllHeroes { get; }

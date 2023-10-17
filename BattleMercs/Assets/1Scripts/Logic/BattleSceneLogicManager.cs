@@ -71,6 +71,8 @@ namespace _1Scripts.Logic
       
       public IUniqueIDGenerator UniqueIDGenerator => uniqueIDGenerator as IUniqueIDGenerator;
 
+      public Transform Transform => this.transform;
+
       #endregion
 
       #region METHODS
