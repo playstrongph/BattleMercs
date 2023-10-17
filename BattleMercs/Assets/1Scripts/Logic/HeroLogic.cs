@@ -45,6 +45,8 @@ namespace _1Scripts.Logic
                return newList;
            }
        }
+
+       public Transform Transform => this.transform;
     
 
        #endregion

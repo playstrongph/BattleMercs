@@ -35,7 +35,7 @@ namespace _1Scripts.Logic
       
               foreach (var heroAsset in teamHeroesAsset.TeamHeroes)
               {
-                  var newHero = Instantiate(heroLogicPrefab, allHeroesLogic.Transform);
+                  var newHero = Instantiate(heroLogicPrefab, playerLogic.Transform);
                   newHero.name = heroAsset.HeroName;
                   
                   var newHeroLogic = newHero.GetComponent<IHeroLogic>();

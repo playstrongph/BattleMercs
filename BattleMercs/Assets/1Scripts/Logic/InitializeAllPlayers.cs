@@ -45,6 +45,8 @@ namespace _1Scripts.Logic
               //Player Heroes Reference
               allPlayersLogic.AddToAllPlayersList(newPlayer);
               
+              
+              
               //Create The Heroes here so you can set the reference
               logicManager.InitializeAllHeroes.LoadHeroes(logicManager,newPlayerLogic,teamHeroesAsset);
           }

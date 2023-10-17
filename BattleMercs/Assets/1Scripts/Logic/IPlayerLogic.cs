@@ -1,6 +1,6 @@
-﻿
-using System.Collections.Generic;
-using _1Scripts.Logic.SOLogicScripts;
+﻿using System.Collections.Generic;
+using _1Scripts.Visual;
+using UnityEngine;
 
 namespace _1Scripts.Logic
 {
@@ -11,6 +11,10 @@ namespace _1Scripts.Logic
       //IPlayerNumberAsset PlayerIDNumber { get; set; }
       string PlayerIDNumber { get; set; }
       int SoulsCount { get; set; }
+
+      Transform Transform { get; }
+
+      IPlayerVisual PlayerVisualReference { get; set; }
 
       IPlayerLogic CurrentEnemyPlayer { get; set; }
 

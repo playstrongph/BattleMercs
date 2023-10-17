@@ -28,7 +28,7 @@ namespace _1Scripts.Logic
          
          foreach (var skillAsset in skillAssets)
          {
-            var newSkill = Instantiate(skillLogicPrefab, allSkillsLogic.Transform);
+            var newSkill = Instantiate(skillLogicPrefab, heroLogic.Transform);
             newSkill.name = skillAsset.SkillName;
             
             var newSkillLogic = newSkill.GetComponent<ISkillLogic>();

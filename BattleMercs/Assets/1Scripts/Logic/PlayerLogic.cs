@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using _1Scripts.Visual;
 using UnityEngine;
 
 namespace _1Scripts.Logic
@@ -12,7 +13,9 @@ namespace _1Scripts.Logic
       [SerializeField] private string playerName;
       [SerializeField] private string playerIDNumber;
       [SerializeField] private int soulsCount;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerVisual))] private Object playerVisualReference;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerLogic))] private Object currentEnemyPlayer;
+      
          
       [Header("HERO LISTS")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> playerHeroes;
@@ -30,10 +33,18 @@ namespace _1Scripts.Logic
       public string PlayerName { get => playerName; set => playerName = value; }
       public string PlayerIDNumber { get => playerIDNumber; set => playerIDNumber = value; }
       public int SoulsCount { get => soulsCount; set => soulsCount = value; }
+
+      public Transform Transform => this.transform;
                
       //SET IN RUNTIME
                
       //Used for reference purposes only;  Object type to prevent circular logic
+      
+      public IPlayerVisual PlayerVisualReference
+      {
+         get => playerVisualReference as IPlayerVisual;
+         set => playerVisualReference = value as Object;
+      }
       public IPlayerLogic CurrentEnemyPlayer { get => currentEnemyPlayer as IPlayerLogic; set => currentEnemyPlayer = value as Object; }
       
       public List<IHeroLogic> PlayerHeroes

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace _1Scripts.Logic
 {
@@ -11,6 +12,8 @@ namespace _1Scripts.Logic
         List<ISkillLogic> HeroSkills { get; }
 
         IPlayerLogic PlayerReference { get; set; }
+
+        Transform Transform { get; }
 
         void AddToHeroSkillsList(ISkillLogic skillLogic);
 
