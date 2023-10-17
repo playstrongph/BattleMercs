@@ -23,7 +23,7 @@ namespace _1Scripts.Logic
       
       public void LoadPlayers(IBattleSceneLogicManager logicManager)
       {
-          var allPlayerAssets = logicManager.BattleSettings.AllPlayers;
+          var allPlayerAssets = logicManager.BattleSettings.AllEnemyPlayers;
           var allPlayersLogic = logicManager.AllPlayersLogic;
           var playerLogicPrefab = logicManager.BattleSettings.PlayerLogicPrefab;
 

@@ -5,7 +5,9 @@ namespace _1Scripts.Logic.SOLogicScripts
 {
     public interface IBattleSceneSettingsAsset
     {
-        List<IPlayerAsset> AllPlayers { get; }
+
+        IPlayerAsset MainPlayer { get; }
+        List<IPlayerAsset> AllEnemyPlayers { get; }
 
         GameObject PlayerLogicPrefab { get; }
 

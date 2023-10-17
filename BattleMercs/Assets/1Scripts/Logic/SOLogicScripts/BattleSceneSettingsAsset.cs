@@ -9,8 +9,10 @@ namespace _1Scripts.Logic.SOLogicScripts
    {
       #region VARIABLES
 #pragma warning disable 0649
-
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAsset))] private List<Object> allPlayers = new List<Object>();
+      
+      
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAsset))] private Object mainPlayer;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAsset))] private List<Object> allEnemyPlayers = new List<Object>();
 
       [Header("PREFABS")]
       [SerializeField] private GameObject playerLogicPrefab;
@@ -20,13 +22,15 @@ namespace _1Scripts.Logic.SOLogicScripts
       #endregion
         
       #region PROPERTIES
+
+      public IPlayerAsset MainPlayer => mainPlayer as IPlayerAsset;
       
-      public List<IPlayerAsset> AllPlayers
+      public List<IPlayerAsset> AllEnemyPlayers
       {
          get
          {
             var newList = new List<IPlayerAsset>();
-            foreach (var player in allPlayers)
+            foreach (var player in allEnemyPlayers)
             {
                newList.Add(player as IPlayerAsset);
             }
