@@ -52,7 +52,8 @@ namespace _1Scripts.Logic
                   //Add to all heroes list
                   allHeroesLogic.AddToAllHeroesList(newHero);
                   
-                  //TODO:  Heroes-Skill References
+                  //Initialize Hero Skills
+                  logicManager.InitializeAllSkills.LoadAllSkills(logicManager, newHeroLogic, heroAsset);
 
               }//foreach heroAsset
          

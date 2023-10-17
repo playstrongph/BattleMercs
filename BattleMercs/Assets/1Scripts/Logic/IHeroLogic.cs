@@ -12,5 +12,7 @@ namespace _1Scripts.Logic
 
         IPlayerLogic PlayerReference { get; set; }
 
+        void AddToHeroSkillsList(ISkillLogic skillLogic);
+
     }
 }

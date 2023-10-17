@@ -51,6 +51,10 @@ namespace _1Scripts.Logic
 
        #region METHODS
 
+       public void AddToHeroSkillsList(ISkillLogic skillLogic)
+       {
+           heroSkills.Add(skillLogic as Object);
+       }
 
 
        #endregion
