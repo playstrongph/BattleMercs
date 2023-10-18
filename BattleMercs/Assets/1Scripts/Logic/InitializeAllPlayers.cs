@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Text;
+using _1Scripts.Logic.SOLogicScripts;
 using UnityEngine;
 
 
@@ -23,38 +24,70 @@ namespace _1Scripts.Logic
       
       public void LoadPlayers(IBattleSceneLogicManager logicManager)
       {
-          var allPlayerAssets = logicManager.BattleSettings.AllEnemyPlayers;
+          LoadMainPlayer(logicManager);
+          
+          LoadAllEnemyPlayers(logicManager);
+      }
+
+      private void LoadMainPlayer(IBattleSceneLogicManager logicManager)
+      {
+          var mainPlayerAsset = logicManager.BattleSettings.MainPlayer;
           var allPlayersLogic = logicManager.AllPlayersLogic;
           var playerLogicPrefab = logicManager.BattleSettings.PlayerLogicPrefab;
 
-          foreach (var playerAsset in allPlayerAssets)
+          
+          //var playerHeroes = mainPlayerAsset.Heroes;
+          var newPlayer = Instantiate(playerLogicPrefab, logicManager.Transform);
+          newPlayer.name = mainPlayerAsset.PlayerName;
+              
+          var newPlayerLogic = newPlayer.GetComponent<IPlayerLogic>();
+
+          //Set player name
+          newPlayerLogic.PlayerName = mainPlayerAsset.PlayerName;
+          //Set unique player ID Number
+          newPlayerLogic.PlayerIDNumber = logicManager.UniqueIDGenerator.GenerateUniqueID();
+          //Set SoulsCount
+          newPlayerLogic.SoulsCount = mainPlayerAsset.SoulsCount;
+              
+          //Player Heroes Reference
+          allPlayersLogic.AddToAllPlayersList(newPlayer);
+
+          //Create The Heroes here so you can set the reference
+          logicManager.InitializeAllHeroes.LoadHeroes(logicManager,newPlayerLogic,mainPlayerAsset.Heroes);
+      }
+
+      private void LoadAllEnemyPlayers(IBattleSceneLogicManager logicManager)
+      {
+          var allEnemyPlayerAssets = logicManager.BattleSettings.AllEnemyPlayers;
+          var allPlayersLogic = logicManager.AllPlayersLogic;
+          var playerLogicPrefab = logicManager.BattleSettings.PlayerLogicPrefab;
+
+          foreach (var enemyPlayerAsset in allEnemyPlayerAssets)
           {
-              var teamHeroesAsset = playerAsset.PlayerHeroes;
+              var playerHeroes = enemyPlayerAsset.Heroes;
               var newPlayer = Instantiate(playerLogicPrefab, logicManager.Transform);
-              newPlayer.name = playerAsset.PlayerName;
+              newPlayer.name = enemyPlayerAsset.PlayerName;
               
               var newPlayerLogic = newPlayer.GetComponent<IPlayerLogic>();
 
               //Set player name
-              newPlayerLogic.PlayerName = playerAsset.PlayerName;
+              newPlayerLogic.PlayerName = enemyPlayerAsset.PlayerName;
               //Set unique player ID Number
               newPlayerLogic.PlayerIDNumber = logicManager.UniqueIDGenerator.GenerateUniqueID();
               //Set SoulsCount
-              newPlayerLogic.SoulsCount = playerAsset.SoulsCount;
+              newPlayerLogic.SoulsCount = enemyPlayerAsset.SoulsCount;
               
               //Player Heroes Reference
               allPlayersLogic.AddToAllPlayersList(newPlayer);
-              
-              
-              
+
               //Create The Heroes here so you can set the reference
-              logicManager.InitializeAllHeroes.LoadHeroes(logicManager,newPlayerLogic,teamHeroesAsset);
+              logicManager.InitializeAllHeroes.LoadHeroes(logicManager,newPlayerLogic,playerHeroes);
           }
       }
 
-      
-      
-      
+
+
+
       #endregion
    }
 }

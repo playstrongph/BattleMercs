@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd90433fd3926fa459f67ee47a5c44dc, type: 3}
   m_Name: EnemyPlayer2
   m_EditorClassIdentifier: 
-  playerName: DarkCPU
+  playerName: CPU2
   soulsCount: 88
-  playerHeroes: {fileID: 11400000, guid: f0b65800ceb22874eb45d69d0084dcf5, type: 2}
+  heroes:
+  - {fileID: 11400000, guid: 527efaf73f406a64ca458964e1301508, type: 2}
+  - {fileID: 11400000, guid: c0b2c439dc2a82545aa1053bde075425, type: 2}
+  - {fileID: 11400000, guid: c2e26d89c46949c45aea41bc92b77552, type: 2}
+  - {fileID: 11400000, guid: 7c5c6940c69d454499e78888e68836f1, type: 2}

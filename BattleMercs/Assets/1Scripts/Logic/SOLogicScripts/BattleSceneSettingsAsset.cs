@@ -10,7 +10,7 @@ namespace _1Scripts.Logic.SOLogicScripts
       #region VARIABLES
 #pragma warning disable 0649
       
-      
+      [Header("PLAYER ASSETS")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAsset))] private Object mainPlayer;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAsset))] private List<Object> allEnemyPlayers = new List<Object>();
 

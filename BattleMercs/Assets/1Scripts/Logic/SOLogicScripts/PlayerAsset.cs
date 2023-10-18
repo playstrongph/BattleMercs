@@ -12,9 +12,9 @@ namespace _1Scripts.Logic.SOLogicScripts
 
       [SerializeField] private string playerName;
       [SerializeField] private int soulsCount;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ITeamHeroesAsset))] private Object playerHeroes;
-       
-      
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroAsset))] private List<Object> heroes = new List<Object>();
+
+
       #pragma warning restore 0649
 
       #endregion
@@ -23,12 +23,27 @@ namespace _1Scripts.Logic.SOLogicScripts
 
       public string PlayerName => playerName;
       public int SoulsCount => soulsCount;
-      public ITeamHeroesAsset PlayerHeroes => playerHeroes as ITeamHeroesAsset;
+      public List<IHeroAsset> Heroes
+      {
+         get
+         {
+            var newList = new List<IHeroAsset>();
+            foreach (var hero in heroes)
+            {
+               newList.Add(hero as IHeroAsset);
+            }
+            return newList;
+         }
+      }
 
       #endregion
 
       #region METHODS
-      
+
+      public void AddToHeroesList(IHeroAsset heroAsset)
+      {
+         heroes.Add(heroAsset as Object);
+      }
 
 
       #endregion

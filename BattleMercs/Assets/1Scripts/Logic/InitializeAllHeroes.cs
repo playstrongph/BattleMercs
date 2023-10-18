@@ -27,13 +27,13 @@ namespace _1Scripts.Logic
       /// </summary>
       /// <param name="logicManager"></param>
       /// <param name="playerLogic"></param>
-      ///  /// <param name="teamHeroesAsset"></param>
-      public void LoadHeroes(IBattleSceneLogicManager logicManager, IPlayerLogic playerLogic, ITeamHeroesAsset teamHeroesAsset)
+      ///  /// <param name="playerHeroes"></param>
+      public void LoadHeroes(IBattleSceneLogicManager logicManager, IPlayerLogic playerLogic, List<IHeroAsset> playerHeroes)
       {
           var allHeroesLogic = logicManager.AllHeroesLogic;
           var heroLogicPrefab = logicManager.BattleSettings.HeroLogicPrefab;
       
-              foreach (var heroAsset in teamHeroesAsset.TeamHeroes)
+              foreach (var heroAsset in playerHeroes)
               {
                   var newHero = Instantiate(heroLogicPrefab, playerLogic.Transform);
                   newHero.name = heroAsset.HeroName;

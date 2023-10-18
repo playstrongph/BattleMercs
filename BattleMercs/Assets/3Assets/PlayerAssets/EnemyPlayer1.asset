@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd90433fd3926fa459f67ee47a5c44dc, type: 3}
   m_Name: EnemyPlayer1
   m_EditorClassIdentifier: 
-  playerName: Praetorian
+  playerName: CPU1
   soulsCount: 99
-  playerHeroes: {fileID: 11400000, guid: a5b570a2a6ac50341bb6b8324f5b12f1, type: 2}
+  heroes:
+  - {fileID: 11400000, guid: 279111c88db602f4d9c50a8e996bc3f5, type: 2}
+  - {fileID: 11400000, guid: 89f9f57a10142d04dab7f8758bac357e, type: 2}
+  - {fileID: 11400000, guid: a3b467dfc69ffbe40bd4eaf1d359f857, type: 2}
+  - {fileID: 11400000, guid: 2d70e8015a9b84149afc51dfb09cafc3, type: 2}
