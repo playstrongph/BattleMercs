@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Object = UnityEngine.Object;
 
 namespace _1Scripts.Logic
@@ -11,10 +12,12 @@ namespace _1Scripts.Logic
 
       [Header("Inspector References")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneLogicManager))] private Object battleSceneLogicManager;
+      
+      [SerializeField] private GameObject mainPlayer;
+      
+      [FormerlySerializedAs("allPlayers")] [SerializeField] private List<GameObject> allEnemyPlayers = new List<GameObject>();
 
-      [SerializeField] private List<GameObject> allPlayers = new List<GameObject>();
-
-      //Non-serialized variables
+     
       
 
       #endregion
@@ -27,12 +30,14 @@ namespace _1Scripts.Logic
          private set => battleSceneLogicManager = value as Object;
       }
 
-      public List<IPlayerLogic> AllPlayers
+      public GameObject MainPlayer { get => mainPlayer; set => mainPlayer = value; }
+
+      public List<IPlayerLogic> AllEnemyPlayers
       {
          get
          {
             var newList = new List<IPlayerLogic>();
-            foreach (var player in allPlayers)
+            foreach (var player in allEnemyPlayers)
             {
                newList.Add(player.GetComponent<IPlayerLogic>());
             }
@@ -51,7 +56,7 @@ namespace _1Scripts.Logic
 
       public void AddToAllPlayersList(GameObject playerLogicGameObject)
       {
-         allPlayers.Add(playerLogicGameObject);
+         allEnemyPlayers.Add(playerLogicGameObject);
       }
 
       #endregion

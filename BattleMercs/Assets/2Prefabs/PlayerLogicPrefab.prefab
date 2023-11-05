@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3825531709743193433}
   - component: {fileID: 68788437743382228}
+  - component: {fileID: -1175787245978760925}
   m_Layer: 0
   m_Name: PlayerLogicPrefab
   m_TagString: Untagged
@@ -46,8 +47,22 @@ MonoBehaviour:
   playerName: Default Player
   playerIDNumber: 9999
   soulsCount: 0
+  playerVisualReference: {fileID: 0}
   currentEnemyPlayer: {fileID: 0}
   playerHeroes: []
   aliveHeroes: []
   deadHeroes: []
   extinctHeroes: []
+  setPlayerVisualAndLogicReferences: {fileID: -1175787245978760925}
+--- !u!114 &-1175787245978760925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6634385906465547695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce81727b84a62e04d986461f43812072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

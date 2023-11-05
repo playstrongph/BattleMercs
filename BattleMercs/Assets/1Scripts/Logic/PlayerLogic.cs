@@ -22,6 +22,9 @@ namespace _1Scripts.Logic
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> aliveHeroes;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> deadHeroes;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> extinctHeroes;
+      
+      [Header("COMPONENTS")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetPlayerVisualAndLogicReferences))] private Object setPlayerVisualAndLogicReferences;
          
 #pragma warning restore 0649
         
@@ -98,6 +101,9 @@ namespace _1Scripts.Logic
             return newList;
          }
       }
+      
+      //COMPONENTS
+      public ISetPlayerVisualAndLogicReferences SetPlayerVisualAndLogicReferences => setPlayerVisualAndLogicReferences as ISetPlayerVisualAndLogicReferences;
                
       #endregion
         

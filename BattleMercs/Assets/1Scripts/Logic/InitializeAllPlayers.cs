@@ -53,7 +53,8 @@ namespace _1Scripts.Logic
           newPlayerLogic.SoulsCount = mainPlayerAsset.SoulsCount;
               
           //Player Heroes Reference
-          allPlayersLogic.AddToAllPlayersList(newPlayer);
+          //allPlayersLogic.AddToAllPlayersList(newPlayer);  //OLD
+          allPlayersLogic.MainPlayer = newPlayer;
 
           //Create The Heroes here so you can set the reference
           logicManager.InitializeAllHeroes.LoadHeroes(logicManager,newPlayerLogic,mainPlayerAsset.Heroes);
@@ -92,9 +93,10 @@ namespace _1Scripts.Logic
       {
           var mainPlayerVisual = logicManager.BattleSceneManagerVisual.MainPlayerVisual;
           
-          logicManager.SetPlayerVisualAndLogicReferences.SetReferences(playerLogic,mainPlayerVisual);
+          //logicManager.SetPlayerVisualAndLogicReferences.SetReferences(playerLogic,mainPlayerVisual);
           
-          
+          playerLogic.SetPlayerVisualAndLogicReferences.SetReferences(playerLogic,mainPlayerVisual);
+
       }
       
       

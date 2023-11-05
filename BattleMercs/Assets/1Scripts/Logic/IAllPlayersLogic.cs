@@ -8,7 +8,9 @@ namespace _1Scripts.Logic
     {
         IBattleSceneLogicManager BattleSceneLogicManager { get; }
 
-        List<IPlayerLogic> AllPlayers { get; }
+        GameObject MainPlayer { get; set; }
+
+        List<IPlayerLogic> AllEnemyPlayers { get; }
 
         Transform Transform { get; }
 

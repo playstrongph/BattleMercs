@@ -29,5 +29,7 @@ namespace _1Scripts.Logic
       void AddToDeadHeroesList(IHeroLogic heroLogic);
 
       void AddToExtinctHeroesList(IHeroLogic heroLogic);
+
+      ISetPlayerVisualAndLogicReferences SetPlayerVisualAndLogicReferences { get; }
    }
 }

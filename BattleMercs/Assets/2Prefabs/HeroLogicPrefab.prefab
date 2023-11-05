@@ -47,7 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroInformation: {fileID: 401306147064565858}
   heroAttributes: {fileID: 401306147064565859}
-  heroSkills: []
+  playerReference: {fileID: 0}
+  heroSkillsReference: []
+  heroVisualReference: {fileID: 0}
 --- !u!114 &401306147064565858
 MonoBehaviour:
   m_ObjectHideFlags: 0
