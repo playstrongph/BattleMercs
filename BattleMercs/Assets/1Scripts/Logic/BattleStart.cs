@@ -51,12 +51,8 @@ namespace _1Scripts.Logic
           LogicManagerReference.InitializeAllPlayers.LoadPlayers(LogicManagerReference);
           yield return null;
       }
-
-    
-
-
-
-
+      
+      //TODO: Update Enemies
 
       #endregion
    }

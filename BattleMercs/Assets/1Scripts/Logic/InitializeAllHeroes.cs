@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 using _1Scripts.Logic.SOLogicScripts;
+using _1Scripts.Visual;
 using UnityEngine;
 
 
@@ -32,6 +33,7 @@ namespace _1Scripts.Logic
       {
           var allHeroesLogic = logicManager.AllHeroesLogic;
           var heroLogicPrefab = logicManager.BattleSettings.HeroLogicPrefab;
+          
       
               foreach (var heroAsset in playerHeroes)
               {
@@ -39,7 +41,7 @@ namespace _1Scripts.Logic
                   newHero.name = heroAsset.HeroName;
                   
                   var newHeroLogic = newHero.GetComponent<IHeroLogic>();
-                  
+
                   //Set Hero Information
                   SetHeroInformation(newHeroLogic,heroAsset);
 
@@ -56,7 +58,7 @@ namespace _1Scripts.Logic
                   logicManager.InitializeAllSkills.LoadAllSkills(logicManager, newHeroLogic, heroAsset);
 
               }//foreach heroAsset
-         
+
       } //Load Heroes End
       
       
@@ -102,7 +104,12 @@ namespace _1Scripts.Logic
           heroAttributes.DualAttackChance = heroAsset.DualAttackChance;
           heroAttributes.HitChance = heroAsset.HitChance;
       }
-
+      
+      /// <summary>
+      /// Set player and hero logic references
+      /// </summary>
+      /// <param name="heroLogic"></param>
+      /// <param name="playerLogic"></param>
       private void SetPlayerAndHeroReferences(IHeroLogic heroLogic, IPlayerLogic playerLogic)
       {
           //Set Hero's PLayer Reference
@@ -112,6 +119,11 @@ namespace _1Scripts.Logic
           playerLogic.AddToPlayerHeroesList(heroLogic);
           playerLogic.AddToAliveHeroesList(heroLogic);
       }
+      
+      
+      
+
+
 
 
 

@@ -9,7 +9,8 @@ namespace _1Scripts.Logic.SOLogicScripts
       
       public override void SetClassColor(IHeroLogic heroLogic) 
       {
-
+         var heroVisual = heroLogic.HeroVisualReference;
+         heroVisual.HeroFrames.SetColorBlueFrame();
       }
         
 

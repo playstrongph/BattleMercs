@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using _1Scripts.Visual;
 using UnityEngine;
+
 
 namespace _1Scripts.Logic
 {
@@ -13,9 +15,12 @@ namespace _1Scripts.Logic
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroInformation))] private Object heroInformation;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroAttributes))] private Object heroAttributes;
       
-      [Header("SET IN RUNTIME")]
+      [Header("LOGIC REFERENCES")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerLogic))] private Object playerReference;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillLogic))] private List<Object> heroSkills;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillLogic))] private List<Object> heroSkillsReference;
+
+      [Header("VISUAL REFERENCES")] 
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroVisual))] private Object heroVisualReference;
       
 #pragma warning restore 0649
 
@@ -33,18 +38,20 @@ namespace _1Scripts.Logic
            set => playerReference  = value as Object;
        }
 
-       public List<ISkillLogic> HeroSkills
+       public List<ISkillLogic> HeroSkillsReference
        {
            get
            {
                var newList = new List<ISkillLogic>();
-               foreach (var heroSKill in heroSkills)
+               foreach (var heroSKill in heroSkillsReference)
                {
                    newList.Add(heroSKill as ISkillLogic);
                }
                return newList;
            }
        }
+
+       public IHeroVisual HeroVisualReference { get => heroVisualReference as IHeroVisual; set => heroVisualReference = value as Object; }
 
        public Transform Transform => this.transform;
     
@@ -55,7 +62,7 @@ namespace _1Scripts.Logic
 
        public void AddToHeroSkillsList(ISkillLogic skillLogic)
        {
-           heroSkills.Add(skillLogic as Object);
+           heroSkillsReference.Add(skillLogic as Object);
        }
 
 

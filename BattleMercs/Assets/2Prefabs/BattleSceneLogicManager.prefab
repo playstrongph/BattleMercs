@@ -66,6 +66,7 @@ MonoBehaviour:
   initializeAllHeroes: {fileID: 5118911434887637107}
   initializeAllSkills: {fileID: 7300771690263513753}
   uniqueIDGenerator: {fileID: 6357082121393306748}
+  setPlayerVisualAndLogicReferences: {fileID: 3042455342852387268}
 --- !u!114 &2705020884670478515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce81727b84a62e04d986461f43812072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleSceneLogicManager: {fileID: 0}
 --- !u!114 &6357082121393306748
 MonoBehaviour:
   m_ObjectHideFlags: 0

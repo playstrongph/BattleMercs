@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using _1Scripts.Logic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,8 +9,12 @@ namespace _1Scripts.Visual
    {
       #region VARIABLES
       
+   #pragma warning disable 0649
       [Header("Inspector References")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillsVisual))] private Object heroSkillsVisual = null;
+
+      [Header("Logic References")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillLogic))] private Object skillLogicReference;
       
       [Header("Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisualInputActions))] private Object skillVisualInputActions = null;
@@ -34,7 +39,8 @@ namespace _1Scripts.Visual
       [Header("Text")] 
       [SerializeField] private TextMeshProUGUI speedText = null;
       [SerializeField] private TextMeshProUGUI cooldownText = null;
-
+      
+#pragma warning restore 0649
       #endregion
 
       #region PROPERTIES
@@ -42,6 +48,9 @@ namespace _1Scripts.Visual
       //INSPECTOR REFERENCES
       public IHeroSkillsVisual HeroSkillsVisual => heroSkillsVisual as IHeroSkillsVisual;
       
+      //LOGIC REFERENCES
+      public ISkillLogic SkillLogicReference { get => skillLogicReference as ISkillLogic; set => skillLogicReference = value as Object; }
+
       //COMPONENTS
       public ISkillVisualInputActions SkillVisualInputActions => skillVisualInputActions as ISkillVisualInputActions;
       public BoxCollider SkillVisualCollider => skillVisualCollider;

@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using _1Scripts.Logic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ namespace _1Scripts.Visual
     public interface ISkillVisual
     {
         IHeroSkillsVisual HeroSkillsVisual { get; }
+        ISkillLogic SkillLogicReference { get; set; }
         ISkillVisualInputActions SkillVisualInputActions { get; }
         BoxCollider SkillVisualCollider { get; }
         Transform SkillReadyVisualTransform { get; }

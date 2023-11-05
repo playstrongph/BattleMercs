@@ -41,6 +41,9 @@ namespace _1Scripts.Logic
           newPlayer.name = mainPlayerAsset.PlayerName;
               
           var newPlayerLogic = newPlayer.GetComponent<IPlayerLogic>();
+          
+          //Set Main Player Logic and References
+          SetMainPlayerLogicAndVisualReferences(logicManager, newPlayerLogic);
 
           //Set player name
           newPlayerLogic.PlayerName = mainPlayerAsset.PlayerName;
@@ -84,6 +87,17 @@ namespace _1Scripts.Logic
               logicManager.InitializeAllHeroes.LoadHeroes(logicManager,newPlayerLogic,playerHeroes);
           }
       }
+
+      private void SetMainPlayerLogicAndVisualReferences(IBattleSceneLogicManager logicManager, IPlayerLogic playerLogic)
+      {
+          var mainPlayerVisual = logicManager.BattleSceneManagerVisual.MainPlayerVisual;
+          
+          logicManager.SetPlayerVisualAndLogicReferences.SetReferences(playerLogic,mainPlayerVisual);
+          
+          
+      }
+      
+      
 
 
 
