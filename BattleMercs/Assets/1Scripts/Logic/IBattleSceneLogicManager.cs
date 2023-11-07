@@ -28,7 +28,7 @@ namespace _1Scripts.Logic
         IInitializeAllHeroes InitializeAllHeroes { get; }
         IInitializeBattleSceneManagerVisual InitializeBattleSceneManagerVisual { get; }
         IUniqueIDGenerator UniqueIDGenerator { get; }
-        ISetPlayerVisualAndLogicReferences SetPlayerVisualAndLogicReferences { get; }
+        
 
     }
 }

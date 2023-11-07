@@ -31,10 +31,6 @@ namespace _1Scripts.Logic
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeAllHeroes))] private Object initializeAllHeroes;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeAllSkills))] private Object initializeAllSkills;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IUniqueIDGenerator))] private Object uniqueIDGenerator;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetPlayerVisualAndLogicReferences))] private Object setPlayerVisualAndLogicReferences;
-      
-      
-      
 
 #pragma warning restore 0649 // Restore warnings
       #endregion
@@ -71,7 +67,6 @@ namespace _1Scripts.Logic
       public IInitializeAllSkills InitializeAllSkills => initializeAllSkills as IInitializeAllSkills;
       
       public IUniqueIDGenerator UniqueIDGenerator => uniqueIDGenerator as IUniqueIDGenerator;
-      public ISetPlayerVisualAndLogicReferences SetPlayerVisualAndLogicReferences => setPlayerVisualAndLogicReferences as ISetPlayerVisualAndLogicReferences;
 
       public Transform Transform => this.transform;
 
