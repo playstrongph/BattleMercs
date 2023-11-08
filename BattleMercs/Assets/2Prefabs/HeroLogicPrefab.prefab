@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 401306147064565861}
   - component: {fileID: 401306147064565858}
   - component: {fileID: 401306147064565859}
+  - component: {fileID: 9031937760904393453}
   m_Layer: 0
   m_Name: HeroLogicPrefab
   m_TagString: Untagged
@@ -45,11 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8afc93a424b2eb40839fd2c11890808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroInformation: {fileID: 401306147064565858}
-  heroAttributes: {fileID: 401306147064565859}
+  heroVisualReference: {fileID: 0}
   playerReference: {fileID: 0}
   heroSkillsReference: []
-  heroVisualReference: {fileID: 0}
+  heroInformation: {fileID: 401306147064565858}
+  heroAttributes: {fileID: 401306147064565859}
+  setHeroVisualAndLogicReferences: {fileID: 9031937760904393453}
 --- !u!114 &401306147064565858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,3 +95,15 @@ MonoBehaviour:
   effectResistance: 0
   dualAttackChance: 0
   hitChance: 0
+--- !u!114 &9031937760904393453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401306147064565863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c9810911bb88704eb63aae348a64a06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

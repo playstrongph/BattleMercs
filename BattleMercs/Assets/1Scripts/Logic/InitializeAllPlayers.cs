@@ -88,7 +88,9 @@ namespace _1Scripts.Logic
               logicManager.InitializeAllHeroes.LoadHeroes(logicManager,newPlayerLogic,playerHeroes);
           }
       }
-
+      
+      //TODO: Check if Setting of References should be done separately
+      
       private void SetMainPlayerLogicAndVisualReferences(IBattleSceneLogicManager logicManager, IPlayerLogic playerLogic)
       {
           var mainPlayerVisual = logicManager.BattleSceneManagerVisual.MainPlayerVisual;

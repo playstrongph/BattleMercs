@@ -11,17 +11,19 @@ namespace _1Scripts.Logic
       
 #pragma warning disable 0649
       
-      [Header("COMPONENTS")]
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroInformation))] private Object heroInformation;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroAttributes))] private Object heroAttributes;
-      
+      [Header("VISUAL REFERENCES")] 
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroVisual))] private Object heroVisualReference;
+
       [Header("LOGIC REFERENCES")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerLogic))] private Object playerReference;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillLogic))] private List<Object> heroSkillsReference;
-
-      [Header("VISUAL REFERENCES")] 
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroVisual))] private Object heroVisualReference;
       
+      [Header("COMPONENTS")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroInformation))] private Object heroInformation;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroAttributes))] private Object heroAttributes;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetHeroVisualAndLogicReferences))] private Object setHeroVisualAndLogicReferences;
+
+
 #pragma warning restore 0649
 
 
@@ -31,6 +33,8 @@ namespace _1Scripts.Logic
        
        public IHeroInformation HeroInformation => heroInformation as IHeroInformation;
        public IHeroAttributes HeroAttributes => heroAttributes as IHeroAttributes;
+       
+       public ISetHeroVisualAndLogicReferences SetHeroVisualAndLogicReferences => setHeroVisualAndLogicReferences as ISetHeroVisualAndLogicReferences;
 
        public IPlayerLogic PlayerReference
        {

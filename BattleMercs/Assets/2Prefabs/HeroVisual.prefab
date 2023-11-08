@@ -709,7 +709,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5.5
+  m_fontSize: 5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1044,10 +1044,12 @@ MonoBehaviour:
   heroStatusEffectsVisual: {fileID: 4404307873071508609}
   armorImage: {fileID: 7681471113979834689}
   turnOrderImage: {fileID: 1163335127710731040}
+  heroGraphic: {fileID: 4232360344964056177}
   attackText: {fileID: 8405608397748948556}
   healthText: {fileID: 1326501693730904568}
   armorText: {fileID: 7395362406037057512}
   turnOrderText: {fileID: 119535418229508856}
+  heroLogicReference: {fileID: 0}
 --- !u!1 &6751825552393685817
 GameObject:
   m_ObjectHideFlags: 0

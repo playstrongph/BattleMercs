@@ -10,6 +10,8 @@ namespace _1Scripts.Logic
         IHeroInformation HeroInformation { get; }
 
         IHeroAttributes HeroAttributes { get; }
+
+        ISetHeroVisualAndLogicReferences SetHeroVisualAndLogicReferences { get; }
         List<ISkillLogic> HeroSkillsReference { get; }
 
         IPlayerLogic PlayerReference { get; set; }
