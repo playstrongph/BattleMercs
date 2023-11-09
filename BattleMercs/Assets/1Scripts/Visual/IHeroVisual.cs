@@ -21,6 +21,8 @@ namespace _1Scripts.Visual
 
         IHeroLogic HeroLogicReference { get; set; }
 
+        ISetHeroVisuals SetHeroVisuals { get; set; }
+
         Transform Transform { get; }
     }
 }

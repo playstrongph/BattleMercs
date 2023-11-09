@@ -27,6 +27,8 @@ namespace _1Scripts.Visual
 
       [Header("REFERENCES")] 
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private Object heroLogicReference;
+
+      [Header("COMPONENTS")] [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetHeroVisuals))] private Object setHeroVisuals;
       
       
 #pragma warning restore 0649
@@ -56,6 +58,9 @@ namespace _1Scripts.Visual
       
       //References
       public IHeroLogic HeroLogicReference { get => heroLogicReference as IHeroLogic; set => heroLogicReference = value as Object; }
+      
+      //Components
+      public ISetHeroVisuals SetHeroVisuals { get => setHeroVisuals as ISetHeroVisuals; set => setHeroVisuals = value as Object; }
 
       //Others
       public Transform Transform => transform;
