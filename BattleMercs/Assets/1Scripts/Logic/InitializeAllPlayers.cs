@@ -57,7 +57,7 @@ namespace _1Scripts.Logic
           allPlayersLogic.MainPlayer = newPlayer;
 
           //Create The Heroes here so you can set the reference
-          logicManager.InitializeAllHeroes.LoadHeroes(logicManager,newPlayerLogic,mainPlayerAsset.Heroes);
+          newPlayerLogic.InitializeAllHeroes.LoadHeroes(logicManager,newPlayerLogic,mainPlayerAsset.Heroes);
       }
 
       private void LoadAllEnemyPlayers(IBattleSceneLogicManager logicManager)
@@ -85,7 +85,7 @@ namespace _1Scripts.Logic
               allPlayersLogic.AddToAllPlayersList(newPlayer);
 
               //Create The Heroes here so you can set the reference
-              logicManager.InitializeAllHeroes.LoadHeroes(logicManager,newPlayerLogic,playerHeroes);
+              newPlayerLogic.InitializeAllHeroes.LoadHeroes(logicManager,newPlayerLogic,playerHeroes);
           }
       }
       

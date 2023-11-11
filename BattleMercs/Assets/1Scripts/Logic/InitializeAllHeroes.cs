@@ -55,7 +55,7 @@ namespace _1Scripts.Logic
                   allHeroesLogic.AddToAllHeroesList(newHero);
                   
                   //Initialize Hero Skills
-                  logicManager.InitializeAllSkills.LoadAllSkills(logicManager, newHeroLogic, heroAsset);
+                  newHeroLogic.InitializeAllSkills.LoadAllSkills(logicManager,newHeroLogic,heroAsset);
 
               }//foreach heroAsset
 

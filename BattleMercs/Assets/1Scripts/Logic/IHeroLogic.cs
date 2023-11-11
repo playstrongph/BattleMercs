@@ -11,6 +11,7 @@ namespace _1Scripts.Logic
 
         IHeroAttributes HeroAttributes { get; }
 
+        IInitializeAllSkills InitializeAllSkills { get; }
         ISetHeroVisualAndLogicReferences SetHeroVisualAndLogicReferences { get; }
         List<ISkillLogic> HeroSkillsReference { get; }
 

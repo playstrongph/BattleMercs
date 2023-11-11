@@ -28,8 +28,7 @@ namespace _1Scripts.Logic
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleStart))] private Object battleStart;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeBattleSceneManagerVisual))] private Object initializeBattleSceneManagerVisual;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeAllPlayers))] private Object initializeAllPlayers;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeAllHeroes))] private Object initializeAllHeroes;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeAllSkills))] private Object initializeAllSkills;
+      
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IUniqueIDGenerator))] private Object uniqueIDGenerator;
 
 #pragma warning restore 0649 // Restore warnings
@@ -62,12 +61,7 @@ namespace _1Scripts.Logic
       private IBattleStart BattleStart => battleStart as IBattleStart;
       public IInitializeBattleSceneManagerVisual InitializeBattleSceneManagerVisual => initializeBattleSceneManagerVisual as IInitializeBattleSceneManagerVisual;
       public IInitializeAllPlayers InitializeAllPlayers => initializeAllPlayers as IInitializeAllPlayers;
-      public IInitializeAllHeroes InitializeAllHeroes => initializeAllHeroes as IInitializeAllHeroes;
-      
-      public IInitializeAllSkills InitializeAllSkills => initializeAllSkills as IInitializeAllSkills;
-      
       public IUniqueIDGenerator UniqueIDGenerator => uniqueIDGenerator as IUniqueIDGenerator;
-
       public Transform Transform => this.transform;
 
       #endregion

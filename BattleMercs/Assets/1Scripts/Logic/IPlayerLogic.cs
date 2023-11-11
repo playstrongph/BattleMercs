@@ -30,6 +30,7 @@ namespace _1Scripts.Logic
 
       void AddToExtinctHeroesList(IHeroLogic heroLogic);
 
+      IInitializeAllHeroes InitializeAllHeroes { get; }
       ISetPlayerVisualAndLogicReferences SetPlayerVisualAndLogicReferences { get; }
    }
 }

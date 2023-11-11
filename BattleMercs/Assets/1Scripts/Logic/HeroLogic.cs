@@ -21,6 +21,7 @@ namespace _1Scripts.Logic
       [Header("COMPONENTS")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroInformation))] private Object heroInformation;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroAttributes))] private Object heroAttributes;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeAllSkills))] private Object initializeAllSkills;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetHeroVisualAndLogicReferences))] private Object setHeroVisualAndLogicReferences;
 
 
@@ -34,6 +35,7 @@ namespace _1Scripts.Logic
        public IHeroInformation HeroInformation => heroInformation as IHeroInformation;
        public IHeroAttributes HeroAttributes => heroAttributes as IHeroAttributes;
        
+       public IInitializeAllSkills InitializeAllSkills => initializeAllSkills as IInitializeAllSkills;
        public ISetHeroVisualAndLogicReferences SetHeroVisualAndLogicReferences => setHeroVisualAndLogicReferences as ISetHeroVisualAndLogicReferences;
 
        public IPlayerLogic PlayerReference

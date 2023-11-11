@@ -25,6 +25,7 @@ namespace _1Scripts.Logic
       
       [Header("COMPONENTS")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetPlayerVisualAndLogicReferences))] private Object setPlayerVisualAndLogicReferences;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(InitializeAllHeroes))] private Object initializeAllHeroes;
          
 #pragma warning restore 0649
         
@@ -103,7 +104,9 @@ namespace _1Scripts.Logic
       }
       
       //COMPONENTS
+      public IInitializeAllHeroes InitializeAllHeroes => initializeAllHeroes as IInitializeAllHeroes;
       public ISetPlayerVisualAndLogicReferences SetPlayerVisualAndLogicReferences => setPlayerVisualAndLogicReferences as ISetPlayerVisualAndLogicReferences;
+      
                
       #endregion
         
