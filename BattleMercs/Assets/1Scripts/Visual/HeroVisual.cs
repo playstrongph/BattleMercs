@@ -28,7 +28,9 @@ namespace _1Scripts.Visual
       [Header("REFERENCES")] 
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private Object heroLogicReference;
 
-      [Header("COMPONENTS")] [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetHeroVisuals))] private Object setHeroVisuals;
+      [Header("COMPONENTS")]
+      [SerializeField] private Canvas canvas;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetHeroVisuals))] private Object setHeroVisuals;
       
       
 #pragma warning restore 0649
@@ -57,6 +59,7 @@ namespace _1Scripts.Visual
       public TextMeshProUGUI TurnOrderText { get => turnOrderText; set => turnOrderText = value; }
       
       //References
+      public Canvas Canvas => canvas;
       public IHeroLogic HeroLogicReference { get => heroLogicReference as IHeroLogic; set => heroLogicReference = value as Object; }
       
       //Components

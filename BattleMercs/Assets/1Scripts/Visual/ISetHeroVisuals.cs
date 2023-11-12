@@ -6,6 +6,10 @@ namespace _1Scripts.Visual
     {
 
         void SetGameObjectHeroName(string heroName);
+
+        void ShowHeroVisual();
+        void HideHeroVisual();
+        
         void ShowHeroGlowVisual();
         void HideHeroGlowVisual();
 

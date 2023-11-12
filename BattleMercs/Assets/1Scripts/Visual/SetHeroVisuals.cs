@@ -29,6 +29,16 @@ namespace _1Scripts.Visual
          HeroVisual.Transform.gameObject.name = heroName;
       }
 
+      public void ShowHeroVisual()
+      {
+         HeroVisual.Canvas.enabled = true;
+      }
+      
+      public void HideHeroVisual()
+      {
+         HeroVisual.Canvas.enabled = false;
+      }
+
       public void ShowHeroGlowVisual()
       {
          //TODO: Hero Glow is based on skill targeting
@@ -137,8 +147,12 @@ namespace _1Scripts.Visual
       public void UpdateTurnOrderText(int turnOrderValue)
       {
          var textValue = Mathf.Max(0, turnOrderValue);
+         var ellipsis = "...";
 
          HeroVisual.TurnOrderText.text = textValue.ToString();
+
+         if (turnOrderValue <= 0)
+            HeroVisual.TurnOrderText.text = ellipsis;
       }
 
 

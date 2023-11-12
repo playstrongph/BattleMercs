@@ -1073,6 +1073,7 @@ MonoBehaviour:
   armorText: {fileID: 7395362406037057512}
   turnOrderText: {fileID: 119535418229508856}
   heroLogicReference: {fileID: 0}
+  canvas: {fileID: 7079868310584934017}
   setHeroVisuals: {fileID: 7831247425321371870}
 --- !u!114 &7831247425321371870
 MonoBehaviour:

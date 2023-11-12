@@ -61,6 +61,9 @@ namespace _1Scripts.Logic
           
           //TEST: Load MainPlayer Visuals
           LoadMainPlayerHeroesVisuals(newPlayerLogic, logicManager);
+          
+          //TEST: TODO: Load Main Player Heroes Skills Visuals
+          
       }
 
       private void LoadAllEnemyPlayers(IBattleSceneLogicManager logicManager)
@@ -108,8 +111,6 @@ namespace _1Scripts.Logic
       private void LoadMainPlayerHeroesVisuals(IPlayerLogic mainPlayer, IBattleSceneLogicManager logicManager)
       {
           var mainPlayerVisual = logicManager.BattleSceneManagerVisual.MainPlayerVisual;
-          
-          
 
           for (int i = 0; i < mainPlayer.PlayerHeroes.Count; i++)
           {
@@ -130,9 +131,10 @@ namespace _1Scripts.Logic
               heroVisual.SetHeroVisuals.UpdateTurnOrderText(0);
               heroVisual.SetHeroVisuals.UpdateAttackText();
               heroVisual.SetHeroVisuals.UpdateHealthText();
+              
+              //Show the Hero
+              heroVisual.SetHeroVisuals.ShowHeroVisual();
           }
-          
-          
       }
 
 
