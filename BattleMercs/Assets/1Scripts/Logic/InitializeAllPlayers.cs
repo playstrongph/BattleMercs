@@ -58,6 +58,9 @@ namespace _1Scripts.Logic
 
           //Create The Heroes here so you can set the reference
           newPlayerLogic.InitializeAllHeroes.LoadHeroes(logicManager,newPlayerLogic,mainPlayerAsset.Heroes);
+          
+          //TEST: Load MainPlayer Visuals
+          LoadMainPlayerHeroesVisuals(newPlayerLogic, logicManager);
       }
 
       private void LoadAllEnemyPlayers(IBattleSceneLogicManager logicManager)
@@ -101,7 +104,38 @@ namespace _1Scripts.Logic
 
       }
       
-      
+      //TEST
+      private void LoadMainPlayerHeroesVisuals(IPlayerLogic mainPlayer, IBattleSceneLogicManager logicManager)
+      {
+          var mainPlayerVisual = logicManager.BattleSceneManagerVisual.MainPlayerVisual;
+          
+          
+
+          for (int i = 0; i < mainPlayer.PlayerHeroes.Count; i++)
+          {
+              var heroLogic = mainPlayer.PlayerHeroes[i];
+              var heroVisual = mainPlayerVisual.HeroVisualsList[i];
+              
+              //Set the References 
+              heroLogic.HeroVisualReference = heroVisual;
+              heroVisual.HeroLogicReference = heroLogic;
+              
+              //Change the heroVisual game object name
+              heroVisual.SetHeroVisuals.SetGameObjectHeroName(heroLogic.HeroInformation.HeroName);
+              
+              //Load the Visuals
+              heroVisual.SetHeroVisuals.SetHeroGraphic(heroLogic.HeroInformation.HeroGraphic);
+              heroVisual.SetHeroVisuals.SetHeroFrameColorVisual();
+              heroVisual.SetHeroVisuals.UpdateArmorTextAndImage();
+              heroVisual.SetHeroVisuals.UpdateTurnOrderText(0);
+              heroVisual.SetHeroVisuals.UpdateAttackText();
+              heroVisual.SetHeroVisuals.UpdateHealthText();
+          }
+          
+          
+      }
+
+
 
 
 

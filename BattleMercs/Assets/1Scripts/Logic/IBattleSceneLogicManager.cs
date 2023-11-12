@@ -13,12 +13,7 @@ namespace _1Scripts.Logic
 
         IBattleSceneSettingsAsset BattleSettings { get; }
         IAllPlayersLogic AllPlayersLogic { get; }
-        IAllHeroesLogic AllHeroesLogic { get; }
-
-        IAllSkillsLogic AllSkillsLogic { get; }
         IBattleSceneManagerVisual BattleSceneManagerVisual { get; set; }
-
-        
         Transform Transform { get; }
 
         //Attached Components

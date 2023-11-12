@@ -4,6 +4,8 @@ namespace _1Scripts.Visual
 {
     public interface ISetHeroVisuals
     {
+
+        void SetGameObjectHeroName(string heroName);
         void ShowHeroGlowVisual();
         void HideHeroGlowVisual();
 

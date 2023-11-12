@@ -21,14 +21,11 @@ namespace _1Scripts.Logic
       
       [Header("Children Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IAllPlayersLogic))] private Object playersLogic;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IAllHeroesLogic))] private Object allHeroesLogic;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IAllSkillsLogic))] private Object allSkillsLogic;
-      
+
       [Header("Attached Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleStart))] private Object battleStart;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeBattleSceneManagerVisual))] private Object initializeBattleSceneManagerVisual;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeAllPlayers))] private Object initializeAllPlayers;
-      
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IUniqueIDGenerator))] private Object uniqueIDGenerator;
 
 #pragma warning restore 0649 // Restore warnings
@@ -54,9 +51,6 @@ namespace _1Scripts.Logic
 
       //Components
       public IAllPlayersLogic AllPlayersLogic => playersLogic as IAllPlayersLogic;
-      public IAllHeroesLogic AllHeroesLogic => allHeroesLogic as IAllHeroesLogic;
-      public IAllSkillsLogic AllSkillsLogic => allSkillsLogic as IAllSkillsLogic;
-      
       //Attached Components
       private IBattleStart BattleStart => battleStart as IBattleStart;
       public IInitializeBattleSceneManagerVisual InitializeBattleSceneManagerVisual => initializeBattleSceneManagerVisual as IInitializeBattleSceneManagerVisual;

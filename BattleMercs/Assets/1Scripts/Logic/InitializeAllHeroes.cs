@@ -31,7 +31,7 @@ namespace _1Scripts.Logic
       ///  /// <param name="playerHeroes"></param>
       public void LoadHeroes(IBattleSceneLogicManager logicManager, IPlayerLogic playerLogic, List<IHeroAsset> playerHeroes)
       {
-          var allHeroesLogic = logicManager.AllHeroesLogic;
+          
           var heroLogicPrefab = logicManager.BattleSettings.HeroLogicPrefab;
           
       
@@ -50,10 +50,7 @@ namespace _1Scripts.Logic
                   
                   //Set the References
                   SetPlayerAndHeroReferences(newHeroLogic,playerLogic);
-                  
-                  //Add to all heroes list
-                  allHeroesLogic.AddToAllHeroesList(newHero);
-                  
+
                   //Initialize Hero Skills
                   newHeroLogic.InitializeAllSkills.LoadAllSkills(logicManager,newHeroLogic,heroAsset);
 
@@ -80,6 +77,7 @@ namespace _1Scripts.Logic
           heroInformation.HeroElement = heroAsset.HeroElement;
           heroInformation.HeroClass = heroAsset.HeroClass;
           heroInformation.HeroZodiac = heroAsset.HeroZodiac;
+          heroInformation.HeroGraphic = heroAsset.HeroSprite;
       }
       
       /// <summary>
@@ -118,6 +116,9 @@ namespace _1Scripts.Logic
           //Add to the player's PlayerHeroes and AliveHeroes list
           playerLogic.AddToPlayerHeroesList(heroLogic);
           playerLogic.AddToAliveHeroesList(heroLogic);
+          
+          //TODO: TEST Load Hero Visuals here
+          
       }
       
       

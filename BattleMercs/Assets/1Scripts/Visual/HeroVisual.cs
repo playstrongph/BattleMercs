@@ -60,6 +60,7 @@ namespace _1Scripts.Visual
       public IHeroLogic HeroLogicReference { get => heroLogicReference as IHeroLogic; set => heroLogicReference = value as Object; }
       
       //Components
+      
       public ISetHeroVisuals SetHeroVisuals { get => setHeroVisuals as ISetHeroVisuals; set => setHeroVisuals = value as Object; }
 
       //Others

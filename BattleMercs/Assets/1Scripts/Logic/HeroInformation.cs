@@ -18,7 +18,8 @@ namespace _1Scripts.Logic
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroElementAsset))] private Object heroElement;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroClassAsset))] private Object heroClass;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroZodiacAsset))] private Object heroZodiac;
-
+      [SerializeField] private Sprite heroGraphic;
+      
 #pragma warning restore 0649 
         
 
@@ -40,11 +41,13 @@ namespace _1Scripts.Logic
       
       public IHeroZodiacAsset HeroZodiac { get => heroZodiac as IHeroZodiacAsset; set => heroZodiac = value as Object; }
 
+      public Sprite HeroGraphic { get => heroGraphic; set => heroGraphic = value; }
+
       #endregion
-        
+
       #region METHODS
 
-        
+
 
       #endregion
    }

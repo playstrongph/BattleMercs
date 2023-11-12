@@ -52,7 +52,8 @@ namespace _1Scripts.Logic
           yield return null;
       }
       
-      //TODO: Update Enemies
+      //TODO: SetupMainPlayer
+      //TODO: SetUpEnemyPlayer inside battle start proper
 
       #endregion
    }

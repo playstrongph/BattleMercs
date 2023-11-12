@@ -23,7 +23,6 @@ namespace _1Scripts.Logic
       public void LoadAllSkills(IBattleSceneLogicManager logicManager, IHeroLogic heroLogic, IHeroAsset heroAsset)
       {
          var skillAssets = heroAsset.HeroSkills;
-         var allSkillsLogic = logicManager.AllSkillsLogic;
          var skillLogicPrefab = logicManager.BattleSettings.SkillLogicPrefab;
          
          foreach (var skillAsset in skillAssets)
@@ -38,14 +37,9 @@ namespace _1Scripts.Logic
             
             //Set Skill Attributes
             SetSkillAttributes(newSkillLogic,skillAsset);
-            
-            //Add to All Skills List
-            allSkillsLogic.AddToAllSkillsList(newSkillLogic);
-            
+
             //Set References
             SetSkillAndHeroReferences(newSkillLogic, heroLogic);
-
-
          }
          
       } // Load Heroes

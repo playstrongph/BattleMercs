@@ -24,6 +24,11 @@ namespace _1Scripts.Visual
 
       #region METHODS
 
+      public void SetGameObjectHeroName(string heroName)
+      {
+         HeroVisual.Transform.gameObject.name = heroName;
+      }
+
       public void ShowHeroGlowVisual()
       {
          //TODO: Hero Glow is based on skill targeting
