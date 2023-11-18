@@ -10,9 +10,6 @@ namespace _1Scripts.Logic
       #region VARIABLES
 #pragma warning disable 0649 // Disable "Field is never assigned to..." warning
    
-      [Header("Prefabs")]
-      [SerializeField] private GameObject prefabBattleSceneManagerVisual;
-      
       [Header("SO Assets")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneSettingsAsset))] private Object battleSettings;
 
@@ -32,8 +29,6 @@ namespace _1Scripts.Logic
 
       #region PROPERTIES
 
-      public GameObject PrefabBattleSceneManagerVisual => prefabBattleSceneManagerVisual;
-      
       public IBattleSceneSettingsAsset BattleSettings
       {
          get => battleSettings as IBattleSceneSettingsAsset;

@@ -6,9 +6,6 @@ namespace _1Scripts.Logic
 {
     public interface IBattleSceneLogicManager
     {
-        //Prefabs
-        GameObject PrefabBattleSceneManagerVisual { get; }
-        
         //Components
 
         IBattleSceneSettingsAsset BattleSettings { get; }
