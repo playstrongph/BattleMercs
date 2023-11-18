@@ -29,22 +29,12 @@ namespace _1Scripts.Logic
 
       private IEnumerator StartActionCoroutines()
       {
-          //yield return StartCoroutine(InitializeBattleSceneManagerVisualCoroutine());
-
           yield return StartCoroutine(InitializeAllPlayersHeroesAndSkillsCoroutine());
 
           yield return null;
       }
       
-      /// <summary>
-      /// Load the prefab of BattleSceneManagerVisual
-      /// </summary>
-      /// <returns></returns>
-      private IEnumerator InitializeBattleSceneManagerVisualCoroutine()
-      {
-          LogicManagerReference.InitializeBattleSceneManagerVisual.StartActions();
-          yield return null;
-      }
+      
 
       private IEnumerator InitializeAllPlayersHeroesAndSkillsCoroutine()
       {

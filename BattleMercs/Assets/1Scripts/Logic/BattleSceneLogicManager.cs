@@ -24,7 +24,6 @@ namespace _1Scripts.Logic
 
       [Header("Attached Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleStart))] private Object battleStart;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeBattleSceneManagerVisual))] private Object initializeBattleSceneManagerVisual;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeAllPlayers))] private Object initializeAllPlayers;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IUniqueIDGenerator))] private Object uniqueIDGenerator;
 
@@ -53,7 +52,6 @@ namespace _1Scripts.Logic
       public IAllPlayersLogic AllPlayersLogic => playersLogic as IAllPlayersLogic;
       //Attached Components
       public IBattleStart BattleStart => battleStart as IBattleStart;
-      public IInitializeBattleSceneManagerVisual InitializeBattleSceneManagerVisual => initializeBattleSceneManagerVisual as IInitializeBattleSceneManagerVisual;
       public IInitializeAllPlayers InitializeAllPlayers => initializeAllPlayers as IInitializeAllPlayers;
       public IUniqueIDGenerator UniqueIDGenerator => uniqueIDGenerator as IUniqueIDGenerator;
       public Transform Transform => this.transform;
@@ -61,12 +59,7 @@ namespace _1Scripts.Logic
       #endregion
 
       #region METHODS
-      private void Start()
-      {
-         //TODO: Load in BattleStart
-         //InitializeBattleSceneManagerVisual.StartActions();
-         //BattleStart.StartAction();
-      }
+     
 
       
 
