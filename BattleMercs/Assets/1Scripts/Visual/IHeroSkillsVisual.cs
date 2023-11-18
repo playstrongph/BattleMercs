@@ -4,7 +4,7 @@
     {
         ISkillPanelVisual ThreeSkillPanelVisual { get; }
         ISkillPanelVisual FourSkillPanelVisual { get; }
-        IBattleSceneManagerVisual BattleSceneManagerVisual { get; }
+        IBattleSceneVisualManager BattleSceneVisualManager { get; }
         void ShowHeroSkillsVisual();
         void HideHeroSkillsVisual();
     }

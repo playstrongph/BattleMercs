@@ -99,7 +99,7 @@ namespace _1Scripts.Logic
       
       private void SetMainPlayerLogicAndVisualReferences(IBattleSceneLogicManager logicManager, IPlayerLogic playerLogic)
       {
-          var mainPlayerVisual = logicManager.BattleSceneManagerVisual.MainPlayerVisual;
+          var mainPlayerVisual = logicManager.BattleSceneVisualManager.MainPlayerVisual;
           
           //logicManager.SetPlayerVisualAndLogicReferences.SetReferences(playerLogic,mainPlayerVisual);
           
@@ -110,7 +110,7 @@ namespace _1Scripts.Logic
       //TEST
       private void LoadMainPlayerHeroesVisuals(IPlayerLogic mainPlayer, IBattleSceneLogicManager logicManager)
       {
-          var mainPlayerVisual = logicManager.BattleSceneManagerVisual.MainPlayerVisual;
+          var mainPlayerVisual = logicManager.BattleSceneVisualManager.MainPlayerVisual;
 
           for (int i = 0; i < mainPlayer.PlayerHeroes.Count; i++)
           {

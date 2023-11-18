@@ -9,7 +9,7 @@ namespace _1Scripts.Visual
       #region VARIABLES
 
       [Header("Inspector References")]
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManagerVisual))] private Object battleSceneManagerVisual = null;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneVisualManager))] private Object battleSceneManagerVisual = null;
       
 
       [Header("Transforms")] 
@@ -29,7 +29,7 @@ namespace _1Scripts.Visual
 
       #region PROPERTIES
       
-      public IBattleSceneManagerVisual BattleSceneManagerVisual => battleSceneManagerVisual as IBattleSceneManagerVisual;
+      public IBattleSceneVisualManager BattleSceneVisualManager => battleSceneManagerVisual as IBattleSceneVisualManager;
       public Transform CrossHair => crossHair;
       public Transform Arrow => arrow;
       public List<Transform> Nodes => nodes;

@@ -6,7 +6,7 @@ namespace _1Scripts.Visual
 {
     public interface ISkillTargetingVisual
     {
-        IBattleSceneManagerVisual BattleSceneManagerVisual { get; }
+        IBattleSceneVisualManager BattleSceneVisualManager { get; }
         IDraggable Draggable { get; }
         ISelectSkillTargetVisual SelectSkillTargetVisual { get; }
 

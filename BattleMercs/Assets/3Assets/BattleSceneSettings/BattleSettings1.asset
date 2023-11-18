@@ -16,6 +16,10 @@ MonoBehaviour:
   allEnemyPlayers:
   - {fileID: 11400000, guid: 36c9c23b6e872ea48977f58c92ef09f8, type: 2}
   - {fileID: 11400000, guid: ed53eee2908d8c84d80e60c25fab7b47, type: 2}
+  battleSceneLogicManager: {fileID: 4025127891384342249, guid: b390b2f8ed343a84ea4f57a4ee6520f0,
+    type: 3}
+  battleSceneVisualManager: {fileID: 407357391222785282, guid: 86f42a1ae533925429bc500618128eef,
+    type: 3}
   playerLogicPrefab: {fileID: 6634385906465547695, guid: d2be427a02231064ebf2184c9c320e3b,
     type: 3}
   heroLogicPrefab: {fileID: 401306147064565863, guid: 6096aff8134eaff478478d664ba1ba5f,

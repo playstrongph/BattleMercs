@@ -29,7 +29,7 @@ namespace _1Scripts.Logic
 
       private IEnumerator StartActionCoroutines()
       {
-          yield return StartCoroutine(InitializeBattleSceneManagerVisualCoroutine());
+          //yield return StartCoroutine(InitializeBattleSceneManagerVisualCoroutine());
 
           yield return StartCoroutine(InitializeAllPlayersHeroesAndSkillsCoroutine());
 

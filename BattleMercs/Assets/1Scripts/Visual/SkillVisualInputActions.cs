@@ -28,14 +28,14 @@ namespace _1Scripts.Visual
 
       private void OnMouseDown()
       {
-         SkillVisual.HeroSkillsVisual.BattleSceneManagerVisual.SkillTargetingVisual.SelectSkillTargetVisual.SkillTargetingPermissiveChecks(SkillVisual);
+         SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillTargetingVisual.SelectSkillTargetVisual.SkillTargetingPermissiveChecks(SkillVisual);
       }
 
       private void OnMouseUp()
       {
-         SkillVisual.HeroSkillsVisual.BattleSceneManagerVisual.SkillTargetingVisual.ResetPositionToOrigin();
+         SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillTargetingVisual.ResetPositionToOrigin();
          
-         SkillVisual.HeroSkillsVisual.BattleSceneManagerVisual.SkillTargetingVisual.Draggable.DisableDraggable();
+         SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillTargetingVisual.Draggable.DisableDraggable();
       }
 
       #endregion

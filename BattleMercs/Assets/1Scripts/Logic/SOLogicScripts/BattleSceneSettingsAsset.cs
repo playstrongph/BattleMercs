@@ -15,6 +15,8 @@ namespace _1Scripts.Logic.SOLogicScripts
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAsset))] private List<Object> allEnemyPlayers = new List<Object>();
 
       [Header("PREFABS")]
+      [SerializeField] private GameObject battleSceneLogicManager;
+      [SerializeField] private GameObject battleSceneVisualManager;
       [SerializeField] private GameObject playerLogicPrefab;
       [SerializeField] private GameObject heroLogicPrefab;
       [SerializeField] private GameObject skillLogicPrefab;
@@ -37,6 +39,9 @@ namespace _1Scripts.Logic.SOLogicScripts
             return newList;
          }
       }
+
+      public GameObject BattleSceneLogicManager => battleSceneLogicManager;
+      public GameObject BattleSceneVisualManager => battleSceneVisualManager;
       public GameObject PlayerLogicPrefab => playerLogicPrefab;
       public GameObject HeroLogicPrefab => heroLogicPrefab;
       public GameObject SkillLogicPrefab => skillLogicPrefab;

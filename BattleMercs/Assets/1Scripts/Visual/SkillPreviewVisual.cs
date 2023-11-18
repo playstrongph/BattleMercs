@@ -9,7 +9,7 @@ namespace _1Scripts.Visual
       #region VARIABLES
 
       [Header("Inspector References")]
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManagerVisual))] private Object battleManagerVisual = null;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneVisualManager))] private Object battleManagerVisual = null;
 
       [Header("Components")] 
       [SerializeField] private Canvas canvas = null;
@@ -32,7 +32,7 @@ namespace _1Scripts.Visual
       #region PROPERTIES
       
       //Inspector References
-      private IBattleSceneManagerVisual BattleSceneManagerVisual => battleManagerVisual as IBattleSceneManagerVisual;
+      private IBattleSceneVisualManager BattleSceneVisualManager => battleManagerVisual as IBattleSceneVisualManager;
       
       //Components
       public Canvas Canvas => canvas;

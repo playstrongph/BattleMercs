@@ -2,7 +2,7 @@
 {
     public interface IUsedSkillPreviewVisual
     {
-        IBattleSceneManagerVisual BattleSceneManagerVisual { get; }
+        IBattleSceneVisualManager BattleSceneVisualManager { get; }
         IUsedSkillSingleTargetVisual UsedSkillSingleTargetVisual { get; }
         IUsedSkillMultiTarget UsedSkillMultiTarget { get; }
         ISkillUsedVisual SkillUsedVisual { get; }

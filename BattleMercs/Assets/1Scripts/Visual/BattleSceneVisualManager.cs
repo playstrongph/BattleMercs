@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 namespace _1Scripts.Visual
 {
-   public class BattleSceneManagerVisual : MonoBehaviour, IBattleSceneManagerVisual
+   public class BattleSceneVisualManager : MonoBehaviour, IBattleSceneVisualManager
    {
       #region VARIABLES
 

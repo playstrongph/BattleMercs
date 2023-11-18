@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 namespace _1Scripts.Visual
 {
-    public interface IBattleSceneManagerVisual
+    public interface IBattleSceneVisualManager
     {
         //Inspector References
         IBattleSceneLogicManager BattleSceneLogicManager { get; set; }

@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 5882213117987428413}
   - component: {fileID: 1045963700}
   m_Layer: 0
-  m_Name: BattleSceneManagerVisual
+  m_Name: BattleSceneVisualManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

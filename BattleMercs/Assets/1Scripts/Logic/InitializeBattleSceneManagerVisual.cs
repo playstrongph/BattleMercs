@@ -31,10 +31,10 @@ namespace _1Scripts.Logic
          var prefab = BattleSceneLogicManager.PrefabBattleSceneManagerVisual;
 
          //Set New Instance Reference
-         BattleSceneLogicManager.BattleSceneManagerVisual = Instantiate(prefab).GetComponent<IBattleSceneManagerVisual>();
+         BattleSceneLogicManager.BattleSceneVisualManager = Instantiate(prefab).GetComponent<IBattleSceneVisualManager>();
          
          //Set LogicManager reference of VisualManager
-         BattleSceneLogicManager.BattleSceneManagerVisual.BattleSceneLogicManager = BattleSceneLogicManager;
+         BattleSceneLogicManager.BattleSceneVisualManager.BattleSceneLogicManager = BattleSceneLogicManager;
 
       }
 

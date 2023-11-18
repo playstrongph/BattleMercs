@@ -20,7 +20,7 @@ namespace _1Scripts.Visual
 
       [Header("Inspector References")]
       [SerializeField]
-      [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManagerVisual))] private Object battleSceneManagerVisual = null;
+      [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneVisualManager))] private Object battleSceneManagerVisual = null;
 
       #endregion
         
@@ -43,7 +43,7 @@ namespace _1Scripts.Visual
       
       //Inspector References
       
-      public IBattleSceneManagerVisual BattleSceneManagerVisual => battleSceneManagerVisual as IBattleSceneManagerVisual;
+      public IBattleSceneVisualManager BattleSceneVisualManager => battleSceneManagerVisual as IBattleSceneVisualManager;
 
       #endregion
         

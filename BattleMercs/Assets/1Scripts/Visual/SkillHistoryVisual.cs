@@ -7,7 +7,7 @@ namespace _1Scripts.Visual
    {
       #region VARIABLES
 
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManagerVisual))] private Object battleSceneManagerVisual = null;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneVisualManager))] private Object battleSceneManagerVisual = null;
 
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IUsedSkillHistoryVisual))] private List<Object> usedSkillHistoryVisualList = null;
       
@@ -17,7 +17,7 @@ namespace _1Scripts.Visual
 
       #region PROPERTIES
    
-      public IBattleSceneManagerVisual BattleSceneManagerVisual => battleSceneManagerVisual as IBattleSceneManagerVisual;
+      public IBattleSceneVisualManager BattleSceneVisualManager => battleSceneManagerVisual as IBattleSceneVisualManager;
 
       public List<IUsedSkillHistoryVisual> UsedSkillHistoryVisualList
       {

@@ -13,14 +13,16 @@ namespace _1Scripts.Logic
 
         IBattleSceneSettingsAsset BattleSettings { get; }
         IAllPlayersLogic AllPlayersLogic { get; }
-        IBattleSceneManagerVisual BattleSceneManagerVisual { get; set; }
+        IBattleSceneVisualManager BattleSceneVisualManager { get; set; }
         Transform Transform { get; }
 
         //Attached Components
         IInitializeAllPlayers InitializeAllPlayers { get; }
         IInitializeBattleSceneManagerVisual InitializeBattleSceneManagerVisual { get; }
         IUniqueIDGenerator UniqueIDGenerator { get; }
-        
+
+        IBattleStart BattleStart { get; }
+
 
     }
 }

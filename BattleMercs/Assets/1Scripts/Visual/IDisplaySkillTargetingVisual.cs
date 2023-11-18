@@ -6,7 +6,7 @@ namespace _1Scripts.Visual
 {
     public interface IDisplaySkillTargetingVisual
     {
-        IBattleSceneManagerVisual BattleSceneManagerVisual { get; }
+        IBattleSceneVisualManager BattleSceneVisualManager { get; }
         Transform CrossHair { get; }
         Transform Arrow { get; }
         List<Transform> Nodes { get; }

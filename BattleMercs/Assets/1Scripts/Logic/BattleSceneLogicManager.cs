@@ -17,7 +17,7 @@ namespace _1Scripts.Logic
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneSettingsAsset))] private Object battleSettings;
 
       [Header("Runtime References")]
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManagerVisual))]private Object battleSceneManagerVisual;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneVisualManager))]private Object battleSceneManagerVisual;
       
       [Header("Children Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IAllPlayersLogic))] private Object playersLogic;
@@ -42,9 +42,9 @@ namespace _1Scripts.Logic
       }
       
 
-      public IBattleSceneManagerVisual BattleSceneManagerVisual
+      public IBattleSceneVisualManager BattleSceneVisualManager
       {
-         get => battleSceneManagerVisual as IBattleSceneManagerVisual;
+         get => battleSceneManagerVisual as IBattleSceneVisualManager;
          set => battleSceneManagerVisual = value as Object;
       }
       
@@ -52,7 +52,7 @@ namespace _1Scripts.Logic
       //Components
       public IAllPlayersLogic AllPlayersLogic => playersLogic as IAllPlayersLogic;
       //Attached Components
-      private IBattleStart BattleStart => battleStart as IBattleStart;
+      public IBattleStart BattleStart => battleStart as IBattleStart;
       public IInitializeBattleSceneManagerVisual InitializeBattleSceneManagerVisual => initializeBattleSceneManagerVisual as IInitializeBattleSceneManagerVisual;
       public IInitializeAllPlayers InitializeAllPlayers => initializeAllPlayers as IInitializeAllPlayers;
       public IUniqueIDGenerator UniqueIDGenerator => uniqueIDGenerator as IUniqueIDGenerator;
@@ -65,7 +65,7 @@ namespace _1Scripts.Logic
       {
          //TODO: Load in BattleStart
          //InitializeBattleSceneManagerVisual.StartActions();
-         BattleStart.StartAction();
+         //BattleStart.StartAction();
       }
 
       

@@ -5,7 +5,7 @@ namespace _1Scripts.Visual
 {
     public interface IPlayerVisual
     {
-        IBattleSceneManagerVisual BattleSceneManagerVisual { get; }
+        IBattleSceneVisualManager BattleSceneVisualManager { get; }
         IPlayerLogic PlayerLogicReference { get; set; }
         List<IHeroVisual> HeroVisualsList { get; }
     }

@@ -9,7 +9,7 @@ namespace _1Scripts.Visual
       #region VARIABLES
 #pragma warning disable 0649
       [Header("Inspector References")]
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManagerVisual))] private Object battleSceneManagerVisual = null;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneVisualManager))] private Object battleSceneManagerVisual = null;
       
       [Header("Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroVisual))] private List<Object> heroVisualsList = new List<Object>();
@@ -20,7 +20,7 @@ namespace _1Scripts.Visual
 
       #region PROPERTIES
       
-      public IBattleSceneManagerVisual BattleSceneManagerVisual => battleSceneManagerVisual as IBattleSceneManagerVisual;
+      public IBattleSceneVisualManager BattleSceneVisualManager => battleSceneManagerVisual as IBattleSceneVisualManager;
       
       public List<IHeroVisual> HeroVisualsList
       {
