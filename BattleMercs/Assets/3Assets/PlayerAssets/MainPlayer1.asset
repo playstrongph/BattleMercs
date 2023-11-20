@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MainPlayer1
   m_EditorClassIdentifier: 
   playerName: PlayerMain1
-  soulsCount: 99
+  soulsCount: 100
   heroes:
   - {fileID: 11400000, guid: 301b941011f60e94fb798d17f6b5b1c4, type: 2}
   - {fileID: 11400000, guid: d89b13637212bbf4d958afc8a28a0bac, type: 2}

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd90433fd3926fa459f67ee47a5c44dc, type: 3}
-  m_Name: EnemyPlayer2
+  m_Name: EnemyPlayer4
   m_EditorClassIdentifier: 
-  playerName: CPU2
-  soulsCount: 22
+  playerName: CPU4
+  soulsCount: 44
   heroes:
   - {fileID: 11400000, guid: 527efaf73f406a64ca458964e1301508, type: 2}
   - {fileID: 11400000, guid: c0b2c439dc2a82545aa1053bde075425, type: 2}

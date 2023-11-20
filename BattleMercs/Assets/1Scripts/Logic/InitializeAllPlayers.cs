@@ -60,7 +60,7 @@ namespace _1Scripts.Logic
           newPlayerLogic.InitializeAllHeroes.LoadHeroes(logicManager,newPlayerLogic,mainPlayerAsset.Heroes);
           
           //TEST: Load MainPlayer Visuals
-          LoadMainPlayerHeroesVisuals(newPlayerLogic, logicManager);
+          //LoadMainPlayerHeroesVisuals(newPlayerLogic, logicManager);
           
           //TEST: TODO: Load Main Player Heroes Skills Visuals
           

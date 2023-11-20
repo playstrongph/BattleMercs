@@ -10,6 +10,8 @@ namespace _1Scripts.Logic
 
         GameObject MainPlayer { get; set; }
 
+        GameObject SelectedEnemyPlayer { get; set; }
+
         List<IPlayerLogic> AllEnemyPlayers { get; }
 
         Transform Transform { get; }

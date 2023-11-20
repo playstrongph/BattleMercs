@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemyPlayer1
   m_EditorClassIdentifier: 
   playerName: CPU1
-  soulsCount: 99
+  soulsCount: 11
   heroes:
   - {fileID: 11400000, guid: 279111c88db602f4d9c50a8e996bc3f5, type: 2}
   - {fileID: 11400000, guid: 89f9f57a10142d04dab7f8758bac357e, type: 2}

@@ -10,10 +10,13 @@ namespace _1Scripts.Logic
       #region VARIABLES
 
 
-      [Header("Inspector References")]
+      [Header("INSPECTOR REFERENCES")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneLogicManager))] private Object battleSceneLogicManager;
       
       [SerializeField] private GameObject mainPlayer;
+      
+      [Header("RUNTIME REFERENCES")]
+      [SerializeField] private GameObject selectedEnemyPlayer;
       
       [FormerlySerializedAs("allPlayers")] [SerializeField] private List<GameObject> allEnemyPlayers = new List<GameObject>();
 
@@ -31,6 +34,8 @@ namespace _1Scripts.Logic
       }
 
       public GameObject MainPlayer { get => mainPlayer; set => mainPlayer = value; }
+      
+      public GameObject SelectedEnemyPlayer { get => selectedEnemyPlayer; set => selectedEnemyPlayer = value; }
 
       public List<IPlayerLogic> AllEnemyPlayers
       {
