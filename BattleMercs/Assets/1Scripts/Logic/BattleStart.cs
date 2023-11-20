@@ -33,7 +33,13 @@ namespace _1Scripts.Logic
           yield return StartCoroutine(InitializeAllPlayersHeroesAndSkillsCoroutine());
           
           //TEST
+          yield return StartCoroutine(LoadMainPlayerHeroesVisual());
+          
+          //TEST
           yield return StartCoroutine(SelectEnemyPlayer());
+          
+          //TEST
+          yield return StartCoroutine(LoadSelectedEnemyHeroesVisual());
 
           yield return null;
       }
@@ -53,11 +59,9 @@ namespace _1Scripts.Logic
       //TEST METHODS
 
 
-      #region MyRegion
+      #region TestMethods
 
       
-
-      #endregion
       
       /// <summary>
       /// Temporary Methods - for cleanup
@@ -88,6 +92,51 @@ namespace _1Scripts.Logic
           yield return null;
       }
       
+      private IEnumerator LoadMainPlayerHeroesVisual()
+      {
+          var mainPlayer = LogicManagerReference.AllPlayersLogic.MainPlayer.GetComponent<IPlayerLogic>();
+          LoadHeroesVisual(mainPlayer);
+          yield return null;
+      }
+      
+      
+      private IEnumerator LoadSelectedEnemyHeroesVisual()
+      {
+          var selectedEnemyPlayer = LogicManagerReference.AllPlayersLogic.SelectedEnemyPlayer.GetComponent<IPlayerLogic>();
+          
+          LoadHeroesVisual(selectedEnemyPlayer);
+          
+          yield return null;
+      }
+
+      private void LoadHeroesVisual(IPlayerLogic player)
+      {
+          for (int i = 0; i < player.PlayerHeroes.Count; i++)
+          {
+              var heroLogic = player.PlayerHeroes[i];
+              var heroVisual = player.PlayerVisualReference.HeroVisualsList[i];
+              
+              //Set the References 
+              heroLogic.HeroVisualReference = heroVisual;
+              heroVisual.HeroLogicReference = heroLogic;
+              
+              //Change the heroVisual game object name
+              heroVisual.SetHeroVisuals.SetGameObjectHeroName(heroLogic.HeroInformation.HeroName);
+              
+              //Load the Visuals
+              heroVisual.SetHeroVisuals.SetHeroGraphic(heroLogic.HeroInformation.HeroGraphic);
+              heroVisual.SetHeroVisuals.SetHeroFrameColorVisual();
+              heroVisual.SetHeroVisuals.UpdateArmorTextAndImage();
+              heroVisual.SetHeroVisuals.UpdateTurnOrderText(0);
+              heroVisual.SetHeroVisuals.UpdateAttackText();
+              heroVisual.SetHeroVisuals.UpdateHealthText();
+              
+              //Show the Hero
+              heroVisual.SetHeroVisuals.ShowHeroVisual();
+          }
+      }
+
+
       // Returns a random and shuffled list
       private List<IPlayerLogic> ShuffleList(List<IPlayerLogic> itemsList)
       {
@@ -102,6 +151,8 @@ namespace _1Scripts.Logic
 
           return itemsList;
       }
+      
+      #endregion
 
 
 
