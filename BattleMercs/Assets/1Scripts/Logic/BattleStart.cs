@@ -65,26 +65,31 @@ namespace _1Scripts.Logic
       /// <returns></returns>
       private IEnumerator SelectEnemyPlayer()
       {
-          //TODO: Temporary Selection process
-          LogicManagerReference.AllPlayersLogic.SelectedEnemyPlayer = LogicManagerReference.AllPlayersLogic.AllEnemyPlayers[0].Transform.gameObject;
-
           var enemiesList = new List<IPlayerLogic>(LogicManagerReference.AllPlayersLogic.AllEnemyPlayers);
-          
-          if(LogicManagerReference.AllPlayersLogic.SelectedEnemyPlayer != null)
-              if (enemiesList.Contains(LogicManagerReference.AllPlayersLogic.SelectedEnemyPlayer
-                      .GetComponent<IPlayerLogic>()))
-                  enemiesList.Remove(LogicManagerReference.AllPlayersLogic.SelectedEnemyPlayer
-                      .GetComponent<IPlayerLogic>());
-          
-          ShuffleList(enemiesList);
+          var selectedEnemyPlayer = LogicManagerReference.AllPlayersLogic.SelectedEnemyPlayer;
+          var mainPlayer = LogicManagerReference.AllPlayersLogic.MainPlayer;
 
-          LogicManagerReference.AllPlayersLogic.SelectedEnemyPlayer = enemiesList[0].Transform.gameObject;
+          var enemyPlayerVisual = LogicManagerReference.BattleSceneVisualManager.EnemyPlayerVisual;
+          
+          if(selectedEnemyPlayer != null)
+              if (enemiesList.Contains(selectedEnemyPlayer.GetComponent<IPlayerLogic>()))
+                  enemiesList.Remove(selectedEnemyPlayer.GetComponent<IPlayerLogic>());
+          
+          //Select Random Enemy
+          LogicManagerReference.AllPlayersLogic.SelectedEnemyPlayer = ShuffleList(enemiesList)[0].Transform.gameObject;
+          
+          //Set References
+          enemyPlayerVisual.PlayerLogicReference = LogicManagerReference.AllPlayersLogic.SelectedEnemyPlayer.GetComponent<IPlayerLogic>();
+          LogicManagerReference.AllPlayersLogic.SelectedEnemyPlayer.GetComponent<IPlayerLogic>().PlayerVisualReference = enemyPlayerVisual;
+          
+          LogicManagerReference.AllPlayersLogic.SelectedEnemyPlayer.GetComponent<IPlayerLogic>().CurrentEnemyPlayer = mainPlayer.GetComponent<IPlayerLogic>();
+          mainPlayer.GetComponent<IPlayerLogic>().CurrentEnemyPlayer = LogicManagerReference.AllPlayersLogic.SelectedEnemyPlayer.GetComponent<IPlayerLogic>();
 
           yield return null;
       }
       
-      // Function to shuffle the list
-      private void ShuffleList(List<IPlayerLogic> itemsList)
+      // Returns a random and shuffled list
+      private List<IPlayerLogic> ShuffleList(List<IPlayerLogic> itemsList)
       {
           int n = itemsList.Count;
           while (n > 1)
@@ -94,6 +99,8 @@ namespace _1Scripts.Logic
               // Swap elements at positions k and n
               (itemsList[k], itemsList[n]) = (itemsList[n], itemsList[k]);
           }
+
+          return itemsList;
       }
 
 
