@@ -8,10 +8,12 @@ namespace _1Scripts.Visual
         IHeroFramesVisual HeroFramesVisual { get; }
         Image Armor { get; }
         Image NamePlate { get; }
-        Image RacePlate { get; }
-        TextMeshProUGUI AttackText { get; }
-        TextMeshProUGUI HealthText { get; }
-        TextMeshProUGUI NameText { get; }
-        TextMeshProUGUI RaceText { get; }
+        Image ClassPlate { get; }
+        TextMeshProUGUI AttackText { get; set; }
+        TextMeshProUGUI HealthText { get; set; }
+        
+        TextMeshProUGUI ArmorText { get; set; }
+        TextMeshProUGUI NameText { get; set; }
+        TextMeshProUGUI ClassText { get; set; }
     }
 }

@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6e44aad729bd1544b5deef34198ab17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heroLogicReference: {fileID: 0}
   battleSceneManagerVisual: {fileID: 0}
   canvas: {fileID: 2483678299826297277}
   heroPreviewHero: {fileID: 1844285821570051437}
@@ -109,6 +110,7 @@ MonoBehaviour:
   - {fileID: 6678453933089441818}
   - {fileID: 6678453932643800370}
   - {fileID: 6678453932760841308}
+  setPreviewHeroComponents: {fileID: 1246480421009091171}
 --- !u!114 &1246480421009091171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728cc009c6f1a9b4b8b4825b43ac23c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setPreviewHeroComponents: {fileID: 2961265782815502989}
+  heroPreviewVisual: {fileID: 2961265782815502989}
 --- !u!1001 &2483678299675311987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -635,25 +637,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2483678299826297278}
     m_Modifications:
-    - target: {fileID: 514299423, guid: 70cc17af85cc53542a67c1a84a1c4c3c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.019332886
-      objectReference: {fileID: 0}
-    - target: {fileID: 514299423, guid: 70cc17af85cc53542a67c1a84a1c4c3c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.5973358
-      objectReference: {fileID: 0}
-    - target: {fileID: 879210025, guid: 70cc17af85cc53542a67c1a84a1c4c3c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.17454529
-      objectReference: {fileID: 0}
-    - target: {fileID: 879210026, guid: 70cc17af85cc53542a67c1a84a1c4c3c, type: 3}
-      propertyPath: m_fontSize
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1921943035, guid: 70cc17af85cc53542a67c1a84a1c4c3c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.5414276
+    - target: {fileID: 1921943034, guid: 70cc17af85cc53542a67c1a84a1c4c3c, type: 3}
+      propertyPath: m_Name
+      value: ClassPlate
       objectReference: {fileID: 0}
     - target: {fileID: 7305401988604356882, guid: 70cc17af85cc53542a67c1a84a1c4c3c,
         type: 3}
@@ -764,16 +750,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HeroPreviewHero
-      objectReference: {fileID: 0}
-    - target: {fileID: 7305401988950330417, guid: 70cc17af85cc53542a67c1a84a1c4c3c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.7519226
-      objectReference: {fileID: 0}
-    - target: {fileID: 7305401988950330417, guid: 70cc17af85cc53542a67c1a84a1c4c3c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.46229553
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70cc17af85cc53542a67c1a84a1c4c3c, type: 3}

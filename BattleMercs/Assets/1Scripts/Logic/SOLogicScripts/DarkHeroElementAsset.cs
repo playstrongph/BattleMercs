@@ -12,6 +12,14 @@ namespace _1Scripts.Logic.SOLogicScripts
       {
          heroVisual.HeroFrames.SetColorDarkFame();
       }
+      
+      public override void SetHeroPreviewClassColor(IHeroPreviewVisual heroPreviewVisual)
+      {
+         heroPreviewVisual.HeroPreviewHero.HeroFramesVisual.SetColorDarkFame();
+
+      }
+      
+      
         
 
       #endregion

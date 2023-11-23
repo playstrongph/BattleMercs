@@ -18,6 +18,12 @@ namespace _1Scripts.Logic.SOLogicScripts
 
       }
       
+      public virtual void SetHeroPreviewClassColor(IHeroPreviewVisual heroPreviewVisual)
+      {
+         
+
+      }
+      
       
         
 

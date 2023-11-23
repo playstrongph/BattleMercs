@@ -12,6 +12,13 @@ namespace _1Scripts.Logic.SOLogicScripts
       {
          heroVisual.HeroFrames.SetColorGreenFrame();
       }
+      
+      
+      public override void SetHeroPreviewClassColor(IHeroPreviewVisual heroPreviewVisual)
+      {
+         heroPreviewVisual.HeroPreviewHero.HeroFramesVisual.SetColorGreenFrame();
+
+      }
         
 
       #endregion

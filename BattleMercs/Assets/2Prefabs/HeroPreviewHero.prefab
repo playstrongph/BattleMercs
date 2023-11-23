@@ -243,7 +243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.33257508, y: 0.19811676}
   m_AnchorMax: {x: 0.688, y: 0.27420115}
-  m_AnchoredPosition: {x: -0.019329071, y: 0.59734344}
+  m_AnchoredPosition: {x: -0.019332886, y: 0.5973358}
   m_SizeDelta: {x: 0.8841758, y: -0.74161226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &514299425
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 879210027}
   - component: {fileID: 879210026}
   m_Layer: 0
-  m_Name: RaceText
+  m_Name: ClassText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -377,7 +377,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.38181773, y: 0.14412142}
   m_AnchorMax: {x: 0.64116216, y: 0.20138921}
-  m_AnchoredPosition: {x: -0.39150238, y: -0.17455292}
+  m_AnchoredPosition: {x: -0.39150238, y: -0.17454529}
   m_SizeDelta: {x: 0.5028069, y: 1.3890309}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &879210027
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Race
+  m_text: Class
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7be18d266b5d59546bbd7e359c87e3e9, type: 2}
   m_sharedMaterial: {fileID: 4491592743849078351, guid: 7be18d266b5d59546bbd7e359c87e3e9,
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
+  m_fontSize: 15
   m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -720,7 +720,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3475631, y: 0.13480611}
   m_AnchorMax: {x: 0.6558057, y: 0.20868446}
-  m_AnchoredPosition: {x: -0.5414238, y: 0.7066345}
+  m_AnchoredPosition: {x: -0.5414276, y: 0.7066345}
   m_SizeDelta: {x: -1.349045, y: -0.45024633}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1921943037
@@ -1048,8 +1048,9 @@ MonoBehaviour:
   racePlate: {fileID: 1921943036}
   attackText: {fileID: 357818177}
   healthText: {fileID: 1992010176}
+  armorText: {fileID: 1866303688}
   nameText: {fileID: 514299424}
-  raceText: {fileID: 879210026}
+  classText: {fileID: 879210026}
 --- !u!1 &7305401988950330418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,7 +1087,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.19880396, y: 0.19314772}
   m_AnchorMax: {x: 0.8054382, y: 0.804}
-  m_AnchoredPosition: {x: -0.75193024, y: 0.46229523}
+  m_AnchoredPosition: {x: -0.7519226, y: 0.46229553}
   m_SizeDelta: {x: -0.14495623, y: -1.6258122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7305401988950330423

@@ -10,6 +10,7 @@ namespace _1Scripts.Visual
       
       [Header("RUNTIME REFERENCES")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private Object heroLogicReference = null;
+    
       
       [Header("COMPONENTS")] 
       [SerializeField] private Canvas canvas = null;
@@ -18,6 +19,8 @@ namespace _1Scripts.Visual
 
       [Header("INSPECTOR REFERENCES")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneVisualManager))] private Object battleSceneManagerVisual = null;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetPreviewHeroComponents))] private Object setPreviewHeroComponents = null;
+    
       
 
       
@@ -52,6 +55,10 @@ namespace _1Scripts.Visual
             return newList;
          }
       }
+
+      public ISetPreviewHeroComponents SetPreviewHeroComponents => setPreviewHeroComponents as ISetPreviewHeroComponents;
+
+      public Transform ThisTransform => transform;
 
 
       #endregion
