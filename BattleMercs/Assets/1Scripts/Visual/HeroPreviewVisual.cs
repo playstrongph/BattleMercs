@@ -64,8 +64,28 @@ namespace _1Scripts.Visual
       #endregion
 
       #region METHODS
-
-
+      
+      /// <summary>
+      /// Updates all of the components and sets the heroLogic reference
+      /// </summary>
+      /// <param name="heroLogic"></param>
+      public void UpdateAllHeroPreviewHeroVisualComponents(IHeroLogic heroLogic)
+      {
+         //Set References
+         HeroLogicReference = heroLogic;
+         //TODO: HeroLogic Hero Preview Visual Reference
+         
+         //Change the HeroPreviewVisual Hero Object Name
+         SetPreviewHeroComponents.UpdateHeroPreviewGameObjectName();
+         
+         //Update the components
+         SetPreviewHeroComponents.UpdateHeroPreviewFrame();
+         SetPreviewHeroComponents.UpdateHeroPreviewAttackText();
+         SetPreviewHeroComponents.UpdateHeroPreviewHealthText();
+         SetPreviewHeroComponents.UpdateHeroPreviewArmorText();
+         SetPreviewHeroComponents.UpdateHeroPreviewNameText();
+         SetPreviewHeroComponents.UpdateHeroPreviewClassText();
+      }
 
       #endregion
    }

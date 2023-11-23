@@ -15,5 +15,7 @@ namespace _1Scripts.Visual
         ISetPreviewHeroComponents SetPreviewHeroComponents { get; }
 
         Transform ThisTransform { get; }
+
+        void UpdateAllHeroPreviewHeroVisualComponents(IHeroLogic heroLogic);
     }
 }

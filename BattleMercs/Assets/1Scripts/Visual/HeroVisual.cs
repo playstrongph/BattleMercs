@@ -84,10 +84,10 @@ namespace _1Scripts.Visual
           HeroLogicReference = heroLogic;
           heroLogic.HeroVisualReference = this;
           
-          //Change the heroVisual game object name
+          //Update the heroVisual game object name
           SetHeroVisualComponent.UpdateGameObjectHeroName(heroLogic.HeroInformation.HeroName);
           
-          //Load the Visuals
+          //Update the components
           SetHeroVisualComponent.UpdateHeroGraphic(heroLogic.HeroInformation.HeroGraphic);
           SetHeroVisualComponent.UpdateHeroFrameColorVisual();
           SetHeroVisualComponent.UpdateArmorTextAndImage();
