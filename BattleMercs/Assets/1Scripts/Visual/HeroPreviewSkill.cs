@@ -28,7 +28,7 @@ namespace _1Scripts.Visual
       #region PROPERTIES
       
       //Components
-      private ISkillPreviewFrames SkillPreviewFrames => skillPreviewFrames as ISkillPreviewFrames;
+      public ISkillPreviewFrames SkillPreviewFrames => skillPreviewFrames as ISkillPreviewFrames;
       
       //Images
       public Image SkillPreviewGraphic => skillPreviewGraphic;

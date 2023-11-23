@@ -56,7 +56,7 @@ namespace _1Scripts.Visual
       {
          var heroLogic = HeroVisual.HeroLogicReference;
          
-         heroLogic.HeroInformation.HeroElement.SetClassColor(heroLogic);
+         heroLogic.HeroInformation.HeroElement.SetHeroClassColor(HeroVisual);
       }
       
       /// <summary>

@@ -5,6 +5,7 @@ namespace _1Scripts.Visual
 {
     public interface IHeroPreviewSkill
     {
+        ISkillPreviewFrames SkillPreviewFrames { get; }
         Image SkillPreviewGraphic { get; }
         Image CooldownGraphic { get; }
         Image SpeedGraphic { get; }

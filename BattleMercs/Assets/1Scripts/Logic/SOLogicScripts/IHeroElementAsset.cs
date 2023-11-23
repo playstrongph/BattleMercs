@@ -1,7 +1,9 @@
-﻿namespace _1Scripts.Logic.SOLogicScripts
+﻿using _1Scripts.Visual;
+
+namespace _1Scripts.Logic.SOLogicScripts
 {
     public interface IHeroElementAsset
     {
-        void SetClassColor(IHeroLogic heroLogic);
+        void SetHeroClassColor(IHeroVisual heroVisual);
     }
 }

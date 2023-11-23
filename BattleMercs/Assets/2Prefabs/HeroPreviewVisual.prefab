@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2483678299826297277}
   - component: {fileID: 2483678299826297276}
   - component: {fileID: 2961265782815502989}
+  - component: {fileID: 1246480421009091171}
   m_Layer: 0
   m_Name: HeroPreviewVisual
   m_TagString: Untagged
@@ -108,6 +109,19 @@ MonoBehaviour:
   - {fileID: 6678453933089441818}
   - {fileID: 6678453932643800370}
   - {fileID: 6678453932760841308}
+--- !u!114 &1246480421009091171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2483678299826297279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728cc009c6f1a9b4b8b4825b43ac23c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setPreviewHeroComponents: {fileID: 2961265782815502989}
 --- !u!1001 &2483678299675311987
 PrefabInstance:
   m_ObjectHideFlags: 0

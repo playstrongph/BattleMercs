@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _1Scripts.Visual;
+using UnityEngine;
 
 namespace _1Scripts.Logic.SOLogicScripts
 {
@@ -7,9 +8,8 @@ namespace _1Scripts.Logic.SOLogicScripts
    {
       #region METHODS
       
-      public override void SetClassColor(IHeroLogic heroLogic)
+      public override void SetHeroClassColor(IHeroVisual heroVisual)
       {
-         var heroVisual = heroLogic.HeroVisualReference;
          heroVisual.HeroFrames.SetColorGreenFrame();
       }
         

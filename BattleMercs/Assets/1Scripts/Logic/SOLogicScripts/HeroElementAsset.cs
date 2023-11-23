@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _1Scripts.Visual;
+using UnityEngine;
 
 namespace _1Scripts.Logic.SOLogicScripts
 {
@@ -11,11 +12,13 @@ namespace _1Scripts.Logic.SOLogicScripts
    {
       #region METHODS
       
-      public virtual void SetClassColor(IHeroLogic heroLogic)
+      public virtual void SetHeroClassColor(IHeroVisual heroVisual)
       {
          
 
       }
+      
+      
         
 
       #endregion
