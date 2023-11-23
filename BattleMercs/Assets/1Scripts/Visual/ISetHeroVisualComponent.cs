@@ -2,10 +2,10 @@
 
 namespace _1Scripts.Visual
 {
-    public interface ISetHeroVisuals
+    public interface ISetHeroVisualComponent
     {
 
-        void SetGameObjectHeroName(string heroName);
+        void UpdateGameObjectHeroName(string heroName);
 
         void ShowHeroVisual();
         void HideHeroVisual();
@@ -16,7 +16,7 @@ namespace _1Scripts.Visual
         /// <summary>
         /// Hero Frame depends on the hero Element
         /// </summary>
-        void SetHeroFrameColorVisual();
+        void UpdateHeroFrameColorVisual();
 
         /// <summary>
         /// Updates the armor text and armor image display
@@ -38,7 +38,7 @@ namespace _1Scripts.Visual
         /// Set the Hero Graphic
         /// </summary>
         /// <param name="graphic"></param>
-        void SetHeroGraphic(Sprite graphic);
+        void UpdateHeroGraphic(Sprite graphic);
 
         /// <summary>
         /// Update the attack text

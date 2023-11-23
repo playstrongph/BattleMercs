@@ -33,11 +33,11 @@ namespace _1Scripts.Logic
           yield return StartCoroutine(InitializeAllPlayersHeroesAndSkillsCoroutine());
           
           //TEST
-          yield return StartCoroutine(LoadMainPlayerHeroesVisual());
-          
-          //TEST
           yield return StartCoroutine(SelectEnemyPlayer());
           
+          //TEST
+          yield return StartCoroutine(LoadMainPlayerHeroesVisual());
+
           //TEST
           yield return StartCoroutine(LoadSelectedEnemyHeroesVisual());
 
@@ -115,24 +115,8 @@ namespace _1Scripts.Logic
           {
               var heroLogic = player.PlayerHeroes[i];
               var heroVisual = player.PlayerVisualReference.HeroVisualsList[i];
-              
-              //Set the References 
-              heroLogic.HeroVisualReference = heroVisual;
-              heroVisual.HeroLogicReference = heroLogic;
-              
-              //Change the heroVisual game object name
-              heroVisual.SetHeroVisuals.SetGameObjectHeroName(heroLogic.HeroInformation.HeroName);
-              
-              //Load the Visuals
-              heroVisual.SetHeroVisuals.SetHeroGraphic(heroLogic.HeroInformation.HeroGraphic);
-              heroVisual.SetHeroVisuals.SetHeroFrameColorVisual();
-              heroVisual.SetHeroVisuals.UpdateArmorTextAndImage();
-              heroVisual.SetHeroVisuals.UpdateTurnOrderText(0);
-              heroVisual.SetHeroVisuals.UpdateAttackText();
-              heroVisual.SetHeroVisuals.UpdateHealthText();
-              
-              //Show the Hero
-              heroVisual.SetHeroVisuals.ShowHeroVisual();
+
+              heroVisual.UpdateAllHeroVisualComponents(heroLogic);
           }
       }
 

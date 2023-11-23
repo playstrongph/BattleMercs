@@ -2,7 +2,7 @@
 
 namespace _1Scripts.Visual
 {
-   public class SetHeroVisuals : MonoBehaviour, ISetHeroVisuals
+   public class SetHeroVisualComponent : MonoBehaviour, ISetHeroVisualComponent
    {
       #region VARIABLES
 
@@ -24,7 +24,7 @@ namespace _1Scripts.Visual
 
       #region METHODS
 
-      public void SetGameObjectHeroName(string heroName)
+      public void UpdateGameObjectHeroName(string heroName)
       {
          HeroVisual.Transform.gameObject.name = heroName;
       }
@@ -52,7 +52,7 @@ namespace _1Scripts.Visual
       /// <summary>
       /// Hero Frame depends on the hero Element
       /// </summary>
-      public void SetHeroFrameColorVisual()
+      public void UpdateHeroFrameColorVisual()
       {
          var heroLogic = HeroVisual.HeroLogicReference;
          
@@ -109,7 +109,7 @@ namespace _1Scripts.Visual
       /// Set the Hero Graphic
       /// </summary>
       /// <param name="graphic"></param>
-      public void SetHeroGraphic(Sprite graphic)
+      public void UpdateHeroGraphic(Sprite graphic)
       {
          var heroGraphic = HeroVisual.HeroGraphic;
 

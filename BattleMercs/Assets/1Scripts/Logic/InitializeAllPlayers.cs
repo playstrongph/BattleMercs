@@ -122,18 +122,18 @@ namespace _1Scripts.Logic
               heroVisual.HeroLogicReference = heroLogic;
               
               //Change the heroVisual game object name
-              heroVisual.SetHeroVisuals.SetGameObjectHeroName(heroLogic.HeroInformation.HeroName);
+              heroVisual.SetHeroVisualComponent.UpdateGameObjectHeroName(heroLogic.HeroInformation.HeroName);
               
               //Load the Visuals
-              heroVisual.SetHeroVisuals.SetHeroGraphic(heroLogic.HeroInformation.HeroGraphic);
-              heroVisual.SetHeroVisuals.SetHeroFrameColorVisual();
-              heroVisual.SetHeroVisuals.UpdateArmorTextAndImage();
-              heroVisual.SetHeroVisuals.UpdateTurnOrderText(0);
-              heroVisual.SetHeroVisuals.UpdateAttackText();
-              heroVisual.SetHeroVisuals.UpdateHealthText();
+              heroVisual.SetHeroVisualComponent.UpdateHeroGraphic(heroLogic.HeroInformation.HeroGraphic);
+              heroVisual.SetHeroVisualComponent.UpdateHeroFrameColorVisual();
+              heroVisual.SetHeroVisualComponent.UpdateArmorTextAndImage();
+              heroVisual.SetHeroVisualComponent.UpdateTurnOrderText(0);
+              heroVisual.SetHeroVisualComponent.UpdateAttackText();
+              heroVisual.SetHeroVisualComponent.UpdateHealthText();
               
               //Show the Hero
-              heroVisual.SetHeroVisuals.ShowHeroVisual();
+              heroVisual.SetHeroVisualComponent.ShowHeroVisual();
           }
       }
 

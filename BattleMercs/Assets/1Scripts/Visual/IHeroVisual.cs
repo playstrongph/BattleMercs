@@ -7,6 +7,8 @@ namespace _1Scripts.Visual
 {
     public interface IHeroVisual
     {
+
+        void UpdateAllHeroVisualComponents(IHeroLogic heroLogic);
         IHeroGlowsVisual HeroGlows { get; }
         IHeroFramesVisual HeroFrames { get; }
         IHeroStatusEffectsVisual HeroStatusEffectsVisual { get; }
@@ -23,7 +25,7 @@ namespace _1Scripts.Visual
 
         Canvas Canvas { get; }
 
-        ISetHeroVisuals SetHeroVisuals { get; set; }
+        ISetHeroVisualComponent SetHeroVisualComponent { get; set; }
 
         Transform Transform { get; }
     }

@@ -30,7 +30,7 @@ namespace _1Scripts.Visual
 
       [Header("COMPONENTS")]
       [SerializeField] private Canvas canvas;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetHeroVisuals))] private Object setHeroVisuals;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetHeroVisualComponent))] private Object setHeroVisuals;
       
       
 #pragma warning restore 0649
@@ -64,7 +64,7 @@ namespace _1Scripts.Visual
       
       //Components
       
-      public ISetHeroVisuals SetHeroVisuals { get => setHeroVisuals as ISetHeroVisuals; set => setHeroVisuals = value as Object; }
+      public ISetHeroVisualComponent SetHeroVisualComponent { get => setHeroVisuals as ISetHeroVisualComponent; set => setHeroVisuals = value as Object; }
 
       //Others
       public Transform Transform => transform;
@@ -73,7 +73,31 @@ namespace _1Scripts.Visual
 
       #region METHODS
 
-
+      
+      /// <summary>
+      /// Updates all of the hero and hero preview's visual components
+      /// </summary>
+      /// <param name="heroLogic"></param>
+      public void UpdateAllHeroVisualComponents(IHeroLogic heroLogic)
+      {
+          //Set References
+          HeroLogicReference = heroLogic;
+          heroLogic.HeroVisualReference = this;
+          
+          //Change the heroVisual game object name
+          SetHeroVisualComponent.UpdateGameObjectHeroName(heroLogic.HeroInformation.HeroName);
+          
+          //Load the Visuals
+          SetHeroVisualComponent.UpdateHeroGraphic(heroLogic.HeroInformation.HeroGraphic);
+          SetHeroVisualComponent.UpdateHeroFrameColorVisual();
+          SetHeroVisualComponent.UpdateArmorTextAndImage();
+          SetHeroVisualComponent.UpdateTurnOrderText(0);
+          SetHeroVisualComponent.UpdateAttackText();
+          SetHeroVisualComponent.UpdateHealthText();
+              
+          //Show the Hero
+          SetHeroVisualComponent.ShowHeroVisual();
+      }
 
       #endregion
    }
