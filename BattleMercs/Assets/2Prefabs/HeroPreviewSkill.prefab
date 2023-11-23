@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8614387202556066374, guid: 1d58eb9aeb55c7242a6f8d0d56718f85,
+  m_Sprite: {fileID: -8614387202556066374, guid: fda4682a5f5bb874faa6a2956b4ff586,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -90,10 +90,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillPreviewFrame: {fileID: 1415578496786337564}
   frames:
-  - {fileID: 6308278330998182386, guid: 1d58eb9aeb55c7242a6f8d0d56718f85, type: 3}
-  - {fileID: 2531894167454913421, guid: 1d58eb9aeb55c7242a6f8d0d56718f85, type: 3}
-  - {fileID: -6372847374873367398, guid: 1d58eb9aeb55c7242a6f8d0d56718f85, type: 3}
-  - {fileID: -8614387202556066374, guid: 1d58eb9aeb55c7242a6f8d0d56718f85, type: 3}
+  - {fileID: -8614387202556066374, guid: fda4682a5f5bb874faa6a2956b4ff586, type: 3}
+  - {fileID: -6372847374873367398, guid: fda4682a5f5bb874faa6a2956b4ff586, type: 3}
+  - {fileID: 2531894167454913421, guid: fda4682a5f5bb874faa6a2956b4ff586, type: 3}
+  - {fileID: 6308278330998182386, guid: fda4682a5f5bb874faa6a2956b4ff586, type: 3}
+  - {fileID: -599077170762162498, guid: fda4682a5f5bb874faa6a2956b4ff586, type: 3}
+  - {fileID: -5230421286986390004, guid: fda4682a5f5bb874faa6a2956b4ff586, type: 3}
 --- !u!1 &1415578496954242056
 GameObject:
   m_ObjectHideFlags: 0

@@ -106,41 +106,6 @@ namespace _1Scripts.Logic
           playerLogic.SetPlayerVisualAndLogicReferences.SetReferences(playerLogic,mainPlayerVisual);
 
       }
-      
-      //TEST
-      private void LoadMainPlayerHeroesVisuals(IPlayerLogic mainPlayer, IBattleSceneLogicManager logicManager)
-      {
-          var mainPlayerVisual = logicManager.BattleSceneVisualManager.MainPlayerVisual;
-
-          for (int i = 0; i < mainPlayer.PlayerHeroes.Count; i++)
-          {
-              var heroLogic = mainPlayer.PlayerHeroes[i];
-              var heroVisual = mainPlayerVisual.HeroVisualsList[i];
-              
-              //Set the References 
-              heroLogic.HeroVisualReference = heroVisual;
-              heroVisual.HeroLogicReference = heroLogic;
-              
-              //Change the heroVisual game object name
-              heroVisual.SetHeroVisualComponent.UpdateGameObjectHeroName(heroLogic.HeroInformation.HeroName);
-              
-              //Load the Visuals
-              heroVisual.SetHeroVisualComponent.UpdateHeroGraphic(heroLogic.HeroInformation.HeroGraphic);
-              heroVisual.SetHeroVisualComponent.UpdateHeroFrameColorVisual();
-              heroVisual.SetHeroVisualComponent.UpdateArmorTextAndImage();
-              heroVisual.SetHeroVisualComponent.UpdateTurnOrderText(0);
-              heroVisual.SetHeroVisualComponent.UpdateAttackText();
-              heroVisual.SetHeroVisualComponent.UpdateHealthText();
-              
-              //Show the Hero
-              heroVisual.SetHeroVisualComponent.ShowHeroVisual();
-          }
-      }
-
-
-
-
-
 
       #endregion
    }

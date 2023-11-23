@@ -54,15 +54,19 @@ namespace _1Scripts.Logic
           LogicManagerReference.InitializeAllPlayers.LoadPlayers(LogicManagerReference);
           yield return null;
       }
-      
-      
+
       //TEST METHODS
 
 
       #region TestMethods
 
-      
-      
+      private IEnumerator LoadMainPlayerHeroesVisual()
+      {
+          var mainPlayer = LogicManagerReference.AllPlayersLogic.MainPlayer.GetComponent<IPlayerLogic>();
+          LoadHeroesVisual(mainPlayer);
+          yield return null;
+      }
+
       /// <summary>
       /// Temporary Methods - for cleanup
       /// </summary>
@@ -91,15 +95,7 @@ namespace _1Scripts.Logic
 
           yield return null;
       }
-      
-      private IEnumerator LoadMainPlayerHeroesVisual()
-      {
-          var mainPlayer = LogicManagerReference.AllPlayersLogic.MainPlayer.GetComponent<IPlayerLogic>();
-          LoadHeroesVisual(mainPlayer);
-          yield return null;
-      }
-      
-      
+
       private IEnumerator LoadSelectedEnemyHeroesVisual()
       {
           var selectedEnemyPlayer = LogicManagerReference.AllPlayersLogic.SelectedEnemyPlayer.GetComponent<IPlayerLogic>();
