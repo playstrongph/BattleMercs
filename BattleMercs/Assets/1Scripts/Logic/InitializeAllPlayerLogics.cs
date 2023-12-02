@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace _1Scripts.Logic
 {
-   public class InitializeAllPlayers : MonoBehaviour, IInitializeAllPlayers
+   public class InitializeAllPlayerLogics : MonoBehaviour, IInitializeAllPlayerLogics
    {
       #region VARIABLES
 #pragma warning disable 0649
@@ -58,11 +58,8 @@ namespace _1Scripts.Logic
 
           //Create The Heroes here so you can set the reference
           newPlayerLogic.InitializeAllHeroes.LoadHeroes(logicManager,newPlayerLogic,mainPlayerAsset.Heroes);
-          
-          //TEST: Load MainPlayer Visuals
-          //LoadMainPlayerHeroesVisuals(newPlayerLogic, logicManager);
-          
-          //TEST: TODO: Load Main Player Heroes Skills Visuals
+
+         
           
       }
 
@@ -94,15 +91,10 @@ namespace _1Scripts.Logic
               newPlayerLogic.InitializeAllHeroes.LoadHeroes(logicManager,newPlayerLogic,playerHeroes);
           }
       }
-      
-      //TODO: Check if Setting of References should be done separately
-      
+
       private void SetMainPlayerLogicAndVisualReferences(IBattleSceneLogicManager logicManager, IPlayerLogic playerLogic)
       {
           var mainPlayerVisual = logicManager.BattleSceneVisualManager.MainPlayerVisual;
-          
-          //logicManager.SetPlayerVisualAndLogicReferences.SetReferences(playerLogic,mainPlayerVisual);
-          
           playerLogic.SetPlayerVisualAndLogicReferences.SetReferences(playerLogic,mainPlayerVisual);
 
       }

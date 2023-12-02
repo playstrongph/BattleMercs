@@ -16,12 +16,13 @@ namespace _1Scripts.Logic
       [Header("Runtime References")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneVisualManager))]private Object battleSceneManagerVisual;
       
-      [Header("Children Components")]
+      [Header("Inspector Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IAllPlayersLogic))] private Object playersLogic;
 
-      [Header("Attached Components")]
+      [Header("Script Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleStart))] private Object battleStart;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeAllPlayers))] private Object initializeAllPlayers;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeAllPlayerLogics))] private Object initializeAllPlayers;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISelectEnemyPlayer))] private Object selectEnemyPlayer;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IUniqueIDGenerator))] private Object uniqueIDGenerator;
 
 #pragma warning restore 0649 // Restore warnings
@@ -47,7 +48,8 @@ namespace _1Scripts.Logic
       public IAllPlayersLogic AllPlayersLogic => playersLogic as IAllPlayersLogic;
       //Attached Components
       public IBattleStart BattleStart => battleStart as IBattleStart;
-      public IInitializeAllPlayers InitializeAllPlayers => initializeAllPlayers as IInitializeAllPlayers;
+      public IInitializeAllPlayerLogics InitializeAllPlayerLogics => initializeAllPlayers as IInitializeAllPlayerLogics;
+      public ISelectEnemyPlayer SelectEnemyPlayer => selectEnemyPlayer as ISelectEnemyPlayer;
       public IUniqueIDGenerator UniqueIDGenerator => uniqueIDGenerator as IUniqueIDGenerator;
       public Transform Transform => this.transform;
 

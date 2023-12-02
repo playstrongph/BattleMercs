@@ -14,7 +14,8 @@ namespace _1Scripts.Logic
         Transform Transform { get; }
 
         //Attached Components
-        IInitializeAllPlayers InitializeAllPlayers { get; }
+        IInitializeAllPlayerLogics InitializeAllPlayerLogics { get; }
+        ISelectEnemyPlayer SelectEnemyPlayer { get; }
         IUniqueIDGenerator UniqueIDGenerator { get; }
 
         IBattleStart BattleStart { get; }

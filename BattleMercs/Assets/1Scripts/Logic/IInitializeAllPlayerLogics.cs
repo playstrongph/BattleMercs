@@ -1,6 +1,6 @@
 namespace _1Scripts.Logic
 {
-    public interface IInitializeAllPlayers
+    public interface IInitializeAllPlayerLogics
     {
         void LoadPlayers(IBattleSceneLogicManager logicManager);
     }

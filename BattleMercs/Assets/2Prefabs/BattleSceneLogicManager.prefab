@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2705020884670478515}
   - component: {fileID: 1989336922780340270}
   - component: {fileID: 1357007176}
+  - component: {fileID: 6215529952624177495}
   - component: {fileID: 6357082121393306748}
   m_Layer: 0
   m_Name: BattleSceneLogicManager
@@ -47,14 +48,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1da3aa3b2c8d6eb4c82edb339bb201e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabBattleSceneManagerVisual: {fileID: 407357391222785282, guid: 86f42a1ae533925429bc500618128eef,
-    type: 3}
   battleSettings: {fileID: 11400000, guid: 2cee7d7d882df1e43bee5128365d1d2b, type: 2}
   battleSceneManagerVisual: {fileID: 0}
   playersLogic: {fileID: 2705020884670478515}
   battleStart: {fileID: 1989336922780340270}
-  initializeBattleSceneManagerVisual: {fileID: 0}
   initializeAllPlayers: {fileID: 1357007176}
+  selectEnemyPlayer: {fileID: 6215529952624177495}
   uniqueIDGenerator: {fileID: 6357082121393306748}
 --- !u!114 &2705020884670478515
 MonoBehaviour:
@@ -70,6 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleSceneLogicManager: {fileID: 1847427112}
   mainPlayer: {fileID: 0}
+  selectedEnemyPlayer: {fileID: 0}
   allEnemyPlayers: []
 --- !u!114 &1989336922780340270
 MonoBehaviour:
@@ -96,6 +96,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65971c343458bba458210f97bf42c024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6215529952624177495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4025127891384342249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501e743ce53a73741ab8c95ce41a46b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logicManagerReference: {fileID: 1847427112}
 --- !u!114 &6357082121393306748
 MonoBehaviour:
   m_ObjectHideFlags: 0
