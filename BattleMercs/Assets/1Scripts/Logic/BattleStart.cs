@@ -63,7 +63,7 @@ namespace _1Scripts.Logic
       private IEnumerator LoadMainPlayerHeroesVisual()
       {
           var mainPlayer = LogicManagerReference.AllPlayersLogic.MainPlayer.GetComponent<IPlayerLogic>();
-          LoadHeroesVisual(mainPlayer);
+          mainPlayer.LoadPlayerHeroesVisual.LoadHeroesVisual();
           yield return null;
       }
 
@@ -79,21 +79,12 @@ namespace _1Scripts.Logic
       {
           var selectedEnemyPlayer = LogicManagerReference.AllPlayersLogic.SelectedEnemyPlayer.GetComponent<IPlayerLogic>();
           
-          LoadHeroesVisual(selectedEnemyPlayer);
+          selectedEnemyPlayer.LoadPlayerHeroesVisual.LoadHeroesVisual();
           
           yield return null;
       }
 
-      private void LoadHeroesVisual(IPlayerLogic player)
-      {
-          for (int i = 0; i < player.PlayerHeroes.Count; i++)
-          {
-              var heroLogic = player.PlayerHeroes[i];
-              var heroVisual = player.PlayerVisualReference.HeroVisualsList[i];
-
-              heroVisual.UpdateAllHeroVisualComponents(heroLogic);
-          }
-      }
+      
 
       #endregion
 

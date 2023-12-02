@@ -10,21 +10,24 @@ namespace _1Scripts.Logic
       
 #pragma warning disable 0649
 
+      [Header("Player Attributes")]
       [SerializeField] private string playerName;
       [SerializeField] private string playerIDNumber;
       [SerializeField] private int soulsCount;
+      
+      [Header("Runtime Set References")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerVisual))] private Object playerVisualReference;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerLogic))] private Object currentEnemyPlayer;
-      
-         
-      [Header("HERO LISTS")]
+
+      [Header("Hero Lists")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> playerHeroes;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> aliveHeroes;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> deadHeroes;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> extinctHeroes;
       
-      [Header("COMPONENTS")]
+      [Header("Script Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetPlayerVisualAndLogicReferences))] private Object setPlayerVisualAndLogicReferences;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ILoadPlayerHeroesVisual))] private Object loadPlayerHeroesVisual;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(InitializeAllHeroes))] private Object initializeAllHeroes;
          
 #pragma warning restore 0649
@@ -34,16 +37,15 @@ namespace _1Scripts.Logic
         
       #region PROPERTIES
       
+      //PLAYER ATTRIBUTES
       public string PlayerName { get => playerName; set => playerName = value; }
       public string PlayerIDNumber { get => playerIDNumber; set => playerIDNumber = value; }
       public int SoulsCount { get => soulsCount; set => soulsCount = value; }
-
+      
+      //OTHERS
       public Transform Transform => this.transform;
                
-      //SET IN RUNTIME
-               
-      //Used for reference purposes only;  Object type to prevent circular logic
-      
+      //RUN TIME SET REFERENCES
       public IPlayerVisual PlayerVisualReference
       {
          get => playerVisualReference as IPlayerVisual;
@@ -103,8 +105,10 @@ namespace _1Scripts.Logic
          }
       }
       
-      //COMPONENTS
+      //SCRIPT COMPONENTS
       public IInitializeAllHeroes InitializeAllHeroes => initializeAllHeroes as IInitializeAllHeroes;
+      
+      public ILoadPlayerHeroesVisual LoadPlayerHeroesVisual => loadPlayerHeroesVisual as ILoadPlayerHeroesVisual;
       public ISetPlayerVisualAndLogicReferences SetPlayerVisualAndLogicReferences => setPlayerVisualAndLogicReferences as ISetPlayerVisualAndLogicReferences;
       
                

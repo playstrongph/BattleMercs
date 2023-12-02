@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3825531709743193433}
   - component: {fileID: 68788437743382228}
   - component: {fileID: 5461147028833600310}
+  - component: {fileID: 1564671331389188819}
   - component: {fileID: -1175787245978760925}
   m_Layer: 0
   m_Name: PlayerLogicPrefab
@@ -55,6 +56,7 @@ MonoBehaviour:
   deadHeroes: []
   extinctHeroes: []
   setPlayerVisualAndLogicReferences: {fileID: -1175787245978760925}
+  loadPlayerHeroesVisual: {fileID: 1564671331389188819}
   initializeAllHeroes: {fileID: 5461147028833600310}
 --- !u!114 &5461147028833600310
 MonoBehaviour:
@@ -68,6 +70,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 363b87699bc60274ababed516070d085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1564671331389188819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6634385906465547695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d00ea884d9e3494eab570ed07800e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLogic: {fileID: 68788437743382228}
 --- !u!114 &-1175787245978760925
 MonoBehaviour:
   m_ObjectHideFlags: 0
