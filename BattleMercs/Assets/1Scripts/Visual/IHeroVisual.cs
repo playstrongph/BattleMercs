@@ -28,5 +28,7 @@ namespace _1Scripts.Visual
         ISetHeroVisualComponent SetHeroVisualComponent { get; set; }
 
         Transform Transform { get; }
+
+        IPlayerVisual PlayerVisualReference { get; }
     }
 }

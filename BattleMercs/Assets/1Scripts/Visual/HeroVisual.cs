@@ -1,6 +1,7 @@
 ﻿using _1Scripts.Logic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _1Scripts.Visual
@@ -9,30 +10,35 @@ namespace _1Scripts.Visual
    {
       #region VARIABLES
 #pragma warning disable 0649
-      [Header("GRAPHIC COMPONENTS")]
+      [Header("Graphic Components")]
+      [Header("COMPONENTS")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroGlowsVisual))] private Object heroGlows = null;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroFramesVisual))] private Object heroFrames = null;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroStatusEffectsVisual))] private Object heroStatusEffectsVisual = null;
+      [SerializeField] private Canvas canvas;
 
-      [Header("IMAGE COMPONENTS")]
+      [Header("Image Components")]
       [SerializeField] private Image armorImage = null;
       [SerializeField] private Image turnOrderImage = null;
       [SerializeField] private Image heroGraphic = null;
 
-      [Header("TEXT COMPONENTS")] 
+      [Header("Text Components")] 
       [SerializeField] private TextMeshProUGUI attackText = null;
       [SerializeField] private TextMeshProUGUI healthText = null;
       [SerializeField] private TextMeshProUGUI armorText = null;
       [SerializeField] private TextMeshProUGUI turnOrderText = null;
-
-      [Header("REFERENCES")] 
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private Object heroLogicReference;
-
-      [Header("COMPONENTS")]
-      [SerializeField] private Canvas canvas;
+      
+      [Header("Script Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetHeroVisualComponent))] private Object setHeroVisuals;
+
+      [Header("Runtime Set References")] 
+      [Header("REFERENCES")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private Object heroLogicReference;
       
       
+      [Header("Inspector Set References")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerVisual))] private Object playerVisualReference;
+
 #pragma warning restore 0649
           
 
@@ -44,7 +50,7 @@ namespace _1Scripts.Visual
       public IHeroGlowsVisual HeroGlows => heroGlows as IHeroGlowsVisual;
       public IHeroFramesVisual HeroFrames => heroFrames as IHeroFramesVisual;
       public IHeroStatusEffectsVisual HeroStatusEffectsVisual => heroStatusEffectsVisual as IHeroStatusEffectsVisual;
-      
+      public Canvas Canvas => canvas;
       
       //Image Components
       public Image ArmorImage => armorImage;
@@ -58,13 +64,14 @@ namespace _1Scripts.Visual
       public TextMeshProUGUI ArmorText { get => armorText; set => armorText = value; }
       public TextMeshProUGUI TurnOrderText { get => turnOrderText; set => turnOrderText = value; }
       
-      //References
-      public Canvas Canvas => canvas;
+      //Script Components
+      public ISetHeroVisualComponent SetHeroVisualComponent { get => setHeroVisuals as ISetHeroVisualComponent; set => setHeroVisuals = value as Object; }
+      
+      //Runtime Set References
       public IHeroLogic HeroLogicReference { get => heroLogicReference as IHeroLogic; set => heroLogicReference = value as Object; }
       
-      //Components
-      
-      public ISetHeroVisualComponent SetHeroVisualComponent { get => setHeroVisuals as ISetHeroVisualComponent; set => setHeroVisuals = value as Object; }
+      //Inspector Set References
+      public IPlayerVisual PlayerVisualReference => playerVisualReference as IPlayerVisual;
 
       //Others
       public Transform Transform => transform;
