@@ -34,17 +34,12 @@ namespace _1Scripts.Logic
           var mainPlayerAsset = logicManager.BattleSettings.MainPlayer;
           var allPlayersLogic = logicManager.AllPlayersLogic;
           var playerLogicPrefab = logicManager.BattleSettings.PlayerLogicPrefab;
-
-          
-          //var playerHeroes = mainPlayerAsset.Heroes;
           var newPlayer = Instantiate(playerLogicPrefab, logicManager.Transform);
-          newPlayer.name = mainPlayerAsset.PlayerName;
-              
           var newPlayerLogic = newPlayer.GetComponent<IPlayerLogic>();
+          var mainPlayerVisual = logicManager.BattleSceneVisualManager.MainPlayerVisual;
           
-          //Set Main Player Logic and References
-          SetMainPlayerLogicAndVisualReferences(logicManager, newPlayerLogic);
-
+          newPlayer.name = mainPlayerAsset.PlayerName;
+          
           //Set player name
           newPlayerLogic.PlayerName = mainPlayerAsset.PlayerName;
           //Set unique player ID Number
@@ -53,14 +48,14 @@ namespace _1Scripts.Logic
           newPlayerLogic.SoulsCount = mainPlayerAsset.SoulsCount;
               
           //Player Heroes Reference
-          //allPlayersLogic.AddToAllPlayersList(newPlayer);  //OLD
           allPlayersLogic.MainPlayer = newPlayer;
+
+          //Set Main Player Logic and References
+          newPlayerLogic.PlayerVisualReference = mainPlayerVisual;
+          mainPlayerVisual.PlayerLogicReference = newPlayerLogic;
 
           //Create The Heroes here so you can set the reference
           newPlayerLogic.InitializeAllHeroes.LoadHeroes(logicManager,newPlayerLogic,mainPlayerAsset.Heroes);
-
-         
-          
       }
 
       private void LoadAllEnemyPlayers(IBattleSceneLogicManager logicManager)
@@ -92,12 +87,7 @@ namespace _1Scripts.Logic
           }
       }
 
-      private void SetMainPlayerLogicAndVisualReferences(IBattleSceneLogicManager logicManager, IPlayerLogic playerLogic)
-      {
-          var mainPlayerVisual = logicManager.BattleSceneVisualManager.MainPlayerVisual;
-          playerLogic.SetPlayerVisualAndLogicReferences.SetReferences(playerLogic,mainPlayerVisual);
-
-      }
+      
 
       #endregion
    }

@@ -69,9 +69,6 @@ namespace _1Scripts.Logic
           yield return null;
       }
 
-      
-
-
 
       private IEnumerator LoadSelectedEnemyHeroesVisual()
       {

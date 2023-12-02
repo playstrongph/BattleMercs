@@ -26,7 +26,7 @@ namespace _1Scripts.Logic
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> extinctHeroes;
       
       [Header("Script Components")]
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetPlayerVisualAndLogicReferences))] private Object setPlayerVisualAndLogicReferences;
+      //[SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetPlayerVisualAndLogicReferences))] private Object setPlayerVisualAndLogicReferences;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ILoadPlayerHeroesVisual))] private Object loadPlayerHeroesVisual;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(InitializeAllHeroes))] private Object initializeAllHeroes;
          
@@ -109,7 +109,7 @@ namespace _1Scripts.Logic
       public IInitializeAllHeroes InitializeAllHeroes => initializeAllHeroes as IInitializeAllHeroes;
       
       public ILoadPlayerHeroesVisual LoadPlayerHeroesVisual => loadPlayerHeroesVisual as ILoadPlayerHeroesVisual;
-      public ISetPlayerVisualAndLogicReferences SetPlayerVisualAndLogicReferences => setPlayerVisualAndLogicReferences as ISetPlayerVisualAndLogicReferences;
+      //public ISetPlayerVisualAndLogicReferences SetPlayerVisualAndLogicReferences => setPlayerVisualAndLogicReferences as ISetPlayerVisualAndLogicReferences;
       
                
       #endregion

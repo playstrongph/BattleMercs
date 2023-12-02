@@ -32,6 +32,6 @@ namespace _1Scripts.Logic
 
       IInitializeAllHeroes InitializeAllHeroes { get; }
       ILoadPlayerHeroesVisual LoadPlayerHeroesVisual { get; }
-      ISetPlayerVisualAndLogicReferences SetPlayerVisualAndLogicReferences { get; }
+      //ISetPlayerVisualAndLogicReferences SetPlayerVisualAndLogicReferences { get; }
    }
 }
