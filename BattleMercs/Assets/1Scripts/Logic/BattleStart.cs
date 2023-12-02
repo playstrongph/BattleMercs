@@ -54,11 +54,13 @@ namespace _1Scripts.Logic
           LogicManagerReference.InitializeAllPlayerLogics.LoadPlayers(LogicManagerReference);
           yield return null;
       }
-
-      //TEST METHODS
-
-
-      #region TestMethods
+    
+      private IEnumerator SelectEnemyPlayer()
+      {
+          LogicManagerReference.SelectEnemyPlayer.SelectNextPlayer();
+          yield return null;
+      }
+    
 
       private IEnumerator LoadMainPlayerHeroesVisual()
       {
@@ -67,11 +69,7 @@ namespace _1Scripts.Logic
           yield return null;
       }
 
-      private IEnumerator SelectEnemyPlayer()
-      {
-          LogicManagerReference.SelectEnemyPlayer.SelectNextPlayer();
-          yield return null;
-      }
+      
 
 
 
@@ -85,11 +83,6 @@ namespace _1Scripts.Logic
       }
 
       
-
-      #endregion
-
-
-
 
       #endregion
    }
