@@ -79,7 +79,7 @@ namespace _1Scripts.Logic
       {
           var selectedEnemyPlayer = LogicManagerReference.AllPlayersLogic.SelectedEnemyPlayer.GetComponent<IPlayerLogic>();
           
-           (selectedEnemyPlayer);
+          LoadHeroesVisual(selectedEnemyPlayer);
           
           yield return null;
       }
