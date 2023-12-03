@@ -65,6 +65,9 @@ namespace _1Scripts.Logic
       private IEnumerator LoadMainPlayerHeroesVisual()
       {
           var mainPlayer = LogicManagerReference.AllPlayersLogic.MainPlayer.GetComponent<IPlayerLogic>();
+          
+          
+          
           mainPlayer.LoadPlayerHeroesVisual.LoadHeroesVisual();
           yield return null;
       }

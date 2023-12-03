@@ -88,15 +88,17 @@ namespace _1Scripts.Visual
       public void UpdateAllHeroVisualComponents(IHeroLogic heroLogic)
       {
           //Set References
-          HeroLogicReference = heroLogic;
-          heroLogic.HeroVisualReference = this;
+          //HeroLogicReference = heroLogic;
+          //heroLogic.HeroVisualReference = this;
           
           //Update the heroVisual game object name
           SetHeroVisualComponent.UpdateGameObjectHeroName(heroLogic.HeroInformation.HeroName);
           
           //Update the components
           SetHeroVisualComponent.UpdateHeroGraphic(heroLogic.HeroInformation.HeroGraphic);
+          
           SetHeroVisualComponent.UpdateHeroFrameColorVisual();
+          
           SetHeroVisualComponent.UpdateArmorTextAndImage();
           SetHeroVisualComponent.UpdateTurnOrderText(0);
           SetHeroVisualComponent.UpdateAttackText();

@@ -10,6 +10,7 @@ namespace _1Scripts.Logic.SOLogicScripts
       
       public override void SetHeroClassColor(IHeroVisual heroVisual)
       {
+         
          heroVisual.HeroFrames.SetColorLightFrame();
       }
       

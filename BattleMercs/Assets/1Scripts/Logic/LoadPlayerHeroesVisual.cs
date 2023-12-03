@@ -26,6 +26,10 @@ namespace _1Scripts.Logic
           {
               var heroLogic = PlayerLogic.PlayerHeroes[i];
               var heroVisual = PlayerLogic.PlayerVisualReference.HeroVisualsList[i];
+              
+              //Set References
+              heroLogic.HeroVisualReference = heroVisual;
+              heroVisual.HeroLogicReference = heroLogic;
 
               heroVisual.UpdateAllHeroVisualComponents(heroLogic);
           }
