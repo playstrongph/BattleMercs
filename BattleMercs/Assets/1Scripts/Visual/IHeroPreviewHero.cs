@@ -6,6 +6,7 @@ namespace _1Scripts.Visual
     public interface IHeroPreviewHero
     {
         IHeroFramesVisual HeroFramesVisual { get; }
+        Image HeroGraphic { get; }
         Image Armor { get; }
         Image NamePlate { get; }
         Image ClassPlate { get; }

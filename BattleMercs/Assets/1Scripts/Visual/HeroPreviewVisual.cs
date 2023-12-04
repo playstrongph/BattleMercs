@@ -81,6 +81,7 @@ namespace _1Scripts.Visual
          SetPreviewHeroComponents.UpdateHeroPreviewGameObjectName();
          
          //Update the components
+         SetPreviewHeroComponents.UpdateHeroPreviewHeroGraphic();
          SetPreviewHeroComponents.UpdateHeroPreviewFrame();
          SetPreviewHeroComponents.UpdateHeroPreviewAttackText();
          SetPreviewHeroComponents.UpdateHeroPreviewHealthText();

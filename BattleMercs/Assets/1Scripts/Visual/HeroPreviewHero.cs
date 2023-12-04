@@ -13,6 +13,7 @@ namespace _1Scripts.Visual
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroFramesVisual))] private Object heroFramesVisual = null;
       
       [Header("Images")]
+      [SerializeField] private Image heroGraphic = null;
       [SerializeField] private Image armor = null;
       [SerializeField] private Image namePlate = null;
       [SerializeField] private Image classPlate = null;
@@ -32,6 +33,7 @@ namespace _1Scripts.Visual
       public IHeroFramesVisual HeroFramesVisual => heroFramesVisual as IHeroFramesVisual;
       
       //Images
+      public Image HeroGraphic => heroGraphic;
       public Image Armor => armor;
       public Image NamePlate => namePlate;
       public Image ClassPlate => classPlate;

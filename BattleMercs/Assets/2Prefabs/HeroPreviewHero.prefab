@@ -435,7 +435,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
+  m_fontSize: 12
   m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 1921943037}
   - component: {fileID: 1921943036}
   m_Layer: 0
-  m_Name: RacePlate
+  m_Name: ClassPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1043,9 +1043,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroFramesVisual: {fileID: 9061017711195330355}
+  heroGraphic: {fileID: 7305401989640124875}
   armor: {fileID: 1745400227}
   namePlate: {fileID: 210708988}
-  racePlate: {fileID: 1921943036}
+  classPlate: {fileID: 1921943036}
   attackText: {fileID: 357818177}
   healthText: {fileID: 1992010176}
   armorText: {fileID: 1866303688}

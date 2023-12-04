@@ -26,6 +26,13 @@ namespace _1Scripts.Visual
       {
           HeroPreviewVisual.ThisTransform.gameObject.name = HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroInformation.HeroName + "HeroPreview";
       }
+      
+      public void UpdateHeroPreviewHeroGraphic()
+      {
+          var heroGraphic = HeroPreviewVisual.HeroVisualReference.HeroGraphic.sprite;
+
+          HeroPreviewVisual.HeroPreviewHero.HeroGraphic.sprite = heroGraphic;
+      }
 
       public void UpdateHeroPreviewFrame()
       {

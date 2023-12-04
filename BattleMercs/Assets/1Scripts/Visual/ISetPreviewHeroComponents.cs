@@ -2,6 +2,7 @@
 {
     public interface ISetPreviewHeroComponents
     {
+        void UpdateHeroPreviewHeroGraphic();
         void UpdateHeroPreviewGameObjectName();
         void UpdateHeroPreviewFrame();
         void UpdateHeroPreviewAttackText();
