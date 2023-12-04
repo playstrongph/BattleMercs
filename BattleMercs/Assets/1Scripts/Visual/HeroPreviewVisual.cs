@@ -22,7 +22,7 @@ namespace _1Scripts.Visual
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetPreviewHeroComponents))] private Object setPreviewHeroComponents = null;
     
       
-
+      
       
       
       #endregion
@@ -40,7 +40,7 @@ namespace _1Scripts.Visual
       public IBattleSceneVisualManager BattleSceneVisualManager => battleSceneManagerVisual as IBattleSceneVisualManager;
       
       //Components
-      private Canvas Canvas => canvas;
+      public Canvas Canvas => canvas;
       public IHeroPreviewHero HeroPreviewHero => heroPreviewHero as IHeroPreviewHero;
 
       public List<IHeroPreviewSkill> HeroPreviewSkillList

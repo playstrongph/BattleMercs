@@ -17,5 +17,7 @@ namespace _1Scripts.Visual
         Transform ThisTransform { get; }
 
         void UpdateAllHeroPreviewHeroVisualComponents(IHeroLogic heroLogic);
+
+        Canvas Canvas { get; }
     }
 }

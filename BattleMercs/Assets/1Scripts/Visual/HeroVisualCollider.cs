@@ -7,15 +7,18 @@ namespace _1Scripts.Visual
    public class HeroVisualCollider : MonoBehaviour, IHeroVisualCollider
    {
       #region VARIABLES
-
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroVisual))]
-      private Object heroVisual;  
-
+#pragma warning disable 0649
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroVisual))] private Object heroVisual;  
+      
+      
+#pragma warning restore 0649
       #endregion
         
       #region PROPERTIES
 
-      public IHeroVisual HeroVisual => heroVisual as IHeroVisual;   
+      public IHeroVisual HeroVisual => heroVisual as IHeroVisual;
+
+      
 
       #endregion
         
@@ -23,12 +26,28 @@ namespace _1Scripts.Visual
 
       private void OnMouseDown()
       {
-         Debug.Log("Mouse Down: " +HeroVisual.HeroLogicReference.HeroInformation.HeroName);
+          //TEMP
+          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.HeroLogicReference = HeroVisual.HeroLogicReference;
+          
+          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.SetPreviewHeroComponents.UpdateHeroPreviewFrame();
+          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.SetPreviewHeroComponents.UpdateHeroPreviewArmorText();
+          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.SetPreviewHeroComponents.UpdateHeroPreviewAttackText();
+          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.SetPreviewHeroComponents.UpdateHeroPreviewClassText();
+          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.SetPreviewHeroComponents.UpdateHeroPreviewNameText();
+          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.SetPreviewHeroComponents.UpdateHeroPreviewHealthText();
+          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.SetPreviewHeroComponents.UpdateHeroPreviewGameObjectName();
+          
+          //TEMP
+          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.Canvas.enabled = true;
+          
+
       }
       
       private void OnMouseUp()
       {
-         Debug.Log("Mouse Up");
+      
+          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.Canvas.enabled = false;
+         
       }
 
       #endregion

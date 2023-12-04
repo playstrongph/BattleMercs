@@ -1104,6 +1104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroVisual: {fileID: 2640027834027088753}
+  setHeroVisual: {fileID: 7831247425321371870}
 --- !u!65 &8981356759662012193
 BoxCollider:
   m_ObjectHideFlags: 0
