@@ -24,31 +24,31 @@ namespace _1Scripts.Visual
 
       public void UpdateHeroPreviewGameObjectName()
       {
-          HeroPreviewVisual.ThisTransform.gameObject.name = HeroPreviewVisual.HeroLogicReference.HeroInformation.HeroName + "HeroPreview";
+          HeroPreviewVisual.ThisTransform.gameObject.name = HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroInformation.HeroName + "HeroPreview";
       }
 
       public void UpdateHeroPreviewFrame()
       {
-          HeroPreviewVisual.HeroLogicReference.HeroInformation.HeroElement.SetHeroPreviewClassColor(HeroPreviewVisual);
+          HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroInformation.HeroElement.SetHeroPreviewClassColor(HeroPreviewVisual);
       }
       
       public void UpdateHeroPreviewAttackText()
       {
-          var attackValue = HeroPreviewVisual.HeroLogicReference.HeroAttributes.Attack;
+          var attackValue = HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroAttributes.Attack;
 
           HeroPreviewVisual.HeroPreviewHero.AttackText.text = attackValue.ToString();
       }
       
       public void UpdateHeroPreviewHealthText()
       {
-          var healthValue = HeroPreviewVisual.HeroLogicReference.HeroAttributes.Health;
+          var healthValue = HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroAttributes.Health;
 
           HeroPreviewVisual.HeroPreviewHero.HealthText.text = healthValue.ToString();
       }
 
       public void UpdateHeroPreviewArmorText()
       {
-          var armorValue = HeroPreviewVisual.HeroLogicReference.HeroAttributes.Armor;
+          var armorValue = HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroAttributes.Armor;
           
           HeroPreviewVisual.HeroPreviewHero.ArmorText.text = armorValue.ToString();
 
@@ -61,21 +61,17 @@ namespace _1Scripts.Visual
       
       public void UpdateHeroPreviewNameText()
       {
-          var nameValue = HeroPreviewVisual.HeroLogicReference.HeroInformation.HeroName;
+          var nameValue = HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroInformation.HeroName;
 
           HeroPreviewVisual.HeroPreviewHero.NameText.text = nameValue;
       }
       
       public void UpdateHeroPreviewClassText()
       {
-          var nameValue = HeroPreviewVisual.HeroLogicReference.HeroInformation.HeroClass.ToString();
+          var nameValue = HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroInformation.HeroClass.ClassName;
 
           HeroPreviewVisual.HeroPreviewHero.ClassText.text = nameValue;
       }
-
-      
-      
-      
 
       #endregion
    }

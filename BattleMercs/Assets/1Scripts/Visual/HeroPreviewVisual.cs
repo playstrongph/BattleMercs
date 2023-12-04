@@ -1,27 +1,28 @@
-﻿using System.Collections.Generic;
-using _1Scripts.Logic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace _1Scripts.Visual
 {
    public class HeroPreviewVisual : MonoBehaviour, IHeroPreviewVisual
    {
       #region VARIABLES
-      
-      [Header("RUNTIME REFERENCES")]
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private Object heroLogicReference = null;
-    
-      
-      [Header("COMPONENTS")] 
-      [SerializeField] private Canvas canvas = null;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroPreviewHero))] private Object heroPreviewHero = null;
+#pragma warning disable 0649
+      [Header("Runtime Set References")]
+      //[SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private Object heroLogicReference = null;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroVisual))] private Object heroVisualReference;
+
+      [Header("Components")] 
+      [SerializeField] private Canvas canvas;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroPreviewHero))] private Object heroPreviewHero;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroPreviewSkill))] private List<Object> heroPreviewSkillList = new List<Object>();
 
-      [Header("INSPECTOR REFERENCES")]
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneVisualManager))] private Object battleSceneManagerVisual = null;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetPreviewHeroComponents))] private Object setPreviewHeroComponents = null;
+      [Header("Inspector Set References")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneVisualManager))] private Object battleSceneManagerVisual;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetPreviewHeroComponents))] private Object setPreviewHeroComponents;
     
-      
+#pragma warning restore 0649
       
       
       
@@ -30,17 +31,19 @@ namespace _1Scripts.Visual
       #region PROPERTIES
       
       //Runtime References
-      public IHeroLogic HeroLogicReference
+     
+      
+      public IHeroVisual HeroVisualReference
       {
-         get => heroLogicReference as IHeroLogic;
-         set => heroLogicReference = value as Object;
+         get => heroVisualReference as IHeroVisual;
+         private set => heroVisualReference = value as Object;
       }
 
       //Inspector References
       public IBattleSceneVisualManager BattleSceneVisualManager => battleSceneManagerVisual as IBattleSceneVisualManager;
       
       //Components
-      public Canvas Canvas => canvas;
+      private Canvas Canvas => canvas;
       public IHeroPreviewHero HeroPreviewHero => heroPreviewHero as IHeroPreviewHero;
 
       public List<IHeroPreviewSkill> HeroPreviewSkillList
@@ -68,13 +71,12 @@ namespace _1Scripts.Visual
       /// <summary>
       /// Updates all of the components and sets the heroLogic reference
       /// </summary>
-      /// <param name="heroLogic"></param>
-      public void UpdateAllHeroPreviewHeroVisualComponents(IHeroLogic heroLogic)
+      /// <param name="heroVisual"></param>
+      private void UpdateAllHeroPreviewHeroVisualComponents(IHeroVisual heroVisual)
       {
          //Set References
-         HeroLogicReference = heroLogic;
-         //TODO: HeroLogic Hero Preview Visual Reference
-         
+         HeroVisualReference = heroVisual;
+
          //Change the HeroPreviewVisual Hero Object Name
          SetPreviewHeroComponents.UpdateHeroPreviewGameObjectName();
          
@@ -86,6 +88,21 @@ namespace _1Scripts.Visual
          SetPreviewHeroComponents.UpdateHeroPreviewNameText();
          SetPreviewHeroComponents.UpdateHeroPreviewClassText();
       }
+
+      public void ShowHeroPreviewVisual(IHeroVisual heroVisual)
+      {
+
+         UpdateAllHeroPreviewHeroVisualComponents(heroVisual);
+         
+         Canvas.enabled = true;
+      }
+      
+      public void HideHeroPreviewVisual()
+      {
+         Canvas.enabled = false;
+      }
+
+
 
       #endregion
    }

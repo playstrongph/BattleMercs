@@ -11,6 +11,8 @@ namespace _1Scripts.Logic.SOLogicScripts
       {
 
       }
+      
+      public override string ClassName => "Warrior";
         
 
       #endregion

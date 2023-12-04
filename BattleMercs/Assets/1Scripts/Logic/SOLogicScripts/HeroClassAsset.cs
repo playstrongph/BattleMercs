@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace _1Scripts.Logic.SOLogicScripts
 {
@@ -10,13 +11,14 @@ namespace _1Scripts.Logic.SOLogicScripts
    public class HeroClassAsset : ScriptableObject, IHeroClassAsset
    {
       #region METHODS
-      
+
       public virtual void SetClassColor(IHeroLogic heroLogic)
       {
          
 
       }
-        
+
+      public virtual string ClassName => "HeroClass";
 
       #endregion
    }

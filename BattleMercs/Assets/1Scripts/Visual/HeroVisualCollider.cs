@@ -26,28 +26,12 @@ namespace _1Scripts.Visual
 
       private void OnMouseDown()
       {
-          //TEMP
-          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.HeroLogicReference = HeroVisual.HeroLogicReference;
-          
-          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.SetPreviewHeroComponents.UpdateHeroPreviewFrame();
-          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.SetPreviewHeroComponents.UpdateHeroPreviewArmorText();
-          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.SetPreviewHeroComponents.UpdateHeroPreviewAttackText();
-          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.SetPreviewHeroComponents.UpdateHeroPreviewClassText();
-          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.SetPreviewHeroComponents.UpdateHeroPreviewNameText();
-          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.SetPreviewHeroComponents.UpdateHeroPreviewHealthText();
-          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.SetPreviewHeroComponents.UpdateHeroPreviewGameObjectName();
-          
-          //TEMP
-          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.Canvas.enabled = true;
-          
-
+          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.ShowHeroPreviewVisual(HeroVisual);
       }
       
       private void OnMouseUp()
       {
-      
-          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.Canvas.enabled = false;
-         
+          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.HideHeroPreviewVisual();
       }
 
       #endregion

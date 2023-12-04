@@ -10,14 +10,15 @@ namespace _1Scripts.Visual
         IHeroPreviewHero HeroPreviewHero { get; }
         List<IHeroPreviewSkill> HeroPreviewSkillList { get; }
 
-        IHeroLogic HeroLogicReference { get; set; }
+        //IHeroLogic HeroLogicReference { get; set; }
+
+        IHeroVisual HeroVisualReference { get;}
 
         ISetPreviewHeroComponents SetPreviewHeroComponents { get; }
 
         Transform ThisTransform { get; }
+        void ShowHeroPreviewVisual(IHeroVisual heroVisual);
 
-        void UpdateAllHeroPreviewHeroVisualComponents(IHeroLogic heroLogic);
-
-        Canvas Canvas { get; }
+        void HideHeroPreviewVisual();
     }
 }
