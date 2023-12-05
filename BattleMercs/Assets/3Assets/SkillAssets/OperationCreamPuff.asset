@@ -20,7 +20,8 @@ MonoBehaviour:
     amount recovered increases proportional to the caster's max Health. The severity
     of injuries increases proportional to damage dealt. Injuries decrease max Health
     of the target by up to 25% every time this skill is used.
-  skillSprite: {fileID: 0}
+  skillSprite: {fileID: -8010573296162038494, guid: cf3aa363a511ecc47aba3bb3359a3dee,
+    type: 3}
   skillCooldown: 0
   skillSpeed: 0
   baseSkillCooldown: 4
