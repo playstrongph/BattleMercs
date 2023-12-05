@@ -29,6 +29,16 @@ namespace _1Scripts.Logic.SOLogicScripts
          
       }
 
+      public virtual void SetPreviewSkillCooldownGraphic(IHeroPreviewSkill heroPreviewSkill)
+      {
+         //Enabled image for active skills
+         //Disable image for basic and passive skills
+      }
+      
+      
+      
+      
+
 
       #endregion
    }

@@ -24,6 +24,11 @@ namespace _1Scripts.Logic.SOLogicScripts
       {
          //Do Nothing
       }
+      
+      public override void SetPreviewSkillCooldownGraphic(IHeroPreviewSkill heroPreviewSkill)
+      {
+         heroPreviewSkill.CooldownGraphic.enabled = false;
+      }
 
       #endregion
    }

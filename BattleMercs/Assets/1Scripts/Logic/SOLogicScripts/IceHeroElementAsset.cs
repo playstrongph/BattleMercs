@@ -8,9 +8,15 @@ namespace _1Scripts.Logic.SOLogicScripts
    {
       #region METHODS
       
-      public override void SetHeroClassColor(IHeroVisual heroVisual)
+      public override void SetHeroPreviewSkillClassColor(IHeroPreviewSkill heroPreviewSkill)
       {
-         heroVisual.HeroFrames.SetColorBlueFrame();
+         heroPreviewSkill.SkillPreviewFrames.SetColorBlueElement();
+      }
+      
+      public override void SetHeroPreviewElementText(IHeroPreviewSkill heroPreviewSkill)
+      {
+         heroPreviewSkill.SkillElementText.text = "Ice";
+
       }
       
       public override void SetHeroPreviewClassColor(IHeroPreviewVisual heroPreviewVisual)

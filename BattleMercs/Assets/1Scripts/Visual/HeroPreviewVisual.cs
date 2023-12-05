@@ -68,6 +68,13 @@ namespace _1Scripts.Visual
 
       #region METHODS
       
+      public void ShowHeroPreviewVisual(IHeroVisual heroVisual)
+      {
+         UpdateAllHeroPreviewHeroVisualComponents(heroVisual);
+         
+         Canvas.enabled = true;
+      }
+      
       /// <summary>
       /// Updates all of the components and sets the heroLogic reference
       /// </summary>
@@ -90,13 +97,7 @@ namespace _1Scripts.Visual
          SetPreviewHeroComponents.UpdateHeroPreviewClassText();
       }
 
-      public void ShowHeroPreviewVisual(IHeroVisual heroVisual)
-      {
-
-         UpdateAllHeroPreviewHeroVisualComponents(heroVisual);
-         
-         Canvas.enabled = true;
-      }
+      
       
       public void HideHeroPreviewVisual()
       {

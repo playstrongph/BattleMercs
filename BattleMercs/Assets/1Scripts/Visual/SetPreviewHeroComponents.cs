@@ -22,6 +22,8 @@ namespace _1Scripts.Visual
 
       #region METHODS
 
+      #region HeroPreviewHero Updates
+
       public void UpdateHeroPreviewGameObjectName()
       {
           HeroPreviewVisual.ThisTransform.gameObject.name = HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroInformation.HeroName + "HeroPreview";
@@ -79,6 +81,62 @@ namespace _1Scripts.Visual
 
           HeroPreviewVisual.HeroPreviewHero.ClassText.text = nameValue;
       }
+      
+      #endregion
+
+      #region HeroPreviewSkill Updates
+
+      public void UpdateHeroPreviewSkillFrame(IHeroPreviewSkill heroPreviewSkill)
+      {
+          HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroInformation.HeroElement.SetHeroPreviewSkillClassColor(heroPreviewSkill);
+      }
+
+      public void UpdateSkillPreviewGraphic(IHeroPreviewSkill heroPreviewSkill)
+      {
+          heroPreviewSkill.SkillPreviewGraphic.sprite = HeroPreviewVisual.HeroVisualReference.HeroGraphic.sprite;
+      }
+
+      public void UpdateSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill, ISkillVisual skillVisual)
+      {
+          skillVisual.SkillLogicReference.SkillAttributes.SkillType.SetPreviewSkillCooldownGraphic(heroPreviewSkill);
+      }
+      
+      public void UpdateSkillPreviewCooldownText(IHeroPreviewSkill heroPreviewSkill, ISkillVisual skillVisual)
+      {
+          var skillCooldown = skillVisual.SkillLogicReference.SkillAttributes.BaseSkillCooldown;
+
+          heroPreviewSkill.CooldownText.text = skillCooldown <= 0 ? " " : skillCooldown.ToString();
+      }
+      
+      public void UpdateSkillPreviewSpeedText(IHeroPreviewSkill heroPreviewSkill, ISkillVisual skillVisual)
+      {
+          var skillSpeed = skillVisual.SkillLogicReference.SkillAttributes.BaseSkillSpeed;
+
+          heroPreviewSkill.SpeedText.text = skillSpeed <= 0 ? " " : skillSpeed.ToString();
+      }
+      
+      public void UpdateSkillPreviewNameText(IHeroPreviewSkill heroPreviewSkill, ISkillVisual skillVisual)
+      {
+          var skillName = skillVisual.SkillLogicReference.SkillInformation.SkillName;
+
+          heroPreviewSkill.SkillNameText.text = skillName;
+      }
+      
+      public void UpdateSkillPreviewElementText(IHeroPreviewSkill heroPreviewSkill)
+      {
+          HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroInformation.HeroElement.SetHeroPreviewElementText(heroPreviewSkill);
+      }
+      
+      public void UpdateSkillPreviewDescriptionText(IHeroPreviewSkill heroPreviewSkill, ISkillVisual skillVisual)
+      {
+          var skillDescription = skillVisual.SkillLogicReference.SkillInformation.SkillDescription;
+
+          heroPreviewSkill.SkillDescriptionText.text = skillDescription;
+      }
+      
+      
+
+      #endregion
 
       #endregion
    }
