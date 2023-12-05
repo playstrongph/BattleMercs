@@ -11,7 +11,12 @@ namespace _1Scripts.Logic.SOLogicScripts
    public class HeroElementAsset : ScriptableObject, IHeroElementAsset
    {
       #region METHODS
-      
+
+      public virtual void SetHeroClassColor(IHeroVisual heroVisual)
+      {
+         
+      }
+
       public virtual void SetHeroPreviewSkillClassColor(IHeroPreviewSkill heroPreviewSkill)
       {
          

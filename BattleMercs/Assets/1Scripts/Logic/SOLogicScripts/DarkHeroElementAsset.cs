@@ -8,6 +8,10 @@ namespace _1Scripts.Logic.SOLogicScripts
    {
       #region METHODS
       
+      public override void SetHeroClassColor(IHeroVisual heroVisual)
+      {
+         heroVisual.HeroFrames.SetColorDarkFame();
+      }
       
       
       public override void SetHeroPreviewClassColor(IHeroPreviewVisual heroPreviewVisual)
