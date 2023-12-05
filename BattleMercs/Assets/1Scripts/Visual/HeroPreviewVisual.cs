@@ -75,19 +75,27 @@ namespace _1Scripts.Visual
          Canvas.enabled = true;
       }
       
+      public void HideHeroPreviewVisual()
+      {
+         Canvas.enabled = false;
+      }
+      
       /// <summary>
       /// Updates all of the components and sets the heroLogic reference
       /// </summary>
       /// <param name="heroVisual"></param>
       private void UpdateAllHeroPreviewHeroVisualComponents(IHeroVisual heroVisual)
       {
+         
+         var heroSkillsCount = heroVisual.HeroLogicReference.HeroSkillsReference.Count;
+         
          //Set References
          HeroVisualReference = heroVisual;
 
          //Change the HeroPreviewVisual Hero Object Name
          SetPreviewHeroComponents.UpdateHeroPreviewGameObjectName();
          
-         //Update the components
+         //Update the hero preview hero components
          SetPreviewHeroComponents.UpdateHeroPreviewHeroGraphic();
          SetPreviewHeroComponents.UpdateHeroPreviewFrame();
          SetPreviewHeroComponents.UpdateHeroPreviewAttackText();
@@ -95,14 +103,31 @@ namespace _1Scripts.Visual
          SetPreviewHeroComponents.UpdateHeroPreviewArmorText();
          SetPreviewHeroComponents.UpdateHeroPreviewNameText();
          SetPreviewHeroComponents.UpdateHeroPreviewClassText();
+
+         
+         
+        //Update the hero preview skills 
+        for (var i = 0; i < heroSkillsCount; i++)
+         {
+            var heroPreviewSkill = HeroPreviewSkillList[i];
+            var skillLogic = heroVisual.HeroLogicReference.HeroSkillsReference[i];
+            
+            SetPreviewHeroComponents.UpdateHeroPreviewSkillFrame(heroPreviewSkill);
+            SetPreviewHeroComponents.UpdateSkillPreviewGraphic(heroPreviewSkill,skillLogic);
+            SetPreviewHeroComponents.UpdateSkillPreviewCooldownGraphic(heroPreviewSkill, skillLogic);
+            SetPreviewHeroComponents.UpdateSkillPreviewCooldownText(heroPreviewSkill,skillLogic);
+            SetPreviewHeroComponents.UpdateSkillPreviewSpeedText(heroPreviewSkill,skillLogic);
+            SetPreviewHeroComponents.UpdateSkillPreviewNameText(heroPreviewSkill,skillLogic);
+            SetPreviewHeroComponents.UpdateSkillPreviewElementText(heroPreviewSkill);
+            SetPreviewHeroComponents.UpdateSkillPreviewDescriptionText(heroPreviewSkill,skillLogic);
+         }
       }
+      
+      
 
       
       
-      public void HideHeroPreviewVisual()
-      {
-         Canvas.enabled = false;
-      }
+      
 
 
 
