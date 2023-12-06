@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -21,6 +22,15 @@ namespace _1Scripts.Visual
       [Header("Inspector Set References")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneVisualManager))] private Object battleSceneManagerVisual;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetPreviewHeroComponents))] private Object setPreviewHeroComponents;
+
+      [Header("Preview Parameters")] 
+      [SerializeField] private float displayDelay = 0.5f;
+      [SerializeField] private bool enablePreview = false;
+      
+      
+      //Private Variables
+      private Coroutine _delayCoroutine;
+      
     
 #pragma warning restore 0649
       
@@ -70,16 +80,35 @@ namespace _1Scripts.Visual
       
       public void ShowHeroPreviewVisual(IHeroVisual heroVisual)
       {
-         UpdateAllHeroPreviewHeroVisualComponents(heroVisual);
+         enablePreview = true;
          
-         Canvas.enabled = true;
+         if(_delayCoroutine != null)StopCoroutine(_delayCoroutine);
+
+         _delayCoroutine = StartCoroutine(UpdateHeroPreviewCoroutine(heroVisual));
       }
       
       public void HideHeroPreviewVisual()
       {
+         enablePreview = false;
          Canvas.enabled = false;
+         
+         if(_delayCoroutine != null)StopCoroutine(_delayCoroutine);
       }
-      
+
+      private IEnumerator UpdateHeroPreviewCoroutine(IHeroVisual heroVisual)
+      {
+
+         yield return new WaitForSeconds(displayDelay);
+
+         if (enablePreview)
+         {
+            UpdateAllHeroPreviewHeroVisualComponents(heroVisual);
+            Canvas.enabled = true;
+         }
+
+         _delayCoroutine = null;
+      }
+
       /// <summary>
       /// Updates all of the components and sets the heroLogic reference
       /// </summary>
