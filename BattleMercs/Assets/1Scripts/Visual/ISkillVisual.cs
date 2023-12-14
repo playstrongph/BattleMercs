@@ -10,6 +10,7 @@ namespace _1Scripts.Visual
         IHeroSkillsVisual HeroSkillsVisual { get; }
         ISkillLogic SkillLogicReference { get; set; }
         ISkillVisualInputActions SkillVisualInputActions { get; }
+        ISetSkillVisualComponent SetSkillVisualComponent { get; }
         BoxCollider SkillVisualCollider { get; }
         Transform SkillReadyVisualTransform { get; }
         Transform SkillNotReadyVisualTransform { get; }
@@ -22,6 +23,8 @@ namespace _1Scripts.Visual
         Canvas PassiveSkillCanvas { get; }
         TextMeshProUGUI SpeedText { get; }
         TextMeshProUGUI CooldownText { get; }
+
+        TextMeshProUGUI PassiveSkillCooldownText { get; }
 
         Transform ThisTransform { get; }
     }

@@ -97,12 +97,22 @@ namespace _1Scripts.Visual
             ThreeSkillPanelVisual.Transform.gameObject.SetActive(false);
          }
          
+         //Set Skill Panel Color, based on hero element
+         HeroLogicReference.HeroInformation.HeroElement.UpdateSkillPanelFrameVisual(SkillPanelInUse);
+         
          //Assign Skill Logic Reference
          for (var i = 0; i < allHeroSkillLogics.Count; i++)
          {
             var skillLogic = allHeroSkillLogics[i];
+            var skillVisual = SkillPanelInUse.SkillVisualList[i]; 
             //Set Skill Logic Reference
-            SkillPanelInUse.SkillVisualList[i].SkillLogicReference = skillLogic;
+           skillVisual.SkillLogicReference = skillLogic;
+            
+            //Update 
+            skillVisual.SetSkillVisualComponent.UpdateSkillReadinessVisual();
+            skillVisual.SetSkillVisualComponent.UpdateSkillGraphic();
+            skillVisual.SetSkillVisualComponent.UpdateSkillSpeedText();
+            skillVisual.SetSkillVisualComponent.UpdateSkillCooldownText();
 
          }
          

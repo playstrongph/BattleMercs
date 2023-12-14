@@ -10,15 +10,14 @@ namespace _1Scripts.Visual
       #region VARIABLES
       
    #pragma warning disable 0649
-      [Header("Inspector References")]
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillsVisual))] private Object heroSkillsVisual = null;
-
+      
       [Header("Runtime References")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillLogic))] private Object skillLogicReference;
       
-      [Header("Components")]
+      [Header("Inspector References")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillsVisual))] private Object heroSkillsVisual = null;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisualInputActions))] private Object skillVisualInputActions = null;
-
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetSkillVisualComponent))] private Object setSkillVisualComponent = null;
       [SerializeField] private BoxCollider skillVisualCollider = null;
       
       [Header("Transforms")]
@@ -39,22 +38,23 @@ namespace _1Scripts.Visual
       [Header("Text")] 
       [SerializeField] private TextMeshProUGUI speedText = null;
       [SerializeField] private TextMeshProUGUI cooldownText = null;
+      [SerializeField] private TextMeshProUGUI passiveSkillCooldownText = null;
       
 #pragma warning restore 0649
       #endregion
 
       #region PROPERTIES
       
-      //INSPECTOR REFERENCES
-      public IHeroSkillsVisual HeroSkillsVisual => heroSkillsVisual as IHeroSkillsVisual;
-      
       //LOGIC REFERENCES
       public ISkillLogic SkillLogicReference { get => skillLogicReference as ISkillLogic; set => skillLogicReference = value as Object; }
-
-      //COMPONENTS
-      public ISkillVisualInputActions SkillVisualInputActions => skillVisualInputActions as ISkillVisualInputActions;
-      public BoxCollider SkillVisualCollider => skillVisualCollider;
       
+      //INSPECTOR REFERENCES
+      public IHeroSkillsVisual HeroSkillsVisual => heroSkillsVisual as IHeroSkillsVisual;
+      public ISkillVisualInputActions SkillVisualInputActions => skillVisualInputActions as ISkillVisualInputActions;
+      public ISetSkillVisualComponent SetSkillVisualComponent => setSkillVisualComponent as ISetSkillVisualComponent;
+      public BoxCollider SkillVisualCollider => skillVisualCollider;
+
+
       //TRANSFORMS
       public Transform SkillReadyVisualTransform => skillReadyVisualTransform;
       public Transform SkillNotReadyVisualTransform => skillNotReadyVisualTransform;
@@ -75,6 +75,8 @@ namespace _1Scripts.Visual
       //TEXT
       public TextMeshProUGUI SpeedText => speedText;
       public TextMeshProUGUI CooldownText => cooldownText;
+      
+      public TextMeshProUGUI PassiveSkillCooldownText => passiveSkillCooldownText;
 
 
 

@@ -31,6 +31,11 @@ namespace _1Scripts.Logic.SOLogicScripts
 
       }
       
+      public override void UpdateSkillPanelFrameVisual(ISkillPanelVisual skillPanelVisual)
+      {
+         skillPanelVisual.SkillPanelFrames.SetDarkFrame();
+      }
+      
       
         
 

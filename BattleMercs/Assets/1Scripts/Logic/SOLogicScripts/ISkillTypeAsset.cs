@@ -9,5 +9,9 @@ namespace _1Scripts.Logic.SOLogicScripts
         void SetPreviewSkillCooldownGraphic(IHeroPreviewSkill heroPreviewSkill);
 
         void UpdateSkillReadinessVisual(ISkillVisual skillVisual);
+
+        void UpdateSkillSpeedText(ISkillVisual skillVisual);
+
+        void UpdateSkillCooldownText(ISkillVisual skillVisual);
     }
 }

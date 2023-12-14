@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace _1Scripts.Visual
 {
-   public class SetSkillVisualComponent : MonoBehaviour
+   public class SetSkillVisualComponent : MonoBehaviour, ISetSkillVisualComponent
    {
       #region VARIABLES
       #pragma warning disable 0649
@@ -31,6 +32,30 @@ namespace _1Scripts.Visual
 
          //Call SkillType UpdateSkillReadinessVisual
          skillType.UpdateSkillReadinessVisual(SkillVisualReference);
+      }
+
+      public void UpdateSkillGraphic()
+      {
+         
+         var skillGraphic = SkillVisualReference.SkillLogicReference.SkillInformation.SkillSprite;
+         
+         //Just update all for simplification
+         SkillVisualReference.SkillReadyGraphic.sprite = skillGraphic;
+         SkillVisualReference.SkillNotReadyGraphic.sprite = skillGraphic;
+         SkillVisualReference.PassiveSkillGraphic.sprite = skillGraphic;
+      }
+
+      public void UpdateSkillSpeedText()
+      {
+         var skillType = SkillVisualReference.SkillLogicReference.SkillAttributes.SkillType;
+         skillType.UpdateSkillSpeedText(SkillVisualReference);
+      }
+      
+      public void UpdateSkillCooldownText()
+      {
+         var skillType = SkillVisualReference.SkillLogicReference.SkillAttributes.SkillType;
+         skillType.UpdateSkillCooldownText(SkillVisualReference);
+         
       }
 
 

@@ -35,11 +35,18 @@ namespace _1Scripts.Logic.SOLogicScripts
          //Active Skill - check skill readiness status 
          //Passive Skill - Set Passive skill canvas enabled, others disabled
          //Basic Skill - Set Skill Ready Canvas enabled, others disabled
-         
       }
 
 
+      public virtual void UpdateSkillSpeedText(ISkillVisual skillVisual)
+      {
+         
+      }
+      
+      public virtual void UpdateSkillCooldownText(ISkillVisual skillVisual)
+      {
 
+      }
 
 
 

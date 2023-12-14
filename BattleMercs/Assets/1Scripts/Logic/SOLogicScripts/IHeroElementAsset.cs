@@ -11,6 +11,8 @@ namespace _1Scripts.Logic.SOLogicScripts
 
         void SetHeroPreviewElementText(IHeroPreviewSkill heroPreviewSkill);
 
+        void UpdateSkillPanelFrameVisual(ISkillPanelVisual skillPanelVisual);
+
 
     }
 }

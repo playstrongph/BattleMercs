@@ -28,6 +28,11 @@ namespace _1Scripts.Logic.SOLogicScripts
          heroPreviewVisual.HeroPreviewHero.HeroFramesVisual.SetColorRedFrame();
 
       }
+      
+      public override void UpdateSkillPanelFrameVisual(ISkillPanelVisual skillPanelVisual)
+      {
+         skillPanelVisual.SkillPanelFrames.SetRedFrame();
+      }
         
 
       #endregion

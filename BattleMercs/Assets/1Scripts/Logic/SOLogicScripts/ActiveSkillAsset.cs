@@ -36,6 +36,20 @@ namespace _1Scripts.Logic.SOLogicScripts
          skillVisual.SkillLogicReference.SkillAttributes.SkillReadiness.UpdateSkillReadinessVisual(skillVisual);
          
       }
+      
+      public override void UpdateSkillSpeedText(ISkillVisual skillVisual)
+      {
+         var skillSpeed = skillVisual.SkillLogicReference.SkillAttributes.SkillSpeed;
+
+         skillVisual.SpeedText.text = skillSpeed <= 0 ? "" : skillSpeed.ToString();
+      }
+      
+      public override void UpdateSkillCooldownText(ISkillVisual skillVisual)
+      {
+         var skillCooldown = skillVisual.SkillLogicReference.SkillAttributes.SkillCooldown;
+
+         skillVisual.CooldownText.text = skillCooldown <= 0 ? "" : skillCooldown.ToString();
+      }
 
       #endregion
    }

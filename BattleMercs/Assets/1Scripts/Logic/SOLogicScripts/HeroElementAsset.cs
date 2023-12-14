@@ -34,9 +34,19 @@ namespace _1Scripts.Logic.SOLogicScripts
          
 
       }
-      
-      
-        
+
+      public virtual void UpdateSkillPanelFrameVisual(ISkillPanelVisual skillPanelVisual)
+      {
+         //0 - default
+         //1 - red
+         //2 - green
+         //3 - blue
+         //4 - dark
+         //5 - light
+      }
+
+
+
 
       #endregion
    }

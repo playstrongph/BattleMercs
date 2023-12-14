@@ -39,6 +39,16 @@ namespace _1Scripts.Logic.SOLogicScripts
          skillVisual.PassiveSkillCanvas.enabled = false;
          skillVisual.SkillNotReadyCanvas.enabled = false;
       }
+      
+      public override void UpdateSkillSpeedText(ISkillVisual skillVisual)
+      {
+         skillVisual.SpeedText.text = "";
+      }
+      
+      public override void UpdateSkillCooldownText(ISkillVisual skillVisual)
+      {
+         skillVisual.CooldownText.text = "";
+      }
 
       #endregion
    }
