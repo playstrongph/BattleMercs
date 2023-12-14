@@ -97,6 +97,15 @@ namespace _1Scripts.Visual
             ThreeSkillPanelVisual.Transform.gameObject.SetActive(false);
          }
          
+         //Assign Skill Logic Reference
+         for (var i = 0; i < allHeroSkillLogics.Count; i++)
+         {
+            var skillLogic = allHeroSkillLogics[i];
+            //Set Skill Logic Reference
+            SkillPanelInUse.SkillVisualList[i].SkillLogicReference = skillLogic;
+
+         }
+         
          
          
 

@@ -26,6 +26,14 @@ namespace _1Scripts.Logic.SOLogicScripts
       {
          
       }
+      
+      public virtual void UpdateSkillReadinessVisual(ISkillVisual skillVisual)
+      {
+         //Active Skill - check skill readiness status 
+         //Passive Skill - Set Passive skill canvas enabled, others disabled
+         //Basic Skill - Set Skill Ready Canvas enabled, others disabled
+         
+      }
 
 
       #endregion

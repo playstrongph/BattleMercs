@@ -29,6 +29,13 @@ namespace _1Scripts.Logic.SOLogicScripts
       {
          heroPreviewSkill.CooldownGraphic.enabled = true;
       }
+      
+      public override void UpdateSkillReadinessVisual(ISkillVisual skillVisual)
+      {
+         //Check if skill is ready or not ready
+         skillVisual.SkillLogicReference.SkillAttributes.SkillReadiness.UpdateSkillReadinessVisual(skillVisual);
+         
+      }
 
       #endregion
    }

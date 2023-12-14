@@ -27,6 +27,16 @@ namespace _1Scripts.Logic.SOLogicScripts
       {
          
       }
+      
+      public override void UpdateSkillReadinessVisual(ISkillVisual skillVisual)
+      {
+ 
+         //Skill ready settings
+         skillVisual.SkillReadyCanvas.enabled = true;
+         
+         skillVisual.PassiveSkillCanvas.enabled = false;
+         skillVisual.SkillNotReadyCanvas.enabled = false;
+      }
 
 
       #endregion

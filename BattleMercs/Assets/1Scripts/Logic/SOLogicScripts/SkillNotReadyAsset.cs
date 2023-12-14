@@ -24,6 +24,18 @@ namespace _1Scripts.Logic.SOLogicScripts
       
       //VISUAL Methods
       public override void StartSkillTargetingVisual(ISkillVisual skillVisual,ISelectSkillTargetVisual selectSkillTargetVisual) { }
+      
+      
+      public override void UpdateSkillReadinessVisual(ISkillVisual skillVisual)
+      {
+ 
+         //Skill not ready settings
+         skillVisual.SkillNotReadyCanvas.enabled = true;
+         
+         skillVisual.SkillReadyCanvas.enabled = false;
+         skillVisual.PassiveSkillCanvas.enabled = false;
+        
+      }
 
 
       #endregion

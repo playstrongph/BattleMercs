@@ -22,7 +22,16 @@ namespace _1Scripts.Visual
 
       #region METHODS
       
-      
+      /// <summary>
+      /// Checks skill type and skill readiness before updating the skill readiness visual
+      /// </summary>
+      public void UpdateSkillReadinessVisual()
+      {
+         var skillType = SkillVisualReference.SkillLogicReference.SkillAttributes.SkillType;
+
+         //Call SkillType UpdateSkillReadinessVisual
+         skillType.UpdateSkillReadinessVisual(SkillVisualReference);
+      }
 
 
       #endregion

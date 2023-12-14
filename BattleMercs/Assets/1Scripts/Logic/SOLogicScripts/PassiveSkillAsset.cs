@@ -29,6 +29,17 @@ namespace _1Scripts.Logic.SOLogicScripts
       {
          heroPreviewSkill.CooldownGraphic.enabled = false;
       }
+      
+      public override void UpdateSkillReadinessVisual(ISkillVisual skillVisual)
+      {
+ 
+         //Passive Skill - Set Passive skill canvas enabled, others disabled
+         skillVisual.PassiveSkillCanvas.enabled = true;
+         
+         skillVisual.SkillReadyCanvas.enabled = false;
+         skillVisual.SkillNotReadyCanvas.enabled = false;
+
+      }
 
       #endregion
    }

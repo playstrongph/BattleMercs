@@ -19,11 +19,6 @@ namespace _1Scripts.Logic.SOLogicScripts
         
       #region METHODS
       
-      
-      
-      //VISUAL Methods
-      
-      
       public virtual void StartSkillTargetingVisual(ISkillVisual skillVisual, ISelectSkillTargetVisual selectSkillTargetVisual)
       {
          
@@ -34,10 +29,20 @@ namespace _1Scripts.Logic.SOLogicScripts
          //Enabled image for active skills
          //Disable image for basic and passive skills
       }
-      
-      
-      
-      
+
+      public virtual void UpdateSkillReadinessVisual(ISkillVisual skillVisual)
+      {
+         //Active Skill - check skill readiness status 
+         //Passive Skill - Set Passive skill canvas enabled, others disabled
+         //Basic Skill - Set Skill Ready Canvas enabled, others disabled
+         
+      }
+
+
+
+
+
+
 
 
       #endregion
