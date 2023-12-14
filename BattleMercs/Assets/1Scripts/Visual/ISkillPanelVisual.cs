@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace _1Scripts.Visual
@@ -10,5 +11,7 @@ namespace _1Scripts.Visual
         List<ISkillVisual> SkillVisualList { get; }
         void ShowSkillPanel();
         void HideSkillPanel();
+
+        Transform Transform { get; }
     }
 }

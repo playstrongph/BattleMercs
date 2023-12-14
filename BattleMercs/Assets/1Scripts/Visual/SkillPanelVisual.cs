@@ -39,6 +39,8 @@ namespace _1Scripts.Visual
          }
       }
 
+      public Transform Transform => transform;
+
       #endregion
 
       #region METHODS

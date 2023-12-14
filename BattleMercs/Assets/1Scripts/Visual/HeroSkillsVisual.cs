@@ -10,13 +10,16 @@ namespace _1Scripts.Visual
       #pragma warning disable 0649
 
       [Header("Components")]
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object threeSkillPanelVisual = null;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object fourSkillPanelVisual = null;
-      [SerializeField] private Canvas canvas = null;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object threeSkillPanelVisual;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object fourSkillPanelVisual;
+      [SerializeField] private Canvas canvas;
 
-      [Header("Runtime References")] [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private Object heroLogicReference;
+      [Header("Runtime References")] 
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private Object heroLogicReference;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object skillPanelInUse;
 
-      [Header("Inspector References")] [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneVisualManager))] private Object battleSceneManagerVisual = null;
+      [Header("Inspector References")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneVisualManager))] private Object battleSceneManagerVisual;
       
 #pragma warning restore 0649
 
@@ -31,10 +34,17 @@ namespace _1Scripts.Visual
          set => heroLogicReference = value as Object;
       }
       public IBattleSceneVisualManager BattleSceneVisualManager => battleSceneManagerVisual as IBattleSceneVisualManager;
-
+   
       public ISkillPanelVisual ThreeSkillPanelVisual => threeSkillPanelVisual as ISkillPanelVisual;
       
       public ISkillPanelVisual FourSkillPanelVisual => fourSkillPanelVisual as ISkillPanelVisual;
+
+      private ISkillPanelVisual SkillPanelInUse
+      {
+         get => skillPanelInUse as ISkillPanelVisual;
+         set => skillPanelInUse = value as Object;
+
+      }
 
 
       #endregion
@@ -47,9 +57,6 @@ namespace _1Scripts.Visual
       /// <param name="referenceHeroLogic"></param>
       public void ShowMainPlayerHeroSkillsVisual(IHeroLogic referenceHeroLogic)
       {
-         
-         var playerAlliance = referenceHeroLogic.PlayerReference.PlayerAlliance;
-         
          //Check if the hero is in the team of the main player
          referenceHeroLogic.PlayerReference.PlayerAlliance.DisplayHeroSkills(this, referenceHeroLogic);
          
@@ -68,11 +75,28 @@ namespace _1Scripts.Visual
       /// <param name="referenceHeroLogic"></param>
       public void ShowHeroSkillsVisual(IHeroLogic referenceHeroLogic)
       {
-         //TODO
+
+         var allHeroSkillLogics = referenceHeroLogic.HeroSkillsReference;
+
          //Set HeroLogic Reference
          HeroLogicReference = referenceHeroLogic;
          
-         //Select four or three panelvisual
+         //Select Skill Panel Visual in use
+         if (allHeroSkillLogics.Count < 4)
+         {
+            SkillPanelInUse = ThreeSkillPanelVisual;
+            
+            ThreeSkillPanelVisual.Transform.gameObject.SetActive(true);
+            FourSkillPanelVisual.Transform.gameObject.SetActive(false);
+         }
+         else
+         {
+            SkillPanelInUse = FourSkillPanelVisual;
+            
+            FourSkillPanelVisual.Transform.gameObject.SetActive(true);
+            ThreeSkillPanelVisual.Transform.gameObject.SetActive(false);
+         }
+         
          
          
 
