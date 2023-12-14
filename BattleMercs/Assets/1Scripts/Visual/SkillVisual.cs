@@ -13,7 +13,7 @@ namespace _1Scripts.Visual
       [Header("Inspector References")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillsVisual))] private Object heroSkillsVisual = null;
 
-      [Header("Logic References")]
+      [Header("Runtime References")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillLogic))] private Object skillLogicReference;
       
       [Header("Components")]

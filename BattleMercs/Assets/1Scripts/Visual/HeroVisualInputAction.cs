@@ -4,7 +4,7 @@ using Object = UnityEngine.Object;
 
 namespace _1Scripts.Visual
 {
-   public class HeroVisualCollider : MonoBehaviour, IHeroVisualCollider
+   public class HeroVisualInputAction : MonoBehaviour, IHeroVisualInputAction
    {
       #region VARIABLES
 #pragma warning disable 0649

@@ -1,6 +1,6 @@
 ﻿namespace _1Scripts.Visual
 {
-    public interface IHeroVisualCollider
+    public interface IHeroVisualInputAction
     {
         IHeroVisual HeroVisual { get; }
     }

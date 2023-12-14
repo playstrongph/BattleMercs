@@ -805,8 +805,9 @@ GameObject:
   - component: {fileID: 3240097523965823125}
   - component: {fileID: 3240097523965823124}
   - component: {fileID: 5940426726895412396}
-  - component: {fileID: 530503993789234235}
+  - component: {fileID: 6333053833323224060}
   - component: {fileID: 7136167246501256177}
+  - component: {fileID: 530503993789234235}
   m_Layer: 0
   m_Name: SkillVisual
   m_TagString: Untagged
@@ -870,6 +871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroSkillsVisual: {fileID: 0}
+  skillLogicReference: {fileID: 0}
   skillVisualInputActions: {fileID: 7136167246501256177}
   skillVisualCollider: {fileID: 530503993789234235}
   skillReadyVisualTransform: {fileID: 3240097524160099078}
@@ -883,19 +885,19 @@ MonoBehaviour:
   passiveSkillCanvas: {fileID: 316922914}
   speedText: {fileID: 1140343362}
   cooldownText: {fileID: 1813423250}
---- !u!65 &530503993789234235
-BoxCollider:
+--- !u!114 &6333053833323224060
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3240097523965823122}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 30, y: 30, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cfc1abc88b146e4db49d457c512b950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillVisualReference: {fileID: 5940426726895412396}
 --- !u!114 &7136167246501256177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -909,6 +911,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillVisual: {fileID: 5940426726895412396}
+--- !u!65 &530503993789234235
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3240097523965823122}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30, y: 30, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3240097524032005631
 GameObject:
   m_ObjectHideFlags: 0
