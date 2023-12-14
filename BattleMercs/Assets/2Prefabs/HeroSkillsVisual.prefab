@@ -75,6 +75,7 @@ MonoBehaviour:
   threeSkillPanelVisual: {fileID: 8377659362689121397}
   fourSkillPanelVisual: {fileID: 5626623284273940199}
   canvas: {fileID: 7303433935170825732}
+  heroLogicReference: {fileID: 0}
   battleSceneManagerVisual: {fileID: 0}
 --- !u!1 &7303433935918806154
 GameObject:
@@ -161,7 +162,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4038726832969559223, guid: 5ffdd0e95b58fd84f86aabae740c3a8d,
+  m_Sprite: {fileID: 7512602189878905553, guid: 2a72e0d6bf82e134f809923c1a969493,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -238,12 +239,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillPanelVisual: {fileID: 5626623284273940199}
   frames:
-  - {fileID: 4038726832969559223, guid: 5ffdd0e95b58fd84f86aabae740c3a8d, type: 3}
-  - {fileID: -6332194793555141414, guid: 5ffdd0e95b58fd84f86aabae740c3a8d, type: 3}
-  - {fileID: 663884410599526384, guid: 5ffdd0e95b58fd84f86aabae740c3a8d, type: 3}
-  - {fileID: -4001662651508378108, guid: 5ffdd0e95b58fd84f86aabae740c3a8d, type: 3}
-  - {fileID: -3425829872271575657, guid: 5ffdd0e95b58fd84f86aabae740c3a8d, type: 3}
-  - {fileID: 5004661452520620699, guid: 5ffdd0e95b58fd84f86aabae740c3a8d, type: 3}
+  - {fileID: 7512602189878905553, guid: 2a72e0d6bf82e134f809923c1a969493, type: 3}
+  - {fileID: -1517548340706904495, guid: 2a72e0d6bf82e134f809923c1a969493, type: 3}
+  - {fileID: 8017093054964487753, guid: 2a72e0d6bf82e134f809923c1a969493, type: 3}
+  - {fileID: -8299617201611005775, guid: 2a72e0d6bf82e134f809923c1a969493, type: 3}
+  - {fileID: -757832184766495395, guid: 2a72e0d6bf82e134f809923c1a969493, type: 3}
+  - {fileID: 5469086713090774839, guid: 2a72e0d6bf82e134f809923c1a969493, type: 3}
 --- !u!1 &7303433936031633648
 GameObject:
   m_ObjectHideFlags: 0

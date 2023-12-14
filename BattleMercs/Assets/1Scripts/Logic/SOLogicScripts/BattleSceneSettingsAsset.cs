@@ -13,6 +13,10 @@ namespace _1Scripts.Logic.SOLogicScripts
       [Header("PLAYER ASSETS")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAsset))] private Object mainPlayer;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAsset))] private List<Object> allEnemyPlayers = new List<Object>();
+      
+      [Header("PLAYER ALLIANCE ASSETS")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAllianceAsset))] private Object allyPlayer;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAllianceAsset))] private Object enemyPlayer;
 
       [Header("PREFABS")]
       [SerializeField] private GameObject playerLogicPrefab;
@@ -37,10 +41,15 @@ namespace _1Scripts.Logic.SOLogicScripts
             return newList;
          }
       }
+      
+      public IPlayerAllianceAsset AllyPlayerAlliance => allyPlayer as IPlayerAllianceAsset;
+      public IPlayerAllianceAsset EnemyPlayerAlliance => enemyPlayer as IPlayerAllianceAsset;
 
       public GameObject PlayerLogicPrefab => playerLogicPrefab;
       public GameObject HeroLogicPrefab => heroLogicPrefab;
       public GameObject SkillLogicPrefab => skillLogicPrefab;
+      
+      
       
 
 

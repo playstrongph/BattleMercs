@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using _1Scripts.Logic.SOLogicScripts;
 using _1Scripts.Visual;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ namespace _1Scripts.Logic
       [SerializeField] private string playerName;
       [SerializeField] private string playerIDNumber;
       [SerializeField] private int soulsCount;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAllianceAsset))] private Object playerAlliance;
       
       [Header("Runtime Set References")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerVisual))] private Object playerVisualReference;
@@ -41,7 +43,13 @@ namespace _1Scripts.Logic
       public string PlayerName { get => playerName; set => playerName = value; }
       public string PlayerIDNumber { get => playerIDNumber; set => playerIDNumber = value; }
       public int SoulsCount { get => soulsCount; set => soulsCount = value; }
-      
+
+      public IPlayerAllianceAsset PlayerAlliance
+      {
+         get => playerAlliance as IPlayerAllianceAsset;
+         set => playerAlliance = value as Object;
+      }
+
       //OTHERS
       public Transform Transform => this.transform;
                

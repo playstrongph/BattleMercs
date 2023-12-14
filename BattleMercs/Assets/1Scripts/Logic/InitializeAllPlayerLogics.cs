@@ -46,6 +46,9 @@ namespace _1Scripts.Logic
           newPlayerLogic.PlayerIDNumber = logicManager.UniqueIDGenerator.GenerateUniqueID();
           //Set SoulsCount
           newPlayerLogic.SoulsCount = mainPlayerAsset.SoulsCount;
+          //Set Player Alliance
+          newPlayerLogic.PlayerAlliance = logicManager.BattleSettings.AllyPlayerAlliance;
+          
               
           //Player Heroes Reference
           allPlayersLogic.MainPlayer = newPlayer;
@@ -78,6 +81,8 @@ namespace _1Scripts.Logic
               newPlayerLogic.PlayerIDNumber = logicManager.UniqueIDGenerator.GenerateUniqueID();
               //Set SoulsCount
               newPlayerLogic.SoulsCount = enemyPlayerAsset.SoulsCount;
+              //Set Player Alliance
+              newPlayerLogic.PlayerAlliance = logicManager.BattleSettings.EnemyPlayerAlliance;
               
               //Player Heroes Reference
               allPlayersLogic.AddToAllPlayersList(newPlayer);

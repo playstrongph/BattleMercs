@@ -19,6 +19,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 449c2ddf7ddcf1f42b4e626c37525c7e, type: 2}
   - {fileID: 11400000, guid: 7f9b909074e47df4482eabc96f816083, type: 2}
   - {fileID: 11400000, guid: 2d3a3efbbf2052c47902cc09a6e412ef, type: 2}
+  allyPlayer: {fileID: 11400000, guid: 1dd9624f16538be4db00e7113458e9d1, type: 2}
+  enemyPlayer: {fileID: 11400000, guid: 403ab44258dd06348b36a1c756608272, type: 2}
   playerLogicPrefab: {fileID: 6634385906465547695, guid: d2be427a02231064ebf2184c9c320e3b,
     type: 3}
   heroLogicPrefab: {fileID: 401306147064565863, guid: 6096aff8134eaff478478d664ba1ba5f,

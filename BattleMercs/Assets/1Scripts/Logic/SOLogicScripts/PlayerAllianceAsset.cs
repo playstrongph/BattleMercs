@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _1Scripts.Visual;
+using UnityEngine;
 
 namespace _1Scripts.Logic.SOLogicScripts
 {
@@ -18,7 +19,7 @@ namespace _1Scripts.Logic.SOLogicScripts
         
       #region METHODS
 
-      public virtual void DisplayHeroSkills(IHeroLogic heroLogic)
+      public virtual void DisplayHeroSkills(IHeroSkillsVisual heroSkillsVisual, IHeroLogic heroLogic)
       {
          /*
          //Logic below is for ally heroes only 
@@ -27,12 +28,12 @@ namespace _1Scripts.Logic.SOLogicScripts
          */
       }
 
-      public virtual void ScaleDownHero(IHeroLogic heroLogic)
+      public virtual void ScaleDownHero(IHeroVisual heroVisual)
       {
          
       }
       
-      public virtual void ScaleUpHero(IHeroLogic heroLogic)
+      public virtual void ScaleUpHero(IHeroVisual heroVisual, Vector3 newScale)
       {
          
       }

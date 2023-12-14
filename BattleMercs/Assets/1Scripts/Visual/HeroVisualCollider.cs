@@ -27,6 +27,9 @@ namespace _1Scripts.Visual
       private void OnMouseDown()
       {
           HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.ShowHeroPreviewVisual(HeroVisual);
+          
+          //TEST
+          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroSkillsVisual.ShowMainPlayerHeroSkillsVisual(HeroVisual.HeroLogicReference);
       }
       
       private void OnMouseUp()

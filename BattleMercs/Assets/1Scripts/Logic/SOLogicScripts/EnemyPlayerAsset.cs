@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _1Scripts.Visual;
+using UnityEngine;
 
 namespace _1Scripts.Logic.SOLogicScripts
 {
@@ -19,21 +20,17 @@ namespace _1Scripts.Logic.SOLogicScripts
         
       #region METHODS
       
-      
-      public override void DisplayHeroSkills(IHeroLogic heroLogic)
+      public override  void ScaleDownHero(IHeroVisual heroVisual)
       {
-        Debug.Log("Enemy Player DisplayHeroSkills");
-      }
-
-      public override void ScaleDownHero(IHeroLogic heroLogic)
-      {
-          Debug.Log("Enemy Player ScaleDownHero");
+         heroVisual.Transform.localScale = new Vector3(1,1,1);
       }
       
-      public override void ScaleUpHero(IHeroLogic heroLogic)
+      public override void ScaleUpHero(IHeroVisual heroVisual, Vector3 newScale)
       {
-          Debug.Log("Enemy Player ScaleUpHero");
+        
+         heroVisual.Transform.localScale = newScale;
       }
+      
         
 
       #endregion

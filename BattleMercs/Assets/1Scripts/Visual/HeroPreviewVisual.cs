@@ -78,6 +78,8 @@ namespace _1Scripts.Visual
 
       #region METHODS
       
+      
+      
       public void ShowHeroPreviewVisual(IHeroVisual heroVisual)
       {
          enablePreview = true;

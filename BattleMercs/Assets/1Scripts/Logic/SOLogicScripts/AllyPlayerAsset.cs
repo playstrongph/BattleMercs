@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _1Scripts.Visual;
+using UnityEngine;
 
 namespace _1Scripts.Logic.SOLogicScripts
 {
@@ -19,21 +20,22 @@ namespace _1Scripts.Logic.SOLogicScripts
         
       #region METHODS
       
-      
-      public override void DisplayHeroSkills(IHeroLogic heroLogic)
+      public override void DisplayHeroSkills(IHeroSkillsVisual heroSkillsVisual,IHeroLogic heroLogic)
       {
-        Debug.Log("Ally Player DisplayHeroSkills");
-      }
-
-      public override void ScaleDownHero(IHeroLogic heroLogic)
-      {
-          Debug.Log("Ally Player ScaleDownHero");
+          
+          heroSkillsVisual.ShowHeroSkillsVisual(heroLogic);
       }
       
-      public override void ScaleUpHero(IHeroLogic heroLogic)
+      public override  void ScaleDownHero(IHeroVisual heroVisual)
       {
-          Debug.Log("Ally Player ScaleUpHero");
+         
       }
+      
+      public override void ScaleUpHero(IHeroVisual heroVisual, Vector3 newScale)
+      {
+         
+      }
+     
         
 
       #endregion
