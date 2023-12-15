@@ -1120,6 +1120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroVisual: {fileID: 2640027834027088753}
   newScale: {x: 1.5, y: 1.5, z: 1}
+  defaultSortingOrder: 1
 --- !u!65 &8981356759662012193
 BoxCollider:
   m_ObjectHideFlags: 0

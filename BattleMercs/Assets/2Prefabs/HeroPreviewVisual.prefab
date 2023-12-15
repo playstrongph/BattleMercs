@@ -111,6 +111,8 @@ MonoBehaviour:
   - {fileID: 6678453932760841308}
   battleSceneManagerVisual: {fileID: 0}
   setPreviewHeroComponents: {fileID: 1246480421009091171}
+  displayDelay: 0.5
+  enablePreview: 0
 --- !u!114 &1246480421009091171
 MonoBehaviour:
   m_ObjectHideFlags: 0
