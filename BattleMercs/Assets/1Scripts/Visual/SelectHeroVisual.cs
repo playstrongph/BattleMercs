@@ -8,8 +8,11 @@ namespace _1Scripts.Visual
 #pragma warning disable 0649
        
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroVisual))] private Object heroVisual;
-
+        
+      [Header("Manual Input Fields")]
       [SerializeField] private Vector3 newScale = new Vector3(1.5f, 1.5f, 1f);
+
+      [SerializeField] private int defaultSortingOrder = 1;
 
 #pragma warning restore 0649
       #endregion
@@ -17,7 +20,7 @@ namespace _1Scripts.Visual
       #region PROPERTIES
       
       private IHeroVisual HeroVisual => heroVisual as IHeroVisual;
-        
+      private int DefaultSortingOrder => defaultSortingOrder;
 
       #endregion
         
@@ -44,7 +47,7 @@ namespace _1Scripts.Visual
           if (selectedHeroVisual != null)
           {
               //Reset the previously selected hero's scale back to normal
-              ResetHeroScale(selectedHeroVisual);
+              ResetHeroScale(HeroVisual.PlayerVisualReference.SelectedHeroVisual);
               
               if (selectedHeroVisual != HeroVisual)
               {
@@ -65,7 +68,7 @@ namespace _1Scripts.Visual
           {
               //Set the new selected hero
               HeroVisual.PlayerVisualReference.SelectedHeroVisual = HeroVisual;
-              
+
               //Zoom in to the new selected hero
               ScaleUpHero();
           }
@@ -77,6 +80,9 @@ namespace _1Scripts.Visual
       /// </summary>
       private void ScaleUpHero()
       {
+          //Make sure hero appears on top
+          HeroVisual.Canvas.sortingOrder++;
+          
           HeroVisual.Transform.localScale = newScale;
       }
         
@@ -85,6 +91,9 @@ namespace _1Scripts.Visual
       /// </summary>
       private void ResetHeroScale(IHeroVisual previousHeroVisual)
       {
+          //Restore to the default sorting order
+          previousHeroVisual.Canvas.sortingOrder = DefaultSortingOrder;
+          
           previousHeroVisual.Transform.localScale = new Vector3(1, 1, 1);
       }
 
