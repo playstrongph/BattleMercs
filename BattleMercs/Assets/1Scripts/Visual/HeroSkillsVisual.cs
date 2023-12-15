@@ -1,4 +1,5 @@
-﻿using _1Scripts.Logic;
+﻿using System.Collections.Generic;
+using _1Scripts.Logic;
 using UnityEngine;
 
 namespace _1Scripts.Visual
@@ -81,6 +82,21 @@ namespace _1Scripts.Visual
          //Set HeroLogic Reference
          HeroLogicReference = referenceHeroLogic;
          
+         UpdateSkillPanelVisual(allHeroSkillLogics);
+         
+         UpdateAllSkillVisuals(allHeroSkillLogics);
+         
+         //Show Skill Panel
+         Canvas.enabled = true;
+      }
+
+      
+      /// <summary>
+      /// Select 3 or 4 skill panel and update the panel color
+      /// </summary>
+      /// <param name="allHeroSkillLogics"></param>
+      private void UpdateSkillPanelVisual(List<ISkillLogic> allHeroSkillLogics)
+      {
          //Select Skill Panel Visual in use
          if (allHeroSkillLogics.Count < 4)
          {
@@ -99,36 +115,37 @@ namespace _1Scripts.Visual
          
          //Set Skill Panel Color, based on hero element
          HeroLogicReference.HeroInformation.HeroElement.UpdateSkillPanelFrameVisual(SkillPanelInUse);
-         
-         //Assign Skill Logic Reference
+      }
+      
+      /// <summary>
+      /// Update each skill's visual graphics
+      /// </summary>
+      /// <param name="allHeroSkillLogics"></param>
+      private void UpdateAllSkillVisuals(List<ISkillLogic> allHeroSkillLogics)
+      {
+         //Assign Skill Logic Reference and Update Skill Visuals
          for (var i = 0; i < allHeroSkillLogics.Count; i++)
          {
             var skillLogic = allHeroSkillLogics[i];
             var skillVisual = SkillPanelInUse.SkillVisualList[i]; 
             //Set Skill Logic Reference
-           skillVisual.SkillLogicReference = skillLogic;
+            skillVisual.SkillLogicReference = skillLogic;
             
             //Update 
             skillVisual.SetSkillVisualComponent.UpdateSkillReadinessVisual();
             skillVisual.SetSkillVisualComponent.UpdateSkillGraphic();
             skillVisual.SetSkillVisualComponent.UpdateSkillSpeedText();
             skillVisual.SetSkillVisualComponent.UpdateSkillCooldownText();
-
          }
-         
-         
-         
-
-         
-         //TODO: Enable Canvas
-         Canvas.enabled = true;
       }
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
 
 
       #endregion
