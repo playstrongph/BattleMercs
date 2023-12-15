@@ -9,7 +9,7 @@ namespace _1Scripts.Visual
         IBattleSceneVisualManager BattleSceneVisualManager { get; }
 
         
-        void ShowMainPlayerHeroSkillsVisual(IHeroLogic referenceHeroLogic);
+        void ShowMainPlayerHeroSkillsPanelVisual(IHeroLogic referenceHeroLogic);
         void HideMainPlayerHeroSkillsVisual(IHeroLogic referenceHeroLogic);
 
         void ShowHeroSkillsVisual(IHeroLogic referenceHeroLogic);

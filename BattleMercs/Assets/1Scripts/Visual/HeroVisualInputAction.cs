@@ -26,10 +26,14 @@ namespace _1Scripts.Visual
 
       private void OnMouseDown()
       {
+          //Show Hero Preview
           HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroPreviewVisual.ShowHeroPreviewVisual(HeroVisual);
           
-          //TEST
-          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroSkillsVisual.ShowMainPlayerHeroSkillsVisual(HeroVisual.HeroLogicReference);
+          //Show Skills Panel for Main Player heroes only
+          HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroSkillsVisual.ShowMainPlayerHeroSkillsPanelVisual(HeroVisual.HeroLogicReference);
+          
+          //Select Hero Visual for Main Player heroes only
+          HeroVisual.SelectHeroVisual.UpdateMainPlayerSelectedHeroVisual();
       }
       
       private void OnMouseUp()

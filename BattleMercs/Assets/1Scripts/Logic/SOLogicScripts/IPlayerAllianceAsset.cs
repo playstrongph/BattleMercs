@@ -9,8 +9,8 @@ namespace _1Scripts.Logic.SOLogicScripts
 
         void DisplayHeroSkills(IHeroSkillsVisual heroSkillsVisual, IHeroLogic heroLogic);
 
-        void ScaleDownHero(IHeroVisual heroVisual);
+        void UpdateSelectedHeroVisual(ISelectHeroVisual selectHeroVisual);
 
-        void ScaleUpHero(IHeroVisual heroVisual, Vector3 newScale);
+
     }
 }

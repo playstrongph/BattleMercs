@@ -56,7 +56,7 @@ namespace _1Scripts.Visual
       /// Display hero skills panel only for the main player
       /// </summary>
       /// <param name="referenceHeroLogic"></param>
-      public void ShowMainPlayerHeroSkillsVisual(IHeroLogic referenceHeroLogic)
+      public void ShowMainPlayerHeroSkillsPanelVisual(IHeroLogic referenceHeroLogic)
       {
          //Check if the hero is in the team of the main player
          referenceHeroLogic.PlayerReference.PlayerAlliance.DisplayHeroSkills(this, referenceHeroLogic);

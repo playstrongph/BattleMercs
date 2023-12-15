@@ -709,7 +709,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 6.65
+  m_fontSize: 7.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1079,6 +1079,7 @@ MonoBehaviour:
   setHeroVisuals: {fileID: 7831247425321371870}
   heroLogicReference: {fileID: 0}
   playerVisualReference: {fileID: 0}
+  selectHeroVisual: {fileID: 5682914455736102570}
 --- !u!114 &7831247425321371870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1117,6 +1118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13cb4926869b1aa4fa4ed3ea68172687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heroVisual: {fileID: 2640027834027088753}
+  newScale: {x: 1.5, y: 1.5, z: 1}
 --- !u!65 &8981356759662012193
 BoxCollider:
   m_ObjectHideFlags: 0

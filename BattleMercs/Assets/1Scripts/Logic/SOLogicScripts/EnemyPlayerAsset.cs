@@ -20,16 +20,7 @@ namespace _1Scripts.Logic.SOLogicScripts
         
       #region METHODS
       
-      public override  void ScaleDownHero(IHeroVisual heroVisual)
-      {
-         heroVisual.Transform.localScale = new Vector3(1,1,1);
-      }
       
-      public override void ScaleUpHero(IHeroVisual heroVisual, Vector3 newScale)
-      {
-        
-         heroVisual.Transform.localScale = newScale;
-      }
       
         
 

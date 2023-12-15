@@ -23,9 +23,13 @@ namespace _1Scripts.Visual
 
         IHeroLogic HeroLogicReference { get; set; }
 
+        ISelectHeroVisual SelectHeroVisual { get; }
+
         Canvas Canvas { get; }
 
         ISetHeroVisualComponent SetHeroVisualComponent { get; set; }
+        
+        
 
         Transform Transform { get; }
 

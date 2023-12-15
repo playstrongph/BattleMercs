@@ -7,6 +7,8 @@ namespace _1Scripts.Visual
     {
         IBattleSceneVisualManager BattleSceneVisualManager { get; }
         IPlayerLogic PlayerLogicReference { get; set; }
+
+        IHeroVisual SelectedHeroVisual { get; set; }
         List<IHeroVisual> HeroVisualsList { get; }
     }
 }

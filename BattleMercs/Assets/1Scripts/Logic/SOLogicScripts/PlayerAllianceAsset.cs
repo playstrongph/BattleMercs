@@ -28,12 +28,7 @@ namespace _1Scripts.Logic.SOLogicScripts
          */
       }
 
-      public virtual void ScaleDownHero(IHeroVisual heroVisual)
-      {
-         
-      }
-      
-      public virtual void ScaleUpHero(IHeroVisual heroVisual, Vector3 newScale)
+      public virtual void UpdateSelectedHeroVisual(ISelectHeroVisual selectHeroVisual)
       {
          
       }

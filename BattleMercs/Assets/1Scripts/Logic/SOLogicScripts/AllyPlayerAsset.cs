@@ -26,15 +26,12 @@ namespace _1Scripts.Logic.SOLogicScripts
           heroSkillsVisual.ShowHeroSkillsVisual(heroLogic);
       }
       
-      public override  void ScaleDownHero(IHeroVisual heroVisual)
+      public override void UpdateSelectedHeroVisual(ISelectHeroVisual selectHeroVisual)
       {
-         
+          selectHeroVisual.UpdateSelectedHeroVisual();
       }
       
-      public override void ScaleUpHero(IHeroVisual heroVisual, Vector3 newScale)
-      {
-         
-      }
+      
      
         
 
