@@ -30,8 +30,6 @@ namespace _1Scripts.Visual
       {
          SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillTargetingVisual.SelectSkillTargetVisual.SkillTargetingPermissiveChecks(SkillVisual);
          
-         
-         //TODO: Skill Preview
          SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillPreviewVisual.ShowSkillPreviewVisual(SkillVisual);
          
       }
@@ -44,6 +42,18 @@ namespace _1Scripts.Visual
          
          SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillPreviewVisual.HideSkillPreviewVisual();
       }
+
+      private void OnMouseEnter()
+      {
+         SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillPreviewVisual.ShowSkillPreviewVisual(SkillVisual);
+      }
+      
+      private void OnMouseExit()
+      {
+         SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillPreviewVisual.HideSkillPreviewVisual();
+      }
+      
+      
 
       #endregion
    }
