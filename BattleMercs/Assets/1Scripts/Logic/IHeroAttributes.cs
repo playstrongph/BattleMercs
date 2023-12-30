@@ -16,5 +16,18 @@ namespace _1Scripts.Logic
       int EffectResistance { get; set; }
       int DualAttackChance { get; set; }
       int HitChance { get; set; }
+      
+      //BASE ATTRIBUTES
+      int BaseHealth { get; set; }
+      int BaseAttack { get; set; }
+      int BaseDefense { get; set; }
+      int BaseSpeed { get; set; }
+      int BaseArmor { get; set; }
+      int BaseCriticalHitChance { get; set; }
+      int BaseCriticalHitDamage { get; set;}
+      int BaseEffectiveness { get; set; }
+      int BaseEffectResistance { get; set; }
+      int BaseDualAttackChance { get; set; }
+      int BaseHitChance { get; set; }
    }
 }
