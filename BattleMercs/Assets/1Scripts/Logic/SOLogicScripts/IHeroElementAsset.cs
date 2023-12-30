@@ -13,6 +13,8 @@ namespace _1Scripts.Logic.SOLogicScripts
 
         void UpdateSkillPanelFrameVisual(ISkillPanelVisual skillPanelVisual);
 
+        void SetSkillPreviewClassColor(ISkillPreviewVisual skillPreview);
+
 
     }
 }

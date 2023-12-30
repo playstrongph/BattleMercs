@@ -44,6 +44,12 @@ namespace _1Scripts.Logic.SOLogicScripts
          //4 - dark
          //5 - light
       }
+      
+      public virtual void SetSkillPreviewClassColor(ISkillPreviewVisual skillPreview)
+      {
+         
+
+      }
 
 
 

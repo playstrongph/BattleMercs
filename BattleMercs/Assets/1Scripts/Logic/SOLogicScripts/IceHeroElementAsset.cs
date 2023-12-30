@@ -34,6 +34,12 @@ namespace _1Scripts.Logic.SOLogicScripts
       {
          skillPanelVisual.SkillPanelFrames.SetBlueFrame();
       }
+      
+      public override void SetSkillPreviewClassColor(ISkillPreviewVisual skillPreview)
+      {
+         skillPreview.SkillPreviewFrames.SetColorBlueElement();
+
+      }
         
 
       #endregion

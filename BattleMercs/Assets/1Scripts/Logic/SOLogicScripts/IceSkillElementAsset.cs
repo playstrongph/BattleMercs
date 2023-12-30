@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _1Scripts.Visual;
+using UnityEngine;
 
 namespace _1Scripts.Logic.SOLogicScripts
 {
@@ -22,6 +23,16 @@ namespace _1Scripts.Logic.SOLogicScripts
       public override void SetSkillElement()
       {
          
+      }
+      
+      public override void SetSkillPreviewClassColor(ISkillPreviewVisual skillPreview)
+      {
+         skillPreview.SkillPreviewFrames.SetColorBlueElement();
+      }
+      
+      public override void UpdateSkillPreviewElementText(ISkillPreviewVisual skillPreviewVisual)
+      {
+         skillPreviewVisual.ElementText.text = "Ice";
       }
 
 

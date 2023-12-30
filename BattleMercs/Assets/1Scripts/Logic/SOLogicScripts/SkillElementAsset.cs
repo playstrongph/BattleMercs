@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _1Scripts.Visual;
+using UnityEngine;
 
 namespace _1Scripts.Logic.SOLogicScripts
 {
@@ -21,6 +22,17 @@ namespace _1Scripts.Logic.SOLogicScripts
       public virtual void SetSkillElement()
       {
          
+      }
+
+      public virtual void UpdateSkillPreviewElementText(ISkillPreviewVisual skillPreviewVisual)
+      {
+         
+      }
+
+      public virtual void SetSkillPreviewClassColor(ISkillPreviewVisual skillPreview)
+      {
+         skillPreview.SkillPreviewFrames.SetColorDarkElement();
+
       }
 
 

@@ -36,6 +36,13 @@ namespace _1Scripts.Logic.SOLogicScripts
          skillPanelVisual.SkillPanelFrames.SetDarkFrame();
       }
       
+      public override void SetSkillPreviewClassColor(ISkillPreviewVisual skillPreview)
+      {
+         skillPreview.SkillPreviewFrames.SetColorDarkElement();
+
+      }
+
+      
       
         
 

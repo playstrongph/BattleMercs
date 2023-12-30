@@ -29,6 +29,11 @@ namespace _1Scripts.Visual
       private void OnMouseDown()
       {
          SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillTargetingVisual.SelectSkillTargetVisual.SkillTargetingPermissiveChecks(SkillVisual);
+         
+         
+         //TODO: Skill Preview
+         SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillPreviewVisual.ShowSkillPreviewVisual(SkillVisual);
+         
       }
 
       private void OnMouseUp()
@@ -36,6 +41,8 @@ namespace _1Scripts.Visual
          SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillTargetingVisual.ResetPositionToOrigin();
          
          SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillTargetingVisual.Draggable.DisableDraggable();
+         
+         SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillPreviewVisual.HideSkillPreviewVisual();
       }
 
       #endregion

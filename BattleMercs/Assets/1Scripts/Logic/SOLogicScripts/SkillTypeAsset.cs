@@ -29,6 +29,12 @@ namespace _1Scripts.Logic.SOLogicScripts
          //Enabled image for active skills
          //Disable image for basic and passive skills
       }
+      
+      public virtual void SetSkillPreviewCooldownGraphic(ISkillPreviewVisual skillPreview)
+      {
+         //Enabled image for active skills
+         //Disable image for basic and passive skills
+      }
 
       public virtual void UpdateSkillReadinessVisual(ISkillVisual skillVisual)
       {

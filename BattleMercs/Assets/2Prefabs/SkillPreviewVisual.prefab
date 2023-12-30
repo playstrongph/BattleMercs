@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 7853968120051021474}
   - component: {fileID: 7853968120051021473}
   - component: {fileID: 5528246602081874893}
+  - component: {fileID: 1160646187941177136}
   m_Layer: 0
   m_Name: SkillPreviewVisual
   m_TagString: Untagged
@@ -497,7 +498,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 420c5ab52c7646942b7cef39f6fb9c59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillVisualReference: {fileID: 0}
   battleManagerVisual: {fileID: 0}
+  setSkillPreviewComponents: {fileID: 1160646187941177136}
   canvas: {fileID: 7853968120051021473}
   skillPreviewFrames: {fileID: 7623805802148079578}
   skillGraphic: {fileID: 7853968120583128542}
@@ -508,6 +511,21 @@ MonoBehaviour:
   descriptionText: {fileID: 7853968120828770851}
   cooldownText: {fileID: 7853968120005326796}
   speedText: {fileID: 7853968120668053567}
+  displayDelay: 0.5
+  enablePreview: 0
+--- !u!114 &1160646187941177136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7853968120051021475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef98b9fbe17392468a7dc5648501cb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillPreviewVisual: {fileID: 5528246602081874893}
 --- !u!1 &7853968120583128528
 GameObject:
   m_ObjectHideFlags: 0

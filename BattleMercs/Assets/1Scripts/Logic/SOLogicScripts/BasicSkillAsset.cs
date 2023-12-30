@@ -30,6 +30,11 @@ namespace _1Scripts.Logic.SOLogicScripts
          heroPreviewSkill.CooldownGraphic.enabled = false;
       }
       
+      public override void SetSkillPreviewCooldownGraphic(ISkillPreviewVisual skillPreview)
+      {
+         skillPreview.CooldownGraphic.enabled = false;
+      }
+      
       public override void UpdateSkillReadinessVisual(ISkillVisual skillVisual)
       {
  

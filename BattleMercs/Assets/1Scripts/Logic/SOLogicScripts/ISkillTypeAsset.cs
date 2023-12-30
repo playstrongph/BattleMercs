@@ -8,6 +8,8 @@ namespace _1Scripts.Logic.SOLogicScripts
 
         void SetPreviewSkillCooldownGraphic(IHeroPreviewSkill heroPreviewSkill);
 
+        void SetSkillPreviewCooldownGraphic(ISkillPreviewVisual skillPreview);
+
         void UpdateSkillReadinessVisual(ISkillVisual skillVisual);
 
         void UpdateSkillSpeedText(ISkillVisual skillVisual);

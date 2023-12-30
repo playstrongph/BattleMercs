@@ -6,7 +6,16 @@ namespace _1Scripts.Visual
 {
     public interface ISkillPreviewVisual
     {
+
+        void ShowSkillPreviewVisual(ISkillVisual skillVisual);
+
+        void HideSkillPreviewVisual();
+
+        ISetSkillPreviewComponents SetSkillPreviewComponents { get; }
+        ISkillVisual SkillVisualReference { get; set;}
         Canvas Canvas { get; }
+
+        Transform ThisTransform { get; }
         ISkillPreviewFrames SkillPreviewFrames { get; }
         Image SkillGraphic { get; }
         Image CooldownGraphic { get; }
