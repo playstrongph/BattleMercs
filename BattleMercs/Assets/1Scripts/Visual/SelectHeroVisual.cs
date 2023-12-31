@@ -42,6 +42,7 @@ namespace _1Scripts.Visual
       public void UpdateSelectedHeroVisual()
       {
           var selectedHeroVisual = HeroVisual.PlayerVisualReference.SelectedHeroVisual;
+          var skillPanel = HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroSkillsVisual;
           
           //if there's a previously selected hero
           if (selectedHeroVisual != null)
@@ -59,8 +60,7 @@ namespace _1Scripts.Visual
               }
               else
               {
-                  //Clicking on the currently selected hero 'unselects' that hero
-                  HeroVisual.PlayerVisualReference.SelectedHeroVisual = null;
+                  UnselectHeroVisual(selectedHeroVisual);
               }   
           }
           //If there's no previously selected hero
@@ -74,7 +74,21 @@ namespace _1Scripts.Visual
           }
       }
       
-      
+      /// <summary>
+      /// Unselects the hero visual when clicked again
+      /// </summary>
+      private void UnselectHeroVisual(IHeroVisual selectedHeroVisual)
+      {
+          var skillPanel = HeroVisual.PlayerVisualReference.BattleSceneVisualManager.HeroSkillsVisual;
+          
+          //Hide Skill Panel;
+          skillPanel.HideMainPlayerHeroSkillsVisual(selectedHeroVisual.HeroLogicReference);
+          
+          //Clicking on the currently selected hero 'unselects' that hero
+          HeroVisual.PlayerVisualReference.SelectedHeroVisual = null;
+      }
+
+
       /// <summary>
       /// Zoom in to selected hero visual
       /// </summary>

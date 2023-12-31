@@ -60,8 +60,6 @@ namespace _1Scripts.Visual
       {
          //Check if the hero is in the team of the main player
          referenceHeroLogic.PlayerReference.PlayerAlliance.DisplayHeroSkills(this, referenceHeroLogic);
-         
-         
       }
       
       public void HideMainPlayerHeroSkillsVisual(IHeroLogic referenceHeroLogic)
