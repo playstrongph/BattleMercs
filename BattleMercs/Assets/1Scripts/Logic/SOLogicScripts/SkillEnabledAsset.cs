@@ -22,10 +22,16 @@ namespace _1Scripts.Logic.SOLogicScripts
       
       
       
-      //VISUAL Methods
+      /// <summary>
+      /// Check Skill Readiness Status
+      /// </summary>
+      /// <param name="skillVisual"></param>
+      /// <param name="selectSkillTargetVisual"></param>
       public override void StartSkillTargetingVisual(ISkillVisual skillVisual,ISelectSkillTargetVisual selectSkillTargetVisual)
       {
-         //TODO: Check for Skill Readiness
+         var skillReadiness = skillVisual.SkillLogicReference.SkillAttributes.SkillReadiness;
+         
+         skillReadiness.StartSkillTargetingVisual(skillVisual, selectSkillTargetVisual);
       }
 
 

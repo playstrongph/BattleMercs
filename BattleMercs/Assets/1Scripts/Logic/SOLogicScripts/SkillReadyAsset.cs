@@ -22,10 +22,14 @@ namespace _1Scripts.Logic.SOLogicScripts
       
       
       
-      //VISUAL Methods
+      /// <summary>
+      /// Start skill targeting when skill is enabled and skill is ready
+      /// </summary>
+      /// <param name="skillVisual"></param>
+      /// <param name="selectSkillTargetVisual"></param>
       public override void StartSkillTargetingVisual(ISkillVisual skillVisual,ISelectSkillTargetVisual selectSkillTargetVisual)
       {
-         
+         selectSkillTargetVisual.StartSkillTargeting(skillVisual);
       }
       
       public override void UpdateSkillReadinessVisual(ISkillVisual skillVisual)

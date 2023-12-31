@@ -19,10 +19,17 @@ namespace _1Scripts.Logic.SOLogicScripts
       #endregion
         
       #region METHODS
-
+      
+      /// <summary>
+      /// Check Skill Enabled Status
+      /// </summary>
+      /// <param name="skillVisual"></param>
+      /// <param name="selectSkillTargetVisual"></param>
       public override void StartSkillTargetingVisual(ISkillVisual skillVisual,ISelectSkillTargetVisual selectSkillTargetVisual)
       {
-         //TODO: Call SkillEnabled.StartSkillTargetingVisual(skillVisual)
+         var skillEnabledStatus = skillVisual.SkillLogicReference.SkillAttributes.SkillEnableStatus;
+         
+         skillEnabledStatus.StartSkillTargetingVisual(skillVisual,selectSkillTargetVisual);
       }
       
       public override void SetPreviewSkillCooldownGraphic(IHeroPreviewSkill heroPreviewSkill)

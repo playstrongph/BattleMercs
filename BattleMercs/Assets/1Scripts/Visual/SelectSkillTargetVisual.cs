@@ -25,11 +25,13 @@ namespace _1Scripts.Visual
       /// <param name="skillVisual"></param>
       public void SkillTargetingPermissiveChecks(ISkillVisual skillVisual)
       {
+
+         var skillType = skillVisual.SkillLogicReference.SkillAttributes.SkillType;
          //TODO: Replace this with permissive checks for SkillType, SkillEnableStatus, SkillReadinessStatus
-         StartSkillTargeting(skillVisual);
+         //StartSkillTargeting(skillVisual);
          
-         
-         
+         skillType.StartSkillTargetingVisual(skillVisual, this);
+
       }
       
       /// <summary>

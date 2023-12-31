@@ -22,7 +22,7 @@ namespace _1Scripts.Logic.SOLogicScripts
 
       public override void StartSkillTargetingVisual(ISkillVisual skillVisual,ISelectSkillTargetVisual selectSkillTargetVisual)
       {
-         //TODO: Call SkillEnabled.StartSkillTargetingVisual(skillVisual)
+         selectSkillTargetVisual.StartSkillTargeting(skillVisual);
       }
       
       public override void SetPreviewSkillCooldownGraphic(IHeroPreviewSkill heroPreviewSkill)
