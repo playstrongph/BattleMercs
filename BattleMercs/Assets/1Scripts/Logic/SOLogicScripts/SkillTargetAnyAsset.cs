@@ -20,18 +20,29 @@ namespace _1Scripts.Logic.SOLogicScripts
         
       #region METHODS
 
-      public override List<IHeroLogic> GetSkillTargets(IHeroLogic heroLogic)
+      public override List<IHeroLogic> GetSkillTargets(IHeroLogic castHeroLogic)
       {
          //TODO: In the future, shall be influenced by stealth and taunt 
          var allLivingHeroes = new List<IHeroLogic>();
-         var enemyLivingHeroes = heroLogic.PlayerReference.CurrentEnemyPlayer.AliveHeroes;
-         var allyLivingHeroes = heroLogic.PlayerReference.AliveHeroes;
+         var enemyLivingHeroes = castHeroLogic.PlayerReference.CurrentEnemyPlayer.AliveHeroes;
+         var allyLivingHeroes = castHeroLogic.PlayerReference.AliveHeroes;
          
          //Combine lists
          allLivingHeroes.AddRange(enemyLivingHeroes);
-         allyLivingHeroes.AddRange(allyLivingHeroes);
+         allLivingHeroes.AddRange(allyLivingHeroes);
 
          return allLivingHeroes;
+      }
+      
+      public override void ShowHeroGlows(IHeroLogic castHeroLogic)
+      {
+         var heroTargets = GetSkillTargets(castHeroLogic);
+         
+         foreach (var heroTarget in heroTargets)
+         {
+            heroTarget.HeroVisualReference.HeroGlows.SetColorGreen();
+            heroTarget.HeroVisualReference.HeroGlows.ShowHeroGlow();
+         }
       }
 
 

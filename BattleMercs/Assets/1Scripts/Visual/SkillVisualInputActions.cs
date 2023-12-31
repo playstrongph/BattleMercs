@@ -41,9 +41,13 @@ namespace _1Scripts.Visual
          //Targeting 
          SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillTargetingVisual.ResetPositionToOrigin();
          SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillTargetingVisual.Draggable.DisableDraggable();
+         SkillVisual.SkillLogicReference.SkillAttributes.SkillTarget.HideHeroGlows(SkillVisual.SkillLogicReference.SkillInformation.CasterHero);
          
          //Skill Preview
          SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillPreviewVisual.HideSkillPreviewVisual();
+         
+         
+         
       }
 
       private void OnMouseEnter()

@@ -25,11 +25,8 @@ namespace _1Scripts.Visual
       /// <param name="skillVisual"></param>
       public void SkillTargetingPermissiveChecks(ISkillVisual skillVisual)
       {
-
          var skillType = skillVisual.SkillLogicReference.SkillAttributes.SkillType;
-         //TODO: Replace this with permissive checks for SkillType, SkillEnableStatus, SkillReadinessStatus
-         //StartSkillTargeting(skillVisual);
-         
+
          skillType.StartSkillTargetingVisual(skillVisual, this);
 
       }
@@ -40,9 +37,17 @@ namespace _1Scripts.Visual
       /// <param name="skillVisual"></param>
       public void StartSkillTargeting(ISkillVisual skillVisual)
       {
+         //TEST - Test Reference
+         SkillTargetingVisual.SkillVisualReference = skillVisual;
+         
          SkillTargetingVisual.ThisTransform.position = skillVisual.ThisTransform.position;
          SkillTargetingVisual.Draggable.EnableDraggable();
+         
+         //TODO - remove skill visual args
+         SkillTargetingVisual.ShowSkillTargetHeroGlows(skillVisual);
       }
+
+      
 
 
 

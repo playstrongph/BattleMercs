@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using _1Scripts.Logic;
 using UnityEngine;
 
 namespace _1Scripts.Visual
@@ -84,7 +85,7 @@ namespace _1Scripts.Visual
             SkillTargetingVisual.Draggable.ArrowCollider.enabled = true;
 
             //TODO: Show cross hair for valid targets
-            //ShowTargetCrossHair();
+            ShowTargetCrossHair();
 
          }
          else  //if there is NO distance between skill position and mouse position
@@ -192,6 +193,43 @@ namespace _1Scripts.Visual
       }
 
    }
+      
+      private void ShowTargetCrossHair()
+            {
+               // ReSharper disable once PossibleNullReferenceException
+               var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+      
+               //Store at most 5 ray cast hits
+               var mResults = new RaycastHit[5];
+      
+               //ray traverses all layers
+               var layerMask = ~0;
+      
+               //Same to RayCastAll but with no additional garbage
+               int hitsCount = Physics.RaycastNonAlloc(ray, mResults, Mathf.Infinity, layerMask);
+               
+               //Hide CrossHair by default
+               CrossHairImageOff();
+
+               for (int i = 0; i < hitsCount; i++)
+               {
+                  var heroVisualTarget = mResults[i].transform.GetComponent<IHeroVisual>();
+                  var skillTarget = SkillTargetingVisual.SkillVisualReference.SkillLogicReference.SkillAttributes
+                        .SkillTarget;
+                  var casterHero = SkillTargetingVisual.SkillVisualReference.SkillLogicReference.SkillInformation
+                        .CasterHero;
+                  var validHeroTargets = skillTarget.GetSkillTargets(casterHero);
+
+                  if(heroVisualTarget != null)
+                        if (validHeroTargets.Contains(heroVisualTarget.HeroLogicReference))
+                        {
+                           CrossHairImageOn();
+                           SkillTargetingVisual.CrossHairImage.transform.position = heroVisualTarget.Transform.position;
+                        }
+                  
+               }
+
+            }
       
 
       private void ArrowImageOn()

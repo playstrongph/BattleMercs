@@ -10,6 +10,10 @@ namespace _1Scripts.Visual
    {
       #region VARIABLES
       
+      //TEST
+      [Header("Runtime References")]
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private Object skillVisualReference = null;
+      
       [Header("Inspector References")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneVisualManager))] private Object battleSceneManagerVisual = null;
       
@@ -35,6 +39,12 @@ namespace _1Scripts.Visual
       #endregion
 
       #region PROPERTIES
+
+      public ISkillVisual SkillVisualReference
+      {
+         get => skillVisualReference as ISkillVisual;
+         set => skillVisualReference = value as Object;
+      }
       public IBattleSceneVisualManager BattleSceneVisualManager => battleSceneManagerVisual as IBattleSceneVisualManager;
       public ISelectSkillTargetVisual SelectSkillTargetVisual => selectSkillTargetVisual as ISelectSkillTargetVisual;
       public IArrowLineAndCrossHairVisual ArrowLineAndCrossHairVisual => arrowLineAndCrossHairVisual as IArrowLineAndCrossHairVisual;
@@ -67,6 +77,16 @@ namespace _1Scripts.Visual
       {
          ThisTransform.position = SkillTargetingOrigin;
       }
+      
+      public void ShowSkillTargetHeroGlows(ISkillVisual skillVisual)
+      {
+         var skillTargetType = skillVisual.SkillLogicReference.SkillAttributes.SkillTarget;
+         var casterHero = skillVisual.SkillLogicReference.SkillInformation.CasterHero;
+
+         skillTargetType.ShowHeroGlows(casterHero);
+      }
+
+      
 
       #endregion
    }

@@ -6,6 +6,8 @@ namespace _1Scripts.Visual
 {
     public interface ISkillTargetingVisual
     {
+
+        ISkillVisual SkillVisualReference { get; set; }
         IBattleSceneVisualManager BattleSceneVisualManager { get; }
         IDraggable Draggable { get; }
         ISelectSkillTargetVisual SelectSkillTargetVisual { get; }
@@ -20,6 +22,8 @@ namespace _1Scripts.Visual
         Transform ThisTransform { get;}
 
         void ResetPositionToOrigin();
+
+        void ShowSkillTargetHeroGlows(ISkillVisual skillVisual);
 
 
     }

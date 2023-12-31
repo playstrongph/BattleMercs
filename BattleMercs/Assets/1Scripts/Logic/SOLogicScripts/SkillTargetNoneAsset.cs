@@ -20,7 +20,7 @@ namespace _1Scripts.Logic.SOLogicScripts
         
       #region METHODS
 
-      public override List<IHeroLogic> GetSkillTargets(IHeroLogic heroLogic)
+      public override List<IHeroLogic> GetSkillTargets(IHeroLogic castHeroLogic)
       {
          //return an empty list
          return new List<IHeroLogic>();
