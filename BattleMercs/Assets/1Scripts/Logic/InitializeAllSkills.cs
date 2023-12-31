@@ -80,7 +80,7 @@ namespace _1Scripts.Logic
          skillAttributes.SkillType = skillAsset.SkillType;
          skillAttributes.SkillReadiness = skillAsset.SkillReadiness;
          skillAttributes.SkillEnableStatus = skillAsset.SkillEnableStatus;
-         skillAttributes.SkillTargetAsset = skillAsset.SkillTarget;
+         skillAttributes.SkillTarget = skillAsset.SkillTarget;
       }
 
       /// <summary>

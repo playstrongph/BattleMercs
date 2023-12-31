@@ -22,8 +22,9 @@ namespace _1Scripts.Logic.SOLogicScripts
 
       public override List<IHeroLogic> GetSkillTargets(IHeroLogic heroLogic)
       {
-         //TODO: return the enemy target
-         return new List<IHeroLogic>();
+         //TODO: return all the ally heroes
+         //TODO: In the future, shall be influenced by stealth and taunt 
+         return heroLogic.PlayerReference.AliveHeroes;
       }
 
 

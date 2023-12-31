@@ -1,5 +1,6 @@
 ﻿using _1Scripts.Logic.SOLogicScripts;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _1Scripts.Logic
 {
@@ -30,7 +31,7 @@ namespace _1Scripts.Logic
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTypeAsset))] private Object skillType;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillReadinessAsset))] private Object skillReadiness;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillEnableStatusAsset))] private Object skillEnableStatus;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetAsset))] private Object skillTargetAsset;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetAsset))] private Object skillTarget;
 
 #pragma warning restore 0649
         
@@ -78,10 +79,10 @@ namespace _1Scripts.Logic
             set => skillEnableStatus = value as Object;
          }
          
-         public ISkillTargetAsset SkillTargetAsset
+         public ISkillTargetAsset SkillTarget
          {
-            get => skillTargetAsset as ISkillTargetAsset;
-            set => skillTargetAsset = value as Object;
+            get => skillTarget as ISkillTargetAsset;
+            set => skillTarget = value as Object;
          }
         
 

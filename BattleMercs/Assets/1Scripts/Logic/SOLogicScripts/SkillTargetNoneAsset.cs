@@ -22,8 +22,7 @@ namespace _1Scripts.Logic.SOLogicScripts
 
       public override List<IHeroLogic> GetSkillTargets(IHeroLogic heroLogic)
       {
-         
-         //TODO: return the enemy target
+         //return an empty list
          return new List<IHeroLogic>();
       }
 

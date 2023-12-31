@@ -18,6 +18,6 @@ namespace _1Scripts.Logic
         ISkillTypeAsset SkillType { get; set; }
         ISkillReadinessAsset SkillReadiness { get; set; }
         ISkillEnableStatusAsset SkillEnableStatus { get; set; }
-        ISkillTargetAsset SkillTargetAsset { get; set; }
+        ISkillTargetAsset SkillTarget { get; set; }
     }
 }
