@@ -37,14 +37,13 @@ namespace _1Scripts.Visual
       /// <param name="skillVisual"></param>
       public void StartSkillTargeting(ISkillVisual skillVisual)
       {
-         //TEST - Test Reference
+         //Set SkillVisualReference
          SkillTargetingVisual.SkillVisualReference = skillVisual;
          
+         //Show Skill Targeting Visuals
          SkillTargetingVisual.ThisTransform.position = skillVisual.ThisTransform.position;
          SkillTargetingVisual.Draggable.EnableDraggable();
-         
-         //TODO - remove skill visual args
-         SkillTargetingVisual.ShowSkillTargetHeroGlows(skillVisual);
+         SkillTargetingVisual.ShowSkillTargetHeroGlows();
       }
 
       

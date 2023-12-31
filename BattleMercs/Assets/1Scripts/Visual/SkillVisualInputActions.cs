@@ -29,7 +29,7 @@ namespace _1Scripts.Visual
       private void OnMouseDown()
       {
          //Targeting 
-         SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillTargetingVisual.SelectSkillTargetVisual.SkillTargetingPermissiveChecks(SkillVisual);
+         SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillTargetingVisual.StartTargeting(SkillVisual);
          
          //Skill Preview
          SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillPreviewVisual.ShowSkillPreviewVisual(SkillVisual);
@@ -39,10 +39,8 @@ namespace _1Scripts.Visual
       private void OnMouseUp()
       {
          //Targeting 
-         SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillTargetingVisual.ResetPositionToOrigin();
-         SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillTargetingVisual.Draggable.DisableDraggable();
-         SkillVisual.SkillLogicReference.SkillAttributes.SkillTarget.HideHeroGlows(SkillVisual.SkillLogicReference.SkillInformation.CasterHero);
-         
+         SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillTargetingVisual.StopTargeting(SkillVisual);
+
          //Skill Preview
          SkillVisual.HeroSkillsVisual.BattleSceneVisualManager.SkillPreviewVisual.HideSkillPreviewVisual();
          

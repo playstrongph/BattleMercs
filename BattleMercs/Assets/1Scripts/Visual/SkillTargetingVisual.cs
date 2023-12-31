@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
@@ -9,33 +8,34 @@ namespace _1Scripts.Visual
    public class SkillTargetingVisual : MonoBehaviour, ISkillTargetingVisual
    {
       #region VARIABLES
-      
-      //TEST
+
+      #pragma warning disable 0649
       [Header("Runtime References")]
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private Object skillVisualReference = null;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private Object skillVisualReference;
       
       [Header("Inspector References")]
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneVisualManager))] private Object battleSceneManagerVisual = null;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneVisualManager))] private Object battleSceneManagerVisual;
       
       [Header("Components")]
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISelectSkillTargetVisual))] private Object selectSkillTargetVisual = null;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IArrowLineAndCrossHairVisual))] private Object arrowLineAndCrossHairVisual = null;
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IDraggable))] private Object draggable = null;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISelectSkillTargetVisual))] private Object selectSkillTargetVisual;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IArrowLineAndCrossHairVisual))] private Object arrowLineAndCrossHairVisual;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IDraggable))] private Object draggable;
 
-      [Header("Transforms")] 
-      [SerializeField] private Transform crossHair = null;
-      [SerializeField] private Transform arrow = null;
+      [Header("Transforms")]
+      [SerializeField] private Transform arrow;
       [SerializeField] private List<Transform> nodes = new List<Transform>();
       
       [Header("Images")] 
-      [SerializeField] private Image crossHairImage = null;
-      [SerializeField] private Image arrowImage = null;
+      [SerializeField] private Image crossHairImage;
+      [SerializeField] private Image arrowImage;
       [SerializeField] private List<Image> nodesImage = new List<Image>();
       
       //Other variables
 
       private Vector3 SkillTargetingOrigin { get; set; }
-
+   
+      #pragma warning restore 0649
+      
       #endregion
 
       #region PROPERTIES
@@ -49,7 +49,6 @@ namespace _1Scripts.Visual
       public ISelectSkillTargetVisual SelectSkillTargetVisual => selectSkillTargetVisual as ISelectSkillTargetVisual;
       public IArrowLineAndCrossHairVisual ArrowLineAndCrossHairVisual => arrowLineAndCrossHairVisual as IArrowLineAndCrossHairVisual;
       public IDraggable Draggable => draggable as IDraggable;
-      public Transform CrossHair => crossHair;
       public Transform Arrow => arrow;
       public List<Transform> Nodes => nodes;
 
@@ -71,25 +70,36 @@ namespace _1Scripts.Visual
       }
 
       /// <summary>
-      /// TEST
+      /// Displays skill targeting
       /// </summary>
-      public void StartTargeting()
+      public void StartTargeting(ISkillVisual skillVisual)
       {
-         
+         SelectSkillTargetVisual.SkillTargetingPermissiveChecks(skillVisual);
+      }
+      
+      /// <summary>
+      /// Turns off skill targeting display
+      /// </summary>
+      /// <param name="skillVisual"></param>
+      public void StopTargeting(ISkillVisual skillVisual)
+      {
+         ResetPositionToOrigin();
+         Draggable.DisableDraggable();
+         skillVisual.SkillLogicReference.SkillAttributes.SkillTarget.HideHeroGlows(skillVisual.SkillLogicReference.SkillInformation.CasterHero);
       }
 
       /// <summary>
       /// Resets the Skill Targeting Visual to original position
       /// </summary>
-      public void ResetPositionToOrigin()
+      private void ResetPositionToOrigin()
       {
          ThisTransform.position = SkillTargetingOrigin;
       }
       
-      public void ShowSkillTargetHeroGlows(ISkillVisual skillVisual)
+      public void ShowSkillTargetHeroGlows()
       {
-         var skillTargetType = skillVisual.SkillLogicReference.SkillAttributes.SkillTarget;
-         var casterHero = skillVisual.SkillLogicReference.SkillInformation.CasterHero;
+         var skillTargetType = SkillVisualReference.SkillLogicReference.SkillAttributes.SkillTarget;
+         var casterHero = SkillVisualReference.SkillLogicReference.SkillInformation.CasterHero;
 
          skillTargetType.ShowHeroGlows(casterHero);
       }

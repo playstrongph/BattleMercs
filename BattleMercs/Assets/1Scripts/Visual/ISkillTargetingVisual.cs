@@ -11,19 +11,19 @@ namespace _1Scripts.Visual
         IBattleSceneVisualManager BattleSceneVisualManager { get; }
         IDraggable Draggable { get; }
         ISelectSkillTargetVisual SelectSkillTargetVisual { get; }
-
         IArrowLineAndCrossHairVisual ArrowLineAndCrossHairVisual { get; }
-        Transform CrossHair { get; }
         Transform Arrow { get; }
         List<Transform> Nodes { get; }
         Image CrossHairImage { get; }
         Image ArrowImage { get; }
         List<Image> NodesImage { get; }
         Transform ThisTransform { get;}
+        
+        //TEST
+        void StartTargeting(ISkillVisual skillVisual);
+        void StopTargeting(ISkillVisual skillVisual);
 
-        void ResetPositionToOrigin();
-
-        void ShowSkillTargetHeroGlows(ISkillVisual skillVisual);
+        void ShowSkillTargetHeroGlows();
 
 
     }
