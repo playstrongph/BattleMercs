@@ -69,7 +69,15 @@ namespace _1Scripts.Visual
       {
          SkillTargetingOrigin = transform.position;
       }
-      
+
+      /// <summary>
+      /// TEST
+      /// </summary>
+      public void StartTargeting()
+      {
+         
+      }
+
       /// <summary>
       /// Resets the Skill Targeting Visual to original position
       /// </summary>

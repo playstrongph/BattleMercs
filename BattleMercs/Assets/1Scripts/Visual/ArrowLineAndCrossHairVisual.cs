@@ -84,7 +84,7 @@ namespace _1Scripts.Visual
             //Enable Box Collider
             SkillTargetingVisual.Draggable.ArrowCollider.enabled = true;
 
-            //TODO: Show cross hair for valid targets
+            //Show cross hair for valid targets
             ShowTargetCrossHair();
 
          }

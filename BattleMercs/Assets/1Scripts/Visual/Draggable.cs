@@ -87,16 +87,10 @@ namespace _1Scripts.Visual
             
          thisTransform.position = new Vector3(mousePos.x - _pointerDisplacement.x, mousePos.y - _pointerDisplacement.y, thisTransform.position.z);
          
-         //TODO:
+         //Displays the targeting components
          SkillTargetingVisual.ArrowLineAndCrossHairVisual.ShowArrowLineAndCrossHair();
       }
-      
-      
-      
-      
-      
-      
-      
+
       /// <summary>
       /// Dummy method used by _skillTargeting in order not to needlessly run logic in Update
       /// </summary>
