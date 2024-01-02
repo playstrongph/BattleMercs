@@ -37,6 +37,7 @@ namespace _1Scripts.Logic.SOLogicScripts
       [SerializeField] private int effectResistance;
       [SerializeField] private int dualAttackChance;
       [SerializeField] private int hitChance;
+      [SerializeField] private int speedEnergy;
 
       [Header("Hero Skills")] 
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillAsset))] private List<Object> heroSkills = new List<Object>();
@@ -73,6 +74,7 @@ namespace _1Scripts.Logic.SOLogicScripts
       public int EffectResistance => effectResistance;
       public int DualAttackChance => dualAttackChance;
       public int HitChance => hitChance;
+      public int SpeedEnergy => speedEnergy;
 
       public List<ISkillAsset> HeroSkills
       {

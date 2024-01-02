@@ -21,6 +21,8 @@ namespace _1Scripts.Logic
       [SerializeField] private int dualAttackChance;
       [SerializeField] private int hitChance;
       [SerializeField] private int focusPoints;
+      [SerializeField] private int speedEnergy;
+      
       
       [Header("BASE ATTRIBUTES")]
       [SerializeField] private int baseHealth;
@@ -34,6 +36,7 @@ namespace _1Scripts.Logic
       [SerializeField] private int baseEffectResistance;
       [SerializeField] private int baseDualAttackChance;
       [SerializeField] private int baseHitChance;
+      [SerializeField] private int baseSpeedEnergy;
          
 #pragma warning disable 0649
         
@@ -55,6 +58,7 @@ namespace _1Scripts.Logic
       public int DualAttackChance { get => dualAttackChance; set => dualAttackChance = value; }
       public int HitChance { get => hitChance; set => hitChance = value; }
       public int FocusPoints { get => focusPoints; set => focusPoints = value; }
+      public int SpeedEnergy { get => speedEnergy; set => speedEnergy = value; }
       
       //BASE ATTRIBUTES
       
@@ -69,6 +73,7 @@ namespace _1Scripts.Logic
       public int BaseEffectResistance { get => baseEffectResistance; set => baseEffectResistance = value; }
       public int BaseDualAttackChance { get => baseDualAttackChance; set => baseDualAttackChance = value; }
       public int BaseHitChance { get => baseHitChance; set => baseHitChance = value; }
+      public int BaseSpeedEnergy { get => baseSpeedEnergy; set => baseSpeedEnergy = value; }
         
 
       #endregion

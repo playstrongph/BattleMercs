@@ -29,6 +29,7 @@ namespace _1Scripts.Logic.SOLogicScripts
         int EffectResistance { get; }
         int DualAttackChance { get; }
         int HitChance { get; }
+        int SpeedEnergy { get; }
         List<ISkillAsset> HeroSkills { get; }
     }
 }

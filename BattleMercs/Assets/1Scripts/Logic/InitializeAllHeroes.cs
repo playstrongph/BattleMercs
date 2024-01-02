@@ -88,7 +88,23 @@ namespace _1Scripts.Logic
       private void SetHeroAttributes(IHeroLogic heroLogic, IHeroAsset heroAsset)
       {
           var heroAttributes = heroLogic.HeroAttributes;
-
+          
+          
+          //Initialize base attributes
+          heroAttributes.BaseHealth = heroAsset.Health;
+          heroAttributes.BaseAttack = heroAsset.Attack;
+          heroAttributes.BaseDefense = heroAsset.Defense;
+          heroAttributes.BaseSpeed = heroAsset.Speed;
+          heroAttributes.BaseArmor = heroAsset.Armor;
+          heroAttributes.BaseCriticalHitChance = heroAsset.CriticalHitChance;
+          heroAttributes.BaseCriticalHitDamage = heroAsset.CriticalHitDamage;
+          heroAttributes.BaseEffectiveness = heroAsset.Effectiveness;
+          heroAttributes.BaseEffectResistance = heroAsset.EffectResistance;
+          heroAttributes.BaseDualAttackChance = heroAsset.DualAttackChance;
+          heroAttributes.BaseHitChance = heroAsset.HitChance;
+          heroAttributes.BaseSpeedEnergy = heroAsset.SpeedEnergy;
+          
+          //Initialize attributes
           heroAttributes.Health = heroAsset.Health;
           heroAttributes.Attack = heroAsset.Attack;
           heroAttributes.Defense = heroAsset.Defense;
@@ -101,6 +117,8 @@ namespace _1Scripts.Logic
           heroAttributes.EffectResistance = heroAsset.EffectResistance;
           heroAttributes.DualAttackChance = heroAsset.DualAttackChance;
           heroAttributes.HitChance = heroAsset.HitChance;
+          heroAttributes.SpeedEnergy = heroAsset.SpeedEnergy;
+
       }
       
       /// <summary>

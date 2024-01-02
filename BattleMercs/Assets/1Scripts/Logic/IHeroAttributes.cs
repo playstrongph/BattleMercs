@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿
 
 namespace _1Scripts.Logic
 {
@@ -16,7 +16,8 @@ namespace _1Scripts.Logic
       int EffectResistance { get; set; }
       int DualAttackChance { get; set; }
       int HitChance { get; set; }
-      
+      int SpeedEnergy { get; set; }
+
       //BASE ATTRIBUTES
       int BaseHealth { get; set; }
       int BaseAttack { get; set; }
@@ -29,5 +30,7 @@ namespace _1Scripts.Logic
       int BaseEffectResistance { get; set; }
       int BaseDualAttackChance { get; set; }
       int BaseHitChance { get; set; }
+      
+      int BaseSpeedEnergy { get; set; }
    }
 }
