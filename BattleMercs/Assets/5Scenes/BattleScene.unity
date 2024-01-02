@@ -208,6 +208,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d69beb4951246dd4da50deceec178d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedEnergyTurnLimit: 1000
+  activeTurnHero: {fileID: 0}
+  heroSpeedEnergyRanking: []
+  battleSceneLogicManager: {fileID: 0}
 --- !u!1001 &964175992
 PrefabInstance:
   m_ObjectHideFlags: 0
