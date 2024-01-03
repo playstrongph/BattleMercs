@@ -17,7 +17,7 @@ namespace _1Scripts.Logic
        [Header("RUNTIME REFERENCES")]
        [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private Object activeTurnHero;
        
-       [SerializeField] private List<string> heroesRankedBySpeedEnergy = new List<string>();
+       [SerializeField][RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> heroesRankedBySpeedEnergy = new List<Object>();
 
        [Header("INSPECTOR REFERENCES")]
        [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneLogicManager))] private Object battleSceneLogicManager;
@@ -34,7 +34,7 @@ namespace _1Scripts.Logic
        /// <summary>
        /// This is the threshold value that triggers a hero turn
        /// </summary>
-       private int SpeedEnergyTurnLimit => speedEnergyTurnLimit;
+       public int SpeedEnergyTurnLimit => speedEnergyTurnLimit;
 
        private IBattleSceneLogicManager BattleSceneLogicManager => battleSceneLogicManager as IBattleSceneLogicManager;
 
@@ -66,32 +66,40 @@ namespace _1Scripts.Logic
        private List<IHeroLogic> SortAllHeroesByHighestSpeedEnergy()
        {
            var allHeroes = new List<IHeroLogic>(AllLivingHeroes());
-           var exceedSpeedEnergyLimit = false;
-
+           
+           
+           //Initial randomization and sorting - in case there's a hero with a starting speed energy greater than the speed energy limit
            ShuffleList(allHeroes);
-
-           while (!exceedSpeedEnergyLimit)
+           allHeroes.Sort((hero1, hero2) => hero2.HeroAttributes.SpeedEnergy.CompareTo(hero1.HeroAttributes.SpeedEnergy));
+           
+           while (allHeroes[0].HeroAttributes.SpeedEnergy < SpeedEnergyTurnLimit)
            {
-               foreach (var hero in allHeroes)
-               {
-                   hero.HeroAttributes.SpeedEnergy += hero.HeroAttributes.Speed;
-                   exceedSpeedEnergyLimit = hero.HeroAttributes.SpeedEnergy >= SpeedEnergyTurnLimit;
-                  
-               }    
+               IncreaseAllHeroesSpeedEnergy(allHeroes); 
+               
+               ShuffleList(allHeroes);
+               allHeroes.Sort((hero1, hero2) => hero2.HeroAttributes.SpeedEnergy.CompareTo(hero1.HeroAttributes.SpeedEnergy));
            }
            
-           // Sort the list by 'Speed' in descending order
-           allHeroes.Sort((hero1, hero2) => hero2.HeroAttributes.SpeedEnergy.CompareTo(hero1.HeroAttributes.SpeedEnergy));
-
            //Add to heroes ranked by speed so it can be seen in the inspector
            foreach (var hero in allHeroes)
            {
-               var heroSpeedEnergyString = hero.HeroInformation.HeroName +" SpeedEnergy: " +hero.HeroAttributes.SpeedEnergy;
-               
-               heroesRankedBySpeedEnergy.Add(heroSpeedEnergyString);
+               heroesRankedBySpeedEnergy.Add(hero as Object);
            }
            
            return allHeroes;
+       }
+
+       private void IncreaseAllHeroesSpeedEnergy(List<IHeroLogic> allHeroes)
+       {
+           foreach (var hero in allHeroes)
+           {
+               hero.HeroAttributes.SpeedEnergy += hero.HeroAttributes.Speed;
+               
+               //TODO: Visual Animation
+               
+               //Visual Turn Order Text Update
+               hero.HeroVisualReference.SetHeroTurnOrderTextVisual.UpdateHeroTurnOrderText( hero.HeroAttributes.SpeedEnergy);
+           }   
        }
 
        private List<IHeroLogic> AllLivingHeroes()
@@ -99,7 +107,6 @@ namespace _1Scripts.Logic
            var allPlayerHeroes = new List<IHeroLogic>(BattleSceneLogicManager.AllPlayersLogic.MainPlayer.GetComponent<IPlayerLogic>().AliveHeroes);
            var allEnemyHeroes = new List<IHeroLogic>(BattleSceneLogicManager.AllPlayersLogic.SelectedEnemyPlayer.GetComponent<IPlayerLogic>().AliveHeroes);
            var allHeroes = new List<IHeroLogic>();
-           //heroesRankedBySpeedEnergy = new List<Object>();
 
            allHeroes.AddRange(allPlayerHeroes);
            allHeroes.AddRange(allEnemyHeroes);
@@ -107,11 +114,7 @@ namespace _1Scripts.Logic
            return allHeroes;
        }
 
-
-
-
-
-
+       
 
        //GENERIC METHODS
        private void ShuffleList<T>(List<T> list)

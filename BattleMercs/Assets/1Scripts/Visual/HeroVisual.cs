@@ -38,6 +38,7 @@ namespace _1Scripts.Visual
       [Header("Inspector Set References")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerVisual))] private Object playerVisualReference;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISelectHeroVisual))] private Object selectHeroVisual;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISetHeroTurnOrderTextVisual))] private Object setHeroTurnOrderTextVisual;
 
 #pragma warning restore 0649
           
@@ -73,6 +74,8 @@ namespace _1Scripts.Visual
       //Inspector Set References
       public IPlayerVisual PlayerVisualReference => playerVisualReference as IPlayerVisual;
       public ISelectHeroVisual SelectHeroVisual => selectHeroVisual as ISelectHeroVisual;
+      
+      public ISetHeroTurnOrderTextVisual SetHeroTurnOrderTextVisual => setHeroTurnOrderTextVisual as ISetHeroTurnOrderTextVisual;
 
       //Others
       public Transform Transform => transform;

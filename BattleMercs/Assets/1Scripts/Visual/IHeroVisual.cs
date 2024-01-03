@@ -28,8 +28,10 @@ namespace _1Scripts.Visual
         Canvas Canvas { get; }
 
         ISetHeroVisualComponent SetHeroVisualComponent { get; set; }
-        
-        
+
+        ISetHeroTurnOrderTextVisual SetHeroTurnOrderTextVisual { get; }
+
+
 
         Transform Transform { get; }
 

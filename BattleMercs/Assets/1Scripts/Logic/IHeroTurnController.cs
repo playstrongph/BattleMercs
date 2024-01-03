@@ -11,5 +11,7 @@
         /// 
         /// </summary>
         void UpdateNextActiveHero();
+
+        int SpeedEnergyTurnLimit { get; }
     }
 }
