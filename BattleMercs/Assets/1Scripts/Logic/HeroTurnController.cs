@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 
 namespace _1Scripts.Logic
 {
-   public class HeroTurnController : MonoBehaviour
+   public class HeroTurnController : MonoBehaviour, IHeroTurnController
    {
       #region VARIABLES
 #pragma warning disable 0649
@@ -15,7 +16,8 @@ namespace _1Scripts.Logic
        
        [Header("RUNTIME REFERENCES")]
        [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private Object activeTurnHero;
-       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroLogic))] private List<Object> heroesRankedBySpeed = new List<Object>();
+       
+       [SerializeField] private List<string> heroesRankedBySpeedEnergy = new List<string>();
 
        [Header("INSPECTOR REFERENCES")]
        [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneLogicManager))] private Object battleSceneLogicManager;
@@ -45,22 +47,6 @@ namespace _1Scripts.Logic
            private set => activeTurnHero = value as Object;
        }
 
-       /// <summary>
-       /// Hero's arranged according to speed energy, from highest to lowest
-       /// </summary>
-       private List<IHeroLogic> HeroesRankedBySpeed
-       {
-           get
-           {
-               var newList = new List<IHeroLogic>();
-               foreach (var hero in heroesRankedBySpeed)
-               {
-                   newList.Add(hero as IHeroLogic);
-               }
-               return newList;
-           }
-       }
-
        #endregion
 
        #region METHODS
@@ -70,67 +56,55 @@ namespace _1Scripts.Logic
        /// </summary>
        public void UpdateNextActiveHero()
        {
-           //Arrange all heroes according to SpeedEnergy, highest to lowest
-           SortAllHeroesByHighestSpeedEnergy();
+           var heroList = SortAllHeroesByHighestSpeedEnergy();
            
-           //The first hero in heroes ranked by speed has the highest speed
-           var nextActiveHero = HeroesRankedBySpeed[0];
-
-           if (nextActiveHero.HeroAttributes.Speed >= SpeedEnergyTurnLimit)
-           {
-               ActiveTurnHero = nextActiveHero;
-               //TODO: ActiveHeroTakesATurn
-           }
-           else
-           {
-               //Increase all Heroes speed energy
-               IncreaseAllHeroesSpeedEnergy();
-
-               //Repeat this method
-               UpdateNextActiveHero();
-           }
+           ActiveTurnHero = heroList[0];
        }
-
-
-
-       private void IncreaseAllHeroesSpeedEnergy()
-       {
-           foreach (var hero in HeroesRankedBySpeed)
-           {
-               //TODO: Check in the future if there's a debuff that prevents speed energy increase
-               hero.HeroAttributes.SpeedEnergy += hero.HeroAttributes.Speed;
-               
-               //TODO: Visual and Animation updates on heroTurnBar and hero speed energy display
-           }
-           
-       }
-
        /// <summary>
        /// //Arrange all heroes according to SpeedEnergy, highest to lowest
        /// </summary>
-       private void SortAllHeroesByHighestSpeedEnergy()
+       private List<IHeroLogic> SortAllHeroesByHighestSpeedEnergy()
        {
-           var allPlayerHeroes = BattleSceneLogicManager.AllPlayersLogic.MainPlayer.GetComponent<IPlayerLogic>().AliveHeroes;
-           var allEnemyHeroes = BattleSceneLogicManager.AllPlayersLogic.SelectedEnemyPlayer.GetComponent<IPlayerLogic>().AliveHeroes;
+           var allHeroes = new List<IHeroLogic>(AllLivingHeroes());
+           var exceedSpeedEnergyLimit = false;
 
-           var allHeroes = new List<IHeroLogic>();
-           
-           allHeroes.Clear();
-           
-           allHeroes.AddRange(allPlayerHeroes);
-           allHeroes.AddRange(allEnemyHeroes);
-           
-           //randomize hero order before sorting
            ShuffleList(allHeroes);
+
+           while (!exceedSpeedEnergyLimit)
+           {
+               foreach (var hero in allHeroes)
+               {
+                   hero.HeroAttributes.SpeedEnergy += hero.HeroAttributes.Speed;
+                   exceedSpeedEnergyLimit = hero.HeroAttributes.SpeedEnergy >= SpeedEnergyTurnLimit;
+                  
+               }    
+           }
            
            // Sort the list by 'Speed' in descending order
-           allHeroes.Sort((hero1, hero2) => hero2.HeroAttributes.SpeedEnergy.CompareTo(hero1.HeroAttributes.Speed));
-           
+           allHeroes.Sort((hero1, hero2) => hero2.HeroAttributes.SpeedEnergy.CompareTo(hero1.HeroAttributes.SpeedEnergy));
+
            //Add to heroes ranked by speed so it can be seen in the inspector
            foreach (var hero in allHeroes)
            {
-               heroesRankedBySpeed.Add(hero as Object);
+               var heroSpeedEnergyString = hero.HeroInformation.HeroName +" SpeedEnergy: " +hero.HeroAttributes.SpeedEnergy;
+               
+               heroesRankedBySpeedEnergy.Add(heroSpeedEnergyString);
            }
+           
+           return allHeroes;
+       }
+
+       private List<IHeroLogic> AllLivingHeroes()
+       {
+           var allPlayerHeroes = new List<IHeroLogic>(BattleSceneLogicManager.AllPlayersLogic.MainPlayer.GetComponent<IPlayerLogic>().AliveHeroes);
+           var allEnemyHeroes = new List<IHeroLogic>(BattleSceneLogicManager.AllPlayersLogic.SelectedEnemyPlayer.GetComponent<IPlayerLogic>().AliveHeroes);
+           var allHeroes = new List<IHeroLogic>();
+           //heroesRankedBySpeedEnergy = new List<Object>();
+
+           allHeroes.AddRange(allPlayerHeroes);
+           allHeroes.AddRange(allEnemyHeroes);
+           
+           return allHeroes;
        }
 
 

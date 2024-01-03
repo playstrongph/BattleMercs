@@ -14,6 +14,7 @@ namespace _1Scripts.Logic
         Transform Transform { get; }
 
         //Attached Components
+        IHeroTurnController HeroTurnController { get; }
         IInitializeAllPlayerLogics InitializeAllPlayerLogics { get; }
         ISelectEnemyPlayer SelectEnemyPlayer { get; }
         IUniqueIDGenerator UniqueIDGenerator { get; }

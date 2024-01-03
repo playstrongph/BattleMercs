@@ -18,6 +18,7 @@ namespace _1Scripts.Logic
       
       [Header("Inspector Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IAllPlayersLogic))] private Object playersLogic;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroTurnController))] private Object heroTurnController;
 
       [Header("Script Components")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleStart))] private Object battleStart;
@@ -45,7 +46,10 @@ namespace _1Scripts.Logic
       
 
       //Components
+      public IHeroTurnController HeroTurnController => heroTurnController as IHeroTurnController;
       public IAllPlayersLogic AllPlayersLogic => playersLogic as IAllPlayersLogic;
+      
+      
       //Attached Components
       public IBattleStart BattleStart => battleStart as IBattleStart;
       public IInitializeAllPlayerLogics InitializeAllPlayerLogics => initializeAllPlayers as IInitializeAllPlayerLogics;

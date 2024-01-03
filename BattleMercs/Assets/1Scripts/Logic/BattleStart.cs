@@ -32,14 +32,17 @@ namespace _1Scripts.Logic
       {
           yield return StartCoroutine(InitializeAllPlayersHeroesAndSkillsCoroutine());
           
-          //TEST
+          //Select the current enemy player for the enemy player pool
           yield return StartCoroutine(SelectEnemyPlayer());
           
-          //TEST
+          //Load Ally Player Visuals
           yield return StartCoroutine(LoadMainPlayerHeroesVisual());
 
-          //TEST
+          //Load Enemy Player Visuals
           yield return StartCoroutine(LoadSelectedEnemyHeroesVisual());
+          
+          //TEST
+          yield return StartCoroutine(StartNextHeroTurn());
 
           yield return null;
       }
@@ -82,7 +85,14 @@ namespace _1Scripts.Logic
           yield return null;
       }
 
-      
+      private IEnumerator StartNextHeroTurn()
+      {
+          LogicManagerReference.HeroTurnController.UpdateNextActiveHero();
+          
+          yield return null;
+      }
+
+
 
       #endregion
    }
