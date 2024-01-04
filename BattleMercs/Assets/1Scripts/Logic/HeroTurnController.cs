@@ -67,7 +67,6 @@ namespace _1Scripts.Logic
        {
            var allHeroes = new List<IHeroLogic>(AllLivingHeroes());
            
-           
            //Initial randomization and sorting - in case there's a hero with a starting speed energy greater than the speed energy limit
            ShuffleList(allHeroes);
            allHeroes.Sort((hero1, hero2) => hero2.HeroAttributes.SpeedEnergy.CompareTo(hero1.HeroAttributes.SpeedEnergy));
@@ -100,6 +99,8 @@ namespace _1Scripts.Logic
                //Visual Turn Order Text Update
                hero.HeroVisualReference.SetHeroTurnOrderTextVisual.UpdateHeroTurnOrderText( hero.HeroAttributes.SpeedEnergy);
            }   
+           
+           
        }
 
        private List<IHeroLogic> AllLivingHeroes()
