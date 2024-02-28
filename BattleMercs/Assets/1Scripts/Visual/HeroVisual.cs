@@ -96,6 +96,8 @@ namespace _1Scripts.Visual
           //heroLogic.HeroVisualReference = this;
 
           var heroArmorValue = heroLogic.HeroAttributes.Armor;
+          var heroAttackValue = heroLogic.HeroAttributes.Attack;
+          var heroHealthValue = heroLogic.HeroAttributes.Health;
           
           //Update the heroVisual game object name
           SetHeroVisualComponent.UpdateGameObjectHeroName(heroLogic.HeroInformation.HeroName);
@@ -107,8 +109,8 @@ namespace _1Scripts.Visual
           
           SetHeroVisualComponent.UpdateArmorTextAndImage(heroArmorValue);
           SetHeroVisualComponent.UpdateTurnOrderText(0);
-          SetHeroVisualComponent.UpdateAttackText();
-          SetHeroVisualComponent.UpdateHealthText();
+          SetHeroVisualComponent.UpdateAttackText(heroAttackValue);
+          SetHeroVisualComponent.UpdateHealthText(heroHealthValue);
               
           //Show the Hero
           SetHeroVisualComponent.ShowHeroVisual();

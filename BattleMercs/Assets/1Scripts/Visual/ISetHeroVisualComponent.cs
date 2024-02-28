@@ -45,12 +45,12 @@ namespace _1Scripts.Visual
         /// <summary>
         /// Update the attack text
         /// </summary>
-        void UpdateAttackText();
+        void UpdateAttackText(int attackValue);
 
         /// <summary>
         /// Update the health text
         /// </summary>
-        void UpdateHealthText();
+        void UpdateHealthText(int healthValue);
 
         /// <summary>
         /// Sets the turn order text

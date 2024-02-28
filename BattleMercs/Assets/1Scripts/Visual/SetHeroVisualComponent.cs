@@ -105,14 +105,14 @@ namespace _1Scripts.Visual
 
          heroGraphic.sprite = graphic;
       }
-      
+
+
       /// <summary>
       /// Update the attack text
       /// </summary>
-      public void UpdateAttackText()
+      public void UpdateAttackText(int attackValue)
       {
-         var attackValue = HeroVisual.HeroLogicReference.HeroAttributes.Attack;
-         
+
          //This clamps the attack text value to a min of zero
          var textValue = Mathf.Max(0, attackValue);
          
@@ -122,9 +122,8 @@ namespace _1Scripts.Visual
       /// <summary>
       /// Update the health text
       /// </summary>
-      public void UpdateHealthText()
+      public void UpdateHealthText(int healthValue)
       {
-         var healthValue = HeroVisual.HeroLogicReference.HeroAttributes.Health;
          //This clamps the health text value to a min of zero
          var textValue = Mathf.Max(0, healthValue);
          
