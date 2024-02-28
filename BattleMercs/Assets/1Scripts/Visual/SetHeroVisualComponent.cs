@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _1Scripts.Logic.SOLogicScripts;
+using UnityEngine;
 
 namespace _1Scripts.Visual
 {
@@ -48,35 +49,24 @@ namespace _1Scripts.Visual
       {
          //TODO: Hero Glow is based on skill targeting
       }
-      
-      /// <summary>
-      /// Hero Frame depends on the hero Element
-      /// </summary>
-      public void UpdateHeroFrameColorVisual()
+
+      public void UpdateHeroFrameColorVisual(IHeroElementAsset heroElement)
       {
-         var heroLogic = HeroVisual.HeroLogicReference;
-         
-         heroLogic.HeroInformation.HeroElement.SetHeroClassColor(HeroVisual);
+         heroElement.SetHeroClassColor(HeroVisual);
       }
-      
-      /// <summary>
-      /// Updates the armor text and armor image display
-      /// </summary>
-      /// 
-      public void UpdateArmorTextAndImage()
+
+      public void UpdateArmorTextAndImage(int armorValue)
       {
-         var heroArmorValue = HeroVisual.HeroLogicReference.HeroAttributes.Armor;
-         
          var armorImage = HeroVisual.ArmorImage;
          var armorText = HeroVisual.ArmorText;
          
          //display armor image and text
-         if (heroArmorValue > 0)
+         if (armorValue > 0)
          {
             armorImage.enabled = true;
             armorText.enabled = true;
 
-            armorText.text = heroArmorValue.ToString();
+            armorText.text = armorValue.ToString();
          }
          //hide armor image and set text to blank
          else

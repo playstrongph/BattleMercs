@@ -94,16 +94,18 @@ namespace _1Scripts.Visual
           //Set References
           //HeroLogicReference = heroLogic;
           //heroLogic.HeroVisualReference = this;
+
+          var heroArmorValue = heroLogic.HeroAttributes.Armor;
           
           //Update the heroVisual game object name
           SetHeroVisualComponent.UpdateGameObjectHeroName(heroLogic.HeroInformation.HeroName);
           
           //Update the components
           SetHeroVisualComponent.UpdateHeroGraphic(heroLogic.HeroInformation.HeroGraphic);
+
+          SetHeroVisualComponent.UpdateHeroFrameColorVisual(heroLogic.HeroInformation.HeroElement);
           
-          SetHeroVisualComponent.UpdateHeroFrameColorVisual();
-          
-          SetHeroVisualComponent.UpdateArmorTextAndImage();
+          SetHeroVisualComponent.UpdateArmorTextAndImage(heroArmorValue);
           SetHeroVisualComponent.UpdateTurnOrderText(0);
           SetHeroVisualComponent.UpdateAttackText();
           SetHeroVisualComponent.UpdateHealthText();

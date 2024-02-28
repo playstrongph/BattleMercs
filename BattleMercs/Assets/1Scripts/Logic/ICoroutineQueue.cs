@@ -21,7 +21,6 @@ namespace _1Scripts.Logic
         /// the dequeue of the next coroutine in the queue
         /// </summary>
         /// <returns></returns>
-        bool CoroutineCompleted()  //TODO:Is this better named as PlayCoroutineQueueCommands?
-            ;
+        void PlayCoroutineInQueue();
     }
 }

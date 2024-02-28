@@ -49,9 +49,12 @@ namespace _1Scripts.Logic
          CurrentNode = Root;
       }
       
-      public void EndSequence()
+      /// <summary>
+      /// Formerly known as 'end sequence'  This is called inside coroutines using logicTrees
+      /// </summary>
+      public void PlayCoroutineInQueue()
       {
-         CoroutineQueue.CoroutineCompleted();
+         CoroutineQueue.PlayCoroutineInQueue();
       }
       
       /// <summary>
@@ -76,18 +79,7 @@ namespace _1Scripts.Logic
       {
          Root.AddChild(value);
       }
-      
-      /*/// <summary>
-      /// Add a coroutine as a sibling of the current node
-      /// This is processed after all children of the current node are done
-      /// </summary>
-      /// <param name="value">Coroutine to add.</param>
-      public void AddSibling(IEnumerator value)
-      {
-         Root.AddChild(value);
-      }*/
-      
-      
+
       /// <summary>
       /// Returns true if the tree is empty, false otherwise.
       /// </summary>
@@ -105,10 +97,8 @@ namespace _1Scripts.Logic
          {
             // Node -> children -> siblings.
             CurrentNode = node[i];
-                
+            
             CoroutineQueue.AddToCoroutineQueue(node[i].Value);
-
-            yield return null;
 
             if (i >= node.ChildrenCount) yield break;
 

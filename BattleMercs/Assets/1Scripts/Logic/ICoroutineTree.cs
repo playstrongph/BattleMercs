@@ -16,7 +16,7 @@ namespace _1Scripts.Logic
         /// </summary>
         bool Empty { get; }
 
-        void EndSequence();
+        void PlayCoroutineInQueue();
 
         /// <summary>
         /// Add a coroutine as child of the current node.

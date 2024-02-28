@@ -10,13 +10,12 @@ namespace _1Scripts.Logic
 #pragma warning disable 0649
        
        /// <summary>
-       /// Coroutine queue variable for the
-       /// CoroutineQueue constructor
+       /// The coroutine queue 
        /// </summary>
-       private readonly Queue<IEnumerator> _queue;
+       private readonly Queue<IEnumerator> _coroutineQueue;
 
        /// <summary>
-       /// Initial state for coroutine queue's
+       /// Variable to indicate a coroutine is currently playing
        /// </summary>
        private bool _playingQueue = false;
        
@@ -26,7 +25,7 @@ namespace _1Scripts.Logic
       #region PROPERTIES
 
       /// <summary>
-      /// MonoBehavior reference as a coroutine runner
+      /// MonoBehavior reference to enable StartCoroutine
       /// </summary>
       public MonoBehaviour MonoBehaviourReference { get; set; }
 
@@ -39,48 +38,50 @@ namespace _1Scripts.Logic
       /// </summary>
       public CoroutineQueue()
       {
-          _queue = new Queue<IEnumerator>();
+          _coroutineQueue = new Queue<IEnumerator>();
       }
       
       /// <summary>
-      /// Executes the first coroutine in the queue
+      /// Coroutine Queue execution is always First-In, First-Out
       /// </summary>
-      private void PlayFirstCommandFromQueue()
+      private void PlayFirstCoroutineInQueue()
       {
-          _playingQueue = true;             
-          MonoBehaviourReference.StartCoroutine(_queue.Dequeue());     
+          //Set playing queue as true, so no other coroutines will play
+          _playingQueue = true;
+          
+          //Start playing the first coroutine in the coroutine queue 
+          MonoBehaviourReference.StartCoroutine(_coroutineQueue.Dequeue());     
        
       }
       
       /// <summary>
-      /// Add coroutine to Coroutine Queue
+      /// Add coroutine to Coroutine Queue.  If no other coroutine is playing,
+      /// play the coroutine immediately
       /// </summary>
       /// <param name="coroutine"></param>
       public void AddToCoroutineQueue(IEnumerator coroutine)
       {
-          _queue.Enqueue(coroutine);
+          _coroutineQueue.Enqueue(coroutine);
         
           if (!_playingQueue)
-              PlayFirstCommandFromQueue();
-
+              PlayFirstCoroutineInQueue();
       }
       
       /// <summary>
-      /// Marker for the end of a coroutine method and triggers
-      /// the dequeue of the next coroutine in the queue
+      /// Start Playing coroutines in queue
+      /// TODO: Is this required?
       /// </summary>
       /// <returns></returns>
-      public bool CoroutineCompleted()  //TODO:Is this better named as PlayCoroutineQueueCommands?
+      public void PlayCoroutineInQueue()  //TODO:Is this better named as PlayCoroutineQueueCommands?
       {
-          if(_queue.Count > 0)
+          if(_coroutineQueue.Count > 0)
           {
-              PlayFirstCommandFromQueue();
+              PlayFirstCoroutineInQueue();
           }else
           {
               _playingQueue = false;
           }
 
-          return true;
       }
 
       #endregion

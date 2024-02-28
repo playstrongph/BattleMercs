@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _1Scripts.Logic.SOLogicScripts;
+using UnityEngine;
 
 namespace _1Scripts.Visual
 {
@@ -13,16 +14,17 @@ namespace _1Scripts.Visual
         void ShowHeroGlowVisual();
         void HideHeroGlowVisual();
 
+
         /// <summary>
         /// Hero Frame depends on the hero Element
         /// </summary>
-        void UpdateHeroFrameColorVisual();
+        /// <param name="heroElement"></param>
+        void UpdateHeroFrameColorVisual(IHeroElementAsset heroElement);
 
         /// <summary>
         /// Updates the armor text and armor image display
         /// </summary>
-        /// 
-        void UpdateArmorTextAndImage();
+        void UpdateArmorTextAndImage(int armorValue);
 
         /// <summary>
         /// Displays the turn order image 
