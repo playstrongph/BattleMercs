@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using _1Scripts.Logic.SOLogicScripts;
+using UnityEngine;
 
 namespace _1Scripts.Visual
 {
@@ -26,36 +26,28 @@ namespace _1Scripts.Visual
       /// <summary>
       /// Checks skill type and skill readiness before updating the skill readiness visual
       /// </summary>
-      public void UpdateSkillReadinessVisual()
+      public void UpdateSkillReadinessVisual(ISkillTypeAsset skillType)
       {
-         var skillType = SkillVisualReference.SkillLogicReference.SkillAttributes.SkillType;
-
          //Call SkillType UpdateSkillReadinessVisual
          skillType.UpdateSkillReadinessVisual(SkillVisualReference);
       }
 
-      public void UpdateSkillGraphic()
+      public void UpdateSkillGraphic(Sprite skillGraphic)
       {
-         
-         var skillGraphic = SkillVisualReference.SkillLogicReference.SkillInformation.SkillSprite;
-         
          //Just update all for simplification
          SkillVisualReference.SkillReadyGraphic.sprite = skillGraphic;
          SkillVisualReference.SkillNotReadyGraphic.sprite = skillGraphic;
          SkillVisualReference.PassiveSkillGraphic.sprite = skillGraphic;
       }
 
-      public void UpdateSkillSpeedText()
+      public void UpdateSkillSpeedText(ISkillTypeAsset skillType, int skillSpeedValue)
       {
-         var skillType = SkillVisualReference.SkillLogicReference.SkillAttributes.SkillType;
-         skillType.UpdateSkillSpeedText(SkillVisualReference);
+         skillType.UpdateSkillSpeedText(SkillVisualReference, skillSpeedValue);
       }
       
-      public void UpdateSkillCooldownText()
+      public void UpdateSkillCooldownText(ISkillTypeAsset skillType, int skillCooldown)
       {
-         var skillType = SkillVisualReference.SkillLogicReference.SkillAttributes.SkillType;
-         skillType.UpdateSkillCooldownText(SkillVisualReference);
-         
+         skillType.UpdateSkillCooldownText(SkillVisualReference,skillCooldown);
       }
 
 

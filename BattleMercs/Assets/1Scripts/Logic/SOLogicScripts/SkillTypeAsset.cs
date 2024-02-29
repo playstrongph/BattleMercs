@@ -44,12 +44,12 @@ namespace _1Scripts.Logic.SOLogicScripts
       }
 
 
-      public virtual void UpdateSkillSpeedText(ISkillVisual skillVisual)
+      public virtual void UpdateSkillSpeedText(ISkillVisual skillVisualReference, int speedValue)
       {
          
       }
       
-      public virtual void UpdateSkillCooldownText(ISkillVisual skillVisual)
+      public virtual void UpdateSkillCooldownText(ISkillVisual skillVisualReference, int skillCooldown)
       {
 
       }

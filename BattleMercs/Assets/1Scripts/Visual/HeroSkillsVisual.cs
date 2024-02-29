@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using _1Scripts.Logic;
+using _1Scripts.Logic.SOLogicScripts;
 using UnityEngine;
 
 namespace _1Scripts.Visual
@@ -80,7 +81,7 @@ namespace _1Scripts.Visual
          //Set HeroLogic Reference
          HeroLogicReference = referenceHeroLogic;
          
-         UpdateSkillPanelVisual(allHeroSkillLogics);
+         UpdateSkillPanelVisual(allHeroSkillLogics,HeroLogicReference.HeroInformation.HeroElement);
          
          UpdateAllSkillVisuals(allHeroSkillLogics);
          
@@ -93,7 +94,8 @@ namespace _1Scripts.Visual
       /// Select 3 or 4 skill panel and update the panel color
       /// </summary>
       /// <param name="allHeroSkillLogics"></param>
-      private void UpdateSkillPanelVisual(List<ISkillLogic> allHeroSkillLogics)
+      /// <param name="heroElement"></param>
+      private void UpdateSkillPanelVisual(List<ISkillLogic> allHeroSkillLogics, IHeroElementAsset heroElement)
       {
          //Select Skill Panel Visual in use
          if (allHeroSkillLogics.Count < 4)
@@ -112,7 +114,7 @@ namespace _1Scripts.Visual
          }
          
          //Set Skill Panel Color, based on hero element
-         HeroLogicReference.HeroInformation.HeroElement.UpdateSkillPanelFrameVisual(SkillPanelInUse);
+         heroElement.UpdateSkillPanelFrameVisual(SkillPanelInUse);
       }
       
       /// <summary>
@@ -125,15 +127,22 @@ namespace _1Scripts.Visual
          for (var i = 0; i < allHeroSkillLogics.Count; i++)
          {
             var skillLogic = allHeroSkillLogics[i];
-            var skillVisual = SkillPanelInUse.SkillVisualList[i]; 
+            var skillVisual = SkillPanelInUse.SkillVisualList[i];
+            
             //Set Skill Logic Reference
             skillVisual.SkillLogicReference = skillLogic;
             
+            //Skill information and attributes
+            var skillType = skillVisual.SkillLogicReference.SkillAttributes.SkillType;
+            var skillGraphic = skillVisual.SkillLogicReference.SkillInformation.SkillSprite;
+            var skillSpeed = skillVisual.SkillLogicReference.SkillAttributes.SkillSpeed;
+            var skillCooldown = skillVisual.SkillLogicReference.SkillAttributes.SkillCooldown;
+            
             //Update 
-            skillVisual.SetSkillVisualComponent.UpdateSkillReadinessVisual();
-            skillVisual.SetSkillVisualComponent.UpdateSkillGraphic();
-            skillVisual.SetSkillVisualComponent.UpdateSkillSpeedText();
-            skillVisual.SetSkillVisualComponent.UpdateSkillCooldownText();
+            skillVisual.SetSkillVisualComponent.UpdateSkillReadinessVisual(skillType);
+            skillVisual.SetSkillVisualComponent.UpdateSkillGraphic(skillGraphic);
+            skillVisual.SetSkillVisualComponent.UpdateSkillSpeedText(skillType, skillSpeed);
+            skillVisual.SetSkillVisualComponent.UpdateSkillCooldownText(skillType,skillCooldown);
          }
       }
 

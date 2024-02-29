@@ -46,15 +46,13 @@ namespace _1Scripts.Logic.SOLogicScripts
 
       }
       
-      public override void UpdateSkillSpeedText(ISkillVisual skillVisual)
+      public override void UpdateSkillSpeedText(ISkillVisual skillVisual, int speedValue)
       {
-         skillVisual.SpeedText.text = "";
+         skillVisual.SpeedText.text = ""; 
       }
       
-      public override void UpdateSkillCooldownText(ISkillVisual skillVisual)
+      public override void UpdateSkillCooldownText(ISkillVisual skillVisual, int skillCooldown)
       {
-         var skillCooldown = skillVisual.SkillLogicReference.SkillAttributes.SkillCooldown;
-
          skillVisual.PassiveSkillCooldownText.text = skillCooldown <= 0 ? "" : skillCooldown.ToString();
       }
 

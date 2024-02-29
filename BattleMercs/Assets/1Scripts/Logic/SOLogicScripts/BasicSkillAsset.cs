@@ -45,12 +45,12 @@ namespace _1Scripts.Logic.SOLogicScripts
          skillVisual.SkillNotReadyCanvas.enabled = false;
       }
       
-      public override void UpdateSkillSpeedText(ISkillVisual skillVisual)
+      public override void UpdateSkillSpeedText(ISkillVisual skillVisual, int speedValue)
       {
          skillVisual.SpeedText.text = "";
       }
       
-      public override void UpdateSkillCooldownText(ISkillVisual skillVisual)
+      public override void UpdateSkillCooldownText(ISkillVisual skillVisual,int skillCooldown)
       {
          skillVisual.CooldownText.text = "";
       }

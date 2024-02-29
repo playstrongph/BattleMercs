@@ -12,8 +12,8 @@ namespace _1Scripts.Logic.SOLogicScripts
 
         void UpdateSkillReadinessVisual(ISkillVisual skillVisual);
 
-        void UpdateSkillSpeedText(ISkillVisual skillVisual);
+        void UpdateSkillSpeedText(ISkillVisual skillVisualReference, int speedValue);
 
-        void UpdateSkillCooldownText(ISkillVisual skillVisual);
+        void UpdateSkillCooldownText(ISkillVisual skillVisualReference, int skillCooldown);
     }
 }
