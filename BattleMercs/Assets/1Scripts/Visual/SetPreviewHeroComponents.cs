@@ -1,4 +1,5 @@
 ﻿using _1Scripts.Logic;
+using _1Scripts.Logic.SOLogicScripts;
 using UnityEngine;
 
 namespace _1Scripts.Visual
@@ -25,41 +26,33 @@ namespace _1Scripts.Visual
 
       #region HeroPreviewHero Updates
 
-      public void UpdateHeroPreviewGameObjectName()
+      public void UpdateHeroPreviewGameObjectName(string heroName)
       {
-          HeroPreviewVisual.ThisTransform.gameObject.name = HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroInformation.HeroName + "HeroPreview";
+          HeroPreviewVisual.ThisTransform.gameObject.name = heroName + "HeroPreview";
       }
       
-      public void UpdateHeroPreviewHeroGraphic()
+      public void UpdateHeroPreviewHeroGraphic(Sprite heroGraphic)
       {
-          var heroGraphic = HeroPreviewVisual.HeroVisualReference.HeroGraphic.sprite;
-
           HeroPreviewVisual.HeroPreviewHero.HeroGraphic.sprite = heroGraphic;
       }
 
-      public void UpdateHeroPreviewFrame()
+      public void UpdateHeroPreviewFrame(IHeroElementAsset heroElement)
       {
-          HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroInformation.HeroElement.SetHeroPreviewClassColor(HeroPreviewVisual);
+          heroElement.SetHeroPreviewClassColor(HeroPreviewVisual);
       }
       
-      public void UpdateHeroPreviewAttackText()
+      public void UpdateHeroPreviewAttackText(int attackValue)
       {
-          var attackValue = HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroAttributes.Attack;
-
           HeroPreviewVisual.HeroPreviewHero.AttackText.text = attackValue.ToString();
       }
       
-      public void UpdateHeroPreviewHealthText()
+      public void UpdateHeroPreviewHealthText(int healthValue)
       {
-          var healthValue = HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroAttributes.Health;
-
           HeroPreviewVisual.HeroPreviewHero.HealthText.text = healthValue.ToString();
       }
 
-      public void UpdateHeroPreviewArmorText()
+      public void UpdateHeroPreviewArmorText(int armorValue)
       {
-          var armorValue = HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroAttributes.Armor;
-          
           HeroPreviewVisual.HeroPreviewHero.ArmorText.text = armorValue.ToString();
 
           //Hide Armor image if armor is less than or equal to zero
@@ -69,47 +62,42 @@ namespace _1Scripts.Visual
           HeroPreviewVisual.HeroPreviewHero.ArmorText.enabled = armorValue > 0;
       }
       
-      public void UpdateHeroPreviewNameText()
+      public void UpdateHeroPreviewNameText(string heroName)
       {
-          var nameValue = HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroInformation.HeroName;
-
-          HeroPreviewVisual.HeroPreviewHero.NameText.text = nameValue;
+          HeroPreviewVisual.HeroPreviewHero.NameText.text = heroName;
       }
       
-      public void UpdateHeroPreviewClassText()
+      public void UpdateHeroPreviewClassText(string heroClassName)
       {
-          var nameValue = HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroInformation.HeroClass.ClassName;
 
-          HeroPreviewVisual.HeroPreviewHero.ClassText.text = nameValue;
+          HeroPreviewVisual.HeroPreviewHero.ClassText.text = heroClassName;
       }
       
       #endregion
 
       #region HeroPreviewSkill Updates
 
-      public void UpdateHeroPreviewSkillFrame(IHeroPreviewSkill heroPreviewSkill)
+      public void UpdateHeroPreviewSkillFrame(IHeroPreviewSkill heroPreviewSkill, IHeroElementAsset heroElement)
       {
-          HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroInformation.HeroElement.SetHeroPreviewSkillClassColor(heroPreviewSkill);
+          heroElement.SetHeroPreviewSkillClassColor(heroPreviewSkill);
       }
       
-      public void UpdateSkillPreviewElementText(IHeroPreviewSkill heroPreviewSkill)
+      public void UpdateSkillPreviewElementText(IHeroPreviewSkill heroPreviewSkill, IHeroElementAsset heroElementAsset)
       {
           HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroInformation.HeroElement.SetHeroPreviewElementText(heroPreviewSkill);
       }
       
-      public void UpdateSkillPreviewDescriptionText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic)
+      public void UpdateSkillPreviewDescriptionText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic, string skillDescription)
       {
-          var skillDescription = skillLogic.SkillInformation.SkillDescription;
-
           heroPreviewSkill.SkillDescriptionText.text = skillDescription;
       }
       
-      public void UpdateSkillPreviewGraphic(IHeroPreviewSkill heroPreviewSkill,ISkillLogic skillLogic)
+      public void UpdateSkillPreviewGraphic(IHeroPreviewSkill heroPreviewSkill,ISkillLogic skillLogic, Sprite skillPreviewSprite)
       {
-          heroPreviewSkill.SkillPreviewGraphic.sprite = skillLogic.SkillInformation.SkillSprite;
+          skillPreviewSprite = skillLogic.SkillInformation.SkillSprite;
       }
 
-      public void UpdateSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic)
+      public void EnableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic)
       {
           skillLogic.SkillAttributes.SkillType.SetPreviewSkillCooldownGraphic(heroPreviewSkill);
       }

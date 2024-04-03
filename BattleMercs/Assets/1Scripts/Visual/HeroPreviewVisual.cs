@@ -122,18 +122,30 @@ namespace _1Scripts.Visual
          
          //Set References
          HeroVisualReference = heroVisual;
+         
+         //HeroLogic Reference
+         var heroLogicReference = HeroVisualReference.HeroLogicReference;
+         
+         //Information and Attributes
+         var heroName = heroLogicReference.HeroInformation.HeroName;
+         var heroGraphic = heroLogicReference.HeroInformation.HeroGraphic;
+         var heroElement = heroLogicReference.HeroInformation.HeroElement;
+         var heroAttackValue = heroLogicReference.HeroAttributes.Attack;
+         var heroHealthValue = heroLogicReference.HeroAttributes.Health;
+         var heroArmorValue = heroLogicReference.HeroAttributes.Armor;
+         var heroClassName = heroLogicReference.HeroInformation.HeroClass.ClassName;
 
          //Change the HeroPreviewVisual Hero Object Name
-         SetPreviewHeroComponents.UpdateHeroPreviewGameObjectName();
+         SetPreviewHeroComponents.UpdateHeroPreviewGameObjectName(heroName);
          
          //Update the hero preview hero components
-         SetPreviewHeroComponents.UpdateHeroPreviewHeroGraphic();
-         SetPreviewHeroComponents.UpdateHeroPreviewFrame();
-         SetPreviewHeroComponents.UpdateHeroPreviewAttackText();
-         SetPreviewHeroComponents.UpdateHeroPreviewHealthText();
-         SetPreviewHeroComponents.UpdateHeroPreviewArmorText();
-         SetPreviewHeroComponents.UpdateHeroPreviewNameText();
-         SetPreviewHeroComponents.UpdateHeroPreviewClassText();
+         SetPreviewHeroComponents.UpdateHeroPreviewHeroGraphic(heroGraphic);
+         SetPreviewHeroComponents.UpdateHeroPreviewFrame(heroElement);
+         SetPreviewHeroComponents.UpdateHeroPreviewAttackText(heroAttackValue);
+         SetPreviewHeroComponents.UpdateHeroPreviewHealthText(heroHealthValue);
+         SetPreviewHeroComponents.UpdateHeroPreviewArmorText(heroArmorValue);
+         SetPreviewHeroComponents.UpdateHeroPreviewNameText(heroName);
+         SetPreviewHeroComponents.UpdateHeroPreviewClassText(heroClassName);
 
          
          
@@ -143,14 +155,20 @@ namespace _1Scripts.Visual
             var heroPreviewSkill = HeroPreviewSkillList[i];
             var skillLogic = heroVisual.HeroLogicReference.HeroSkillsReference[i];
             
-            SetPreviewHeroComponents.UpdateHeroPreviewSkillFrame(heroPreviewSkill);
-            SetPreviewHeroComponents.UpdateSkillPreviewGraphic(heroPreviewSkill,skillLogic);
-            SetPreviewHeroComponents.UpdateSkillPreviewCooldownGraphic(heroPreviewSkill, skillLogic);
+            //skill attributes and information
+            var skillDescription = skillLogic.SkillInformation.SkillDescription;
+            var skillPreviewSprite = skillLogic.SkillInformation.SkillSprite;
+            
+            SetPreviewHeroComponents.UpdateHeroPreviewSkillFrame(heroPreviewSkill,heroElement);
+            SetPreviewHeroComponents.UpdateSkillPreviewElementText(heroPreviewSkill,heroElement);
+            SetPreviewHeroComponents.UpdateSkillPreviewDescriptionText(heroPreviewSkill,skillLogic,skillDescription);
+            SetPreviewHeroComponents.UpdateSkillPreviewGraphic(heroPreviewSkill,skillLogic,skillPreviewSprite);
+            SetPreviewHeroComponents.EnableSkillPreviewCooldownGraphic(heroPreviewSkill, skillLogic);
+            
             SetPreviewHeroComponents.UpdateSkillPreviewCooldownText(heroPreviewSkill,skillLogic);
             SetPreviewHeroComponents.UpdateSkillPreviewSpeedText(heroPreviewSkill,skillLogic);
             SetPreviewHeroComponents.UpdateSkillPreviewNameText(heroPreviewSkill,skillLogic);
-            SetPreviewHeroComponents.UpdateSkillPreviewElementText(heroPreviewSkill);
-            SetPreviewHeroComponents.UpdateSkillPreviewDescriptionText(heroPreviewSkill,skillLogic);
+            
          }
       }
       
