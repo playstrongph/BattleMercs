@@ -6,7 +6,9 @@ namespace _1Scripts.Logic.SOLogicScripts
     {
         void StartSkillTargetingVisual(ISkillVisual skillVisual, ISelectSkillTargetVisual selectSkillTargetVisual);
 
-        void SetPreviewSkillCooldownGraphic(IHeroPreviewSkill heroPreviewSkill);
+        void EnableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill);
+        
+        void DisableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill);
 
         void SetSkillPreviewCooldownGraphic(ISkillPreviewVisual skillPreview);
 

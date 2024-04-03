@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace _1Scripts.Logic.SOLogicScripts
 {
-   [CreateAssetMenu(fileName = "BasicSkill", menuName = "Assets/SkillType/BasicSkill")]
-   public class BasicSkillAsset : SkillTypeAsset
+   [CreateAssetMenu(fileName = "PassiveSkill", menuName = "Assets/SkillType/PassiveSkill")]
+   public class PassiveSkillWithCooldownAsset : SkillTypeAsset
    {
       #region VARIABLES
 
@@ -22,18 +22,19 @@ namespace _1Scripts.Logic.SOLogicScripts
 
       public override void StartSkillTargetingVisual(ISkillVisual skillVisual,ISelectSkillTargetVisual selectSkillTargetVisual)
       {
-         selectSkillTargetVisual.StartSkillTargeting(skillVisual);
+         //Do Nothing
       }
       
       public override void EnableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill)
       {
-         heroPreviewSkill.CooldownGraphic.enabled = false;
+         heroPreviewSkill.CooldownGraphic.enabled = true;
+         
       }
       
       public override void DisableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill)
       {
          heroPreviewSkill.CooldownGraphic.enabled = false;
-         heroPreviewSkill.CooldownText.text = "";
+         heroPreviewSkill.CooldownText.text = "Active";
       }
       
       public override void SetSkillPreviewCooldownGraphic(ISkillPreviewVisual skillPreview)
@@ -44,21 +45,22 @@ namespace _1Scripts.Logic.SOLogicScripts
       public override void UpdateSkillReadinessVisual(ISkillVisual skillVisual)
       {
  
-         //Basic Skill Settings
-         skillVisual.SkillReadyCanvas.enabled = true;
+         //Passive Skill - Set Passive skill canvas enabled, others disabled
+         skillVisual.PassiveSkillCanvas.enabled = true;
          
-         skillVisual.PassiveSkillCanvas.enabled = false;
+         skillVisual.SkillReadyCanvas.enabled = false;
          skillVisual.SkillNotReadyCanvas.enabled = false;
+
       }
       
       public override void UpdateSkillSpeedText(ISkillVisual skillVisual, int speedValue)
       {
-         skillVisual.SpeedText.text = "";
+         skillVisual.SpeedText.text = ""; 
       }
       
-      public override void UpdateSkillCooldownText(ISkillVisual skillVisual,int skillCooldown)
+      public override void UpdateSkillCooldownText(ISkillVisual skillVisual, int skillCooldown)
       {
-         skillVisual.CooldownText.text = "";
+         skillVisual.PassiveSkillCooldownText.text = skillCooldown <= 0 ? "" : skillCooldown.ToString();
       }
 
       #endregion

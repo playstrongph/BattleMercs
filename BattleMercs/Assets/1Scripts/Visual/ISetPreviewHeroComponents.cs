@@ -23,7 +23,7 @@ namespace _1Scripts.Visual
         void UpdateSkillPreviewElementText(IHeroPreviewSkill heroPreviewSkill, IHeroElementAsset heroElementAsset);
         void UpdateSkillPreviewDescriptionText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic, string skillDescription);
         void EnableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic);
-        void UpdateSkillPreviewCooldownText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic);
+        void UpdateSkillPreviewCooldownText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic, int currentSkillCooldown);
         void UpdateSkillPreviewSpeedText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic);
         void UpdateSkillPreviewNameText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic);
         

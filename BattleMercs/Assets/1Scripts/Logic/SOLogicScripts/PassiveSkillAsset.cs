@@ -25,9 +25,16 @@ namespace _1Scripts.Logic.SOLogicScripts
          //Do Nothing
       }
       
-      public override void SetPreviewSkillCooldownGraphic(IHeroPreviewSkill heroPreviewSkill)
+      public override void EnableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill)
       {
          heroPreviewSkill.CooldownGraphic.enabled = false;
+         
+      }
+      
+      public override void DisableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill)
+      {
+         heroPreviewSkill.CooldownGraphic.enabled = false;
+         heroPreviewSkill.CooldownText.text = "";
       }
       
       public override void SetSkillPreviewCooldownGraphic(ISkillPreviewVisual skillPreview)

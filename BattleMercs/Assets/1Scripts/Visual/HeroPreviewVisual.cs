@@ -158,14 +158,16 @@ namespace _1Scripts.Visual
             //skill attributes and information
             var skillDescription = skillLogic.SkillInformation.SkillDescription;
             var skillPreviewSprite = skillLogic.SkillInformation.SkillSprite;
+            var currentSkillCooldown = skillLogic.SkillAttributes.SkillCooldown;
             
             SetPreviewHeroComponents.UpdateHeroPreviewSkillFrame(heroPreviewSkill,heroElement);
             SetPreviewHeroComponents.UpdateSkillPreviewElementText(heroPreviewSkill,heroElement);
             SetPreviewHeroComponents.UpdateSkillPreviewDescriptionText(heroPreviewSkill,skillLogic,skillDescription);
             SetPreviewHeroComponents.UpdateSkillPreviewGraphic(heroPreviewSkill,skillLogic,skillPreviewSprite);
-            SetPreviewHeroComponents.EnableSkillPreviewCooldownGraphic(heroPreviewSkill, skillLogic);
+            SetPreviewHeroComponents.UpdateSkillPreviewCooldownText(heroPreviewSkill,skillLogic,currentSkillCooldown);
             
-            SetPreviewHeroComponents.UpdateSkillPreviewCooldownText(heroPreviewSkill,skillLogic);
+            //SetPreviewHeroComponents.EnableSkillPreviewCooldownGraphic(heroPreviewSkill, skillLogic);
+            
             SetPreviewHeroComponents.UpdateSkillPreviewSpeedText(heroPreviewSkill,skillLogic);
             SetPreviewHeroComponents.UpdateSkillPreviewNameText(heroPreviewSkill,skillLogic);
             

@@ -99,14 +99,30 @@ namespace _1Scripts.Visual
 
       public void EnableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic)
       {
-          skillLogic.SkillAttributes.SkillType.SetPreviewSkillCooldownGraphic(heroPreviewSkill);
+          skillLogic.SkillAttributes.SkillType.EnableSkillPreviewCooldownGraphic(heroPreviewSkill);
       }
       
-      public void UpdateSkillPreviewCooldownText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic)
+      public void DisableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic)
       {
-          var skillCooldown = skillLogic.SkillAttributes.BaseSkillCooldown;
+          skillLogic.SkillAttributes.SkillType.DisableSkillPreviewCooldownGraphic(heroPreviewSkill);
+      }
+      
+      public void UpdateSkillPreviewCooldownText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic, int currentSkillCooldown)
+      {
+          //var skillCooldown = skillLogic.SkillAttributes.BaseSkillCooldown;
 
-          heroPreviewSkill.CooldownText.text = skillCooldown <= 0 ? " " : skillCooldown.ToString();
+          //heroPreviewSkill.CooldownText.text = currentSkillCooldown <= 0 ? " " : currentSkillCooldown.ToString();
+
+          if (currentSkillCooldown <= 0)
+          {
+              skillLogic.SkillAttributes.SkillType.DisableSkillPreviewCooldownGraphic(heroPreviewSkill);
+              //heroPreviewSkill.CooldownText.text = "Ready!";
+          }
+          else
+          {
+              skillLogic.SkillAttributes.SkillType.EnableSkillPreviewCooldownGraphic(heroPreviewSkill);
+              heroPreviewSkill.CooldownText.text = currentSkillCooldown.ToString();
+          }
       }
       
       public void UpdateSkillPreviewSpeedText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic)

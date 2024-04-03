@@ -24,10 +24,14 @@ namespace _1Scripts.Logic.SOLogicScripts
          
       }
 
-      public virtual void SetPreviewSkillCooldownGraphic(IHeroPreviewSkill heroPreviewSkill)
+      public virtual void EnableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill)
       {
-         //Enabled image for active skills
-         //Disable image for basic and passive skills
+         //Enable image for active skills and passive skills with cooldown
+      }
+      
+      public virtual void DisableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill)
+      {
+         //Disable image for active skills and passive skills with cooldown
       }
       
       public virtual void SetSkillPreviewCooldownGraphic(ISkillPreviewVisual skillPreview)

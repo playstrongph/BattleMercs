@@ -32,9 +32,16 @@ namespace _1Scripts.Logic.SOLogicScripts
          skillEnabledStatus.StartSkillTargetingVisual(skillVisual,selectSkillTargetVisual);
       }
       
-      public override void SetPreviewSkillCooldownGraphic(IHeroPreviewSkill heroPreviewSkill)
+      public override void EnableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill)
       {
          heroPreviewSkill.CooldownGraphic.enabled = true;
+         
+      }
+      
+      public override void DisableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill)
+      {
+         heroPreviewSkill.CooldownGraphic.enabled = false;
+         heroPreviewSkill.CooldownText.text = "Ready!";
       }
       
       public override void SetSkillPreviewCooldownGraphic(ISkillPreviewVisual skillPreview)
