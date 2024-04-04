@@ -119,19 +119,27 @@ namespace _1Scripts.Visual
          //SetReference
          SkillVisualReference = skillVisual;
          
+         
          //Skill Information
-         var previewGameObjectName = skillVisual.SkillLogicReference.SkillInformation.SkillName;
+         var skillName = skillVisual.SkillLogicReference.SkillInformation.SkillName;
+         var skillElement = skillVisual.SkillLogicReference.SkillAttributes.SkillElementAsset;
+         var skillSprite = skillVisual.SkillLogicReference.SkillInformation.SkillSprite;
+         var skillType = skillVisual.SkillLogicReference.SkillAttributes.SkillType;
+         var skillDescription = skillVisual.SkillLogicReference.SkillInformation.SkillDescription;
+         var baseSkillCooldown = skillVisual.SkillLogicReference.SkillAttributes.BaseSkillCooldown;
+         var baseSkillSpeed = skillVisual.SkillLogicReference.SkillAttributes.BaseSkillSpeed;
+         
          
          //Update the Skill preview Components
-         SetSkillPreviewComponents.UpdateSkillPreviewGameObjectName(previewGameObjectName);
-         SetSkillPreviewComponents.UpdateSkillPreviewFrame();
-         SetSkillPreviewComponents.UpdateSkillPreviewGraphic();
-         SetSkillPreviewComponents.UpdateSkillPreviewCooldownGraphic();
-         SetSkillPreviewComponents.UpdateSkillPreviewNameText();
-         SetSkillPreviewComponents.UpdateSkillPreviewElementText();
-         SetSkillPreviewComponents.UpdateSkillPreviewDescriptionText();
-         SetSkillPreviewComponents.UpdateSkillPreviewCooldownText();
-         SetSkillPreviewComponents.UpdateSkillPreviewSpeedText();
+         SetSkillPreviewComponents.UpdateSkillPreviewGameObjectName(skillName);
+         SetSkillPreviewComponents.UpdateSkillPreviewFrame(skillElement);
+         SetSkillPreviewComponents.UpdateSkillPreviewGraphic(skillSprite);
+         SetSkillPreviewComponents.UpdateSkillPreviewCooldownGraphic(skillType);
+         SetSkillPreviewComponents.UpdateSkillPreviewNameText(skillName);
+         SetSkillPreviewComponents.UpdateSkillPreviewElementText(skillElement);
+         SetSkillPreviewComponents.UpdateSkillPreviewDescriptionText(skillDescription);
+         SetSkillPreviewComponents.UpdateSkillPreviewCooldownText(baseSkillCooldown);
+         SetSkillPreviewComponents.UpdateSkillPreviewSpeedText(baseSkillSpeed);
          
       }
 

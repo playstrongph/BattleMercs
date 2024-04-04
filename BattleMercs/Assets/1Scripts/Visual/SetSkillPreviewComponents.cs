@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _1Scripts.Logic.SOLogicScripts;
+using UnityEngine;
 
 namespace _1Scripts.Visual
 {
@@ -22,61 +23,49 @@ namespace _1Scripts.Visual
 
       #region METHODS
       
-      public void UpdateSkillPreviewGameObjectName(string previewGameObjectName)
+      public void UpdateSkillPreviewGameObjectName(string skillName)
       {
-          SkillPreviewVisual.ThisTransform.gameObject.name = previewGameObjectName + "SkillPreview";
-
+          SkillPreviewVisual.ThisTransform.gameObject.name = skillName + "SkillPreview";
       }
 
-      public void UpdateSkillPreviewFrame()
+      public void UpdateSkillPreviewFrame(ISkillElementAsset skillElement)
       {
-          SkillPreviewVisual.SkillVisualReference.SkillLogicReference.SkillAttributes.SkillElementAsset.SetSkillPreviewClassColor(SkillPreviewVisual);
+          skillElement.SetSkillPreviewClassColor(SkillPreviewVisual);
       }
       
-      public void UpdateSkillPreviewGraphic()
+      public void UpdateSkillPreviewGraphic(Sprite skillSprite)
       {
-          var skillSprite = SkillPreviewVisual.SkillVisualReference.SkillLogicReference.SkillInformation.SkillSprite;
-
           SkillPreviewVisual.SkillGraphic.sprite = skillSprite;
       }
       
-      public void UpdateSkillPreviewCooldownGraphic()
+      public void UpdateSkillPreviewCooldownGraphic(ISkillTypeAsset skillType)
       {
-          SkillPreviewVisual.SkillVisualReference.SkillLogicReference.SkillAttributes.SkillType.SetSkillPreviewCooldownGraphic(SkillPreviewVisual);
-          
+          skillType.SetSkillPreviewCooldownGraphic(SkillPreviewVisual);
       }
       
-      public void UpdateSkillPreviewNameText()
+      public void UpdateSkillPreviewNameText(string skillName)
       {
-          var skillName = SkillPreviewVisual.SkillVisualReference.SkillLogicReference.SkillInformation.SkillName;
-
           SkillPreviewVisual.NameText.text = skillName;
       }
       
-      public void UpdateSkillPreviewElementText()
+      public void UpdateSkillPreviewElementText(ISkillElementAsset skillElement)
       {
-          SkillPreviewVisual.SkillVisualReference.SkillLogicReference.SkillAttributes.SkillElementAsset.UpdateSkillPreviewElementText(SkillPreviewVisual);
+          skillElement.UpdateSkillPreviewElementText(SkillPreviewVisual);
       }
 
-      public void UpdateSkillPreviewDescriptionText()
+      public void UpdateSkillPreviewDescriptionText(string skillDescription)
       {
-          var skillDescription = SkillPreviewVisual.SkillVisualReference.SkillLogicReference.SkillInformation.SkillDescription;
-
           SkillPreviewVisual.DescriptionText.text = skillDescription;
       }
       
-      public void UpdateSkillPreviewCooldownText( )
+      public void UpdateSkillPreviewCooldownText(int baseSkillCooldown )
       {
-          var skillCooldown = SkillPreviewVisual.SkillVisualReference.SkillLogicReference.SkillAttributes.BaseSkillCooldown;
-
-          SkillPreviewVisual.CooldownText.text = skillCooldown <= 0 ? " " : skillCooldown.ToString();
+          SkillPreviewVisual.CooldownText.text = baseSkillCooldown <= 0 ? " " : baseSkillCooldown.ToString();
       }
       
-      public void UpdateSkillPreviewSpeedText( )
+      public void UpdateSkillPreviewSpeedText(int baseSkillSpeed )
       {
-          var skillSpeed = SkillPreviewVisual.SkillVisualReference.SkillLogicReference.SkillAttributes.BaseSkillSpeed;
-
-          SkillPreviewVisual.SpeedText.text = skillSpeed <= 0 ? " " : skillSpeed.ToString();
+          SkillPreviewVisual.SpeedText.text = baseSkillSpeed <= 0 ? " " : baseSkillSpeed.ToString();
       }
 
 
