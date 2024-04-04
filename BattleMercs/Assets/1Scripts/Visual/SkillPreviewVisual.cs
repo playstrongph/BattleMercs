@@ -119,8 +119,11 @@ namespace _1Scripts.Visual
          //SetReference
          SkillVisualReference = skillVisual;
          
+         //Skill Information
+         var previewGameObjectName = skillVisual.SkillLogicReference.SkillInformation.SkillName;
+         
          //Update the Skill preview Components
-         SetSkillPreviewComponents.UpdateSkillPreviewGameObjectName();
+         SetSkillPreviewComponents.UpdateSkillPreviewGameObjectName(previewGameObjectName);
          SetSkillPreviewComponents.UpdateSkillPreviewFrame();
          SetSkillPreviewComponents.UpdateSkillPreviewGraphic();
          SetSkillPreviewComponents.UpdateSkillPreviewCooldownGraphic();

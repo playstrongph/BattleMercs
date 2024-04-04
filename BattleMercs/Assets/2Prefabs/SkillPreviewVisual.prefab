@@ -32,10 +32,10 @@ RectTransform:
   m_Father: {fileID: 7853968120051021474}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.40767378, y: 0.518}
-  m_AnchorMax: {x: 0.62126434, y: 0.62}
-  m_AnchoredPosition: {x: -0.18682861, y: -0.21916962}
-  m_SizeDelta: {x: -0.6789657, y: 1.8075037}
+  m_AnchorMin: {x: 0.55, y: 0.69147813}
+  m_AnchorMax: {x: 0.76000005, y: 0.7955305}
+  m_AnchoredPosition: {x: -0.20000458, y: -0.5999985}
+  m_SizeDelta: {x: 0.32102966, y: 0.80750275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7853968119745994661
 CanvasRenderer:
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7853968119745994584}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -241,10 +241,10 @@ RectTransform:
   m_Father: {fileID: 7853968120051021474}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.50872785, y: 0.66584927}
-  m_AnchorMax: {x: 0.80921584, y: 0.8167345}
-  m_AnchoredPosition: {x: 0.23609161, y: -0.34667206}
-  m_SizeDelta: {x: -1.388796, y: 0.18575203}
+  m_AnchorMin: {x: 0.45035374, y: 0.48682284}
+  m_AnchorMax: {x: 0.55472374, y: 0.5917519}
+  m_AnchoredPosition: {x: -0.06199646, y: 0.45400238}
+  m_SizeDelta: {x: -0.9528198, y: 0.20285034}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7853968120005326795
 CanvasRenderer:
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5
+  m_text: 9
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7be18d266b5d59546bbd7e359c87e3e9, type: 2}
   m_sharedMaterial: {fileID: 4491592743849078351, guid: 7be18d266b5d59546bbd7e359c87e3e9,
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 12
+  m_fontSizeMin: 20
   m_fontSizeMax: 30
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -375,10 +375,10 @@ RectTransform:
   m_Father: {fileID: 7853968120051021474}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.6057649, y: 0.6858661}
-  m_AnchorMax: {x: 0.71300006, y: 0.7908225}
-  m_AnchoredPosition: {x: -0.16352844, y: 0.9193649}
-  m_SizeDelta: {x: -0.6302265, y: 0.527415}
+  m_AnchorMin: {x: 0.45035374, y: 0.48682284}
+  m_AnchorMax: {x: 0.55472374, y: 0.5917519}
+  m_AnchoredPosition: {x: 0.40037537, y: 0.3660202}
+  m_SizeDelta: {x: 0.36977386, y: -0.4725876}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7853968120015184354
 CanvasRenderer:
@@ -500,9 +500,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillVisualReference: {fileID: 0}
   battleManagerVisual: {fileID: 0}
-  setSkillPreviewComponents: {fileID: 1160646187941177136}
   canvas: {fileID: 7853968120051021473}
   skillPreviewFrames: {fileID: 7623805802148079578}
+  setSkillPreviewComponents: {fileID: 1160646187941177136}
   skillGraphic: {fileID: 7853968120583128542}
   cooldownGraphic: {fileID: 7853968120015184355}
   speedGraphic: {fileID: 7853968119745994662}
@@ -633,10 +633,10 @@ RectTransform:
   m_Father: {fileID: 7853968120051021474}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.42700002, y: 0.50781864}
-  m_AnchorMax: {x: 0.55472374, y: 0.58470154}
-  m_AnchoredPosition: {x: -0.049972534, y: 0.85352886}
-  m_SizeDelta: {x: -2.4749207, y: -2.9828699}
+  m_AnchorMin: {x: 0.58770746, y: 0.69147813}
+  m_AnchorMax: {x: 0.71000004, y: 0.76100004}
+  m_AnchoredPosition: {x: -0.099998474, y: -0.5999985}
+  m_SizeDelta: {x: -0.47492218, y: 0.01712799}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7853968120668053566
 CanvasRenderer:
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7853968120668053553}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 

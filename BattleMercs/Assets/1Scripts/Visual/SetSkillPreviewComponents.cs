@@ -22,9 +22,10 @@ namespace _1Scripts.Visual
 
       #region METHODS
       
-      public void UpdateSkillPreviewGameObjectName()
+      public void UpdateSkillPreviewGameObjectName(string previewGameObjectName)
       {
-          SkillPreviewVisual.ThisTransform.gameObject.name = SkillPreviewVisual.SkillVisualReference.SkillLogicReference.SkillInformation.SkillName + "SkillPreview";
+          SkillPreviewVisual.ThisTransform.gameObject.name = previewGameObjectName + "SkillPreview";
+
       }
 
       public void UpdateSkillPreviewFrame()
