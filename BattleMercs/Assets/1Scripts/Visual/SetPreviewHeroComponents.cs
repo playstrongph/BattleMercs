@@ -84,20 +84,44 @@ namespace _1Scripts.Visual
       
       public void UpdateSkillPreviewElementText(IHeroPreviewSkill heroPreviewSkill, IHeroElementAsset heroElementAsset)
       {
-          HeroPreviewVisual.HeroVisualReference.HeroLogicReference.HeroInformation.HeroElement.SetHeroPreviewElementText(heroPreviewSkill);
+          heroElementAsset.SetHeroPreviewElementText(heroPreviewSkill);
       }
       
-      public void UpdateSkillPreviewDescriptionText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic, string skillDescription)
+      public void UpdateSkillPreviewDescriptionText(IHeroPreviewSkill heroPreviewSkill, string skillDescription)
       {
           heroPreviewSkill.SkillDescriptionText.text = skillDescription;
       }
       
-      public void UpdateSkillPreviewGraphic(IHeroPreviewSkill heroPreviewSkill,ISkillLogic skillLogic, Sprite skillPreviewSprite)
+      public void UpdateSkillPreviewGraphic(IHeroPreviewSkill heroPreviewSkill, Sprite skillPreviewSprite)
       {
           heroPreviewSkill.SkillPreviewGraphic.sprite = skillPreviewSprite;
       }
 
-      public void EnableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic)
+      public void UpdateSkillPreviewCooldownText(IHeroPreviewSkill heroPreviewSkill, ISkillTypeAsset skillType, int currentSkillCooldown)
+      {
+          if (currentSkillCooldown <= 0)
+          {
+              skillType.DisableSkillPreviewCooldownGraphic(heroPreviewSkill);
+              
+          }
+          else
+          {
+              skillType.EnableSkillPreviewCooldownGraphic(heroPreviewSkill);
+              heroPreviewSkill.CooldownText.text = currentSkillCooldown.ToString();
+          }
+      }
+      
+      public void UpdateSkillPreviewSpeedText(IHeroPreviewSkill heroPreviewSkill, int baseSkillSpeed)
+      {
+          heroPreviewSkill.SpeedText.text = baseSkillSpeed <= 0 ? " " : baseSkillSpeed.ToString();
+      }
+      
+      public void UpdateSkillPreviewNameText(IHeroPreviewSkill heroPreviewSkill, string skillName)
+      {
+          heroPreviewSkill.SkillNameText.text = skillName;
+      }
+      
+      /*public void EnableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic)
       {
           skillLogic.SkillAttributes.SkillType.EnableSkillPreviewCooldownGraphic(heroPreviewSkill);
       }
@@ -105,32 +129,7 @@ namespace _1Scripts.Visual
       public void DisableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic)
       {
           skillLogic.SkillAttributes.SkillType.DisableSkillPreviewCooldownGraphic(heroPreviewSkill);
-      }
-      
-      public void UpdateSkillPreviewCooldownText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic, int currentSkillCooldown)
-      {
-
-          if (currentSkillCooldown <= 0)
-          {
-              skillLogic.SkillAttributes.SkillType.DisableSkillPreviewCooldownGraphic(heroPreviewSkill);
-              
-          }
-          else
-          {
-              skillLogic.SkillAttributes.SkillType.EnableSkillPreviewCooldownGraphic(heroPreviewSkill);
-              heroPreviewSkill.CooldownText.text = currentSkillCooldown.ToString();
-          }
-      }
-      
-      public void UpdateSkillPreviewSpeedText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic, int baseSkillSpeed)
-      {
-          heroPreviewSkill.SpeedText.text = baseSkillSpeed <= 0 ? " " : baseSkillSpeed.ToString();
-      }
-      
-      public void UpdateSkillPreviewNameText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic, string skillName)
-      {
-          heroPreviewSkill.SkillNameText.text = skillName;
-      }
+      }*/
       
 
       #endregion

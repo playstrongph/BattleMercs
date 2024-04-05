@@ -18,15 +18,16 @@ namespace _1Scripts.Visual
         
         //HERO PREVIEW SKILL
         void UpdateHeroPreviewSkillFrame(IHeroPreviewSkill heroPreviewSkill, IHeroElementAsset heroElement);
-        void UpdateSkillPreviewGraphic(IHeroPreviewSkill heroPreviewSkill,ISkillLogic skillLogic, Sprite skillPreviewSprite);
-        
+        void UpdateSkillPreviewGraphic(IHeroPreviewSkill heroPreviewSkill, Sprite skillPreviewSprite);
         void UpdateSkillPreviewElementText(IHeroPreviewSkill heroPreviewSkill, IHeroElementAsset heroElementAsset);
-        void UpdateSkillPreviewDescriptionText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic, string skillDescription);
-        void EnableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic);
-        void UpdateSkillPreviewCooldownText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic, int currentSkillCooldown);
-        void UpdateSkillPreviewSpeedText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic, int baseSkillSpeed);
-        void UpdateSkillPreviewNameText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic, string skillName);
+        void UpdateSkillPreviewDescriptionText(IHeroPreviewSkill heroPreviewSkill, string skillDescription);
+        void UpdateSkillPreviewCooldownText(IHeroPreviewSkill heroPreviewSkill, ISkillTypeAsset skillType, int currentSkillCooldown);
+        void UpdateSkillPreviewSpeedText(IHeroPreviewSkill heroPreviewSkill, int baseSkillSpeed);
+        void UpdateSkillPreviewNameText(IHeroPreviewSkill heroPreviewSkill, string skillName);
         
+        //void EnableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic);
+        //void DisableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic);
+
 
     }
 }
