@@ -11,7 +11,6 @@ namespace _1Scripts.Visual
         
         void ShowMainPlayerHeroSkillsPanelVisual(IHeroLogic referenceHeroLogic);
         void HideMainPlayerHeroSkillsVisual(IHeroLogic referenceHeroLogic);
-
         void ShowHeroSkillsVisual(IHeroLogic referenceHeroLogic);
     }
 }
