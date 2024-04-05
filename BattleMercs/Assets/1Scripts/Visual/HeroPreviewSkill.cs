@@ -42,6 +42,8 @@ namespace _1Scripts.Visual
       public TextMeshProUGUI SkillElementText => skillElementText;
       public TextMeshProUGUI SkillDescriptionText => skillDescriptionText;
 
+      public Transform Transform => transform;
+
       #endregion
 
       #region METHODS

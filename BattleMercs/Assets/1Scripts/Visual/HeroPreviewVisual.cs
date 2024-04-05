@@ -146,14 +146,23 @@ namespace _1Scripts.Visual
          SetPreviewHeroComponents.UpdateHeroPreviewArmorText(heroArmorValue);
          SetPreviewHeroComponents.UpdateHeroPreviewNameText(heroName);
          SetPreviewHeroComponents.UpdateHeroPreviewClassText(heroClassName);
+         
+         //Created to disable the 4th++ skills without needing if statements
+         for (var i = 0; i < heroPreviewSkillList.Count; i++)
+         {
+            var heroPreviewSkill = HeroPreviewSkillList[i];
+            
+            heroPreviewSkill.Transform.gameObject.SetActive(false);
+         }
 
-         
-         
-        //Update the hero preview skills 
+         //Update the hero preview skills 
         for (var i = 0; i < heroSkillsCount; i++)
          {
             var heroPreviewSkill = HeroPreviewSkillList[i];
             var skillLogic = heroVisual.HeroLogicReference.HeroSkillsReference[i];
+            
+            //Enable the game object
+            heroPreviewSkill.Transform.gameObject.SetActive(true);
             
             //skill attributes and information
             var skillDescription = skillLogic.SkillInformation.SkillDescription;

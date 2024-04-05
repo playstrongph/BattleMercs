@@ -1,4 +1,5 @@
 ﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace _1Scripts.Visual
@@ -14,5 +15,7 @@ namespace _1Scripts.Visual
         TextMeshProUGUI SkillNameText { get; }
         TextMeshProUGUI SkillElementText { get; }
         TextMeshProUGUI SkillDescriptionText { get; }
+        
+        Transform Transform { get; }
     }
 }
