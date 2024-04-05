@@ -94,7 +94,7 @@ namespace _1Scripts.Visual
       
       public void UpdateSkillPreviewGraphic(IHeroPreviewSkill heroPreviewSkill,ISkillLogic skillLogic, Sprite skillPreviewSprite)
       {
-          skillPreviewSprite = skillLogic.SkillInformation.SkillSprite;
+          heroPreviewSkill.SkillPreviewGraphic.sprite = skillPreviewSprite;
       }
 
       public void EnableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic)
@@ -109,14 +109,11 @@ namespace _1Scripts.Visual
       
       public void UpdateSkillPreviewCooldownText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic, int currentSkillCooldown)
       {
-          //var skillCooldown = skillLogic.SkillAttributes.BaseSkillCooldown;
-
-          //heroPreviewSkill.CooldownText.text = currentSkillCooldown <= 0 ? " " : currentSkillCooldown.ToString();
 
           if (currentSkillCooldown <= 0)
           {
               skillLogic.SkillAttributes.SkillType.DisableSkillPreviewCooldownGraphic(heroPreviewSkill);
-              //heroPreviewSkill.CooldownText.text = "Ready!";
+              
           }
           else
           {
@@ -125,17 +122,13 @@ namespace _1Scripts.Visual
           }
       }
       
-      public void UpdateSkillPreviewSpeedText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic)
+      public void UpdateSkillPreviewSpeedText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic, int baseSkillSpeed)
       {
-          var skillSpeed = skillLogic.SkillAttributes.BaseSkillSpeed;
-
-          heroPreviewSkill.SpeedText.text = skillSpeed <= 0 ? " " : skillSpeed.ToString();
+          heroPreviewSkill.SpeedText.text = baseSkillSpeed <= 0 ? " " : baseSkillSpeed.ToString();
       }
       
-      public void UpdateSkillPreviewNameText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic)
+      public void UpdateSkillPreviewNameText(IHeroPreviewSkill heroPreviewSkill, ISkillLogic skillLogic, string skillName)
       {
-          var skillName = skillLogic.SkillInformation.SkillName;
-
           heroPreviewSkill.SkillNameText.text = skillName;
       }
       

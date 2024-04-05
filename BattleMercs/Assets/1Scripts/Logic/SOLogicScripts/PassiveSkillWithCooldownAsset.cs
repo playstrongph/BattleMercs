@@ -34,7 +34,7 @@ namespace _1Scripts.Logic.SOLogicScripts
       public override void DisableSkillPreviewCooldownGraphic(IHeroPreviewSkill heroPreviewSkill)
       {
          heroPreviewSkill.CooldownGraphic.enabled = false;
-         heroPreviewSkill.CooldownText.text = "Active";
+         heroPreviewSkill.CooldownText.text = " Active";
       }
       
       public override void SetSkillPreviewCooldownGraphic(ISkillPreviewVisual skillPreview)
